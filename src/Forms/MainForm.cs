@@ -14,12 +14,6 @@ public partial class MainForm : Form
         _lifetimeScope = lifetimeScope;
     }
 
-
-    private void tabClientes_Enter(object sender, EventArgs e)
-    {
-
-    }
-
     private void btnCadastroCliente_Click(object sender, EventArgs e)
     {
         var cadastroClienteForm = new CadastroClienteForm(_lifetimeScope);
