@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Autofac.Core.Lifetime;
 
@@ -12,11 +13,22 @@ public partial class MainForm : Form
     {
         InitializeComponent();
         _lifetimeScope = lifetimeScope;
+        MainControl mainControl = new MainControl();
+        Controls.Add(mainControl);
+
+        Rectangle workingArea = Screen.GetWorkingArea(this);
+        Size formSize = workingArea.Size;
+        Size = formSize;
     }
 
     private void btnCadastroCliente_Click(object sender, EventArgs e)
     {
         var cadastroClienteForm = new CadastroClienteForm(_lifetimeScope);
         cadastroClienteForm.Show();
+    }
+
+    private void MainForm_Resize(object sender, EventArgs e)
+    {
+        WindowState = FormWindowState.Maximized;
     }
 }
