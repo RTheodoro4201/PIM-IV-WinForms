@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace PIM_IV_Forms.Forms;
+namespace PIM_IV_Forms.Forms.Panels;
 
 public partial class ListaClienteForm : Form
 {

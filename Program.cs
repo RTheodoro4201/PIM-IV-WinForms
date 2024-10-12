@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Autofac;
 using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Forms;
+using PIM_IV_Forms.Forms.Panels;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Repositories;
 
@@ -29,7 +30,7 @@ namespace PIM_IV_Forms
             builder.RegisterType<FuncionarioRepository>().As<IRepository<Funcionario>>();
             builder.RegisterType<ClienteController>();
             builder.RegisterType<FuncionarioController>();
-            builder.RegisterType<CadastroClienteForm>();
+            builder.RegisterType<CadastroClienteFisicoForm>();
             builder.RegisterType<ListaClienteForm>();
             builder.RegisterType<MainForm>();
 
@@ -40,7 +41,7 @@ namespace PIM_IV_Forms
 
             using (var scope = container.BeginLifetimeScope())
             {
-                var form = scope.Resolve<MainForm>(new NamedParameter("lifetimeScope", scope));
+                var form = scope.Resolve<MainForm>();
                 Application.Run(form);
             }
         }

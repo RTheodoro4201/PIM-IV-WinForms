@@ -1,30 +1,26 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Autofac;
 using Autofac.Core.Lifetime;
+using PIM_IV_Forms.Forms.UserControls;
 
 namespace PIM_IV_Forms.Forms;
 
 public partial class MainForm : Form
 {
-    private readonly LifetimeScope _lifetimeScope;
+    private readonly IComponentContext _componentContext;
 
-    public MainForm(LifetimeScope lifetimeScope)
+    public MainForm(IComponentContext componentContext)
     {
         InitializeComponent();
-        _lifetimeScope = lifetimeScope;
-        MainControl mainControl = new MainControl();
+        _componentContext = componentContext;
+        MainControl mainControl = new MainControl(_componentContext);
         Controls.Add(mainControl);
 
         Rectangle workingArea = Screen.GetWorkingArea(this);
         Size formSize = workingArea.Size;
         Size = formSize;
-    }
-
-    private void btnCadastroCliente_Click(object sender, EventArgs e)
-    {
-        var cadastroClienteForm = new CadastroClienteForm(_lifetimeScope);
-        cadastroClienteForm.Show();
     }
 
     private void MainForm_Resize(object sender, EventArgs e)
