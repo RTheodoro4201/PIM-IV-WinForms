@@ -171,13 +171,23 @@
         <Compile Include="src\Forms\MainForm.Designer.cs">
           <DependentUpon>MainForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="src\Forms\Panels\CadastroClienteFisicoForm.cs" />
-        <Compile Include="src\Forms\Panels\CadastroClienteFisicoForm.Designer.cs" />
-        <Compile Include="src\Forms\Panels\ListaClienteForm.cs">
-          <SubType>Form</SubType>
+        <Compile Include="src\Forms\UserControls\Cliente\CadastroClienteFisicoControl.cs">
+          <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="src\Forms\Panels\ListaClienteForm.Designer.cs">
-          <DependentUpon>ListaClienteForm.cs</DependentUpon>
+        <Compile Include="src\Forms\UserControls\Cliente\CadastroClienteFisicoControl.Designer.cs">
+          <DependentUpon>CadastroClienteFisicoControl.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\UserControls\Cliente\ClienteControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="src\Forms\UserControls\Cliente\ClienteControl.Designer.cs">
+          <DependentUpon>ClienteControl.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\UserControls\Cliente\ClienteFisicoControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="src\Forms\UserControls\Cliente\ClienteFisicoControl.Designer.cs">
+          <DependentUpon>ClienteFisicoControl.cs</DependentUpon>
         </Compile>
         <Compile Include="src\Forms\UserControls\MainControl.cs">
           <SubType>UserControl</SubType>
@@ -210,11 +220,8 @@
         <EmbeddedResource Include="src\Forms\MainForm.resx">
           <DependentUpon>MainForm.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="src\Forms\Panels\CadastroClienteFisicoForm.en-us.resx">
-          <DependentUpon>CadastroClienteFisicoForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="src\Forms\Panels\CadastroClienteFisicoForm.resx">
-          <DependentUpon>CadastroClienteFisicoForm.cs</DependentUpon>
+        <EmbeddedResource Include="src\Forms\UserControls\Cliente\ClienteControl.resx">
+          <DependentUpon>ClienteControl.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\UserControls\MainControl.resx">
           <DependentUpon>MainControl.cs</DependentUpon>
@@ -231,7 +238,7 @@
         </Compile>
     </ItemGroup>
     <ItemGroup>
-        <None Include="App.config"/>
+        <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="src\Abstract\" />

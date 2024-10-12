@@ -8,7 +8,8 @@ using System.Windows.Forms;
 using Autofac;
 using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Forms;
-using PIM_IV_Forms.Forms.Panels;
+using PIM_IV_Forms.Forms.UserControls;
+using PIM_IV_Forms.Forms.UserControls.Cliente;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Repositories;
 
@@ -30,8 +31,7 @@ namespace PIM_IV_Forms
             builder.RegisterType<FuncionarioRepository>().As<IRepository<Funcionario>>();
             builder.RegisterType<ClienteController>();
             builder.RegisterType<FuncionarioController>();
-            builder.RegisterType<CadastroClienteFisicoForm>();
-            builder.RegisterType<ListaClienteForm>();
+            builder.RegisterType<ClienteControl>();
             builder.RegisterType<MainForm>();
 
             var container = builder.Build();
