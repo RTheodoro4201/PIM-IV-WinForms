@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Windows.Forms;
-using PIM_IV_Forms.Models;
-using PIM_IV_Forms.Controllers;
-using PIM_IV_Forms.Validator;
 using Autofac;
-using Autofac.Core.Lifetime;
+using PIM_IV_Forms.Controllers;
+using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Properties;
+using PIM_IV_Forms.Validator;
 
-namespace PIM_IV_Forms.Forms;
+namespace PIM_IV_Forms.Forms.Panels;
 
-public partial class CadastroClienteForm : Form
+public partial class CadastroClienteFisicoForm : Form
 {
     private readonly ClienteController _clienteController;
-    public CadastroClienteForm(LifetimeScope lifetimeScope)
+    public CadastroClienteFisicoForm(IComponentContext componentContext)
     {
         InitializeComponent();
-        _clienteController = lifetimeScope.Resolve<ClienteController>();
+        _clienteController = componentContext.Resolve<ClienteController>();
     }
 
 
@@ -25,20 +24,10 @@ public partial class CadastroClienteForm : Form
         {
             Nome = txtNome.Text + " " + txtSobrenome.Text,
             Documento = txtDocumento.Text,
+            TipoDocumento = "CPF",
             Telefone = txtTelefone.Text
         };
         var validator = new ClienteValidator();
-
-        if (rbtnCpf.Checked)
-        {
-            cliente.TipoDocumento = rbtnCpf.Text;
-            Console.WriteLine(cliente.TipoDocumento);
-        }
-        if (rbtnCnpj.Checked)
-        {
-            cliente.TipoDocumento = rbtnCnpj.Text;
-            Console.WriteLine(cliente.TipoDocumento);
-        }
 
         if (validator.ValidateModel(cliente))
         {

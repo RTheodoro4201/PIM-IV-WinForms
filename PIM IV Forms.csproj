@@ -77,6 +77,9 @@
           <HintPath>packages\Microsoft.IdentityModel.Tokens.6.35.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
         </Reference>
         <Reference Include="mscorlib" />
+        <Reference Include="PIM_IV_Forms">
+          <HintPath>bin\Debug\PIM_IV_Forms.exe</HintPath>
+        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
           <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -162,25 +165,25 @@
         <Compile Include="src\Controllers\ClienteController.cs" />
         <Compile Include="src\Controllers\CompraController.cs" />
         <Compile Include="src\Controllers\FuncionarioController.cs" />
-        <Compile Include="src\Forms\CadastroClienteForm.cs" />
-        <Compile Include="src\Forms\CadastroClienteForm.Designer.cs" />
-        <Compile Include="src\Forms\ListaClienteForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="src\Forms\ListaClienteForm.Designer.cs">
-          <DependentUpon>ListaClienteForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="src\Forms\MainControl.cs">
-          <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="src\Forms\MainControl.Designer.cs">
-          <DependentUpon>MainControl.cs</DependentUpon>
-        </Compile>
         <Compile Include="src\Forms\MainForm.cs">
           <SubType>Form</SubType>
         </Compile>
         <Compile Include="src\Forms\MainForm.Designer.cs">
           <DependentUpon>MainForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Panels\CadastroClienteFisicoForm.cs" />
+        <Compile Include="src\Forms\Panels\CadastroClienteFisicoForm.Designer.cs" />
+        <Compile Include="src\Forms\Panels\ListaClienteForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Panels\ListaClienteForm.Designer.cs">
+          <DependentUpon>ListaClienteForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\UserControls\MainControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="src\Forms\UserControls\MainControl.Designer.cs">
+          <DependentUpon>MainControl.cs</DependentUpon>
         </Compile>
         <Compile Include="src\Interfaces\IValidator.cs" />
         <Compile Include="src\Models\Cliente.cs" />
@@ -204,17 +207,17 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="src\Forms\CadastroClienteForm.en-us.resx">
-          <DependentUpon>CadastroClienteForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="src\Forms\CadastroClienteForm.resx">
-          <DependentUpon>CadastroClienteForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="src\Forms\MainControl.resx">
-          <DependentUpon>MainControl.cs</DependentUpon>
-        </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\MainForm.resx">
           <DependentUpon>MainForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Panels\CadastroClienteFisicoForm.en-us.resx">
+          <DependentUpon>CadastroClienteFisicoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Panels\CadastroClienteFisicoForm.resx">
+          <DependentUpon>CadastroClienteFisicoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\UserControls\MainControl.resx">
+          <DependentUpon>MainControl.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">

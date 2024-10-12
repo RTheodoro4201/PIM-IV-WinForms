@@ -33,22 +33,21 @@ partial class MainForm
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
         this.SuspendLayout();
-        //
+        // 
         // MainForm
-        //
+        // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.BackColor = System.Drawing.Color.PaleGreen;
         this.IsMdiContainer = true;
         this.MaximizeBox = false;
         this.Name = "MainForm";
+        this.ShowIcon = false;
         this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         this.LocationChanged += new System.EventHandler(this.MainForm_Resize);
         this.Resize += new System.EventHandler(this.MainForm_Resize);
         this.ResumeLayout(false);
     }
-
-    private System.Windows.Forms.Button button2;
 
     #endregion
 }

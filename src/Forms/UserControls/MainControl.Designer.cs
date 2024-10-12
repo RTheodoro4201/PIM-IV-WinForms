@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace PIM_IV_Forms.Forms;
+namespace PIM_IV_Forms.Forms.UserControls;
 
 sealed partial class MainControl
 {
@@ -65,9 +65,9 @@ sealed partial class MainControl
         this.scLabelsTitulo.SplitterDistance = 680;
         this.scLabelsTitulo.SplitterWidth = 2;
         this.scLabelsTitulo.TabIndex = 0;
-        //
+        // 
         // lblCadastros
-        //
+        // 
         this.lblCadastros.BackColor = System.Drawing.Color.DimGray;
         this.lblCadastros.Dock = System.Windows.Forms.DockStyle.Fill;
         this.lblCadastros.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,9 +78,9 @@ sealed partial class MainControl
         this.lblCadastros.TabIndex = 1;
         this.lblCadastros.Text = "Cadastros";
         this.lblCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // lblCompras
-        //
+        // 
         this.lblCompras.BackColor = System.Drawing.Color.CadetBlue;
         this.lblCompras.Dock = System.Windows.Forms.DockStyle.Fill;
         this.lblCompras.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,9 +91,9 @@ sealed partial class MainControl
         this.lblCompras.TabIndex = 2;
         this.lblCompras.Text = "Compras";
         this.lblCompras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // lblCliente
-        //
+        // 
         this.lblCliente.BackColor = System.Drawing.Color.DimGray;
         this.lblCliente.Font = new System.Drawing.Font("Arial", 12F);
         this.lblCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -104,9 +104,9 @@ sealed partial class MainControl
         this.lblCliente.TabIndex = 23;
         this.lblCliente.Text = "Cliente";
         this.lblCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // btnMaterial
-        //
+        // 
         this.btnMaterial.BackColor = System.Drawing.Color.DimGray;
         this.btnMaterial.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnMaterial.FlatAppearance.BorderSize = 0;
@@ -120,9 +120,9 @@ sealed partial class MainControl
         this.btnMaterial.TabIndex = 24;
         this.btnMaterial.Text = "Material";
         this.btnMaterial.UseVisualStyleBackColor = false;
-        //
+        // 
         // btnFornecedorFisico
-        //
+        // 
         this.btnFornecedorFisico.BackColor = System.Drawing.Color.DimGray;
         this.btnFornecedorFisico.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnFornecedorFisico.FlatAppearance.BorderSize = 0;
@@ -136,10 +136,9 @@ sealed partial class MainControl
         this.btnFornecedorFisico.TabIndex = 25;
         this.btnFornecedorFisico.Text = "Físico";
         this.btnFornecedorFisico.UseVisualStyleBackColor = false;
-        this.btnFornecedorFisico.Click += new System.EventHandler(this.btnFornecedorFisico_Click);
-        //
+        // 
         // btnFornecedorJuridico
-        //
+        // 
         this.btnFornecedorJuridico.BackColor = System.Drawing.Color.DimGray;
         this.btnFornecedorJuridico.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnFornecedorJuridico.FlatAppearance.BorderSize = 0;
@@ -153,9 +152,9 @@ sealed partial class MainControl
         this.btnFornecedorJuridico.TabIndex = 26;
         this.btnFornecedorJuridico.Text = "Jurídico";
         this.btnFornecedorJuridico.UseVisualStyleBackColor = false;
-        //
+        // 
         // btnJuridico
-        //
+        // 
         this.btnJuridico.BackColor = System.Drawing.Color.DimGray;
         this.btnJuridico.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnJuridico.FlatAppearance.BorderSize = 0;
@@ -169,9 +168,9 @@ sealed partial class MainControl
         this.btnJuridico.TabIndex = 27;
         this.btnJuridico.Text = "Jurídico";
         this.btnJuridico.UseVisualStyleBackColor = false;
-        //
+        // 
         // btnClienteFisico
-        //
+        // 
         this.btnClienteFisico.BackColor = System.Drawing.Color.DimGray;
         this.btnClienteFisico.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnClienteFisico.FlatAppearance.BorderSize = 0;
@@ -185,9 +184,10 @@ sealed partial class MainControl
         this.btnClienteFisico.TabIndex = 28;
         this.btnClienteFisico.Text = "Físico";
         this.btnClienteFisico.UseVisualStyleBackColor = false;
-        //
+        this.btnClienteFisico.Click += new System.EventHandler(this.btnClienteFisico_Click);
+        // 
         // pnlCenterLine
-        //
+        // 
         this.pnlCenterLine.Anchor = System.Windows.Forms.AnchorStyles.Top;
         this.pnlCenterLine.BackColor = System.Drawing.Color.Black;
         this.pnlCenterLine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -195,9 +195,9 @@ sealed partial class MainControl
         this.pnlCenterLine.Name = "pnlCenterLine";
         this.pnlCenterLine.Size = new System.Drawing.Size(4, 768);
         this.pnlCenterLine.TabIndex = 29;
-        //
+        // 
         // lblFornecedor
-        //
+        // 
         this.lblFornecedor.BackColor = System.Drawing.Color.DimGray;
         this.lblFornecedor.Font = new System.Drawing.Font("Arial", 12F);
         this.lblFornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -208,9 +208,9 @@ sealed partial class MainControl
         this.lblFornecedor.TabIndex = 22;
         this.lblFornecedor.Text = "Fornecedor";
         this.lblFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // MainControl
-        //
+        // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.AutoSize = true;

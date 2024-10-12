@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace PIM_IV_Forms.Forms;
+namespace PIM_IV_Forms.Forms.Panels;
 
-partial class CadastroClienteForm
+partial class CadastroClienteFisicoForm
 {
     /// <summary>
     /// Required designer variable.
@@ -153,7 +153,7 @@ partial class CadastroClienteForm
         this.btnCancelar.UseVisualStyleBackColor = true;
         this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
         //
-        // CadastroClienteForm
+        // CadastroClienteFisicoForm
         //
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,7 +171,7 @@ partial class CadastroClienteForm
         this.Controls.Add(this.txtNome);
         this.Controls.Add(this.lblSobrenome);
         this.Controls.Add(this.lblNome);
-        this.Name = "CadastroClienteForm";
+        this.Name = "CadastroClienteFisicoForm";
         this.ShowIcon = false;
         this.Text = "Gestão de Clientes";
         this.ResumeLayout(false);
