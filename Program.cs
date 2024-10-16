@@ -9,7 +9,6 @@ using Autofac;
 using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Forms;
 using PIM_IV_Forms.Forms.UserControls;
-using PIM_IV_Forms.Forms.UserControls.Cliente;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Repositories;
 
@@ -27,9 +26,9 @@ namespace PIM_IV_Forms
             var builder = new ContainerBuilder();
             builder.Register( sp => new SqlConnection(connectionString))
                 .As<IDbConnection>().InstancePerLifetimeScope();
-            builder.RegisterType<ClienteRepository>().As<IRepository<Cliente>>();
+            builder.RegisterType<ClienteFisicoRepository>().As<IRepository<ClienteFisico>>();
             builder.RegisterType<FuncionarioRepository>().As<IRepository<Funcionario>>();
-            builder.RegisterType<ClienteController>();
+            builder.RegisterType<ClienteFisicoController>();
             builder.RegisterType<FuncionarioController>();
             builder.RegisterType<ClienteControl>();
             builder.RegisterType<MainForm>();

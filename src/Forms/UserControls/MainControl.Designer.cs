@@ -102,7 +102,7 @@ sealed partial class MainControl
         this.lblCliente.Name = "lblCliente";
         this.lblCliente.Size = new System.Drawing.Size(200, 65);
         this.lblCliente.TabIndex = 23;
-        this.lblCliente.Text = "Cliente";
+        this.lblCliente.Text = "ClienteFisico";
         this.lblCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // btnMaterial

@@ -3,24 +3,20 @@ using System.Drawing;
 using System.Windows.Forms;
 using Autofac;
 using Autofac.Core.Lifetime;
+using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Forms.UserControls;
 
 namespace PIM_IV_Forms.Forms;
 
 public partial class MainForm : Form
 {
-    private readonly IComponentContext _componentContext;
-
     public MainForm(IComponentContext componentContext)
     {
         InitializeComponent();
-        _componentContext = componentContext;
-        MainControl mainControl = new MainControl(_componentContext);
+        MainControl mainControl = new MainControl(componentContext);
+        CadastroClienteFisicoControl cadastroClienteFisicoControl = new CadastroClienteFisicoControl(componentContext.Resolve<ClienteFisicoController>());
         Controls.Add(mainControl);
-
-        Rectangle workingArea = Screen.GetWorkingArea(this);
-        Size formSize = workingArea.Size;
-        Size = formSize;
+        Controls.Add(cadastroClienteFisicoControl);
     }
 
     private void MainForm_Resize(object sender, EventArgs e)

@@ -2,40 +2,37 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.ModelBinding;
 using PIM_IV_Forms.Validator;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Repositories;
 
 namespace PIM_IV_Forms.Controllers;
 
-public class ClienteController(IRepository<Cliente> clienteRepository)
+public class ClienteFisicoController(IRepository<ClienteFisico> clienteFisicoRepository)
 {
-    public async Task Create(Cliente cliente)
+    public async Task<bool> Create(ClienteFisico clienteFisico)
     {
         ClienteValidator validator = new ClienteValidator();
-        if (validator.ValidateModel(cliente))
+
+        if (validator.ValidateModel(clienteFisico))
         {
-            await clienteRepository.Add(cliente);
+            await clienteFisicoRepository.Add(clienteFisico);
+            return true;
         }
 
-        if (validator.Erros.Any())
-        {
-            foreach (var erro in validator.Erros)
-            {
-                Console.WriteLine(erro.ToString());
-            }
-        }
+        return false;
     }
 
+    /* Método de listagem
     public async Task Index()
     {
-        var clientes = await clienteRepository.GetAll();
+        var clientesFisicos = await clienteRepository.GetAll();
     }
+    */
 
     /*
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, Cliente cliente)
+    public async Task<IActionResult> Edit(int id, ClienteFisico cliente)
     {
         if (id != cliente.Id)
         {
