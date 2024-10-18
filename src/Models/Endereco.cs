@@ -9,4 +9,11 @@ public class Endereco
     public string Cidade { get; set; }
     public string Uf { get; set; }
     public string Cep { get; set; }
+
+    public override string ToString()
+    {
+        string cepFormatado = Cep.Substring(0, 5) + "-" + Cep.Substring(5);
+
+        return $"{Logradouro}, {Numero}, {Complemento}, {Bairro}, {Cidade} - {Uf}, {cepFormatado}";
+    }
 }

@@ -31,8 +31,8 @@ public class EnderecoValidator : AbstractValidator<Endereco>
 
         RuleFor(endereco => endereco.Numero)
             .NotEmpty().WithMessage("Número é obrigatório")
-            .MaximumLength(5).WithMessage("O número deve possuir menos de 5 caracteres!")
-            .Must(ValidateNumero).WithMessage("Insira apenas números!");
+            .MaximumLength(5).WithMessage("O número do endereço deve possuir menos de 5 caracteres!")
+            .Must(ValidateNumero).WithMessage("Insira apenas números no campo Nº!");
 
         RuleFor(endereco => endereco.Complemento)
             .NotEmpty().WithMessage("Complemento é obrigatório")

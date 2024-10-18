@@ -42,7 +42,6 @@ partial class MainForm
         this.IsMdiContainer = true;
         this.MaximizeBox = false;
         this.Name = "MainForm";
-        this.ShowIcon = false;
         this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         this.LocationChanged += new System.EventHandler(this.MainForm_Resize);
         this.Resize += new System.EventHandler(this.MainForm_Resize);

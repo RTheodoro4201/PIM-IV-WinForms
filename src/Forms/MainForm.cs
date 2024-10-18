@@ -23,4 +23,15 @@ public partial class MainForm : Form
     {
         WindowState = FormWindowState.Maximized;
     }
+
+    public void MainForm_Load(object sender, EventArgs e)
+    {
+        foreach (var control in Controls)
+        {
+            if (DialogResult == DialogResult.Cancel)
+            {
+
+            }
+        }
+    }
 }

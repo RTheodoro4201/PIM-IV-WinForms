@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using PIM_IV_Forms.Validator;
 using PIM_IV_Forms.Models;
@@ -12,9 +9,10 @@ public class ClienteFisicoController(IRepository<ClienteFisico> clienteFisicoRep
 {
     public async Task<bool> Create(ClienteFisico clienteFisico)
     {
-        ClienteValidator validator = new ClienteValidator();
+        var validator = new ClienteFisicoValidator();
+        var validationResult = await validator.ValidateAsync(clienteFisico);
 
-        if (validator.ValidateModel(clienteFisico))
+        if (validationResult.IsValid)
         {
             await clienteFisicoRepository.Add(clienteFisico);
             return true;
