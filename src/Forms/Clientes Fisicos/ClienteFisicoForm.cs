@@ -36,7 +36,7 @@ public partial class ClienteFisicoForm : Form
         else
         {
             MessageBox.Show("Houve um erro ao receber os dados do servidor");
-
+            this.Close();
         }
     }
 
@@ -45,6 +45,8 @@ public partial class ClienteFisicoForm : Form
         int clienteId = Convert.ToInt32(this.dataGridClientes.SelectedRows[0].Cells["id_cliente"].Value);
         var alteraClienteFisicoForm = new AlteraClienteFisicoForm(_clienteFisicoController, clienteId);
         alteraClienteFisicoForm.ShowDialog();
+
+        ClienteFisicoForm_Load(this, null);
     }
 
     private void btnCadastrar_Click(object sender, EventArgs e)
@@ -52,6 +54,7 @@ public partial class ClienteFisicoForm : Form
         var cadastroClienteFisicoForm = new CadastroClienteFisicoForm(_clienteFisicoController);
         cadastroClienteFisicoForm.ShowDialog();
 
+        ClienteFisicoForm_Load(this, null);
     }
 
     private void btnExcluir_Click(object sender, EventArgs e)
@@ -59,6 +62,8 @@ public partial class ClienteFisicoForm : Form
         int clienteId = Convert.ToInt32(this.dataGridClientes.SelectedRows[0].Cells["id_cliente"].Value);
         var excluirClienteFisicoForm = new ExcluirClienteFisicoForm(_clienteFisicoController, clienteId);
         excluirClienteFisicoForm.ShowDialog();
+
+        ClienteFisicoForm_Load(this, null);
     }
 
     private void btnFechar_Click(object sender, EventArgs e)
@@ -71,5 +76,7 @@ public partial class ClienteFisicoForm : Form
         int clienteId = Convert.ToInt32(this.dataGridClientes.SelectedRows[0].Cells["id_cliente"].Value);
         var consultaClienteFisicoForm = new ConsultaClienteFisicoForm(_clienteFisicoController, clienteId);
         consultaClienteFisicoForm.ShowDialog();
+
+        ClienteFisicoForm_Load(this, null);
     }
 }

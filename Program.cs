@@ -20,7 +20,7 @@ namespace PIM_IV_Forms
         static void Main()
         {
             var builder = new ContainerBuilder();
-            builder.Register( sp => new SqlConnection(connectionString))
+            builder.Register( _ => new SqlConnection(connectionString))
                 .As<IDbConnection>().InstancePerLifetimeScope();
             builder.RegisterType<ClienteFisicoRepository>().As<IRepository<ClienteFisico>>();
             builder.RegisterType<FuncionarioRepository>().As<IRepository<Funcionario>>();

@@ -30,55 +30,46 @@ public partial class CadastroClienteFisicoForm : Form
                 Cep = txtCep.Text,
             };
 
-            var cliente = new ClienteFisico()
-            {
-                Nome_Completo = txtNome.Text,
-                Rg = txtRg.Text,
-                Cpf = txtCpf.Text,
-                Email = txtEmail.Text,
-                Telefone = txtTelefone.Text,
-                Endereco = endereco.ToString(),
-                Data_De_Nascimento = dateDataNascimento.Value,
-            };
-
-            if (await _clienteFisicoController.Create(cliente))
-            {
-                MessageBox.Show("Cliente cadastrado com sucesso!");
-                LimparCampos();
-            }
-
-            else
-            {
-                var validator = new ClienteFisicoValidator();
-                var validationResult = await validator.ValidateAsync(cliente);
-                MessageBox.Show("Cadastro de Cliente inválido!");
-
-                foreach (var erro in validationResult.Errors)
+                var cliente = new ClienteFisico()
                 {
-                    MessageBox.Show(erro.ErrorMessage);
+                    Nome_Completo = txtNome.Text,
+                    Rg = txtRg.Text,
+                    Cpf = txtCpf.Text,
+                    Email = txtEmail.Text,
+                    Telefone = txtTelefone.Text,
+                    Endereco = endereco.ToString(),
+                    Data_De_Nascimento = dateDataNascimento.Value,
+                };
+
+                if (await _clienteFisicoController.Create(cliente, endereco))
+                {
+                    MessageBox.Show("Cliente cadastrado com sucesso!");
+                    this.Close();
                 }
-            }
+
+                else
+                {
+                    var clienteValidator = new ClienteFisicoValidator();
+                    var clienteValidationResult = await clienteValidator.ValidateAsync(cliente);
+                    var enderecoValidator = new EnderecoValidator();
+                    var enderecoValidationResult = await enderecoValidator.ValidateAsync(endereco);
+                    MessageBox.Show("Cadastro de Cliente inválido!");
+
+                    foreach (var erro in clienteValidationResult.Errors)
+                    {
+                        MessageBox.Show(erro.ErrorMessage);
+                    }
+
+                    foreach (var erro in enderecoValidationResult.Errors)
+                    {
+                        MessageBox.Show(erro.ErrorMessage);
+                    }
+                }
         }
         catch (Exception ex)
         {
             MessageBox.Show("Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.");
             MessageBox.Show(ex.Message);
-        }
-    }
-
-    private void LimparCampos()
-    {
-        foreach (Control control in this.Controls)
-        {
-            switch (control)
-            {
-                case TextBox box:
-                    box.Clear();
-                    break;
-                case ComboBox box:
-                    box.SelectedIndex = -1;
-                    break;
-            }
         }
     }
 

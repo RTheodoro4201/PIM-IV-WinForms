@@ -61,8 +61,14 @@ public class EnderecoValidator : AbstractValidator<Endereco>
 
     private static bool ValidateCep(string cep)
     {
-        // Verifica se o CEP tem 8 dígitos e se é numérico
-        return Regex.IsMatch(cep, @"^\d{8}$");
+        // Verifica se o CEP tem 8 dígitos e é numérico caso não ele ainda não tenha sido formatado (Cadastro inicial)
+        if (!cep.Contains("-"))
+        {
+            return Regex.IsMatch(cep, @"^\d{8}$");
+        }
+
+        // Verifica se o CEP tem 8 dígitos e é numérico caso ele já tenha sido formatado (Alteração)
+        return Regex.IsMatch(cep, @"^\d{5}-\d{3}$");
     }
 
     private bool ValidateUf(string uf)
