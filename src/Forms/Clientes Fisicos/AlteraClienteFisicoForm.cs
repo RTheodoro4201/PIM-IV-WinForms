@@ -87,7 +87,7 @@ public partial class AlteraClienteFisicoForm : Form
                 Data_De_Nascimento = dateDataNascimento.Value,
             };
 
-            if (await _clienteFisicoController.Edit(cliente))
+            if (await _clienteFisicoController.Edit(cliente, endereco))
             {
                 MessageBox.Show("Cliente alterado com sucesso!");
                 this.Close();
@@ -95,11 +95,18 @@ public partial class AlteraClienteFisicoForm : Form
 
             else
             {
-                var validator = new ClienteFisicoValidator();
-                var validationResult = await validator.ValidateAsync(cliente);
-                MessageBox.Show("Dados de Alteração inválidos!");
+                var clienteValidator = new ClienteFisicoValidator();
+                var clienteValidationResult = await clienteValidator.ValidateAsync(cliente);
+                var enderecoValidator = new EnderecoValidator();
+                var enderecoValidationResult = await enderecoValidator.ValidateAsync(endereco);
+                MessageBox.Show("Dados de alteração inválidos!");
 
-                foreach (var erro in validationResult.Errors)
+                foreach (var erro in clienteValidationResult.Errors)
+                {
+                    MessageBox.Show(erro.ErrorMessage);
+                }
+
+                foreach (var erro in enderecoValidationResult.Errors)
                 {
                     MessageBox.Show(erro.ErrorMessage);
                 }

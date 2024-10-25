@@ -8,12 +8,14 @@ namespace PIM_IV_Forms.Controllers;
 
 public class ClienteFisicoController(IRepository<ClienteFisico> clienteFisicoRepository)
 {
-    public async Task<bool> Create(ClienteFisico cliente)
+    public async Task<bool> Create(ClienteFisico cliente, Endereco enderecoCliente)
     {
-        var validator = new ClienteFisicoValidator();
-        var validationResult = await validator.ValidateAsync(cliente);
+        var clienteValidator = new ClienteFisicoValidator();
+        var enderecoValidator = new EnderecoValidator();
+        var enderecoValidationResult = await enderecoValidator.ValidateAsync(enderecoCliente);
+        var clienteValidationResult = await clienteValidator.ValidateAsync(cliente);
 
-        if (validationResult.IsValid)
+        if (enderecoValidationResult.IsValid && clienteValidationResult.IsValid)
         {
             await clienteFisicoRepository.Add(cliente);
             return true;
@@ -34,12 +36,14 @@ public class ClienteFisicoController(IRepository<ClienteFisico> clienteFisicoRep
         return cliente;
     }
 
-    public async Task<bool> Edit(ClienteFisico cliente)
+    public async Task<bool> Edit(ClienteFisico cliente, Endereco enderecoCliente)
     {
-        var validator = new ClienteFisicoValidator();
-        var validationResult = await validator.ValidateAsync(cliente);
+        var clienteValidator = new ClienteFisicoValidator();
+        var enderecoValidator = new EnderecoValidator();
+        var enderecoValidationResult = await enderecoValidator.ValidateAsync(enderecoCliente);
+        var clienteValidationResult = await clienteValidator.ValidateAsync(cliente);
 
-        if (validationResult.IsValid)
+        if (enderecoValidationResult.IsValid && clienteValidationResult.IsValid)
         {
             await clienteFisicoRepository.Update(cliente);
             return true;
