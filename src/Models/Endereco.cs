@@ -1,4 +1,7 @@
-﻿namespace PIM_IV_Forms.Models;
+﻿using System;
+using System.Windows.Forms;
+
+namespace PIM_IV_Forms.Models;
 
 public class Endereco
 {
@@ -10,10 +13,43 @@ public class Endereco
     public string Uf { get; set; }
     public string Cep { get; set; }
 
+    public static Endereco ToEndereco(string endereco)
+    {
+        try
+        {
+            var enderecoSeparado = endereco.Split(',');
+
+            var enderecoFormatado = new Endereco
+            {
+                Logradouro = enderecoSeparado[0],
+                Numero = enderecoSeparado[1],
+                Complemento = enderecoSeparado[2],
+                Bairro = enderecoSeparado[3],
+                Cidade = enderecoSeparado[4],
+                Uf = enderecoSeparado[5],
+                Cep = enderecoSeparado[6],
+            };
+
+            return enderecoFormatado;
+        }
+        catch (Exception e)
+        {
+            MessageBox.Show("Ocorreu um erro ao tentar converter os endereços!\n" + e.Message);
+            throw;
+        }
+    }
+
     public override string ToString()
     {
-        string cepFormatado = Cep.Substring(0, 5) + "-" + Cep.Substring(5);
+        if (!Cep.Contains("-"))
+        {
+            string cepFormatado = Cep.Substring(0, 5) + "-" + Cep.Substring(5);
+            return $"{Logradouro},{Numero},{Complemento},{Bairro},{Cidade},{Uf},{cepFormatado}";
+        }
 
-        return $"{Logradouro}, {Numero}, {Complemento}, {Bairro}, {Cidade} - {Uf}, {cepFormatado}";
+        else
+        {
+            return $"{Logradouro},{Numero},{Complemento},{Bairro},{Cidade},{Uf},{Cep}";
+        }
     }
 }

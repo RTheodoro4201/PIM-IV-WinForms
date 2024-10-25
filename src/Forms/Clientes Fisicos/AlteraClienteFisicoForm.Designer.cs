@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace PIM_IV_Forms.Forms.UserControls;
+namespace PIM_IV_Forms.Forms.Clientes_Fisicos;
 
-partial class CadastroClienteFisicoControl
+partial class AlteraClienteFisicoForm
 {
     /// <summary>
     /// Required designer variable.
@@ -31,6 +31,7 @@ partial class CadastroClienteFisicoControl
     /// </summary>
     private void InitializeComponent()
     {
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlteraClienteFisicoForm));
         this.txtNome = new System.Windows.Forms.TextBox();
         this.txtComplemento = new System.Windows.Forms.TextBox();
         this.txtCpf = new System.Windows.Forms.TextBox();
@@ -59,238 +60,180 @@ partial class CadastroClienteFisicoControl
         this.lblUf = new System.Windows.Forms.Label();
         this.cbUf = new System.Windows.Forms.ComboBox();
         this.lblDataNascimento = new System.Windows.Forms.Label();
+        this.lblIdCliente = new System.Windows.Forms.Label();
+        this.txtIdCliente = new System.Windows.Forms.TextBox();
         this.SuspendLayout();
         // 
         // txtNome
         // 
-        this.txtNome.Location = new System.Drawing.Point(217, 96);
+        resources.ApplyResources(this.txtNome, "txtNome");
         this.txtNome.Name = "txtNome";
-        this.txtNome.Size = new System.Drawing.Size(400, 20);
-        this.txtNome.TabIndex = 0;
         // 
         // txtComplemento
         // 
-        this.txtComplemento.Location = new System.Drawing.Point(217, 200);
+        resources.ApplyResources(this.txtComplemento, "txtComplemento");
         this.txtComplemento.Name = "txtComplemento";
-        this.txtComplemento.Size = new System.Drawing.Size(113, 20);
-        this.txtComplemento.TabIndex = 1;
         // 
         // txtCpf
         // 
-        this.txtCpf.Location = new System.Drawing.Point(216, 122);
+        resources.ApplyResources(this.txtCpf, "txtCpf");
         this.txtCpf.Name = "txtCpf";
-        this.txtCpf.Size = new System.Drawing.Size(113, 20);
-        this.txtCpf.TabIndex = 3;
         // 
         // txtTelefone
         // 
-        this.txtTelefone.Location = new System.Drawing.Point(637, 148);
+        resources.ApplyResources(this.txtTelefone, "txtTelefone");
         this.txtTelefone.Name = "txtTelefone";
-        this.txtTelefone.Size = new System.Drawing.Size(113, 20);
-        this.txtTelefone.TabIndex = 5;
-        //
+        // 
         // btnSalvar
-        //
+        // 
         this.btnSalvar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-        this.btnSalvar.Location = new System.Drawing.Point(271, 288);
+        resources.ApplyResources(this.btnSalvar, "btnSalvar");
         this.btnSalvar.Name = "btnSalvar";
-        this.btnSalvar.Size = new System.Drawing.Size(113, 35);
-        this.btnSalvar.TabIndex = 8;
-        this.btnSalvar.Text = "Salvar";
         this.btnSalvar.UseVisualStyleBackColor = true;
         this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-        //
+        // 
         // btnCancelar
-        //
+        // 
         this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-        this.btnCancelar.Location = new System.Drawing.Point(412, 288);
+        resources.ApplyResources(this.btnCancelar, "btnCancelar");
         this.btnCancelar.Name = "btnCancelar";
-        this.btnCancelar.Size = new System.Drawing.Size(113, 35);
-        this.btnCancelar.TabIndex = 9;
-        this.btnCancelar.Text = "Cancelar";
         this.btnCancelar.UseVisualStyleBackColor = true;
-        //
+        this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+        // 
         // txtRg
-        //
-        this.txtRg.Location = new System.Drawing.Point(637, 122);
+        // 
+        resources.ApplyResources(this.txtRg, "txtRg");
         this.txtRg.Name = "txtRg";
-        this.txtRg.Size = new System.Drawing.Size(113, 20);
-        this.txtRg.TabIndex = 2;
-        //
+        // 
         // txtEmail
-        //
-        this.txtEmail.Location = new System.Drawing.Point(217, 148);
+        // 
+        resources.ApplyResources(this.txtEmail, "txtEmail");
         this.txtEmail.Name = "txtEmail";
-        this.txtEmail.Size = new System.Drawing.Size(113, 20);
-        this.txtEmail.TabIndex = 4;
-        //
+        // 
         // txtLogradouro
-        //
-        this.txtLogradouro.Location = new System.Drawing.Point(217, 174);
+        // 
+        resources.ApplyResources(this.txtLogradouro, "txtLogradouro");
         this.txtLogradouro.Name = "txtLogradouro";
-        this.txtLogradouro.Size = new System.Drawing.Size(113, 20);
-        this.txtLogradouro.TabIndex = 6;
-        //
+        // 
         // dateDataNascimento
-        //
-        this.dateDataNascimento.CustomFormat = "";
+        // 
+        resources.ApplyResources(this.dateDataNascimento, "dateDataNascimento");
         this.dateDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        this.dateDataNascimento.Location = new System.Drawing.Point(637, 252);
         this.dateDataNascimento.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
         this.dateDataNascimento.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
         this.dateDataNascimento.Name = "dateDataNascimento";
-        this.dateDataNascimento.Size = new System.Drawing.Size(113, 20);
-        this.dateDataNascimento.TabIndex = 7;
         this.dateDataNascimento.Value = new System.DateTime(2002, 10, 13, 0, 0, 0, 0);
         this.dateDataNascimento.ValueChanged += new System.EventHandler(this.dateDataNascimento_ValueChanged);
-        //
+        // 
         // txtNumero
-        //
-        this.txtNumero.Location = new System.Drawing.Point(637, 174);
+        // 
+        resources.ApplyResources(this.txtNumero, "txtNumero");
         this.txtNumero.Name = "txtNumero";
-        this.txtNumero.Size = new System.Drawing.Size(113, 20);
-        this.txtNumero.TabIndex = 10;
-        //
+        // 
         // lblNome
-        //
-        this.lblNome.Location = new System.Drawing.Point(95, 100);
+        // 
+        resources.ApplyResources(this.lblNome, "lblNome");
         this.lblNome.Name = "lblNome";
-        this.lblNome.Size = new System.Drawing.Size(116, 20);
-        this.lblNome.TabIndex = 11;
-        this.lblNome.Text = "Nome";
-        //
+        // 
         // lblTelefone
-        //
-        this.lblTelefone.Location = new System.Drawing.Point(375, 148);
+        // 
+        resources.ApplyResources(this.lblTelefone, "lblTelefone");
         this.lblTelefone.Name = "lblTelefone";
-        this.lblTelefone.Size = new System.Drawing.Size(123, 20);
-        this.lblTelefone.TabIndex = 14;
-        this.lblTelefone.Text = "Telefone";
-        //
+        // 
         // lblEmail
-        //
-        this.lblEmail.Location = new System.Drawing.Point(95, 151);
+        // 
+        resources.ApplyResources(this.lblEmail, "lblEmail");
         this.lblEmail.Name = "lblEmail";
-        this.lblEmail.Size = new System.Drawing.Size(116, 20);
-        this.lblEmail.TabIndex = 13;
-        this.lblEmail.Text = "Email";
-        //
+        // 
         // lblCpf
-        //
-        this.lblCpf.Location = new System.Drawing.Point(95, 125);
+        // 
+        resources.ApplyResources(this.lblCpf, "lblCpf");
         this.lblCpf.Name = "lblCpf";
-        this.lblCpf.Size = new System.Drawing.Size(115, 20);
-        this.lblCpf.TabIndex = 16;
-        this.lblCpf.Text = "CPF";
-        //
+        // 
         // lblRg
-        //
-        this.lblRg.Location = new System.Drawing.Point(375, 125);
+        // 
+        resources.ApplyResources(this.lblRg, "lblRg");
         this.lblRg.Name = "lblRg";
-        this.lblRg.Size = new System.Drawing.Size(123, 20);
-        this.lblRg.TabIndex = 15;
-        this.lblRg.Text = "RG";
-        //
+        // 
         // lblComplemento
-        //
-        this.lblComplemento.Location = new System.Drawing.Point(95, 203);
+        // 
+        resources.ApplyResources(this.lblComplemento, "lblComplemento");
         this.lblComplemento.Name = "lblComplemento";
-        this.lblComplemento.Size = new System.Drawing.Size(116, 20);
-        this.lblComplemento.TabIndex = 20;
-        this.lblComplemento.Text = "Complemento";
-        //
+        // 
         // lblLogradouro
-        //
-        this.lblLogradouro.Location = new System.Drawing.Point(95, 177);
+        // 
+        resources.ApplyResources(this.lblLogradouro, "lblLogradouro");
         this.lblLogradouro.Name = "lblLogradouro";
-        this.lblLogradouro.Size = new System.Drawing.Size(116, 20);
-        this.lblLogradouro.TabIndex = 19;
-        this.lblLogradouro.Text = "Logradouro";
-        //
+        // 
         // lblNum
-        //
-        this.lblNum.Location = new System.Drawing.Point(375, 177);
+        // 
+        resources.ApplyResources(this.lblNum, "lblNum");
         this.lblNum.Name = "lblNum";
-        this.lblNum.Size = new System.Drawing.Size(123, 20);
-        this.lblNum.TabIndex = 18;
-        this.lblNum.Text = "Nº";
-        //
+        // 
         // lblBairro
-        //
-        this.lblBairro.Location = new System.Drawing.Point(375, 206);
+        // 
+        resources.ApplyResources(this.lblBairro, "lblBairro");
         this.lblBairro.Name = "lblBairro";
-        this.lblBairro.Size = new System.Drawing.Size(123, 20);
-        this.lblBairro.TabIndex = 17;
-        this.lblBairro.Text = "Bairro";
-        //
+        // 
         // txtBairro
-        //
-        this.txtBairro.Location = new System.Drawing.Point(637, 200);
+        // 
+        resources.ApplyResources(this.txtBairro, "txtBairro");
         this.txtBairro.Name = "txtBairro";
-        this.txtBairro.Size = new System.Drawing.Size(113, 20);
-        this.txtBairro.TabIndex = 22;
-        //
+        // 
         // txtCidade
-        //
-        this.txtCidade.Location = new System.Drawing.Point(217, 226);
+        // 
+        resources.ApplyResources(this.txtCidade, "txtCidade");
         this.txtCidade.Name = "txtCidade";
-        this.txtCidade.Size = new System.Drawing.Size(113, 20);
-        this.txtCidade.TabIndex = 23;
-        //
+        // 
         // txtCep
-        //
-        this.txtCep.Location = new System.Drawing.Point(217, 252);
+        // 
+        resources.ApplyResources(this.txtCep, "txtCep");
         this.txtCep.Name = "txtCep";
-        this.txtCep.Size = new System.Drawing.Size(113, 20);
-        this.txtCep.TabIndex = 24;
-        //
+        // 
         // lblCep
-        //
-        this.lblCep.Location = new System.Drawing.Point(95, 252);
+        // 
+        resources.ApplyResources(this.lblCep, "lblCep");
         this.lblCep.Name = "lblCep";
-        this.lblCep.Size = new System.Drawing.Size(116, 20);
-        this.lblCep.TabIndex = 25;
-        this.lblCep.Text = "CEP";
-        //
+        // 
         // lblCidade
-        //
-        this.lblCidade.Location = new System.Drawing.Point(95, 226);
+        // 
+        resources.ApplyResources(this.lblCidade, "lblCidade");
         this.lblCidade.Name = "lblCidade";
-        this.lblCidade.Size = new System.Drawing.Size(116, 20);
-        this.lblCidade.TabIndex = 26;
-        this.lblCidade.Text = "Cidade";
-        //
+        // 
         // lblUf
-        //
-        this.lblUf.Location = new System.Drawing.Point(375, 229);
+        // 
+        resources.ApplyResources(this.lblUf, "lblUf");
         this.lblUf.Name = "lblUf";
-        this.lblUf.Size = new System.Drawing.Size(123, 20);
-        this.lblUf.TabIndex = 27;
-        this.lblUf.Text = "UF";
-        //
+        // 
         // cbUf
-        //
+        // 
         this.cbUf.FormattingEnabled = true;
-        this.cbUf.Items.AddRange(new object[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "SC", "SP", "SE", "TO" });
-        this.cbUf.Location = new System.Drawing.Point(637, 226);
+        this.cbUf.Items.AddRange(new object[] { resources.GetString("cbUf.Items"), resources.GetString("cbUf.Items1"), resources.GetString("cbUf.Items2"), resources.GetString("cbUf.Items3"), resources.GetString("cbUf.Items4"), resources.GetString("cbUf.Items5"), resources.GetString("cbUf.Items6"), resources.GetString("cbUf.Items7"), resources.GetString("cbUf.Items8"), resources.GetString("cbUf.Items9"), resources.GetString("cbUf.Items10"), resources.GetString("cbUf.Items11"), resources.GetString("cbUf.Items12"), resources.GetString("cbUf.Items13"), resources.GetString("cbUf.Items14"), resources.GetString("cbUf.Items15"), resources.GetString("cbUf.Items16"), resources.GetString("cbUf.Items17"), resources.GetString("cbUf.Items18"), resources.GetString("cbUf.Items19"), resources.GetString("cbUf.Items20"), resources.GetString("cbUf.Items21"), resources.GetString("cbUf.Items22"), resources.GetString("cbUf.Items23"), resources.GetString("cbUf.Items24"), resources.GetString("cbUf.Items25") });
+        resources.ApplyResources(this.cbUf, "cbUf");
         this.cbUf.Name = "cbUf";
-        this.cbUf.Size = new System.Drawing.Size(113, 21);
-        this.cbUf.TabIndex = 28;
-        //
+        // 
         // lblDataNascimento
-        //
-        this.lblDataNascimento.Location = new System.Drawing.Point(375, 253);
+        // 
+        resources.ApplyResources(this.lblDataNascimento, "lblDataNascimento");
         this.lblDataNascimento.Name = "lblDataNascimento";
-        this.lblDataNascimento.Size = new System.Drawing.Size(150, 20);
-        this.lblDataNascimento.TabIndex = 29;
-        this.lblDataNascimento.Text = "Data de Nascimento";
-        //
-        // CadastroClienteFisicoControl
-        //
-        this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-        this.AutoSize = true;
+        // 
+        // lblIdCliente
+        // 
+        resources.ApplyResources(this.lblIdCliente, "lblIdCliente");
+        this.lblIdCliente.Name = "lblIdCliente";
+        // 
+        // txtIdCliente
+        // 
+        resources.ApplyResources(this.txtIdCliente, "txtIdCliente");
+        this.txtIdCliente.Name = "txtIdCliente";
+        // 
+        // AlteraClienteFisicoForm
+        // 
+        resources.ApplyResources(this, "$this");
+        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.PaleGreen;
+        this.Controls.Add(this.txtIdCliente);
+        this.Controls.Add(this.lblIdCliente);
         this.Controls.Add(this.lblDataNascimento);
         this.Controls.Add(this.cbUf);
         this.Controls.Add(this.lblUf);
@@ -319,12 +262,22 @@ partial class CadastroClienteFisicoControl
         this.Controls.Add(this.txtCpf);
         this.Controls.Add(this.txtComplemento);
         this.Controls.Add(this.txtNome);
-        this.Name = "CadastroClienteFisicoControl";
-        this.Size = new System.Drawing.Size(1366, 768);
-        this.Load += new System.EventHandler(this.CadastroClienteFisicoControl_Load);
+        this.MaximizeBox = false;
+        this.Name = "AlteraClienteFisicoForm";
+        this.ShowIcon = false;
+        this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+        this.Load += new System.EventHandler(this.AlteraClienteFisicoForm_Load);
+        this.ResizeBegin += new System.EventHandler(this.ResizeForm);
+        this.ResizeEnd += new System.EventHandler(this.ResizeForm);
+        this.Move += new System.EventHandler(this.ResizeForm);
+        this.Resize += new System.EventHandler(this.ResizeForm);
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.TextBox txtIdCliente;
+
+    private System.Windows.Forms.Label lblIdCliente;
 
     private System.Windows.Forms.Label lblCep;
 

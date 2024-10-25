@@ -8,7 +8,7 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
 {
     public ClienteFisicoValidator()
     {
-        RuleFor(cliente => cliente.Nome)
+        RuleFor(cliente => cliente.Nome_Completo)
             .NotEmpty().WithMessage("O nome do cliente deve ser informado.")
             .MinimumLength(3).WithMessage("O nome deve conter ao menos 3 letras!")
             .Matches(@"^[a-zA-Zà-úÀ-Ú\s\-\']+$").WithMessage("O nome deve conter apenas letras, acentos, espaços, hífens e apóstrofos.")
@@ -32,9 +32,9 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
             .Matches(@"^\d{11}$").WithMessage("O telefone deve conter exatamente 11 dígitos!");
 
         RuleFor(cliente => cliente.Endereco)
-            .SetValidator(new EnderecoValidator());
+            .NotEmpty().WithMessage("O endereço deve ser informado.");
 
-        RuleFor(cliente => cliente.DataNascimento)
+        RuleFor(cliente => cliente.Data_De_Nascimento)
             .NotEmpty().WithMessage("A data de nascimento deve ser informada.")
             .Must(ValidateDataNascimento).WithMessage("O cliente deve possuir mais de 18 anos!");
     }
@@ -49,7 +49,7 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
 
     public bool ValidateModel(object model)
     {
-        var clienteFisico = model as ClienteFisico;
+        var clienteFisico = model as ClienteFisicoForm;
 
         if (clienteFisico == null)
         {
@@ -110,7 +110,7 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
         Erros?.Add(erro);
     }
 
-    private static bool ValidateTelefone(ClienteFisico clienteFisico)
+    private static bool ValidateTelefone(ClienteFisicoForm clienteFisico)
     {
         if (string.IsNullOrEmpty(clienteFisico.Telefone))
         {
@@ -120,7 +120,7 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
         return clienteFisico is { Telefone: not null } && Regex.IsMatch(clienteFisico.Telefone, @"^\d{11}$");
     }
 
-    private static bool ValidateRg(ClienteFisico clienteFisico)
+    private static bool ValidateRg(ClienteFisicoForm clienteFisico)
     {
         if (string.IsNullOrEmpty(clienteFisico.Rg))
         {
@@ -130,7 +130,7 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
         return (Regex.IsMatch(clienteFisico.Rg, @"^\d{9}$"));
     }
 
-    private static bool ValidateCpf(ClienteFisico clienteFisico)
+    private static bool ValidateCpf(ClienteFisicoForm clienteFisico)
     {
         if (string.IsNullOrEmpty(clienteFisico.Cpf))
         {
@@ -140,7 +140,7 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
         return (Regex.IsMatch(clienteFisico.Cpf, @"^\d{11}$"));
     }
 
-    private static bool ValidateEmail(ClienteFisico clienteFisico)
+    private static bool ValidateEmail(ClienteFisicoForm clienteFisico)
     {
         if (string.IsNullOrEmpty(clienteFisico.Email))
         {
@@ -150,7 +150,7 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
         return Regex.IsMatch(clienteFisico.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
     }
 
-    private static bool ValidateEndereco(ClienteFisico clienteFisico)
+    private static bool ValidateEndereco(ClienteFisicoForm clienteFisico)
     {
         var enderecoValidator = new EnderecoValidator();
 

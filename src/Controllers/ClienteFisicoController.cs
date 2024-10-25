@@ -1,76 +1,63 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using PIM_IV_Forms.Validator;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Repositories;
+using PIM_IV_Forms.Validator;
 
 namespace PIM_IV_Forms.Controllers;
 
 public class ClienteFisicoController(IRepository<ClienteFisico> clienteFisicoRepository)
 {
-    public async Task<bool> Create(ClienteFisico clienteFisico)
+    public async Task<bool> Create(ClienteFisico cliente)
     {
         var validator = new ClienteFisicoValidator();
-        var validationResult = await validator.ValidateAsync(clienteFisico);
+        var validationResult = await validator.ValidateAsync(cliente);
 
         if (validationResult.IsValid)
         {
-            await clienteFisicoRepository.Add(clienteFisico);
+            await clienteFisicoRepository.Add(cliente);
             return true;
         }
 
         return false;
     }
 
-    /* Método de listagem
-    public async Task Index()
+    public async Task<IEnumerable<ClienteFisico>> Index()
     {
-        var clientesFisicos = await clienteRepository.GetAll();
-    }
-    */
-
-    /*
-    [HttpPost]
-    public async Task<IActionResult> Edit(int id, ClienteFisico cliente)
-    {
-        if (id != cliente.Id)
-        {
-            return NotFound();
-        }
-
-        if (ModelState.IsValid)
-        {
-            try
-            {
-                await clienteRepository.Update(cliente);
-            }
-            catch (Exception)
-            {
-                return NotFound();
-            }
-            return RedirectToAction(nameof(Index));
-        }
-        return View(cliente);
+        var clientes = await clienteFisicoRepository.GetAll();
+        return clientes;
     }
 
-    public async Task<IActionResult> Delete(int id)
+    public async Task<ClienteFisico> SearchCliente(int clienteId)
     {
-        var cliente = await clienteRepository.GetById(id);
-
-        if (!ModelState.IsValid || cliente == null)
-        {
-            return NotFound();
-        }
-        return View(cliente);
+        var cliente = await clienteFisicoRepository.GetById(clienteId);
+        return cliente;
     }
 
-    [HttpPost, ActionName("Delete")]
-    public async Task<IActionResult> DeleteConfirmed(int id)
+    public async Task<bool> Edit(ClienteFisico cliente)
     {
-        if (ModelState.IsValid)
+        var validator = new ClienteFisicoValidator();
+        var validationResult = await validator.ValidateAsync(cliente);
+
+        if (validationResult.IsValid)
         {
-            await clienteRepository.Delete(id);
+            await clienteFisicoRepository.Update(cliente);
+            return true;
         }
-        return RedirectToAction(nameof(Index));
+
+        return false;
     }
-    */
+
+    public async Task<bool> Delete(int id)
+    {
+        var cliente = await clienteFisicoRepository.GetById(id);
+
+        if (cliente != null)
+        {
+            await clienteFisicoRepository.Delete(id);
+            return true;
+        }
+
+        return false;
+    }
 }

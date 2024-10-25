@@ -4,13 +4,12 @@ using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Validator;
 
-namespace PIM_IV_Forms.Forms.UserControls;
+namespace PIM_IV_Forms.Forms.Clientes_Fisicos;
 
-public partial class CadastroClienteFisicoControl : UserControl
+public partial class CadastroClienteFisicoForm : Form
 {
     private readonly ClienteFisicoController _clienteFisicoController;
-
-    public CadastroClienteFisicoControl(ClienteFisicoController clienteFisicoController)
+    public CadastroClienteFisicoForm(ClienteFisicoController clienteFisicoController)
     {
         InitializeComponent();
         _clienteFisicoController = clienteFisicoController;
@@ -33,13 +32,13 @@ public partial class CadastroClienteFisicoControl : UserControl
 
             var cliente = new ClienteFisico()
             {
-                Nome = txtNome.Text,
+                Nome_Completo = txtNome.Text,
                 Rg = txtRg.Text,
                 Cpf = txtCpf.Text,
                 Email = txtEmail.Text,
                 Telefone = txtTelefone.Text,
-                Endereco = endereco,
-                DataNascimento = dateDataNascimento.Value,
+                Endereco = endereco.ToString(),
+                Data_De_Nascimento = dateDataNascimento.Value,
             };
 
             if (await _clienteFisicoController.Create(cliente))
@@ -81,21 +80,24 @@ public partial class CadastroClienteFisicoControl : UserControl
                     break;
             }
         }
-
     }
 
-    private void CadastroClienteFisicoControl_Load(object sender, EventArgs e)
+    private void CadastroClienteFisicoForm_Load(object sender, EventArgs e)
     {
-        this.dateDataNascimento.Value = DateTime.Now;
+        this.WindowState = FormWindowState.Maximized;
     }
 
     private void dateDataNascimento_ValueChanged(object sender, EventArgs e)
     {
-        if (this.dateDataNascimento.Value > DateTime.Now)
+        if (this.dateDataNascimento.Value > DateTime.Now.AddYears(-18))
         {
             MessageBox.Show("Data inválida!");
-            this.dateDataNascimento.Value = DateTime.Now;
+            this.dateDataNascimento.Value = DateTime.Now.AddYears(-18);
         }
     }
 
+    private void btnCancelar_Click(object sender, EventArgs e)
+    {
+        this.Close();
+    }
 }

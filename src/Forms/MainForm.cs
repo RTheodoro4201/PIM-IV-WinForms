@@ -1,22 +1,18 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
-using Autofac;
-using Autofac.Core.Lifetime;
 using PIM_IV_Forms.Controllers;
-using PIM_IV_Forms.Forms.UserControls;
+using PIM_IV_Forms.Forms.Clientes_Fisicos;
 
 namespace PIM_IV_Forms.Forms;
 
 public partial class MainForm : Form
 {
-    public MainForm(IComponentContext componentContext)
+    private ClienteFisicoController _clienteFisicoController;
+
+    public MainForm(ClienteFisicoController clienteFisicoController)
     {
         InitializeComponent();
-        MainControl mainControl = new MainControl(componentContext);
-        CadastroClienteFisicoControl cadastroClienteFisicoControl = new CadastroClienteFisicoControl(componentContext.Resolve<ClienteFisicoController>());
-        Controls.Add(mainControl);
-        Controls.Add(cadastroClienteFisicoControl);
+        _clienteFisicoController = clienteFisicoController;
     }
 
     private void MainForm_Resize(object sender, EventArgs e)
@@ -24,14 +20,13 @@ public partial class MainForm : Form
         WindowState = FormWindowState.Maximized;
     }
 
-    public void MainForm_Load(object sender, EventArgs e)
+    private void btnClienteFisico_Click(object sender, EventArgs e)
     {
-        foreach (var control in Controls)
+        if (_clienteFisicoController != null)
         {
-            if (DialogResult == DialogResult.Cancel)
-            {
-
-            }
+            var clienteFisicoForm = new ClienteFisicoForm(_clienteFisicoController);
+            clienteFisicoForm.Show();
         }
     }
 }
+

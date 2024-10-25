@@ -21,28 +21,19 @@ public class ClienteFisicoRepository(IDbConnection dbConnection) : IRepository<C
     public async Task Add(ClienteFisico entity)
     {
         var query =
-            "INSERT INTO clientes_fisicos (nome_completo, rg, cpf, email, telefone, endereco, data_de_nascimento) VALUES (@Nome, @Rg, @Cpf, @Email, @Telefone, @Endereco, @DataNascimento)";
-        await dbConnection.ExecuteAsync(query, new
-        {
-            Nome = entity.Nome,
-            Rg = entity.Rg,
-            Cpf = entity.Cpf,
-            Email = entity.Email,
-            Telefone = entity.Telefone,
-            Endereco = entity.Endereco.ToString(),
-            DataNascimento = entity.DataNascimento
-        });
+            "INSERT INTO clientes_fisicos (nome_completo, rg, cpf, email, telefone, endereco, data_de_nascimento) VALUES (@Nome_Completo, @Rg, @Cpf, @Email, @Telefone, @Endereco, @Data_De_Nascimento)";
+        await dbConnection.ExecuteAsync(query, entity);
     }
 
     public async Task Update(ClienteFisico entity)
     {
-        var query = "UPDATE clientes_fisicos SET nome_completo = @Nome, rg = @Rg, cpf = @Cpf, email = @Email, telefone = @Telefone, endereco = @Endereco.ToString(), data_de_nascimento = @DataNascimento WHERE id_cliente = @Id";
+        var query = "UPDATE clientes_fisicos SET nome_completo = @Nome_Completo, rg = @Rg, cpf = @Cpf, email = @Email, telefone = @Telefone, endereco = @Endereco, data_de_nascimento = @Data_De_Nascimento WHERE id_cliente = @Id_Cliente";
         await dbConnection.ExecuteAsync(query, entity);
     }
 
     public async Task Delete(int id)
     {
-        await dbConnection.ExecuteAsync("DELETE FROM clientes_fisicos WHERE id_cliente = @Id", new { Id = id });
+        await dbConnection.ExecuteAsync("DELETE FROM clientes_fisicos WHERE id_cliente = @Id_Cliente", new { Id_Cliente = id });
     }
 
 }
