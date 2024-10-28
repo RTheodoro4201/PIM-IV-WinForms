@@ -100,6 +100,36 @@
         <Compile Include="src\Forms\Clientes Fisicos\ExcluirClienteFisicoForm.Designer.cs">
           <DependentUpon>ExcluirClienteFisicoForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="src\Forms\Funcionarios\AlteraFuncionarioForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Funcionarios\AlteraFuncionarioForm.Designer.cs">
+          <DependentUpon>AlteraFuncionarioForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Funcionarios\CadastroFuncionarioForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Funcionarios\CadastroFuncionarioForm.Designer.cs">
+          <DependentUpon>CadastroFuncionarioForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Funcionarios\FuncionarioForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Funcionarios\FuncionarioForm.Designer.cs">
+          <DependentUpon>FuncionarioForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Funcionarios\ConsultaFuncionarioForm.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Funcionarios\ConsultaFuncionarioForm.Designer.cs">
+          <DependentUpon>ConsultaFuncionarioForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Funcionarios\ExcluirFuncionarioForm.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Funcionarios\ExcluirFuncionarioForm.Designer.cs">
+          <DependentUpon>ExcluirFuncionarioForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="src\Forms\MainForm.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -114,6 +144,7 @@
         <Compile Include="src\Repositories\IRepository.cs" />
         <Compile Include="src\Validator\ClienteValidator.cs" />
         <Compile Include="src\Validator\EnderecoValidator.cs" />
+        <Compile Include="src\Validator\FuncionarioValidator.cs" />
         <EmbeddedResource Include="Properties\Resources.en-us.resx">
           <DependentUpon>Resources.resx</DependentUpon>
         </EmbeddedResource>
@@ -140,6 +171,21 @@
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\Clientes Fisicos\ExcluirClienteFisicoForm.resx">
           <DependentUpon>ExcluirClienteFisicoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Funcionarios\AlteraFuncionarioForm.resx">
+          <DependentUpon>AlteraFuncionarioForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Funcionarios\CadastroFuncionarioForm.resx">
+          <DependentUpon>CadastroFuncionarioForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Funcionarios\FuncionarioForm.resx">
+          <DependentUpon>FuncionarioForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Funcionarios\ConsultaFuncionarioForm.resx">
+          <DependentUpon>ConsultaFuncionarioForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Funcionarios\ExcluirFuncionarioForm.resx">
+          <DependentUpon>ExcluirFuncionarioForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\MainForm.resx">
           <DependentUpon>MainForm.cs</DependentUpon>
@@ -239,11 +285,6 @@
       <PackageReference Include="System.ValueTuple" Version="4.5.0" />
       <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.0" />
       <PackageReference Include="System.Xml.XDocument" Version="4.3.0" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="src\Forms\Utils\" />
-      <Folder Include="src\Interfaces\" />
-      <Folder Include="src\Libraries\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>

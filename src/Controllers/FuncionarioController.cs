@@ -1,89 +1,67 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Repositories;
+using PIM_IV_Forms.Validator;
 
-namespace PIM_IV_Forms.Controllers
+namespace PIM_IV_Forms.Controllers;
+
+public class FuncionarioController(IRepository<Funcionario> funcionarioRepository)
 {
-    public class FuncionarioController(IRepository<Funcionario> funcionarioRepository)
+    public async Task<bool> Create(Funcionario funcionario, Endereco endereco)
     {
-        /*
-        public async Task<IActionResult> Index()
+        var funcionarioValidator = new FuncionarioValidator();
+        var enderecoValidator = new EnderecoValidator();
+        var enderecoValidationResult = await enderecoValidator.ValidateAsync(endereco);
+        var clienteValidationResult = await funcionarioValidator.ValidateAsync(funcionario);
+
+        if (enderecoValidationResult.IsValid && clienteValidationResult.IsValid)
         {
-            var funcionarios = await funcionarioRepository.GetAll();
-            return View(funcionarios);
+            await funcionarioRepository.Add(funcionario);
+            return true;
         }
 
-        public async Task<IActionResult> Create()
+        return false;
+    }
+
+    public async Task<IEnumerable<Funcionario>> Index()
+    {
+        var funcionarios = await funcionarioRepository.GetAll();
+        return funcionarios;
+    }
+
+    public async Task<Funcionario> SearchFuncionario(int funcionarioId)
+    {
+        var funcionario = await funcionarioRepository.GetById(funcionarioId);
+        return funcionario;
+    }
+
+    public async Task<bool> Edit(Funcionario funcionario, Endereco endereco)
+    {
+        var funcionarioValidator = new FuncionarioValidator();
+        var enderecoValidator = new EnderecoValidator();
+        var enderecoValidationResult = await enderecoValidator.ValidateAsync(endereco);
+        var funcionarioValidationResult = await funcionarioValidator.ValidateAsync(funcionario);
+
+        if (enderecoValidationResult.IsValid && funcionarioValidationResult.IsValid)
         {
-            return View();
+            await funcionarioRepository.Update(funcionario);
+            return true;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(Funcionario funcionario)
-        {
-            if (ModelState.IsValid)
-            {
-                await funcionarioRepository.Add(funcionario);
-                return RedirectToAction(nameof(Index));
-            }
+        return false;
+    }
 
-            return View(funcionario);
+    public async Task<bool> Delete(int id)
+    {
+        var funcionario = await funcionarioRepository.GetById(id);
+
+        if (funcionario != null)
+        {
+            await funcionarioRepository.Delete(id);
+            return true;
         }
 
-        public async Task<IActionResult> Edit(int id)
-        {
-            var funcionario = await funcionarioRepository.GetById(id);
-
-            if (!ModelState.IsValid || funcionario == null)
-            {
-                return NotFound();
-            }
-
-            return View(funcionario);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Edit(int id, Funcionario funcionario)
-        {
-            if (id != funcionario.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    await funcionarioRepository.Update(funcionario);
-                }
-                catch (Exception)
-                {
-                    return NotFound();
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(funcionario);
-        }
-
-        public async Task<IActionResult> Delete(int id)
-        {
-            var funcionario = await funcionarioRepository.GetById(id);
-
-            if (!ModelState.IsValid || funcionario == null)
-            {
-                return NotFound();
-            }
-            return View(funcionario);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Delete(int id, Funcionario funcionario)
-        {
-            if (ModelState.IsValid)
-            {
-                await funcionarioRepository.Delete(id);
-            }
-            return RedirectToAction(nameof(Index));
-        }
-        */
+        return false;
     }
 }
