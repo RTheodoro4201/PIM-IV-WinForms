@@ -129,7 +129,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblFornecedor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 105</value>
+    <value>234, 65</value>
   </data>
   <data name="lblFornecedor.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -160,7 +160,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblFornecedor.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -280,7 +280,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnFornecedorJurídico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -292,7 +292,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnFornecedorJurídico.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 215</value>
+    <value>363, 175</value>
   </data>
   <data name="btnFornecedorJurídico.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -315,104 +315,38 @@
   <data name="&gt;&gt;btnFornecedorJurídico.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="btnClienteFisico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnCliente.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnClienteFisico.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnCliente.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
-  <data name="btnClienteFisico.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnClienteFisico.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 435</value>
+  <data name="btnCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 285</value>
   </data>
-  <data name="btnClienteFisico.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnCliente.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
   </data>
-  <data name="btnClienteFisico.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnCliente.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="btnClienteFisico.Text" xml:space="preserve">
-    <value>Físico</value>
-  </data>
-  <data name="&gt;&gt;btnClienteFisico.Name" xml:space="preserve">
-    <value>btnClienteFisico</value>
-  </data>
-  <data name="&gt;&gt;btnClienteFisico.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClienteFisico.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnClienteFisico.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lblCliente.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt</value>
-  </data>
-  <data name="lblCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblCliente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 325</value>
-  </data>
-  <data name="lblCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 65</value>
-  </data>
-  <data name="lblCliente.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="lblCliente.Text" xml:space="preserve">
+  <data name="btnCliente.Text" xml:space="preserve">
     <value>Cliente</value>
   </data>
-  <data name="lblCliente.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+  <data name="&gt;&gt;btnCliente.Name" xml:space="preserve">
+    <value>btnCliente</value>
   </data>
-  <data name="&gt;&gt;lblCliente.Name" xml:space="preserve">
-    <value>lblCliente</value>
-  </data>
-  <data name="&gt;&gt;lblCliente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCliente.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblCliente.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btnClienteJuridico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClienteJuridico.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt</value>
-  </data>
-  <data name="btnClienteJuridico.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClienteJuridico.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 435</value>
-  </data>
-  <data name="btnClienteJuridico.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 65</value>
-  </data>
-  <data name="btnClienteJuridico.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="btnClienteJuridico.Text" xml:space="preserve">
-    <value>Jurídico</value>
-  </data>
-  <data name="&gt;&gt;btnClienteJuridico.Name" xml:space="preserve">
-    <value>btnClienteJuridico</value>
-  </data>
-  <data name="&gt;&gt;btnClienteJuridico.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnCliente.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnClienteJuridico.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnCliente.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnClienteJuridico.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;btnCliente.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="btnFornecedorFisico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -424,7 +358,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnFornecedorFisico.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 215</value>
+    <value>118, 175</value>
   </data>
   <data name="btnFornecedorFisico.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -445,40 +379,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnFornecedorFisico.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
-  <data name="lblMaterial.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnMaterial.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="lblMaterial.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnMaterial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
-  <data name="lblMaterial.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnMaterial.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lblMaterial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 555</value>
+  <data name="btnMaterial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 395</value>
   </data>
-  <data name="lblMaterial.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnMaterial.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
   </data>
-  <data name="lblMaterial.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnMaterial.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="lblMaterial.Text" xml:space="preserve">
+  <data name="btnMaterial.Text" xml:space="preserve">
     <value>Material</value>
   </data>
-  <data name="&gt;&gt;lblMaterial.Name" xml:space="preserve">
-    <value>lblMaterial</value>
+  <data name="&gt;&gt;btnMaterial.Name" xml:space="preserve">
+    <value>btnMaterial</value>
   </data>
-  <data name="&gt;&gt;lblMaterial.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnMaterial.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblMaterial.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnMaterial.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblMaterial.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;btnMaterial.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -502,7 +436,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnCultura.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -514,7 +448,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCultura.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 555</value>
+    <value>363, 395</value>
   </data>
   <data name="btnCultura.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -535,6 +469,39 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCultura.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnFuncionario.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnFuncionario.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt</value>
+  </data>
+  <data name="btnFuncionario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnFuncionario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 285</value>
+  </data>
+  <data name="btnFuncionario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 65</value>
+  </data>
+  <data name="btnFuncionario.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="btnFuncionario.Text" xml:space="preserve">
+    <value>Funcionário</value>
+  </data>
+  <data name="&gt;&gt;btnFuncionario.Name" xml:space="preserve">
+    <value>btnFuncionario</value>
+  </data>
+  <data name="&gt;&gt;btnFuncionario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFuncionario.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnFuncionario.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

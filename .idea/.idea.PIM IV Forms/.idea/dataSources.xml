@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="PIM_IV@rtheodoro" uuid="56442d19-e18f-4885-8825-f81e2d43571c">
+    <data-source source="LOCAL" name="PIM_IV@RTHEODORO" uuid="e90be12c-42ca-4b9d-bd1e-4bbace89ae30">
       <driver-ref>sqlserver.jb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
-      <jdbc-url>Server=rtheodoro\localhost;Database=PIM_IV</jdbc-url>
+      <jdbc-url>Server=RTHEODORO\LOCALHOST;Database=PIM_IV</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

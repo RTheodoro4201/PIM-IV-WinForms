@@ -12,7 +12,8 @@ namespace PIM_IV_Forms
 {
     static class Program
     {
-        private static string connectionString = @"Server=RTHEODORO\LOCALHOST;Database=PIM_IV;user='user';password='174201';TrustServerCertificate=True;";
+        private const string ConnectionString = @"Server=RTHEODORO\LOCALHOST;Database=PIM_IV;user='user';password='174201';TrustServerCertificate=True;";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -20,7 +21,7 @@ namespace PIM_IV_Forms
         static void Main()
         {
             var builder = new ContainerBuilder();
-            builder.Register( _ => new SqlConnection(connectionString))
+            builder.Register( _ => new SqlConnection(ConnectionString))
                 .As<IDbConnection>().InstancePerLifetimeScope();
             builder.RegisterType<ClienteFisicoRepository>().As<IRepository<ClienteFisico>>();
             builder.RegisterType<FuncionarioRepository>().As<IRepository<Funcionario>>();
