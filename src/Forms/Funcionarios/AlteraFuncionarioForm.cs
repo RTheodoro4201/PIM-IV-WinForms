@@ -6,17 +6,23 @@ using PIM_IV_Forms.Validator;
 
 namespace PIM_IV_Forms.Forms.Funcionarios;
 
+#region TODOs
+//TODO Refatorar datePicker
+//TODO Adicionar novos campos
+//TODO Reestruturar interface
+#endregion
+
 public partial class AlteraFuncionarioForm : Form
 {
     private readonly FuncionarioController _funcionarioController;
     private Funcionario _funcionario;
     private readonly int _funcionarioId;
 
-    public AlteraFuncionarioForm(FuncionarioController funcionarioController, int clienteId)
+    public AlteraFuncionarioForm(FuncionarioController funcionarioController, int funcionarioId)
     {
         InitializeComponent();
         _funcionarioController = funcionarioController;
-        _funcionarioId = clienteId;
+        _funcionarioId = funcionarioId;
     }
     private void ResizeForm(object sender, EventArgs e)
     {

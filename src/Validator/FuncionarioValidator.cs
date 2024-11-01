@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Text.RegularExpressions;
 using FluentValidation;
 using PIM_IV_Forms.Models;
 
@@ -11,8 +11,10 @@ public class FuncionarioValidator : AbstractValidator<Funcionario>
         RuleFor(funcionario => funcionario.Nome_Completo)
             .NotEmpty().WithMessage("O nome do funcionario deve ser informado.")
             .MinimumLength(3).WithMessage("O nome deve conter ao menos 3 letras!")
-            .Matches(@"^[a-zA-Zà-úÀ-Ú\s\-\']+$").WithMessage("O nome deve conter apenas letras, acentos, espaços, hífens e apóstrofos.")
-            .Must(nome => !string.IsNullOrWhiteSpace(nome)).WithMessage("O nome não pode conter apenas espaços em branco.")
+            .Matches(@"^[a-zA-Zà-úÀ-Ú\s\-\']+$")
+            .WithMessage("O nome deve conter apenas letras, acentos, espaços, hífens e apóstrofos.")
+            .Must(nome => !string.IsNullOrWhiteSpace(nome))
+            .WithMessage("O nome não pode conter apenas espaços em branco.")
             .Must(nome => char.IsLetter(nome[0])).WithMessage("A primeira letra do nome deve ser uma letra.");
 
         RuleFor(funcionario => funcionario.Rg)
@@ -22,6 +24,10 @@ public class FuncionarioValidator : AbstractValidator<Funcionario>
         RuleFor(funcionario => funcionario.Cpf)
             .NotEmpty().WithMessage("O cpf deve ser informado.")
             .Matches(@"^\d{11}$").WithMessage("O cpf deve conter exatamente 11 dígitos!");
+
+        RuleFor(funcionario => funcionario.Cargo)
+            .NotEmpty().WithMessage("O cargo deve ser informado.")
+            .MinimumLength(3).WithMessage("O cargo deve possuir mais de 3 dígitos!");
 
         RuleFor(funcionario => funcionario.Email)
             .NotEmpty().WithMessage("O email deve ser informado.")
@@ -34,13 +40,19 @@ public class FuncionarioValidator : AbstractValidator<Funcionario>
         RuleFor(funcionario => funcionario.Endereco)
             .NotEmpty().WithMessage("O endereço deve ser informado.");
 
+        RuleFor(funcionario => funcionario.Salario)
+            .NotEmpty().WithMessage("O salário deve ser informado.")
+            .GreaterThan(0).WithMessage("O salário deve ser maior que zero!")
+            .Must(ValidarSalario)
+            .WithMessage("O salário informado não está no formato válido! (Apenas duas casas decimais)");
+
         RuleFor(funcionario => funcionario.Data_Admissao)
-            .NotEmpty().WithMessage("A data de admissão deve ser informada.")
-            .Must(ValidateDataAdmissao).WithMessage("O funcionario deve possuir mais de 18 anos!");
+            .NotEmpty().WithMessage("A data de admissão deve ser informada.");
     }
 
-    private static bool ValidateDataAdmissao(DateTime dataAdmissao)
+    private static bool ValidarSalario(decimal salario)
     {
-        return dataAdmissao < DateTime.Now.AddYears(-18);
+        var valorString = salario.ToString("C");
+        return Regex.IsMatch(valorString, @"^R\$?\d{1,10}(\,\d{1,2})?$");
     }
 }

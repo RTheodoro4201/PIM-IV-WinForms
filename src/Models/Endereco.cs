@@ -34,7 +34,7 @@ public class Endereco
         }
         catch (Exception e)
         {
-            MessageBox.Show("Ocorreu um erro ao tentar converter os endereços!\n" + e.Message);
+            MessageBox.Show("Ocorreu um erro ao tentar converter o endereço!\n" + e.Message);
             throw;
         }
     }

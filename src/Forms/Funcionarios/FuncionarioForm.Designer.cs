@@ -70,7 +70,7 @@ partial class FuncionarioForm
         this.btnExcluir.UseVisualStyleBackColor = true;
         this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
         // 
-        // dataGridClientes
+        // dataGridFuncionarios
         // 
         this.dataGridFuncionarios.BackgroundColor = System.Drawing.SystemColors.Control;
         this.dataGridFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -103,10 +103,10 @@ partial class FuncionarioForm
         this.btnConsultar.UseVisualStyleBackColor = true;
         this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
         // 
-        // ClienteFisicoForm
+        // FuncionarioForm
         // 
-        this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+        this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.AutoSize = true;
         this.BackColor = System.Drawing.Color.PaleGreen;
         this.ClientSize = new System.Drawing.Size(1350, 681);
@@ -118,7 +118,7 @@ partial class FuncionarioForm
         this.Controls.Add(this.btnCadastrar);
         this.MaximizeBox = false;
         this.Name = "FuncionarioForm";
-        this.Text = "Clientes Físicos";
+        this.Text = "Funcionários";
         this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         this.Load += new System.EventHandler(this.FuncionarioForm_Load);
         this.ResizeBegin += new System.EventHandler(this.ResizeForm);

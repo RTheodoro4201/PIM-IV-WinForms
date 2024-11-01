@@ -5,6 +5,10 @@ using PIM_IV_Forms.Controllers;
 
 namespace PIM_IV_Forms.Forms.Clientes_Fisicos;
 
+#region TODO
+//TODO Refatorar para seguir evolução do projeto
+#endregion
+
 public partial class ClienteFisicoForm : Form
 {
     private readonly ClienteFisicoController _clienteFisicoController;
@@ -23,7 +27,7 @@ public partial class ClienteFisicoForm : Form
     {
         var clientes = await _clienteFisicoController.Index();
 
-        if (clientes != null && clientes.Any())
+        if (clientes.Any())
         {
             this.dataGridClientes.DataSource =  clientes;
             this.dataGridClientes.AutoGenerateColumns = true;

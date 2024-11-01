@@ -6,6 +6,12 @@ using PIM_IV_Forms.Validator;
 
 namespace PIM_IV_Forms.Forms.Funcionarios;
 
+#region TODOs
+//TODO Refatorar datePicker
+//TODO Adicionar novos campos
+//TODO Reestruturar interface
+#endregion
+
 public partial class CadastroFuncionarioForm : Form
 {
     private readonly FuncionarioController _funcionarioController;
@@ -53,6 +59,7 @@ public partial class CadastroFuncionarioForm : Form
                     var funcionarioValidationResult = await funcionarioValidator.ValidateAsync(funcionario);
                     var enderecoValidator = new EnderecoValidator();
                     var enderecoValidationResult = await enderecoValidator.ValidateAsync(endereco);
+
                     MessageBox.Show("Cadastro de Funcionário inválido!");
 
                     foreach (var erro in funcionarioValidationResult.Errors)

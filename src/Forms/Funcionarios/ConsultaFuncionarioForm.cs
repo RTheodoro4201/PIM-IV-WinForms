@@ -5,6 +5,12 @@ using PIM_IV_Forms.Models;
 
 namespace PIM_IV_Forms.Forms.Funcionarios;
 
+#region TODOs
+//TODO Refatorar datePicker
+//TODO Adicionar novos campos
+//TODO Reestruturar interface
+#endregion
+
 public partial class ConsultaFuncionarioForm : Form
 {
     private readonly FuncionarioController _funcionarioController;
