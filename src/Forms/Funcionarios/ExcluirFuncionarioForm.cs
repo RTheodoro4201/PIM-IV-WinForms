@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Models;
@@ -6,8 +7,6 @@ using PIM_IV_Forms.Models;
 namespace PIM_IV_Forms.Forms.Funcionarios;
 
 #region TODOs
-//TODO Refatorar datePicker
-//TODO Adicionar novos campos
 //TODO Reestruturar interface
 #endregion
 
@@ -31,7 +30,7 @@ public partial class ExcluirFuncionarioForm : Form
 
     private async void ExcluirFuncionarioForm_Load(object sender, EventArgs e)
     {
-        this.WindowState = FormWindowState.Maximized;
+        ResizeForm(this, null);
         var funcionario = await _funcionarioController.SearchFuncionario(_funcionarioId);
         if (funcionario != null)
         {
@@ -50,21 +49,23 @@ public partial class ExcluirFuncionarioForm : Form
 
     private void PopulaCampos(Endereco endereco, Funcionario funcionario)
     {
-        this.txtIdFuncionario.Text = funcionario.Id_Funcionario.ToString();
-        this.txtIdFuncionario.ReadOnly = true;
-        this.txtNome.Text = funcionario.Nome_Completo;
-        this.txtRg.Text = funcionario.Rg;
-        this.txtCpf.Text = funcionario.Cpf;
-        this.txtEmail.Text = funcionario.Email;
-        this.txtTelefone.Text = funcionario.Telefone;
-        this.txtLogradouro.Text = endereco.Logradouro;
-        this.txtNumero.Text = endereco.Numero;
-        this.txtComplemento.Text = endereco.Complemento;
-        this.txtBairro.Text = endereco.Bairro;
-        this.txtCidade.Text = endereco.Cidade;
-        this.cbUf.Text = endereco.Uf;
-        this.txtCep.Text = endereco.Cep;
-        this.dateDataAdmissao.Value = funcionario.Data_Admissao.Date;
+        txtIdFuncionario.Text = funcionario.Id_Funcionario.ToString();
+        txtIdFuncionario.ReadOnly = true;
+        txtNome.Text = funcionario.Nome_Completo;
+        txtCargo.Text = funcionario.Cargo;
+        txtRg.Text = funcionario.Rg;
+        txtCpf.Text = funcionario.Cpf;
+        txtEmail.Text = funcionario.Email;
+        txtTelefone.Text = funcionario.Telefone;
+        txtLogradouro.Text = endereco.Logradouro;
+        txtNumero.Text = endereco.Numero;
+        txtComplemento.Text = endereco.Complemento;
+        txtBairro.Text = endereco.Bairro;
+        txtCidade.Text = endereco.Cidade;
+        cbUf.Text = endereco.Uf;
+        txtCep.Text = endereco.Cep;
+        txtSalario.Text = funcionario.Salario.ToString(CultureInfo.CurrentCulture);
+        dateDataAdmissao.Value = funcionario.Data_Admissao.Date;
     }
 
     private void btnCancelar_Click(object sender, EventArgs e)

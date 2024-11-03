@@ -4,9 +4,6 @@ using System.Threading.Tasks;
 using Dapper;
 using PIM_IV_Forms.Models;
 
-#region TODOs
-//TODO Refatorar campos
-#endregion
 namespace PIM_IV_Forms.Repositories;
 public class FuncionarioRepository(IDbConnection dbConnection) : IRepository<Funcionario>
 {
@@ -15,25 +12,27 @@ public class FuncionarioRepository(IDbConnection dbConnection) : IRepository<Fun
         return await dbConnection.QueryAsync<Funcionario>("SELECT * FROM funcionarios");
     }
 
-    public async Task<Funcionario?> GetById(int id)
+    public async Task<Funcionario> GetById(int id)
     {
-        return await dbConnection.QueryFirstOrDefaultAsync<Funcionario>("SELECT * FROM funcionarios WHERE id = @Id", new { Id = id });
+        return await dbConnection.QueryFirstOrDefaultAsync<Funcionario>("SELECT * FROM funcionarios WHERE id_funcionario= @Id_Funcionario", new { Id_Funcionario = id });
     }
 
     public async Task Add(Funcionario entity)
     {
-        var query = "INSERT INTO funcionarios (nomeCompleto, cargo) VALUES (@Nome, @Cargo)";
+        var query = "INSERT INTO funcionarios (nome_completo, rg, cpf, cargo, email, telefone, salario, data_admissao, endereco)" +
+            "VALUES (@Nome_Completo, @Rg, @Cpf, @Cargo, @Email, @Telefone, @Salario, @Data_Admissao, @Endereco)";
         await dbConnection.ExecuteAsync(query, entity);
     }
 
     public async Task Update(Funcionario entity)
     {
-        var query = "UPDATE funcionarios SET nomeCompleto = @Nome, cargo = @Cargo WHERE id = @Id";
+        var query = "UPDATE funcionarios SET nome_completo = @Nome_Completo, rg = @Rg, cpf = @Cpf, cargo = @Cargo, email = @Email, telefone = @Telefone, salario = @Salario, data_admissao = @Data_Admissao, endereco = @Endereco " +
+            "WHERE id_funcionario = @Id_Funcionario";
         await dbConnection.ExecuteAsync(query, entity);
     }
 
     public async Task Delete(int id)
     {
-        await dbConnection.ExecuteAsync("DELETE FROM funcionarios WHERE Id = @Id", new { Id = id });
+        await dbConnection.ExecuteAsync("DELETE FROM funcionarios WHERE id_funcionario = @Id_Funcionario", new { Id_Funcionario = id });
     }
 }

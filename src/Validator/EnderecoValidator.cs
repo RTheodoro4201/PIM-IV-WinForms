@@ -27,11 +27,11 @@ public class EnderecoValidator : AbstractValidator<Endereco>
             .NotEmpty().WithMessage("Logradouro é obrigatório")
             .MaximumLength(50).WithMessage("O logradouro deve possuir menos de 5 caracteres!")
             .MinimumLength(5).WithMessage("O logradouro deve possuir ao menos 5 caracteres!")
-            .Must(ValidatePrefixoLogradouro).WithMessage("Prefixo de logradouro inválido!");
+            .Must(ValidatePrefixoLogradouro).WithMessage("Prefixo de logradouro inválido! (Não use abreviações)");
 
         RuleFor(endereco => endereco.Numero)
             .NotEmpty().WithMessage("Número é obrigatório")
-            .MaximumLength(5).WithMessage("O número do endereço deve possuir menos de 5 caracteres!")
+            .MaximumLength(5).WithMessage("O número do endereço deve possuir no máximo 5 dígitos!")
             .Must(ValidateNumero).WithMessage("Insira apenas números no campo Nº!");
 
         RuleFor(endereco => endereco.Complemento)
@@ -56,19 +56,7 @@ public class EnderecoValidator : AbstractValidator<Endereco>
 
         RuleFor(endereco => endereco.Cep)
             .NotEmpty().WithMessage("CEP é obrigatório")
-            .Must(ValidateCep).WithMessage("CEP inválido!");
-    }
-
-    private static bool ValidateCep(string cep)
-    {
-        // Verifica se o CEP tem 8 dígitos e é numérico caso não ele ainda não tenha sido formatado (Cadastro inicial)
-        if (!cep.Contains("-"))
-        {
-            return Regex.IsMatch(cep, @"^\d{8}$");
-        }
-
-        // Verifica se o CEP tem 8 dígitos e é numérico caso ele já tenha sido formatado (Alteração)
-        return Regex.IsMatch(cep, @"^\d{5}-\d{3}$");
+            .Matches(@"^\d{5}-\d{3}$").WithMessage("CEP inválido!");
     }
 
     private bool ValidateUf(string uf)

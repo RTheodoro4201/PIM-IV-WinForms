@@ -41,15 +41,6 @@ public class Endereco
 
     public override string ToString()
     {
-        if (!Cep.Contains("-"))
-        {
-            string cepFormatado = Cep.Substring(0, 5) + "-" + Cep.Substring(5);
-            return $"{Logradouro},{Numero},{Complemento},{Bairro},{Cidade},{Uf},{cepFormatado}";
-        }
-
-        else
-        {
-            return $"{Logradouro},{Numero},{Complemento},{Bairro},{Cidade},{Uf},{Cep}";
-        }
+        return $"{Logradouro},{Numero},{Complemento},{Bairro},{Cidade},{Uf},{Cep}";
     }
 }

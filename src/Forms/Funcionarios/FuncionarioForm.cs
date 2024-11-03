@@ -93,8 +93,9 @@ public partial class FuncionarioForm : Form
                 dataGridFuncionarios.AutoGenerateColumns = true;
                 dataGridFuncionarios.Columns[0].HeaderText = "Id";
                 dataGridFuncionarios.Columns[1].HeaderText = "Nome";
-                dataGridFuncionarios.Columns[7].HeaderText = "Salário";
-                dataGridFuncionarios.Columns[8].HeaderText = "Data de Admissão";
+                dataGridFuncionarios.Columns[7].HeaderText = "Endereço";
+                dataGridFuncionarios.Columns[8].HeaderText = "Salário";
+                dataGridFuncionarios.Columns[9].HeaderText = "Data de Admissão";
                 dataGridFuncionarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
 

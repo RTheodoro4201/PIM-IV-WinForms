@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Globalization;
+using System.Text.RegularExpressions;
 using FluentValidation;
 using PIM_IV_Forms.Models;
 
@@ -37,14 +38,10 @@ public class FuncionarioValidator : AbstractValidator<Funcionario>
             .NotEmpty().WithMessage("O telefone deve ser informado.")
             .Matches(@"^\d{11}$").WithMessage("O telefone deve conter exatamente 11 dígitos!");
 
-        RuleFor(funcionario => funcionario.Endereco)
-            .NotEmpty().WithMessage("O endereço deve ser informado.");
-
         RuleFor(funcionario => funcionario.Salario)
             .NotEmpty().WithMessage("O salário deve ser informado.")
             .GreaterThan(0).WithMessage("O salário deve ser maior que zero!")
-            .Must(ValidarSalario)
-            .WithMessage("O salário informado não está no formato válido! (Apenas duas casas decimais)");
+            .Must(ValidarSalario).WithMessage("O salário informado não está no formato válido! (Apenas duas casas decimais)");
 
         RuleFor(funcionario => funcionario.Data_Admissao)
             .NotEmpty().WithMessage("A data de admissão deve ser informada.");
@@ -52,7 +49,7 @@ public class FuncionarioValidator : AbstractValidator<Funcionario>
 
     private static bool ValidarSalario(decimal salario)
     {
-        var valorString = salario.ToString("C");
-        return Regex.IsMatch(valorString, @"^R\$?\d{1,10}(\,\d{1,2})?$");
+        var valorString = salario.ToString(CultureInfo.CurrentCulture);
+        return Regex.IsMatch(valorString, @"^\d{1,10}(\,\d{1,2})?$");
     }
 }

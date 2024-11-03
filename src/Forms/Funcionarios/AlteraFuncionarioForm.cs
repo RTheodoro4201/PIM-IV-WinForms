@@ -1,16 +1,11 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Validator;
 
 namespace PIM_IV_Forms.Forms.Funcionarios;
-
-#region TODOs
-//TODO Refatorar datePicker
-//TODO Adicionar novos campos
-//TODO Reestruturar interface
-#endregion
 
 public partial class AlteraFuncionarioForm : Form
 {
@@ -24,53 +19,57 @@ public partial class AlteraFuncionarioForm : Form
         _funcionarioController = funcionarioController;
         _funcionarioId = funcionarioId;
     }
+
     private void ResizeForm(object sender, EventArgs e)
     {
-        this.WindowState = FormWindowState.Maximized;
+        WindowState = FormWindowState.Maximized;
     }
 
     private async void AlteraFuncionarioForm_Load(object sender, EventArgs e)
     {
+        ResizeForm(this, null);
         var funcionario = await _funcionarioController.SearchFuncionario(_funcionarioId);
         if (funcionario != null)
         {
             _funcionario = funcionario;
             var endereco = Endereco.ToEndereco(funcionario.Endereco);
 
-            PopulaCampos(endereco,_funcionario);
+            PopulaCampos(endereco, _funcionario);
         }
 
         else
         {
             MessageBox.Show("Não foi possível carregar os dados deste cliente! Tente novamente mais tarde.");
-            this.Close();
+            Close();
         }
     }
 
     private void PopulaCampos(Endereco endereco, Funcionario funcionario)
     {
-        this.txtIdFuncionario.Text = funcionario.Id_Funcionario.ToString();
-        this.txtIdFuncionario.ReadOnly = true;
-        this.txtNome.Text = funcionario.Nome_Completo;
-        this.txtRg.Text = funcionario.Rg;
-        this.txtCpf.Text = funcionario.Cpf;
-        this.txtEmail.Text = funcionario.Email;
-        this.txtTelefone.Text = funcionario.Telefone;
-        this.txtLogradouro.Text = endereco.Logradouro;
-        this.txtNumero.Text = endereco.Numero;
-        this.txtComplemento.Text = endereco.Complemento;
-        this.txtBairro.Text = endereco.Bairro;
-        this.txtCidade.Text = endereco.Cidade;
-        this.cbUf.Text = endereco.Uf;
-        this.txtCep.Text = endereco.Cep;
-        this.dateDataAdmissao.Value = funcionario.Data_Admissao.Date;
+        txtIdFuncionario.Text = funcionario.Id_Funcionario.ToString();
+        txtIdFuncionario.ReadOnly = true;
+        txtNome.Text = funcionario.Nome_Completo;
+        txtCargo.Text = funcionario.Cargo;
+        txtRg.Text = funcionario.Rg;
+        txtCpf.Text = funcionario.Cpf;
+        txtEmail.Text = funcionario.Email;
+        txtTelefone.Text = funcionario.Telefone;
+        txtLogradouro.Text = endereco.Logradouro;
+        txtNumero.Text = endereco.Numero;
+        txtComplemento.Text = endereco.Complemento;
+        txtBairro.Text = endereco.Bairro;
+        txtCidade.Text = endereco.Cidade;
+        cbUf.Text = endereco.Uf;
+        txtCep.Text = endereco.Cep;
+        txtSalario.Text = funcionario.Salario.ToString(CultureInfo.CurrentCulture);
+        dateDataAdmissao.Value = funcionario.Data_Admissao.Date;
     }
 
     private async void btnSalvar_Click(object sender, EventArgs e)
     {
         try
         {
-            var endereco = new Endereco()
+            var endereco = new Endereco
             {
                 Logradouro = txtLogradouro.Text,
                 Numero = txtNumero.Text,
@@ -78,25 +77,26 @@ public partial class AlteraFuncionarioForm : Form
                 Bairro = txtBairro.Text,
                 Cidade = txtCidade.Text,
                 Uf = cbUf.Text,
-                Cep = txtCep.Text,
+                Cep = txtCep.Text
             };
 
-            var funcionario = new Funcionario()
+            var funcionario = new Funcionario
             {
-                Id_Funcionario = _funcionarioId,
                 Nome_Completo = txtNome.Text,
-                Rg = txtRg.Text,
-                Cpf = txtCpf.Text,
+                Cargo = txtCargo.Text,
+                Rg = txtRg.Text.Replace(".", "").Replace("-","").Replace(" ", ""),
+                Cpf = txtCpf.Text.Replace(".", "").Replace("-",""),
                 Email = txtEmail.Text,
-                Telefone = txtTelefone.Text,
+                Telefone = txtTelefone.Text.Replace("(", "").Replace("-","").Replace(" ", "").Replace(")", ""),
                 Endereco = endereco.ToString(),
-                Data_Admissao = dateDataAdmissao.Value,
+                Salario = decimal.Parse(txtSalario.Text),
+                Data_Admissao = dateDataAdmissao.Value
             };
 
             if (await _funcionarioController.Edit(funcionario, endereco))
             {
                 MessageBox.Show("Funcionário alterado com sucesso!");
-                this.Close();
+                Close();
             }
 
             else
@@ -107,15 +107,9 @@ public partial class AlteraFuncionarioForm : Form
                 var enderecoValidationResult = await enderecoValidator.ValidateAsync(endereco);
                 MessageBox.Show("Dados de alteração inválidos!");
 
-                foreach (var erro in funcionarioValidationResult.Errors)
-                {
-                    MessageBox.Show(erro.ErrorMessage);
-                }
+                foreach (var erro in funcionarioValidationResult.Errors) MessageBox.Show(erro.ErrorMessage);
 
-                foreach (var erro in enderecoValidationResult.Errors)
-                {
-                    MessageBox.Show(erro.ErrorMessage);
-                }
+                foreach (var erro in enderecoValidationResult.Errors) MessageBox.Show(erro.ErrorMessage);
             }
         }
         catch (Exception ex)
@@ -127,15 +121,15 @@ public partial class AlteraFuncionarioForm : Form
 
     private void dateDataNascimento_ValueChanged(object sender, EventArgs e)
     {
-        if (this.dateDataAdmissao.Value > DateTime.Now.AddYears(-18))
+        if (dateDataAdmissao.Value > DateTime.Now)
         {
-            MessageBox.Show("Data inválida!");
-            this.dateDataAdmissao.Value = DateTime.Now.AddYears(-18);
+            MessageBox.Show("Data de admissão não pode ser maior do que a data atual!");
+            dateDataAdmissao.Value = DateTime.Now;
         }
     }
 
     private void btnCancelar_Click(object sender, EventArgs e)
     {
-        this.Close();
+        Close();
     }
 }

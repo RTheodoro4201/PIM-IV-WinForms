@@ -6,15 +6,10 @@ using PIM_IV_Forms.Validator;
 
 namespace PIM_IV_Forms.Forms.Funcionarios;
 
-#region TODOs
-//TODO Refatorar datePicker
-//TODO Adicionar novos campos
-//TODO Reestruturar interface
-#endregion
-
 public partial class CadastroFuncionarioForm : Form
 {
     private readonly FuncionarioController _funcionarioController;
+
     public CadastroFuncionarioForm(FuncionarioController funcionarioController)
     {
         InitializeComponent();
@@ -25,7 +20,7 @@ public partial class CadastroFuncionarioForm : Form
     {
         try
         {
-            var endereco = new Endereco()
+            var endereco = new Endereco
             {
                 Logradouro = txtLogradouro.Text,
                 Numero = txtNumero.Text,
@@ -33,45 +28,41 @@ public partial class CadastroFuncionarioForm : Form
                 Bairro = txtBairro.Text,
                 Cidade = txtBairro.Text,
                 Uf = cbUf.Text,
-                Cep = txtCep.Text,
+                Cep = txtCep.Text
             };
 
-                var funcionario = new Funcionario()
-                {
-                    Nome_Completo = txtNome.Text,
-                    Rg = txtRg.Text,
-                    Cpf = txtCpf.Text,
-                    Email = txtEmail.Text,
-                    Telefone = txtTelefone.Text,
-                    Endereco = endereco.ToString(),
-                    Data_Admissao = dateDataAdmissao.Value,
-                };
+            var funcionario = new Funcionario
+            {
+                Nome_Completo = txtNome.Text,
+                Cargo = txtCargo.Text,
+                Rg = txtRg.Text.Replace(",", "").Replace("-",""),
+                Cpf = txtCpf.Text.Replace(",", "").Replace("-",""),
+                Email = txtEmail.Text,
+                Telefone = txtTelefone.Text.Replace("(", "").Replace("-","").Replace(" ", "").Replace(")", ""),
+                Endereco = endereco.ToString(),
+                Salario = decimal.Parse(txtSalario.Text),
+                Data_Admissao = dateDataAdmissao.Value
+            };
 
-                if (await _funcionarioController.Create(funcionario, endereco))
-                {
-                    MessageBox.Show("Funcionário cadastrado com sucesso!");
-                    this.Close();
-                }
+            if (await _funcionarioController.Create(funcionario, endereco))
+            {
+                MessageBox.Show("Funcionário cadastrado com sucesso!");
+                Close();
+            }
 
-                else
-                {
-                    var funcionarioValidator = new FuncionarioValidator();
-                    var funcionarioValidationResult = await funcionarioValidator.ValidateAsync(funcionario);
-                    var enderecoValidator = new EnderecoValidator();
-                    var enderecoValidationResult = await enderecoValidator.ValidateAsync(endereco);
+            else
+            {
+                var funcionarioValidator = new FuncionarioValidator();
+                var funcionarioValidationResult = await funcionarioValidator.ValidateAsync(funcionario);
+                var enderecoValidator = new EnderecoValidator();
+                var enderecoValidationResult = await enderecoValidator.ValidateAsync(endereco);
 
-                    MessageBox.Show("Cadastro de Funcionário inválido!");
+                MessageBox.Show("Cadastro de Funcionário inválido!");
 
-                    foreach (var erro in funcionarioValidationResult.Errors)
-                    {
-                        MessageBox.Show(erro.ErrorMessage);
-                    }
+                foreach (var erro in funcionarioValidationResult.Errors) MessageBox.Show(erro.ErrorMessage);
 
-                    foreach (var erro in enderecoValidationResult.Errors)
-                    {
-                        MessageBox.Show(erro.ErrorMessage);
-                    }
-                }
+                foreach (var erro in enderecoValidationResult.Errors) MessageBox.Show(erro.ErrorMessage);
+            }
         }
         catch (Exception ex)
         {
@@ -82,20 +73,20 @@ public partial class CadastroFuncionarioForm : Form
 
     private void CadastroFuncionarioForm_Load(object sender, EventArgs e)
     {
-        this.WindowState = FormWindowState.Maximized;
+        WindowState = FormWindowState.Maximized;
     }
 
     private void dateDataNascimento_ValueChanged(object sender, EventArgs e)
     {
-        if (this.dateDataAdmissao.Value > DateTime.Now.AddYears(-18))
+        if (dateDataAdmissao.Value > DateTime.Now)
         {
-            MessageBox.Show("Data inválida!");
-            this.dateDataAdmissao.Value = DateTime.Now.AddYears(-18);
+            MessageBox.Show("Data de admissão não pode ser maior do que a data atual!");
+            dateDataAdmissao.Value = DateTime.Now;
         }
     }
 
     private void btnCancelar_Click(object sender, EventArgs e)
     {
-        this.Close();
+        Close();
     }
 }
