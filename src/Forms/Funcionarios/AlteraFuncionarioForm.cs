@@ -47,7 +47,6 @@ public partial class AlteraFuncionarioForm : Form
     private void PopulaCampos(Endereco endereco, Funcionario funcionario)
     {
         txtIdFuncionario.Text = funcionario.Id_Funcionario.ToString();
-        txtIdFuncionario.ReadOnly = true;
         txtNome.Text = funcionario.Nome_Completo;
         txtCargo.Text = funcionario.Cargo;
         txtRg.Text = funcionario.Rg;
@@ -82,6 +81,7 @@ public partial class AlteraFuncionarioForm : Form
 
             var funcionario = new Funcionario
             {
+                Id_Funcionario = int.Parse(txtIdFuncionario.Text),
                 Nome_Completo = txtNome.Text,
                 Cargo = txtCargo.Text,
                 Rg = txtRg.Text.Replace(".", "").Replace("-","").Replace(" ", ""),

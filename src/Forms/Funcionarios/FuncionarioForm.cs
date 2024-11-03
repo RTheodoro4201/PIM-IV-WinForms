@@ -23,6 +23,7 @@ public partial class FuncionarioForm : Form
 
     private async void FuncionarioForm_Load(object sender, EventArgs e)
     {
+        ResizeForm(this, null);
         await CarregarGrid();
     }
 

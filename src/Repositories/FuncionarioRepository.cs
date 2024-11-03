@@ -26,7 +26,8 @@ public class FuncionarioRepository(IDbConnection dbConnection) : IRepository<Fun
 
     public async Task Update(Funcionario entity)
     {
-        var query = "UPDATE funcionarios SET nome_completo = @Nome_Completo, rg = @Rg, cpf = @Cpf, cargo = @Cargo, email = @Email, telefone = @Telefone, salario = @Salario, data_admissao = @Data_Admissao, endereco = @Endereco " +
+        var query = "UPDATE funcionarios "+
+            "SET nome_completo = @Nome_Completo, rg = @Rg, cpf = @Cpf, cargo = @Cargo, email = @Email, telefone = @Telefone, salario = @Salario, data_admissao = @Data_Admissao, endereco = @Endereco " +
             "WHERE id_funcionario = @Id_Funcionario";
         await dbConnection.ExecuteAsync(query, entity);
     }
