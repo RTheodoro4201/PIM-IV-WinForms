@@ -26,7 +26,7 @@ public partial class CadastroFuncionarioForm : Form
                 Numero = txtNumero.Text,
                 Complemento = txtComplemento.Text,
                 Bairro = txtBairro.Text,
-                Cidade = txtBairro.Text,
+                Cidade = txtCidade.Text,
                 Uf = cbUf.Text,
                 Cep = txtCep.Text
             };
@@ -35,10 +35,10 @@ public partial class CadastroFuncionarioForm : Form
             {
                 Nome_Completo = txtNome.Text,
                 Cargo = txtCargo.Text,
-                Rg = txtRg.Text.Replace(",", "").Replace("-",""),
-                Cpf = txtCpf.Text.Replace(",", "").Replace("-",""),
+                Rg = txtRg.Text.Replace(",", "").Replace("-", ""),
+                Cpf = txtCpf.Text.Replace(",", "").Replace("-", ""),
                 Email = txtEmail.Text,
-                Telefone = txtTelefone.Text.Replace("(", "").Replace("-","").Replace(" ", "").Replace(")", ""),
+                Telefone = txtTelefone.Text.Replace("(", "").Replace("-", "").Replace(" ", "").Replace(")", ""),
                 Endereco = endereco.ToString(),
                 Salario = decimal.Parse(txtSalario.Text),
                 Data_Admissao = dateDataAdmissao.Value

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Text.RegularExpressions;
 using FluentValidation;
 using PIM_IV_Forms.Models;
 
@@ -47,7 +46,7 @@ public class EnderecoValidator : AbstractValidator<Endereco>
         RuleFor(endereco => endereco.Cidade)
             .NotEmpty().WithMessage("Cidade é obrigatória")
             .MaximumLength(30).WithMessage("A cidade deve possuir menos de 30 caracteres!")
-            .MinimumLength(5).WithMessage("A cidade deve possuir ao menos 5 caracteres!");
+            .MinimumLength(3).WithMessage("A cidade deve possuir ao menos 5 caracteres!");
 
         RuleFor(endereco => endereco.Uf)
             .NotEmpty().WithMessage("UF é obrigatória")
@@ -72,10 +71,10 @@ public class EnderecoValidator : AbstractValidator<Endereco>
     private bool ValidatePrefixoLogradouro(string logradouro)
     {
         // Divide a string do logradouro em palavras
-        string[] palavras = logradouro.Split(' ');
+        var palavras = logradouro.Split(' ');
 
         // Obtém a primeira palavra (prefixo)
-        string primeiroPalavra = palavras[0];
+        var primeiroPalavra = palavras[0];
 
         // Verifica se a primeira palavra está contida no array de prefixos, ignorando maiúsculas e minúsculas
         return _prefixosLogradouro.Contains(primeiroPalavra, StringComparer.OrdinalIgnoreCase);

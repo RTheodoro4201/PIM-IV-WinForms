@@ -27,7 +27,7 @@ public class Endereco
                 Bairro = enderecoSeparado[3],
                 Cidade = enderecoSeparado[4],
                 Uf = enderecoSeparado[5],
-                Cep = enderecoSeparado[6],
+                Cep = enderecoSeparado[6]
             };
 
             return enderecoFormatado;

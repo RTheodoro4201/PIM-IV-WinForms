@@ -11,8 +11,10 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
         RuleFor(cliente => cliente.Nome_Completo)
             .NotEmpty().WithMessage("O nome do cliente deve ser informado.")
             .MinimumLength(3).WithMessage("O nome deve conter ao menos 3 letras!")
-            .Matches(@"^[a-zA-Zà-úÀ-Ú\s\-\']+$").WithMessage("O nome deve conter apenas letras, acentos, espaços, hífens e apóstrofos.")
-            .Must(nome => !string.IsNullOrWhiteSpace(nome)).WithMessage("O nome não pode conter apenas espaços em branco.")
+            .Matches(@"^[a-zA-Zà-úÀ-Ú\s\-\']+$")
+            .WithMessage("O nome deve conter apenas letras, acentos, espaços, hífens e apóstrofos.")
+            .Must(nome => !string.IsNullOrWhiteSpace(nome))
+            .WithMessage("O nome não pode conter apenas espaços em branco.")
             .Must(nome => char.IsLetter(nome[0])).WithMessage("A primeira letra do nome deve ser uma letra.");
 
         RuleFor(cliente => cliente.Rg)

@@ -9,8 +9,8 @@ namespace PIM_IV_Forms.Forms.Funcionarios;
 public partial class ConsultaFuncionarioForm : Form
 {
     private readonly FuncionarioController _funcionarioController;
-    private Funcionario _funcionario;
     private readonly int _funcionarioId;
+    private Funcionario _funcionario;
 
     public ConsultaFuncionarioForm(FuncionarioController funcionarioController, int funcionarioId)
     {

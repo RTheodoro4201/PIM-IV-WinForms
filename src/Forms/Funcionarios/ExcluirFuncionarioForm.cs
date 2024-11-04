@@ -7,14 +7,16 @@ using PIM_IV_Forms.Models;
 namespace PIM_IV_Forms.Forms.Funcionarios;
 
 #region TODOs
+
 //TODO Reestruturar interface
+
 #endregion
 
 public partial class ExcluirFuncionarioForm : Form
 {
     private readonly FuncionarioController _funcionarioController;
-    private Funcionario _funcionario;
     private readonly int _funcionarioId;
+    private Funcionario _funcionario;
 
     public ExcluirFuncionarioForm(FuncionarioController funcionarioController, int funcionarioId)
     {
@@ -25,7 +27,7 @@ public partial class ExcluirFuncionarioForm : Form
 
     private void ResizeForm(object sender, EventArgs e)
     {
-        this.WindowState = FormWindowState.Maximized;
+        WindowState = FormWindowState.Maximized;
     }
 
     private async void ExcluirFuncionarioForm_Load(object sender, EventArgs e)
@@ -37,13 +39,13 @@ public partial class ExcluirFuncionarioForm : Form
             _funcionario = funcionario;
             var endereco = Endereco.ToEndereco(funcionario.Endereco);
 
-            PopulaCampos(endereco,_funcionario);
+            PopulaCampos(endereco, _funcionario);
         }
 
         else
         {
             MessageBox.Show("Não foi possível carregar os dados deste funcionario! Tente novamente mais tarde.");
-            this.Close();
+            Close();
         }
     }
 
@@ -70,14 +72,17 @@ public partial class ExcluirFuncionarioForm : Form
 
     private void btnCancelar_Click(object sender, EventArgs e)
     {
-        this.Close();
+        Close();
     }
 
     private async void btnExcluir_Click(object sender, EventArgs e)
     {
         try
         {
-            DialogResult resultado = MessageBox.Show($"Deseja excluir o funcionario {_funcionario.Nome_Completo}? Esta ação não pode ser desfeita.", "Excluir Funcionario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var resultado =
+                MessageBox.Show(
+                    $"Deseja excluir o funcionario {_funcionario.Nome_Completo}? Esta ação não pode ser desfeita.",
+                    "Excluir Funcionario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (resultado == DialogResult.Yes)
             {

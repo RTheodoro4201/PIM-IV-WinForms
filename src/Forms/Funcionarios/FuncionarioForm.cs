@@ -27,6 +27,51 @@ public partial class FuncionarioForm : Form
         await CarregarGrid();
     }
 
+    private async Task CarregarGrid()
+    {
+        try
+        {
+            var funcionarios = await _funcionarioController.Index();
+
+            if (funcionarios.Any())
+            {
+                dataGridFuncionarios.DataSource = funcionarios;
+                dataGridFuncionarios.AutoGenerateColumns = true;
+                dataGridFuncionarios.Columns[0].HeaderText = "Id";
+                dataGridFuncionarios.Columns[1].HeaderText = "Nome";
+                dataGridFuncionarios.Columns[7].HeaderText = "Endereço";
+                dataGridFuncionarios.Columns[8].HeaderText = "Salário";
+                dataGridFuncionarios.Columns[9].HeaderText = "Data de Admissão";
+                dataGridFuncionarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+
+            else
+            {
+                MessageBox.Show("Não foi encontrado nenhum registro no servidor.", "Aviso", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+        }
+
+        catch (Exception)
+        {
+            // Exibir uma mensagem de erro genérica para o usuário
+            MessageBox.Show(
+                "Ocorreu um erro ao carregar os dados dos funcionários. Por favor, tente novamente mais tarde.", "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+    private bool VerificarSelecao()
+    {
+        if (dataGridFuncionarios.SelectedRows.Count == 0)
+        {
+            MessageBox.Show("Selecione um funcionário.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return false;
+        }
+
+        return true;
+    }
+
     #region Métodos de Click
 
     private async void btnCadastrar_Click(object sender, EventArgs e)
@@ -81,49 +126,4 @@ public partial class FuncionarioForm : Form
     }
 
     #endregion
-
-    private async Task CarregarGrid()
-    {
-        try
-        {
-            var funcionarios = await _funcionarioController.Index();
-
-            if (funcionarios.Any())
-            {
-                dataGridFuncionarios.DataSource = funcionarios;
-                dataGridFuncionarios.AutoGenerateColumns = true;
-                dataGridFuncionarios.Columns[0].HeaderText = "Id";
-                dataGridFuncionarios.Columns[1].HeaderText = "Nome";
-                dataGridFuncionarios.Columns[7].HeaderText = "Endereço";
-                dataGridFuncionarios.Columns[8].HeaderText = "Salário";
-                dataGridFuncionarios.Columns[9].HeaderText = "Data de Admissão";
-                dataGridFuncionarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-
-            else
-            {
-                MessageBox.Show("Não foi encontrado nenhum registro no servidor.", "Aviso", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }
-        }
-
-        catch (Exception)
-        {
-            // Exibir uma mensagem de erro genérica para o usuário
-            MessageBox.Show(
-                "Ocorreu um erro ao carregar os dados dos funcionários. Por favor, tente novamente mais tarde.", "Erro",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-    }
-
-    private bool VerificarSelecao()
-    {
-        if (dataGridFuncionarios.SelectedRows.Count == 0)
-        {
-            MessageBox.Show("Selecione um funcionário.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            return false;
-        }
-
-        return true;
-    }
 }

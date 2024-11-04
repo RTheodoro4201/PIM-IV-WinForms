@@ -10,8 +10,8 @@ namespace PIM_IV_Forms.Forms.Funcionarios;
 public partial class AlteraFuncionarioForm : Form
 {
     private readonly FuncionarioController _funcionarioController;
-    private Funcionario _funcionario;
     private readonly int _funcionarioId;
+    private Funcionario _funcionario;
 
     public AlteraFuncionarioForm(FuncionarioController funcionarioController, int funcionarioId)
     {
@@ -84,10 +84,10 @@ public partial class AlteraFuncionarioForm : Form
                 Id_Funcionario = int.Parse(txtIdFuncionario.Text),
                 Nome_Completo = txtNome.Text,
                 Cargo = txtCargo.Text,
-                Rg = txtRg.Text.Replace(".", "").Replace("-","").Replace(" ", ""),
-                Cpf = txtCpf.Text.Replace(".", "").Replace("-",""),
+                Rg = txtRg.Text.Replace(".", "").Replace("-", "").Replace(" ", ""),
+                Cpf = txtCpf.Text.Replace(".", "").Replace("-", ""),
                 Email = txtEmail.Text,
-                Telefone = txtTelefone.Text.Replace("(", "").Replace("-","").Replace(" ", "").Replace(")", ""),
+                Telefone = txtTelefone.Text.Replace("(", "").Replace("-", "").Replace(" ", "").Replace(")", ""),
                 Endereco = endereco.ToString(),
                 Salario = decimal.Parse(txtSalario.Text),
                 Data_Admissao = dateDataAdmissao.Value

@@ -33,7 +33,6 @@ partial class MainForm
     private void InitializeComponent()
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-        this.lblFornecedor = new System.Windows.Forms.Label();
         this.label2 = new System.Windows.Forms.Label();
         this.label3 = new System.Windows.Forms.Label();
         this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -44,48 +43,42 @@ partial class MainForm
         this.panel1 = new System.Windows.Forms.Panel();
         this.btnCultura = new System.Windows.Forms.Button();
         this.btnFuncionario = new System.Windows.Forms.Button();
+        this.btnFornecedor = new System.Windows.Forms.Button();
         ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
         this.splitContainer1.Panel1.SuspendLayout();
         this.splitContainer1.Panel2.SuspendLayout();
         this.splitContainer1.SuspendLayout();
         this.SuspendLayout();
-        //
-        // lblFornecedor
-        //
-        resources.ApplyResources(this.lblFornecedor, "lblFornecedor");
-        this.lblFornecedor.BackColor = System.Drawing.Color.DimGray;
-        this.lblFornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-        this.lblFornecedor.Name = "lblFornecedor";
-        //
+        // 
         // label2
-        //
+        // 
         this.label2.BackColor = System.Drawing.Color.DimGray;
         resources.ApplyResources(this.label2, "label2");
         this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.label2.Name = "label2";
-        //
+        // 
         // label3
-        //
+        // 
         this.label3.BackColor = System.Drawing.Color.CadetBlue;
         resources.ApplyResources(this.label3, "label3");
         this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.label3.Name = "label3";
-        //
+        // 
         // splitContainer1
-        //
+        // 
         resources.ApplyResources(this.splitContainer1, "splitContainer1");
         this.splitContainer1.Name = "splitContainer1";
-        //
+        // 
         // splitContainer1.Panel1
-        //
+        // 
         this.splitContainer1.Panel1.Controls.Add(this.label2);
-        //
+        // 
         // splitContainer1.Panel2
-        //
+        // 
         this.splitContainer1.Panel2.Controls.Add(this.label3);
-        //
+        // 
         // btnFornecedorJurídico
-        //
+        // 
         this.btnFornecedorJurídico.BackColor = System.Drawing.Color.DimGray;
         this.btnFornecedorJurídico.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnFornecedorJurídico.FlatAppearance.BorderSize = 0;
@@ -93,9 +86,10 @@ partial class MainForm
         this.btnFornecedorJurídico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnFornecedorJurídico.Name = "btnFornecedorJurídico";
         this.btnFornecedorJurídico.UseVisualStyleBackColor = false;
-        //
+        this.btnFornecedorJurídico.Click += new System.EventHandler(this.btnFornecedorJurídico_Click);
+        // 
         // btnCliente
-        //
+        // 
         this.btnCliente.BackColor = System.Drawing.Color.DimGray;
         this.btnCliente.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnCliente.FlatAppearance.BorderSize = 0;
@@ -104,9 +98,9 @@ partial class MainForm
         this.btnCliente.Name = "btnCliente";
         this.btnCliente.UseVisualStyleBackColor = false;
         this.btnCliente.Click += new System.EventHandler(this.btnClienteFisico_Click);
-        //
+        // 
         // btnFornecedorFisico
-        //
+        // 
         this.btnFornecedorFisico.BackColor = System.Drawing.Color.DimGray;
         this.btnFornecedorFisico.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnFornecedorFisico.FlatAppearance.BorderSize = 0;
@@ -114,9 +108,10 @@ partial class MainForm
         this.btnFornecedorFisico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnFornecedorFisico.Name = "btnFornecedorFisico";
         this.btnFornecedorFisico.UseVisualStyleBackColor = false;
-        //
+        this.btnFornecedorFisico.Click += new System.EventHandler(this.btnFornecedorFisico_Click);
+        // 
         // btnMaterial
-        //
+        // 
         this.btnMaterial.BackColor = System.Drawing.Color.DimGray;
         this.btnMaterial.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnMaterial.FlatAppearance.BorderSize = 0;
@@ -124,16 +119,16 @@ partial class MainForm
         this.btnMaterial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnMaterial.Name = "btnMaterial";
         this.btnMaterial.UseVisualStyleBackColor = false;
-        //
+        // 
         // panel1
-        //
+        // 
         resources.ApplyResources(this.panel1, "panel1");
         this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
         this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.panel1.Name = "panel1";
-        //
+        // 
         // btnCultura
-        //
+        // 
         this.btnCultura.BackColor = System.Drawing.Color.DimGray;
         this.btnCultura.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnCultura.FlatAppearance.BorderSize = 0;
@@ -141,9 +136,9 @@ partial class MainForm
         this.btnCultura.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnCultura.Name = "btnCultura";
         this.btnCultura.UseVisualStyleBackColor = false;
-        //
+        // 
         // btnFuncionario
-        //
+        // 
         this.btnFuncionario.BackColor = System.Drawing.Color.DimGray;
         this.btnFuncionario.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
         this.btnFuncionario.FlatAppearance.BorderSize = 0;
@@ -152,16 +147,27 @@ partial class MainForm
         this.btnFuncionario.Name = "btnFuncionario";
         this.btnFuncionario.UseVisualStyleBackColor = false;
         this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
-        //
+        // 
+        // btnFornecedor
+        // 
+        this.btnFornecedor.BackColor = System.Drawing.Color.DimGray;
+        this.btnFornecedor.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+        this.btnFornecedor.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnFornecedor, "btnFornecedor");
+        this.btnFornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnFornecedor.Name = "btnFornecedor";
+        this.btnFornecedor.UseVisualStyleBackColor = false;
+        this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
+        // 
         // MainForm
-        //
+        // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.BackColor = System.Drawing.Color.PaleGreen;
+        this.Controls.Add(this.btnFornecedor);
         this.Controls.Add(this.btnFuncionario);
         this.Controls.Add(this.btnCultura);
         this.Controls.Add(this.panel1);
-        this.Controls.Add(this.lblFornecedor);
         this.Controls.Add(this.btnMaterial);
         this.Controls.Add(this.btnFornecedorFisico);
         this.Controls.Add(this.splitContainer1);
@@ -183,6 +189,8 @@ partial class MainForm
         this.ResumeLayout(false);
     }
 
+    private System.Windows.Forms.Button btnFornecedor;
+
     private System.Windows.Forms.Button btnFuncionario;
 
     private System.Windows.Forms.Button btnCultura;
@@ -197,8 +205,6 @@ partial class MainForm
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.SplitContainer splitContainer1;
-
-    private System.Windows.Forms.Label lblFornecedor;
 
     #endregion
 }

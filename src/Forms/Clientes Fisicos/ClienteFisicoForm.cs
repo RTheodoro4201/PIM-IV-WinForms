@@ -6,12 +6,15 @@ using PIM_IV_Forms.Controllers;
 namespace PIM_IV_Forms.Forms.Clientes_Fisicos;
 
 #region TODO
+
 //TODO Refatorar para seguir evolução do projeto
+
 #endregion
 
 public partial class ClienteFisicoForm : Form
 {
     private readonly ClienteFisicoController _clienteFisicoController;
+
     public ClienteFisicoForm(ClienteFisicoController clienteFisicoController)
     {
         InitializeComponent();
@@ -20,7 +23,7 @@ public partial class ClienteFisicoForm : Form
 
     private void ResizeForm(object sender, EventArgs e)
     {
-        this.WindowState = FormWindowState.Maximized;
+        WindowState = FormWindowState.Maximized;
     }
 
     private async void ClienteFisicoForm_Load(object sender, EventArgs e)
@@ -29,24 +32,24 @@ public partial class ClienteFisicoForm : Form
 
         if (clientes.Any())
         {
-            this.dataGridClientes.DataSource =  clientes;
-            this.dataGridClientes.AutoGenerateColumns = true;
-            this.dataGridClientes.Columns[0].HeaderText = "Id";
-            this.dataGridClientes.Columns[1].HeaderText = "Nome";
-            this.dataGridClientes.Columns[7].HeaderText = "Data de Nascimento";
-            this.dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridClientes.DataSource = clientes;
+            dataGridClientes.AutoGenerateColumns = true;
+            dataGridClientes.Columns[0].HeaderText = "Id";
+            dataGridClientes.Columns[1].HeaderText = "Nome";
+            dataGridClientes.Columns[7].HeaderText = "Data de Nascimento";
+            dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         else
         {
             MessageBox.Show("Houve um erro ao receber os dados do servidor");
-            this.Close();
+            Close();
         }
     }
 
     private void btnAlterar_Click(object sender, EventArgs e)
     {
-        int clienteId = Convert.ToInt32(this.dataGridClientes.SelectedRows[0].Cells["id_cliente"].Value);
+        var clienteId = Convert.ToInt32(dataGridClientes.SelectedRows[0].Cells["id_cliente"].Value);
         var alteraClienteFisicoForm = new AlteraClienteFisicoForm(_clienteFisicoController, clienteId);
         alteraClienteFisicoForm.ShowDialog();
 
@@ -63,7 +66,7 @@ public partial class ClienteFisicoForm : Form
 
     private void btnExcluir_Click(object sender, EventArgs e)
     {
-        int clienteId = Convert.ToInt32(this.dataGridClientes.SelectedRows[0].Cells["id_cliente"].Value);
+        var clienteId = Convert.ToInt32(dataGridClientes.SelectedRows[0].Cells["id_cliente"].Value);
         var excluirClienteFisicoForm = new ExcluirClienteFisicoForm(_clienteFisicoController, clienteId);
         excluirClienteFisicoForm.ShowDialog();
 
@@ -72,12 +75,12 @@ public partial class ClienteFisicoForm : Form
 
     private void btnFechar_Click(object sender, EventArgs e)
     {
-        this.Close();
+        Close();
     }
 
     private void btnConsultar_Click(object sender, EventArgs e)
     {
-        int clienteId = Convert.ToInt32(this.dataGridClientes.SelectedRows[0].Cells["id_cliente"].Value);
+        var clienteId = Convert.ToInt32(dataGridClientes.SelectedRows[0].Cells["id_cliente"].Value);
         var consultaClienteFisicoForm = new ConsultaClienteFisicoForm(_clienteFisicoController, clienteId);
         consultaClienteFisicoForm.ShowDialog();
 

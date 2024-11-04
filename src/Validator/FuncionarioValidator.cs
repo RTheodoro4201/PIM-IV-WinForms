@@ -41,7 +41,8 @@ public class FuncionarioValidator : AbstractValidator<Funcionario>
         RuleFor(funcionario => funcionario.Salario)
             .NotEmpty().WithMessage("O salário deve ser informado.")
             .GreaterThan(0).WithMessage("O salário deve ser maior que zero!")
-            .Must(ValidarSalario).WithMessage("O salário informado não está no formato válido! (Apenas duas casas decimais)");
+            .Must(ValidarSalario)
+            .WithMessage("O salário informado não está no formato válido! (Apenas duas casas decimais)");
 
         RuleFor(funcionario => funcionario.Data_Admissao)
             .NotEmpty().WithMessage("A data de admissão deve ser informada.");
