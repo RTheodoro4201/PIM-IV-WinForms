@@ -136,6 +136,7 @@ partial class MainForm
         this.btnCultura.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnCultura.Name = "btnCultura";
         this.btnCultura.UseVisualStyleBackColor = false;
+        this.btnCultura.Click += new System.EventHandler(this.btnCultura_Click);
         // 
         // btnFuncionario
         // 

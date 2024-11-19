@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Forms.Clientes_Fisicos;
+using PIM_IV_Forms.Forms.Culturas;
 using PIM_IV_Forms.Forms.Fornecedores;
 using PIM_IV_Forms.Forms.Funcionarios;
 
@@ -12,13 +13,15 @@ public partial class MainForm : Form
     private readonly ClienteFisicoController _clienteFisicoController;
     private readonly FuncionarioController _funcionarioController;
     private readonly FornecedorController _fornecedorController;
+    private readonly CulturaController _culturaController;
 
-    public MainForm(ClienteFisicoController clienteFisicoController, FuncionarioController funcionarioController, FornecedorController fornecedorController)
+    public MainForm(ClienteFisicoController clienteFisicoController, FuncionarioController funcionarioController, FornecedorController fornecedorController, CulturaController culturaController)
     {
         InitializeComponent();
         _clienteFisicoController = clienteFisicoController;
         _funcionarioController = funcionarioController;
         _fornecedorController = fornecedorController;
+        _culturaController = culturaController;
     }
 
     private void MainForm_Resize(object sender, EventArgs e)
@@ -44,17 +47,6 @@ public partial class MainForm : Form
         }
     }
 
-    /*
-    private void btnFornecedor_Click(object sender, EventArgs e)
-    {
-        if (_fornecedorController != null)
-        {
-            var fornecedorForm = new FornecedorForm(_fornecedorController);
-            fornecedorForm.Show();
-        }
-    }
-    */
-
     private void btnFornecedorFisico_Click(object sender, EventArgs e)
     {
         if (_fornecedorController != null)
@@ -79,6 +71,15 @@ public partial class MainForm : Form
         {
             var fornecedorForm = new FornecedorForm(_fornecedorController, "Geral");
             fornecedorForm.Show();
+        }
+    }
+
+    private void btnCultura_Click(object sender, EventArgs e)
+    {
+        if (_culturaController != null)
+        {
+            var culturaForm = new CulturaForm(_culturaController);
+            culturaForm.Show();
         }
     }
 }
