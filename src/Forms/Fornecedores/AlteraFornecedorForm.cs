@@ -10,7 +10,6 @@ public partial class AlteraFornecedorForm : Form
 {
     private readonly FornecedorController _fornecedorController;
     private readonly int _fornecedorId;
-    private Fornecedor _fornecedor;
 
     public AlteraFornecedorForm(FornecedorController fornecedorController, int fornecedorId)
     {
@@ -30,10 +29,9 @@ public partial class AlteraFornecedorForm : Form
         var fornecedor = await _fornecedorController.SearchFornecedor(_fornecedorId);
         if (fornecedor != null)
         {
-            _fornecedor = fornecedor;
             var endereco = Endereco.ToEndereco(fornecedor.Endereco);
 
-            PopulaCampos(endereco, _fornecedor);
+            PopulaCampos(endereco, fornecedor);
             VerificarTipoFornecedor(this, null);
         }
 
@@ -42,7 +40,6 @@ public partial class AlteraFornecedorForm : Form
             MessageBox.Show("Não foi possível carregar os dados deste fornecedor! Tente novamente mais tarde.");
             Close();
         }
-
     }
 
     private void VerificarTipoFornecedor(object sender, EventArgs e)

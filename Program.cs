@@ -27,9 +27,11 @@ internal static class Program
         builder.RegisterType<ClienteFisicoRepository>().As<IRepository<ClienteFisico>>();
         builder.RegisterType<FuncionarioRepository>().As<IRepository<Funcionario>>();
         builder.RegisterType<FornecedorRepository>().As<IFornecedorRepository>();
+        builder.RegisterType<CulturaRepository>().As<IRepository<Cultura>>();
         builder.RegisterType<ClienteFisicoController>();
         builder.RegisterType<FuncionarioController>();
         builder.RegisterType<FornecedorController>();
+        builder.RegisterType<CulturaController>();
         builder.RegisterType<MainForm>();
 
         var container = builder.Build();

@@ -69,6 +69,7 @@
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="src\Controllers\ClienteFisicoController.cs" />
+        <Compile Include="src\Controllers\CulturaController.cs" />
         <Compile Include="src\Controllers\FornecedorController.cs" />
         <Compile Include="src\Controllers\FuncionarioController.cs" />
         <Compile Include="src\Forms\Clientes Fisicos\AlteraClienteFisicoForm.cs">
@@ -100,6 +101,36 @@
         </Compile>
         <Compile Include="src\Forms\Clientes Fisicos\ExcluirClienteFisicoForm.Designer.cs">
           <DependentUpon>ExcluirClienteFisicoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\AlteraCulturaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\AlteraCulturaForm.Designer.cs">
+          <DependentUpon>AlteraCulturaForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\CadastroCulturaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\CadastroCulturaForm.Designer.cs">
+          <DependentUpon>CadastroCulturaForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\ConsultaCulturaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\ConsultaCulturaForm.Designer.cs">
+          <DependentUpon>ConsultaCulturaForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\CulturaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\CulturaForm.Designer.cs">
+          <DependentUpon>CulturaForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\ExcluirCulturaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Culturas\ExcluirCulturaForm.Designer.cs">
+          <DependentUpon>ExcluirCulturaForm.cs</DependentUpon>
         </Compile>
         <Compile Include="src\Forms\Fornecedores\AlteraFornecedorForm.cs">
           <SubType>Form</SubType>
@@ -168,15 +199,18 @@
           <DependentUpon>MainForm.cs</DependentUpon>
         </Compile>
         <Compile Include="src\Models\ClienteFisico.cs" />
+        <Compile Include="src\Models\Cultura.cs" />
         <Compile Include="src\Models\Endereco.cs" />
         <Compile Include="src\Models\Fornecedor.cs" />
         <Compile Include="src\Models\Funcionario.cs" />
         <Compile Include="src\Repositories\ClienteFisicoRepository.cs" />
+        <Compile Include="src\Repositories\CulturaRepository.cs" />
         <Compile Include="src\Repositories\FornecedorRepository.cs" />
         <Compile Include="src\Repositories\FuncionarioRepository.cs" />
         <Compile Include="src\Repositories\IFornecedorRepository.cs" />
         <Compile Include="src\Repositories\IRepository.cs" />
         <Compile Include="src\Validator\ClienteValidator.cs" />
+        <Compile Include="src\Validator\CulturaValidator.cs" />
         <Compile Include="src\Validator\EnderecoValidator.cs" />
         <Compile Include="src\Validator\FornecedorValidator.cs" />
         <Compile Include="src\Validator\FuncionarioValidator.cs" />
@@ -206,6 +240,21 @@
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\Clientes Fisicos\ExcluirClienteFisicoForm.resx">
           <DependentUpon>ExcluirClienteFisicoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Culturas\AlteraCulturaForm.resx">
+          <DependentUpon>AlteraCulturaForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Culturas\CadastroCulturaForm.resx">
+          <DependentUpon>CadastroCulturaForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Culturas\ConsultaCulturaForm.resx">
+          <DependentUpon>ConsultaCulturaForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Culturas\CulturaForm.resx">
+          <DependentUpon>CulturaForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Culturas\ExcluirCulturaForm.resx">
+          <DependentUpon>ExcluirCulturaForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\Fornecedores\AlteraFornecedorForm.resx">
           <DependentUpon>AlteraFornecedorForm.cs</DependentUpon>
