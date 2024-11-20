@@ -24,14 +24,18 @@ internal static class Program
         var builder = new ContainerBuilder();
         builder.Register(_ => new SqlConnection(ConnectionString))
             .As<IDbConnection>().InstancePerLifetimeScope();
+
         builder.RegisterType<ClienteFisicoRepository>().As<IRepository<ClienteFisico>>();
         builder.RegisterType<FuncionarioRepository>().As<IRepository<Funcionario>>();
         builder.RegisterType<FornecedorRepository>().As<IFornecedorRepository>();
         builder.RegisterType<CulturaRepository>().As<IRepository<Cultura>>();
+        builder.RegisterType<ProdutoRepository>().As<IRepository<Produto>>();
+
         builder.RegisterType<ClienteFisicoController>();
         builder.RegisterType<FuncionarioController>();
         builder.RegisterType<FornecedorController>();
         builder.RegisterType<CulturaController>();
+        builder.RegisterType<ProdutoController>();
         builder.RegisterType<MainForm>();
 
         var container = builder.Build();
