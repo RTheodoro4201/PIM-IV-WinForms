@@ -72,6 +72,7 @@
         <Compile Include="src\Controllers\CulturaController.cs" />
         <Compile Include="src\Controllers\FornecedorController.cs" />
         <Compile Include="src\Controllers\FuncionarioController.cs" />
+        <Compile Include="src\Controllers\InsumoController.cs" />
         <Compile Include="src\Controllers\ProdutoController.cs" />
         <Compile Include="src\Forms\Clientes Fisicos\AlteraClienteFisicoForm.cs">
           <SubType>Form</SubType>
@@ -193,6 +194,36 @@
         <Compile Include="src\Forms\Funcionarios\ExcluirFuncionarioForm.Designer.cs">
           <DependentUpon>ExcluirFuncionarioForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="src\Forms\Insumos\AlteraInsumoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Insumos\AlteraInsumoForm.Designer.cs">
+          <DependentUpon>AlteraInsumoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Insumos\CadastroInsumoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Insumos\CadastroInsumoForm.Designer.cs">
+          <DependentUpon>CadastroInsumoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Insumos\ConsultaInsumoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Insumos\ConsultaInsumoForm.Designer.cs">
+          <DependentUpon>ConsultaInsumoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Insumos\ExcluirInsumoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Insumos\ExcluirInsumoForm.Designer.cs">
+          <DependentUpon>ExcluirInsumoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Insumos\InsumoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Insumos\InsumoForm.Designer.cs">
+          <DependentUpon>InsumoForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="src\Forms\MainForm.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -234,12 +265,15 @@
         <Compile Include="src\Models\Endereco.cs" />
         <Compile Include="src\Models\Fornecedor.cs" />
         <Compile Include="src\Models\Funcionario.cs" />
+        <Compile Include="src\Models\Insumo.cs" />
         <Compile Include="src\Models\Produto.cs" />
         <Compile Include="src\Repositories\ClienteFisicoRepository.cs" />
         <Compile Include="src\Repositories\CulturaRepository.cs" />
         <Compile Include="src\Repositories\FornecedorRepository.cs" />
         <Compile Include="src\Repositories\FuncionarioRepository.cs" />
         <Compile Include="src\Repositories\IFornecedorRepository.cs" />
+        <Compile Include="src\Repositories\IInsumoRepository.cs" />
+        <Compile Include="src\Repositories\InsumoRepository.cs" />
         <Compile Include="src\Repositories\IRepository.cs" />
         <Compile Include="src\Repositories\ProdutoRepository.cs" />
         <Compile Include="src\Validator\ClienteValidator.cs" />
@@ -247,6 +281,7 @@
         <Compile Include="src\Validator\EnderecoValidator.cs" />
         <Compile Include="src\Validator\FornecedorValidator.cs" />
         <Compile Include="src\Validator\FuncionarioValidator.cs" />
+        <Compile Include="src\Validator\InsumoValidator.cs" />
         <Compile Include="src\Validator\ProdutoValidator.cs" />
         <EmbeddedResource Include="Properties\Resources.en-us.resx">
           <DependentUpon>Resources.resx</DependentUpon>
@@ -319,6 +354,21 @@
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\Funcionarios\ExcluirFuncionarioForm.resx">
           <DependentUpon>ExcluirFuncionarioForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Insumos\AlteraInsumoForm.resx">
+          <DependentUpon>AlteraInsumoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Insumos\CadastroInsumoForm.resx">
+          <DependentUpon>CadastroInsumoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Insumos\ConsultaInsumoForm.resx">
+          <DependentUpon>ConsultaInsumoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Insumos\ExcluirInsumoForm.resx">
+          <DependentUpon>ExcluirInsumoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Insumos\InsumoForm.resx">
+          <DependentUpon>InsumoForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\MainForm.resx">
           <DependentUpon>MainForm.cs</DependentUpon>

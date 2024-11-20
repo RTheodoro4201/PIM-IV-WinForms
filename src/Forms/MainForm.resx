@@ -339,37 +339,37 @@
   <data name="&gt;&gt;btnFornecedorFisico.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="btnMaterial.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnInsumo.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnMaterial.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnInsumo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
-  <data name="btnMaterial.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnInsumo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnMaterial.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnInsumo.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 505</value>
   </data>
-  <data name="btnMaterial.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnInsumo.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
   </data>
-  <data name="btnMaterial.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnInsumo.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="btnMaterial.Text" xml:space="preserve">
-    <value>Material</value>
+  <data name="btnInsumo.Text" xml:space="preserve">
+    <value>Insumo</value>
   </data>
-  <data name="&gt;&gt;btnMaterial.Name" xml:space="preserve">
-    <value>btnMaterial</value>
+  <data name="&gt;&gt;btnInsumo.Name" xml:space="preserve">
+    <value>btnInsumo</value>
   </data>
-  <data name="&gt;&gt;btnMaterial.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnInsumo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnMaterial.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnInsumo.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnMaterial.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnInsumo.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">

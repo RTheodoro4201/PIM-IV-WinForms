@@ -39,7 +39,7 @@ partial class MainForm
         this.btnFornecedorJurídico = new System.Windows.Forms.Button();
         this.btnCliente = new System.Windows.Forms.Button();
         this.btnFornecedorFisico = new System.Windows.Forms.Button();
-        this.btnMaterial = new System.Windows.Forms.Button();
+        this.btnInsumo = new System.Windows.Forms.Button();
         this.panel1 = new System.Windows.Forms.Panel();
         this.btnCultura = new System.Windows.Forms.Button();
         this.btnFuncionario = new System.Windows.Forms.Button();
@@ -111,15 +111,16 @@ partial class MainForm
         this.btnFornecedorFisico.UseVisualStyleBackColor = false;
         this.btnFornecedorFisico.Click += new System.EventHandler(this.btnFornecedorFisico_Click);
         // 
-        // btnMaterial
+        // btnInsumo
         // 
-        this.btnMaterial.BackColor = System.Drawing.Color.DimGray;
-        this.btnMaterial.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-        this.btnMaterial.FlatAppearance.BorderSize = 0;
-        resources.ApplyResources(this.btnMaterial, "btnMaterial");
-        this.btnMaterial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-        this.btnMaterial.Name = "btnMaterial";
-        this.btnMaterial.UseVisualStyleBackColor = false;
+        this.btnInsumo.BackColor = System.Drawing.Color.DimGray;
+        this.btnInsumo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+        this.btnInsumo.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnInsumo, "btnInsumo");
+        this.btnInsumo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnInsumo.Name = "btnInsumo";
+        this.btnInsumo.UseVisualStyleBackColor = false;
+        this.btnInsumo.Click += new System.EventHandler(this.btnInsumo_Click);
         // 
         // panel1
         // 
@@ -182,7 +183,7 @@ partial class MainForm
         this.Controls.Add(this.btnFuncionario);
         this.Controls.Add(this.btnCultura);
         this.Controls.Add(this.panel1);
-        this.Controls.Add(this.btnMaterial);
+        this.Controls.Add(this.btnInsumo);
         this.Controls.Add(this.btnFornecedorFisico);
         this.Controls.Add(this.splitContainer1);
         this.Controls.Add(this.btnFornecedorJurídico);
@@ -216,7 +217,7 @@ partial class MainForm
     private System.Windows.Forms.Button btnFornecedorJurídico;
     private System.Windows.Forms.Button btnCliente;
     private System.Windows.Forms.Button btnFornecedorFisico;
-    private System.Windows.Forms.Button btnMaterial;
+    private System.Windows.Forms.Button btnInsumo;
 
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label3;
