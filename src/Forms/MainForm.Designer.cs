@@ -44,6 +44,7 @@ partial class MainForm
         this.btnCultura = new System.Windows.Forms.Button();
         this.btnFuncionario = new System.Windows.Forms.Button();
         this.btnFornecedor = new System.Windows.Forms.Button();
+        this.btnProduto = new System.Windows.Forms.Button();
         ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
         this.splitContainer1.Panel1.SuspendLayout();
         this.splitContainer1.Panel2.SuspendLayout();
@@ -160,11 +161,23 @@ partial class MainForm
         this.btnFornecedor.UseVisualStyleBackColor = false;
         this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
         // 
+        // btnProduto
+        // 
+        this.btnProduto.BackColor = System.Drawing.Color.DimGray;
+        this.btnProduto.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+        this.btnProduto.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnProduto, "btnProduto");
+        this.btnProduto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnProduto.Name = "btnProduto";
+        this.btnProduto.UseVisualStyleBackColor = false;
+        this.btnProduto.Click += new System.EventHandler(this.btnProduto_Click);
+        // 
         // MainForm
         // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.BackColor = System.Drawing.Color.PaleGreen;
+        this.Controls.Add(this.btnProduto);
         this.Controls.Add(this.btnFornecedor);
         this.Controls.Add(this.btnFuncionario);
         this.Controls.Add(this.btnCultura);
@@ -189,6 +202,8 @@ partial class MainForm
         this.splitContainer1.ResumeLayout(false);
         this.ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Button btnProduto;
 
     private System.Windows.Forms.Button btnFornecedor;
 

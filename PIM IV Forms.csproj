@@ -72,6 +72,7 @@
         <Compile Include="src\Controllers\CulturaController.cs" />
         <Compile Include="src\Controllers\FornecedorController.cs" />
         <Compile Include="src\Controllers\FuncionarioController.cs" />
+        <Compile Include="src\Controllers\ProdutoController.cs" />
         <Compile Include="src\Forms\Clientes Fisicos\AlteraClienteFisicoForm.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -198,22 +199,55 @@
         <Compile Include="src\Forms\MainForm.Designer.cs">
           <DependentUpon>MainForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="src\Forms\Produtos\AlteraProdutoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Produtos\AlteraProdutoForm.Designer.cs">
+          <DependentUpon>AlteraProdutoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Produtos\CadastroProdutoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Produtos\CadastroProdutoForm.Designer.cs">
+          <DependentUpon>CadastroProdutoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Produtos\ConsultaProdutoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Produtos\ConsultaProdutoForm.Designer.cs">
+          <DependentUpon>ConsultaProdutoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Produtos\ExcluirProdutoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Produtos\ExcluirProdutoForm.Designer.cs">
+          <DependentUpon>ExcluirProdutoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Produtos\ProdutoForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Produtos\ProdutoForm.Designer.cs">
+          <DependentUpon>ProdutoForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="src\Models\ClienteFisico.cs" />
         <Compile Include="src\Models\Cultura.cs" />
         <Compile Include="src\Models\Endereco.cs" />
         <Compile Include="src\Models\Fornecedor.cs" />
         <Compile Include="src\Models\Funcionario.cs" />
+        <Compile Include="src\Models\Produto.cs" />
         <Compile Include="src\Repositories\ClienteFisicoRepository.cs" />
         <Compile Include="src\Repositories\CulturaRepository.cs" />
         <Compile Include="src\Repositories\FornecedorRepository.cs" />
         <Compile Include="src\Repositories\FuncionarioRepository.cs" />
         <Compile Include="src\Repositories\IFornecedorRepository.cs" />
         <Compile Include="src\Repositories\IRepository.cs" />
+        <Compile Include="src\Repositories\ProdutoRepository.cs" />
         <Compile Include="src\Validator\ClienteValidator.cs" />
         <Compile Include="src\Validator\CulturaValidator.cs" />
         <Compile Include="src\Validator\EnderecoValidator.cs" />
         <Compile Include="src\Validator\FornecedorValidator.cs" />
         <Compile Include="src\Validator\FuncionarioValidator.cs" />
+        <Compile Include="src\Validator\ProdutoValidator.cs" />
         <EmbeddedResource Include="Properties\Resources.en-us.resx">
           <DependentUpon>Resources.resx</DependentUpon>
         </EmbeddedResource>
@@ -288,6 +322,21 @@
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\MainForm.resx">
           <DependentUpon>MainForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Produtos\AlteraProdutoForm.resx">
+          <DependentUpon>AlteraProdutoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Produtos\CadastroProdutoForm.resx">
+          <DependentUpon>CadastroProdutoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Produtos\ConsultaProdutoForm.resx">
+          <DependentUpon>ConsultaProdutoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Produtos\ExcluirProdutoForm.resx">
+          <DependentUpon>ExcluirProdutoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Produtos\ProdutoForm.resx">
+          <DependentUpon>ProdutoForm.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
