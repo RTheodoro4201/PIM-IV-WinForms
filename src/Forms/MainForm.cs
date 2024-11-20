@@ -5,6 +5,7 @@ using PIM_IV_Forms.Forms.Clientes_Fisicos;
 using PIM_IV_Forms.Forms.Culturas;
 using PIM_IV_Forms.Forms.Fornecedores;
 using PIM_IV_Forms.Forms.Funcionarios;
+using PIM_IV_Forms.Forms.Insumos;
 using PIM_IV_Forms.Forms.Produtos;
 
 namespace PIM_IV_Forms.Forms;
@@ -16,8 +17,11 @@ public partial class MainForm : Form
     private readonly FornecedorController _fornecedorController;
     private readonly CulturaController _culturaController;
     private readonly ProdutoController _produtoController;
+    private readonly InsumoController _insumoController;
 
-    public MainForm(ClienteFisicoController clienteFisicoController, FuncionarioController funcionarioController, FornecedorController fornecedorController, CulturaController culturaController, ProdutoController produtoController)
+    public MainForm(ClienteFisicoController clienteFisicoController, FuncionarioController funcionarioController,
+        FornecedorController fornecedorController, CulturaController culturaController,
+        ProdutoController produtoController, InsumoController insumoController)
     {
         InitializeComponent();
         _clienteFisicoController = clienteFisicoController;
@@ -25,6 +29,7 @@ public partial class MainForm : Form
         _fornecedorController = fornecedorController;
         _culturaController = culturaController;
         _produtoController = produtoController;
+        _insumoController = insumoController;
     }
 
     private void MainForm_Resize(object sender, EventArgs e)
@@ -92,6 +97,15 @@ public partial class MainForm : Form
         {
             var produtoForm = new ProdutoForm(_produtoController);
             produtoForm.Show();
+        }
+    }
+
+    private void btnInsumo_Click(object sender, EventArgs e)
+    {
+        if (_insumoController != null)
+        {
+            var insumoForm = new InsumoForm(_insumoController);
+            insumoForm.Show();
         }
     }
 }
