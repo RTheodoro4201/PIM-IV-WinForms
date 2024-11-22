@@ -50,9 +50,9 @@ partial class ExcluirInsumoForm
         this.txtDescricao = new System.Windows.Forms.TextBox();
         this.btnExcluir = new System.Windows.Forms.Button();
         this.SuspendLayout();
-        //
+        // 
         // btnCancelar
-        //
+        // 
         this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
         this.btnCancelar.BackColor = System.Drawing.Color.GhostWhite;
         this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -65,18 +65,18 @@ partial class ExcluirInsumoForm
         this.btnCancelar.Text = "Cancelar";
         this.btnCancelar.UseVisualStyleBackColor = false;
         this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-        //
+        // 
         // txtId
-        //
+        // 
         this.txtId.Font = new System.Drawing.Font("Tahoma", 12F);
         this.txtId.Location = new System.Drawing.Point(425, 9);
         this.txtId.Name = "txtId";
         this.txtId.ReadOnly = true;
         this.txtId.Size = new System.Drawing.Size(86, 27);
         this.txtId.TabIndex = 79;
-        //
+        // 
         // lblId
-        //
+        // 
         this.lblId.BackColor = System.Drawing.Color.GhostWhite;
         this.lblId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblId.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -87,9 +87,9 @@ partial class ExcluirInsumoForm
         this.lblId.TabIndex = 78;
         this.lblId.Text = "Código";
         this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // lblNomeFornecedor
-        //
+        // 
         this.lblNomeFornecedor.BackColor = System.Drawing.Color.GhostWhite;
         this.lblNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblNomeFornecedor.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -100,9 +100,9 @@ partial class ExcluirInsumoForm
         this.lblNomeFornecedor.TabIndex = 95;
         this.lblNomeFornecedor.Text = "Nome do Fornecedor";
         this.lblNomeFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // txtNomeFornecedor
-        //
+        // 
         this.txtNomeFornecedor.Font = new System.Drawing.Font("Tahoma", 12F);
         this.txtNomeFornecedor.Location = new System.Drawing.Point(264, 195);
         this.txtNomeFornecedor.Name = "txtNomeFornecedor";
@@ -110,9 +110,9 @@ partial class ExcluirInsumoForm
         this.txtNomeFornecedor.Size = new System.Drawing.Size(179, 27);
         this.txtNomeFornecedor.TabIndex = 94;
         this.txtNomeFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-        //
+        // 
         // lblDataCompra
-        //
+        // 
         this.lblDataCompra.BackColor = System.Drawing.Color.GhostWhite;
         this.lblDataCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblDataCompra.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -123,9 +123,9 @@ partial class ExcluirInsumoForm
         this.lblDataCompra.TabIndex = 92;
         this.lblDataCompra.Text = "Data de Compra";
         this.lblDataCompra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // dateDataCompra
-        //
+        // 
         this.dateDataCompra.Enabled = false;
         this.dateDataCompra.Font = new System.Drawing.Font("Tahoma", 14F);
         this.dateDataCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -136,9 +136,9 @@ partial class ExcluirInsumoForm
         this.dateDataCompra.Size = new System.Drawing.Size(132, 30);
         this.dateDataCompra.TabIndex = 93;
         this.dateDataCompra.Value = new System.DateTime(2024, 11, 19, 0, 0, 0, 0);
-        //
+        // 
         // lblIdFornecedor
-        //
+        // 
         this.lblIdFornecedor.BackColor = System.Drawing.Color.GhostWhite;
         this.lblIdFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblIdFornecedor.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -149,9 +149,9 @@ partial class ExcluirInsumoForm
         this.lblIdFornecedor.TabIndex = 91;
         this.lblIdFornecedor.Text = "Código do Fornecedor";
         this.lblIdFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // txtIdFornecedor
-        //
+        // 
         this.txtIdFornecedor.Font = new System.Drawing.Font("Tahoma", 12F);
         this.txtIdFornecedor.Location = new System.Drawing.Point(277, 161);
         this.txtIdFornecedor.Name = "txtIdFornecedor";
@@ -159,9 +159,9 @@ partial class ExcluirInsumoForm
         this.txtIdFornecedor.Size = new System.Drawing.Size(166, 27);
         this.txtIdFornecedor.TabIndex = 90;
         this.txtIdFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-        //
+        // 
         // lblQuantidadeEstoque
-        //
+        // 
         this.lblQuantidadeEstoque.BackColor = System.Drawing.Color.GhostWhite;
         this.lblQuantidadeEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblQuantidadeEstoque.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -172,27 +172,27 @@ partial class ExcluirInsumoForm
         this.lblQuantidadeEstoque.TabIndex = 89;
         this.lblQuantidadeEstoque.Text = "Quantidade em Estoque";
         this.lblQuantidadeEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // txtQuantidadeEstoque
-        //
+        // 
         this.txtQuantidadeEstoque.Font = new System.Drawing.Font("Tahoma", 12F);
         this.txtQuantidadeEstoque.Location = new System.Drawing.Point(292, 125);
         this.txtQuantidadeEstoque.Name = "txtQuantidadeEstoque";
         this.txtQuantidadeEstoque.ReadOnly = true;
         this.txtQuantidadeEstoque.Size = new System.Drawing.Size(151, 27);
         this.txtQuantidadeEstoque.TabIndex = 88;
-        //
+        // 
         // txtNome
-        //
+        // 
         this.txtNome.Font = new System.Drawing.Font("Tahoma", 12F);
         this.txtNome.Location = new System.Drawing.Point(220, 90);
         this.txtNome.Name = "txtNome";
         this.txtNome.ReadOnly = true;
         this.txtNome.Size = new System.Drawing.Size(223, 27);
         this.txtNome.TabIndex = 87;
-        //
+        // 
         // lblDataValidade
-        //
+        // 
         this.lblDataValidade.BackColor = System.Drawing.Color.GhostWhite;
         this.lblDataValidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblDataValidade.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -203,9 +203,9 @@ partial class ExcluirInsumoForm
         this.lblDataValidade.TabIndex = 82;
         this.lblDataValidade.Text = "Data de Validade";
         this.lblDataValidade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // lblDescricao
-        //
+        // 
         this.lblDescricao.BackColor = System.Drawing.Color.GhostWhite;
         this.lblDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblDescricao.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -216,9 +216,9 @@ partial class ExcluirInsumoForm
         this.lblDescricao.TabIndex = 85;
         this.lblDescricao.Text = "Descrição";
         this.lblDescricao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // lblNome
-        //
+        // 
         this.lblNome.BackColor = System.Drawing.Color.GhostWhite;
         this.lblNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblNome.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -229,9 +229,9 @@ partial class ExcluirInsumoForm
         this.lblNome.TabIndex = 84;
         this.lblNome.Text = "Nome";
         this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        //
+        // 
         // dateDataValidade
-        //
+        // 
         this.dateDataValidade.Enabled = false;
         this.dateDataValidade.Font = new System.Drawing.Font("Tahoma", 14F);
         this.dateDataValidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -242,18 +242,18 @@ partial class ExcluirInsumoForm
         this.dateDataValidade.Size = new System.Drawing.Size(132, 30);
         this.dateDataValidade.TabIndex = 86;
         this.dateDataValidade.Value = new System.DateTime(2024, 11, 19, 0, 0, 0, 0);
-        //
+        // 
         // txtDescricao
-        //
+        // 
         this.txtDescricao.Font = new System.Drawing.Font("Tahoma", 12F);
         this.txtDescricao.Location = new System.Drawing.Point(583, 90);
         this.txtDescricao.Name = "txtDescricao";
         this.txtDescricao.ReadOnly = true;
         this.txtDescricao.Size = new System.Drawing.Size(223, 27);
         this.txtDescricao.TabIndex = 83;
-        //
+        // 
         // btnExcluir
-        //
+        // 
         this.btnExcluir.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
         this.btnExcluir.BackColor = System.Drawing.Color.GhostWhite;
         this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -265,9 +265,10 @@ partial class ExcluirInsumoForm
         this.btnExcluir.TabIndex = 96;
         this.btnExcluir.Text = "Excluir";
         this.btnExcluir.UseVisualStyleBackColor = false;
-        //
+        this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+        // 
         // ExcluirInsumoForm
-        //
+        // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.AutoSize = true;

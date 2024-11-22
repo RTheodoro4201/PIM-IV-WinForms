@@ -102,6 +102,7 @@ public partial class AlteraInsumoForm : Form
         {
             var insumo = new Insumo
             {
+                Id_Insumo = _idInsumo,
                 Nome = txtNome.Text,
                 Descricao = txtDescricao.Text,
                 Quantidade_Estoque = int.Parse(txtQuantidadeEstoque.Text),
