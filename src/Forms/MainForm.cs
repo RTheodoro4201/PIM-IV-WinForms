@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Forms.Clientes_Fisicos;
+using PIM_IV_Forms.Forms.Compras;
 using PIM_IV_Forms.Forms.Culturas;
 using PIM_IV_Forms.Forms.Fornecedores;
 using PIM_IV_Forms.Forms.Funcionarios;
@@ -18,10 +19,12 @@ public partial class MainForm : Form
     private readonly CulturaController _culturaController;
     private readonly ProdutoController _produtoController;
     private readonly InsumoController _insumoController;
+    private readonly CompraController _compraController;
 
     public MainForm(ClienteFisicoController clienteFisicoController, FuncionarioController funcionarioController,
         FornecedorController fornecedorController, CulturaController culturaController,
-        ProdutoController produtoController, InsumoController insumoController)
+        ProdutoController produtoController, InsumoController insumoController,
+        CompraController compraController)
     {
         InitializeComponent();
         _clienteFisicoController = clienteFisicoController;
@@ -30,6 +33,7 @@ public partial class MainForm : Form
         _culturaController = culturaController;
         _produtoController = produtoController;
         _insumoController = insumoController;
+        _compraController = compraController;
     }
 
     private void MainForm_Resize(object sender, EventArgs e)
@@ -106,6 +110,15 @@ public partial class MainForm : Form
         {
             var insumoForm = new InsumoForm(_insumoController);
             insumoForm.Show();
+        }
+    }
+
+    private void btnCompras_Click(object sender, EventArgs e)
+    {
+        if (_compraController != null)
+        {
+            var compraForm = new CompraForm(_compraController);
+            compraForm.Show();
         }
     }
 }

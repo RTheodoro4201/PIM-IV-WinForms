@@ -10,6 +10,7 @@ public partial class ExcluirInsumoForm : Form
 {
     private readonly InsumoController _insumoController;
     private readonly int _idInsumo;
+    private Insumo _insumo;
 
     public ExcluirInsumoForm(InsumoController insumoController, int idInsumo)
     {
@@ -29,9 +30,10 @@ public partial class ExcluirInsumoForm : Form
         var insumo = await _insumoController.SearchInsumo(_idInsumo);
         if (insumo != null)
         {
+            _insumo = insumo;
             txtId.Text = _idInsumo.ToString();
 
-            PopulaCampos(insumo);
+            PopulaCampos(_insumo);
         }
 
         else
@@ -61,4 +63,29 @@ public partial class ExcluirInsumoForm : Form
     }
 
     #endregion
+
+    private async void btnExcluir_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            var resultado =
+                MessageBox.Show($"Deseja excluir a insumo nº{_idInsumo} '{_insumo.Nome}'? \nEsta ação não pode ser desfeita.",
+                    "Excluir Insumo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (resultado == DialogResult.Yes)
+            {
+                await _insumoController.Delete(_idInsumo);
+                MessageBox.Show("Insumo excluído com sucesso!",
+                    "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            Close();
+        }
+        catch (Exception exception)
+        {
+            MessageBox.Show("Houve um erro ao tentar excluir o insumo!");
+            MessageBox.Show(exception.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            throw;
+        }
+    }
 }

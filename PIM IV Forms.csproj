@@ -69,6 +69,7 @@
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="src\Controllers\ClienteFisicoController.cs" />
+        <Compile Include="src\Controllers\CompraController.cs" />
         <Compile Include="src\Controllers\CulturaController.cs" />
         <Compile Include="src\Controllers\FornecedorController.cs" />
         <Compile Include="src\Controllers\FuncionarioController.cs" />
@@ -103,6 +104,36 @@
         </Compile>
         <Compile Include="src\Forms\Clientes Fisicos\ExcluirClienteFisicoForm.Designer.cs">
           <DependentUpon>ExcluirClienteFisicoForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Compras\AlteraCompraForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Compras\AlteraCompraForm.Designer.cs">
+          <DependentUpon>AlteraCompraForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Compras\CadastroCompraForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Compras\CadastroCompraForm.Designer.cs">
+          <DependentUpon>CadastroCompraForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Compras\CompraForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Compras\CompraForm.Designer.cs">
+          <DependentUpon>CompraForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Compras\ConsultaCompraForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Compras\ConsultaCompraForm.Designer.cs">
+          <DependentUpon>ConsultaCompraForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Compras\ExcluirCompraForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Compras\ExcluirCompraForm.Designer.cs">
+          <DependentUpon>ExcluirCompraForm.cs</DependentUpon>
         </Compile>
         <Compile Include="src\Forms\Culturas\AlteraCulturaForm.cs">
           <SubType>Form</SubType>
@@ -261,6 +292,7 @@
           <DependentUpon>ProdutoForm.cs</DependentUpon>
         </Compile>
         <Compile Include="src\Models\ClienteFisico.cs" />
+        <Compile Include="src\Models\Compra.cs" />
         <Compile Include="src\Models\Cultura.cs" />
         <Compile Include="src\Models\Endereco.cs" />
         <Compile Include="src\Models\Fornecedor.cs" />
@@ -268,6 +300,7 @@
         <Compile Include="src\Models\Insumo.cs" />
         <Compile Include="src\Models\Produto.cs" />
         <Compile Include="src\Repositories\ClienteFisicoRepository.cs" />
+        <Compile Include="src\Repositories\CompraRepository.cs" />
         <Compile Include="src\Repositories\CulturaRepository.cs" />
         <Compile Include="src\Repositories\FornecedorRepository.cs" />
         <Compile Include="src\Repositories\FuncionarioRepository.cs" />
@@ -277,6 +310,7 @@
         <Compile Include="src\Repositories\IRepository.cs" />
         <Compile Include="src\Repositories\ProdutoRepository.cs" />
         <Compile Include="src\Validator\ClienteValidator.cs" />
+        <Compile Include="src\Validator\CompraValidator.cs" />
         <Compile Include="src\Validator\CulturaValidator.cs" />
         <Compile Include="src\Validator\EnderecoValidator.cs" />
         <Compile Include="src\Validator\FornecedorValidator.cs" />
@@ -309,6 +343,21 @@
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\Clientes Fisicos\ExcluirClienteFisicoForm.resx">
           <DependentUpon>ExcluirClienteFisicoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Compras\AlteraCompraForm.resx">
+          <DependentUpon>AlteraCompraForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Compras\CadastroCompraForm.resx">
+          <DependentUpon>CadastroCompraForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Compras\CompraForm.resx">
+          <DependentUpon>CompraForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Compras\ConsultaCompraForm.resx">
+          <DependentUpon>ConsultaCompraForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Compras\ExcluirCompraForm.resx">
+          <DependentUpon>ExcluirCompraForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\Culturas\AlteraCulturaForm.resx">
           <DependentUpon>AlteraCulturaForm.cs</DependentUpon>

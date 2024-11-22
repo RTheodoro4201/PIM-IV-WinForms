@@ -45,6 +45,8 @@ partial class MainForm
         this.btnFuncionario = new System.Windows.Forms.Button();
         this.btnFornecedor = new System.Windows.Forms.Button();
         this.btnProduto = new System.Windows.Forms.Button();
+        this.btnCompras = new System.Windows.Forms.Button();
+        this.btnVendas = new System.Windows.Forms.Button();
         ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
         this.splitContainer1.Panel1.SuspendLayout();
         this.splitContainer1.Panel2.SuspendLayout();
@@ -173,11 +175,34 @@ partial class MainForm
         this.btnProduto.UseVisualStyleBackColor = false;
         this.btnProduto.Click += new System.EventHandler(this.btnProduto_Click);
         // 
+        // btnCompras
+        // 
+        this.btnCompras.BackColor = System.Drawing.Color.CadetBlue;
+        this.btnCompras.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+        this.btnCompras.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnCompras, "btnCompras");
+        this.btnCompras.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnCompras.Name = "btnCompras";
+        this.btnCompras.UseVisualStyleBackColor = false;
+        this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
+        // 
+        // btnVendas
+        // 
+        this.btnVendas.BackColor = System.Drawing.Color.CadetBlue;
+        this.btnVendas.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+        this.btnVendas.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnVendas, "btnVendas");
+        this.btnVendas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnVendas.Name = "btnVendas";
+        this.btnVendas.UseVisualStyleBackColor = false;
+        // 
         // MainForm
         // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.BackColor = System.Drawing.Color.PaleGreen;
+        this.Controls.Add(this.btnVendas);
+        this.Controls.Add(this.btnCompras);
         this.Controls.Add(this.btnProduto);
         this.Controls.Add(this.btnFornecedor);
         this.Controls.Add(this.btnFuncionario);
@@ -203,6 +228,10 @@ partial class MainForm
         this.splitContainer1.ResumeLayout(false);
         this.ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Button btnCompras;
+
+    private System.Windows.Forms.Button btnVendas;
 
     private System.Windows.Forms.Button btnProduto;
 

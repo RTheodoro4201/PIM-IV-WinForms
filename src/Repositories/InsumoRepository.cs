@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Data;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Dapper;
 using PIM_IV_Forms.Models;
@@ -44,5 +45,13 @@ public class InsumoRepository(IDbConnection dbConnection) : IInsumoRepository
     {
         await dbConnection.ExecuteAsync("DELETE FROM insumos WHERE id_insumo = @Id_Insumo",
             new { Id_Insumo = id });
+    }
+
+    public async Task UpdateEstoque(Insumo insumo)
+    {
+        var query = "UPDATE insumos " +
+                    "SET quantidade_estoque = @Quantidade_Estoque "+
+                    "WHERE id_insumo = @Id_Insumo";
+        await dbConnection.ExecuteAsync(query, insumo);
     }
 }

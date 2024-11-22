@@ -1,0 +1,331 @@
+﻿using System.ComponentModel;
+
+namespace PIM_IV_Forms.Forms.Compras;
+
+partial class CadastroCompraForm
+{
+    /// <summary>
+    /// Required designer variable.
+    /// </summary>
+    private IContainer components = null;
+
+    /// <summary>
+    /// Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing)
+    {
+        if (disposing && (components != null))
+        {
+            components.Dispose();
+        }
+
+        base.Dispose(disposing);
+    }
+
+    #region Windows Form Designer generated code
+
+    /// <summary>
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent()
+    {
+        this.lblNomeInsumo = new System.Windows.Forms.Label();
+        this.lblIdInsumo = new System.Windows.Forms.Label();
+        this.txtNomeInsumo = new System.Windows.Forms.TextBox();
+        this.btnCancelar = new System.Windows.Forms.Button();
+        this.btnSalvar = new System.Windows.Forms.Button();
+        this.txtIdInsumo = new System.Windows.Forms.TextBox();
+        this.lblQuantidadeComprada = new System.Windows.Forms.Label();
+        this.txtQuantidadeComprada = new System.Windows.Forms.TextBox();
+        this.lblIdFornecedor = new System.Windows.Forms.Label();
+        this.txtIdFornecedor = new System.Windows.Forms.TextBox();
+        this.lblDataCompra = new System.Windows.Forms.Label();
+        this.dateDataCompra = new System.Windows.Forms.DateTimePicker();
+        this.lblNomeFornecedor = new System.Windows.Forms.Label();
+        this.txtNomeFornecedor = new System.Windows.Forms.TextBox();
+        this.lblValorUnitario = new System.Windows.Forms.Label();
+        this.txtValorUnitario = new System.Windows.Forms.TextBox();
+        this.lblValorTotal = new System.Windows.Forms.Label();
+        this.txtValorTotal = new System.Windows.Forms.TextBox();
+        this.SuspendLayout();
+        // 
+        // lblNomeInsumo
+        // 
+        this.lblNomeInsumo.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblNomeInsumo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblNomeInsumo.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblNomeInsumo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblNomeInsumo.Location = new System.Drawing.Point(458, 89);
+        this.lblNomeInsumo.Name = "lblNomeInsumo";
+        this.lblNomeInsumo.Size = new System.Drawing.Size(138, 27);
+        this.lblNomeInsumo.TabIndex = 54;
+        this.lblNomeInsumo.Text = "Nome do Insumo";
+        this.lblNomeInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // lblIdInsumo
+        // 
+        this.lblIdInsumo.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblIdInsumo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblIdInsumo.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblIdInsumo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblIdInsumo.Location = new System.Drawing.Point(96, 90);
+        this.lblIdInsumo.Name = "lblIdInsumo";
+        this.lblIdInsumo.Size = new System.Drawing.Size(162, 27);
+        this.lblIdInsumo.TabIndex = 50;
+        this.lblIdInsumo.Text = "Código do Insumo";
+        this.lblIdInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // txtNomeInsumo
+        // 
+        this.txtNomeInsumo.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.txtNomeInsumo.Location = new System.Drawing.Point(602, 90);
+        this.txtNomeInsumo.Name = "txtNomeInsumo";
+        this.txtNomeInsumo.ReadOnly = true;
+        this.txtNomeInsumo.Size = new System.Drawing.Size(223, 27);
+        this.txtNomeInsumo.TabIndex = 43;
+        // 
+        // btnCancelar
+        // 
+        this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+        this.btnCancelar.BackColor = System.Drawing.Color.GhostWhite;
+        this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.btnCancelar.Location = new System.Drawing.Point(501, 322);
+        this.btnCancelar.Name = "btnCancelar";
+        this.btnCancelar.Size = new System.Drawing.Size(148, 52);
+        this.btnCancelar.TabIndex = 68;
+        this.btnCancelar.Text = "Cancelar";
+        this.btnCancelar.UseVisualStyleBackColor = false;
+        this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+        // 
+        // btnSalvar
+        // 
+        this.btnSalvar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+        this.btnSalvar.BackColor = System.Drawing.Color.GhostWhite;
+        this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.btnSalvar.Location = new System.Drawing.Point(220, 322);
+        this.btnSalvar.Name = "btnSalvar";
+        this.btnSalvar.Size = new System.Drawing.Size(148, 52);
+        this.btnSalvar.TabIndex = 67;
+        this.btnSalvar.Text = "Salvar";
+        this.btnSalvar.UseVisualStyleBackColor = false;
+        this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+        // 
+        // txtIdInsumo
+        // 
+        this.txtIdInsumo.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.txtIdInsumo.Location = new System.Drawing.Point(264, 90);
+        this.txtIdInsumo.Name = "txtIdInsumo";
+        this.txtIdInsumo.Size = new System.Drawing.Size(164, 27);
+        this.txtIdInsumo.TabIndex = 69;
+        this.txtIdInsumo.Leave += new System.EventHandler(this.txtIdInsumo_Leave);
+        // 
+        // lblQuantidadeComprada
+        // 
+        this.lblQuantidadeComprada.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblQuantidadeComprada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblQuantidadeComprada.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblQuantidadeComprada.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblQuantidadeComprada.Location = new System.Drawing.Point(96, 125);
+        this.lblQuantidadeComprada.Name = "lblQuantidadeComprada";
+        this.lblQuantidadeComprada.Size = new System.Drawing.Size(175, 27);
+        this.lblQuantidadeComprada.TabIndex = 75;
+        this.lblQuantidadeComprada.Text = "Quantidade Comprada";
+        this.lblQuantidadeComprada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // txtQuantidadeComprada
+        // 
+        this.txtQuantidadeComprada.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.txtQuantidadeComprada.Location = new System.Drawing.Point(277, 125);
+        this.txtQuantidadeComprada.Name = "txtQuantidadeComprada";
+        this.txtQuantidadeComprada.Size = new System.Drawing.Size(151, 27);
+        this.txtQuantidadeComprada.TabIndex = 74;
+        // 
+        // lblIdFornecedor
+        // 
+        this.lblIdFornecedor.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblIdFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblIdFornecedor.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblIdFornecedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblIdFornecedor.Location = new System.Drawing.Point(96, 160);
+        this.lblIdFornecedor.Name = "lblIdFornecedor";
+        this.lblIdFornecedor.Size = new System.Drawing.Size(175, 27);
+        this.lblIdFornecedor.TabIndex = 77;
+        this.lblIdFornecedor.Text = "Código do Fornecedor";
+        this.lblIdFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // txtIdFornecedor
+        // 
+        this.txtIdFornecedor.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.txtIdFornecedor.Location = new System.Drawing.Point(277, 161);
+        this.txtIdFornecedor.Name = "txtIdFornecedor";
+        this.txtIdFornecedor.Size = new System.Drawing.Size(151, 27);
+        this.txtIdFornecedor.TabIndex = 76;
+        this.txtIdFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        this.txtIdFornecedor.Leave += new System.EventHandler(this.txtIdFornecedor_Leave);
+        // 
+        // lblDataCompra
+        // 
+        this.lblDataCompra.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblDataCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblDataCompra.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblDataCompra.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblDataCompra.Location = new System.Drawing.Point(458, 195);
+        this.lblDataCompra.Name = "lblDataCompra";
+        this.lblDataCompra.Size = new System.Drawing.Size(128, 30);
+        this.lblDataCompra.TabIndex = 78;
+        this.lblDataCompra.Text = "Data de Compra";
+        this.lblDataCompra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // dateDataCompra
+        // 
+        this.dateDataCompra.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.dateDataCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+        this.dateDataCompra.Location = new System.Drawing.Point(592, 195);
+        this.dateDataCompra.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
+        this.dateDataCompra.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
+        this.dateDataCompra.Name = "dateDataCompra";
+        this.dateDataCompra.Size = new System.Drawing.Size(132, 30);
+        this.dateDataCompra.TabIndex = 79;
+        this.dateDataCompra.Value = new System.DateTime(2024, 11, 19, 0, 0, 0, 0);
+        this.dateDataCompra.Leave += new System.EventHandler(this.dateDataCompra_Leave);
+        // 
+        // lblNomeFornecedor
+        // 
+        this.lblNomeFornecedor.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblNomeFornecedor.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblNomeFornecedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblNomeFornecedor.Location = new System.Drawing.Point(96, 195);
+        this.lblNomeFornecedor.Name = "lblNomeFornecedor";
+        this.lblNomeFornecedor.Size = new System.Drawing.Size(162, 27);
+        this.lblNomeFornecedor.TabIndex = 81;
+        this.lblNomeFornecedor.Text = "Nome do Fornecedor";
+        this.lblNomeFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // txtNomeFornecedor
+        // 
+        this.txtNomeFornecedor.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.txtNomeFornecedor.Location = new System.Drawing.Point(264, 195);
+        this.txtNomeFornecedor.Name = "txtNomeFornecedor";
+        this.txtNomeFornecedor.ReadOnly = true;
+        this.txtNomeFornecedor.Size = new System.Drawing.Size(164, 27);
+        this.txtNomeFornecedor.TabIndex = 80;
+        this.txtNomeFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        // 
+        // lblValorUnitario
+        // 
+        this.lblValorUnitario.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblValorUnitario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblValorUnitario.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblValorUnitario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblValorUnitario.Location = new System.Drawing.Point(458, 125);
+        this.lblValorUnitario.Name = "lblValorUnitario";
+        this.lblValorUnitario.Size = new System.Drawing.Size(111, 27);
+        this.lblValorUnitario.TabIndex = 83;
+        this.lblValorUnitario.Text = "Valor Unitário";
+        this.lblValorUnitario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // txtValorUnitario
+        // 
+        this.txtValorUnitario.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.txtValorUnitario.Location = new System.Drawing.Point(575, 126);
+        this.txtValorUnitario.Name = "txtValorUnitario";
+        this.txtValorUnitario.Size = new System.Drawing.Size(151, 27);
+        this.txtValorUnitario.TabIndex = 82;
+        this.txtValorUnitario.Leave += new System.EventHandler(this.txtValorUnitario_Leave);
+        // 
+        // lblValorTotal
+        // 
+        this.lblValorTotal.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblValorTotal.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblValorTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblValorTotal.Location = new System.Drawing.Point(458, 161);
+        this.lblValorTotal.Name = "lblValorTotal";
+        this.lblValorTotal.Size = new System.Drawing.Size(111, 27);
+        this.lblValorTotal.TabIndex = 85;
+        this.lblValorTotal.Text = "Valor Total";
+        this.lblValorTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // txtValorTotal
+        // 
+        this.txtValorTotal.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.txtValorTotal.Location = new System.Drawing.Point(575, 162);
+        this.txtValorTotal.Name = "txtValorTotal";
+        this.txtValorTotal.ReadOnly = true;
+        this.txtValorTotal.Size = new System.Drawing.Size(151, 27);
+        this.txtValorTotal.TabIndex = 84;
+        // 
+        // CadastroCompraForm
+        // 
+        this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+        this.AutoSize = true;
+        this.BackColor = System.Drawing.Color.PaleGreen;
+        this.ClientSize = new System.Drawing.Size(1350, 685);
+        this.Controls.Add(this.lblValorTotal);
+        this.Controls.Add(this.txtValorTotal);
+        this.Controls.Add(this.lblValorUnitario);
+        this.Controls.Add(this.txtValorUnitario);
+        this.Controls.Add(this.lblNomeFornecedor);
+        this.Controls.Add(this.txtNomeFornecedor);
+        this.Controls.Add(this.lblDataCompra);
+        this.Controls.Add(this.dateDataCompra);
+        this.Controls.Add(this.lblIdFornecedor);
+        this.Controls.Add(this.txtIdFornecedor);
+        this.Controls.Add(this.lblQuantidadeComprada);
+        this.Controls.Add(this.txtQuantidadeComprada);
+        this.Controls.Add(this.txtIdInsumo);
+        this.Controls.Add(this.btnCancelar);
+        this.Controls.Add(this.btnSalvar);
+        this.Controls.Add(this.lblNomeInsumo);
+        this.Controls.Add(this.lblIdInsumo);
+        this.Controls.Add(this.txtNomeInsumo);
+        this.MaximizeBox = false;
+        this.Name = "CadastroCompraForm";
+        this.ShowIcon = false;
+        this.Text = "Cadastrar Compra";
+        this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+        this.Load += new System.EventHandler(this.CadastroCompraForm_Load);
+        this.ResizeBegin += new System.EventHandler(this.ResizeForm);
+        this.ResizeEnd += new System.EventHandler(this.ResizeForm);
+        this.Resize += new System.EventHandler(this.ResizeForm);
+        this.ResumeLayout(false);
+        this.PerformLayout();
+    }
+
+    private System.Windows.Forms.Label lblValorTotal;
+    private System.Windows.Forms.TextBox txtValorTotal;
+
+    private System.Windows.Forms.Label lblValorUnitario;
+    private System.Windows.Forms.TextBox txtValorUnitario;
+
+    private System.Windows.Forms.Label lblNomeFornecedor;
+    private System.Windows.Forms.TextBox txtNomeFornecedor;
+
+    private System.Windows.Forms.Label lblDataCompra;
+    private System.Windows.Forms.DateTimePicker dateDataCompra;
+
+    private System.Windows.Forms.Label lblQuantidadeComprada;
+    private System.Windows.Forms.TextBox txtIdFornecedor;
+
+    private System.Windows.Forms.Label lblIdFornecedor;
+    private System.Windows.Forms.TextBox txtQuantidadeComprada;
+
+    private System.Windows.Forms.TextBox txtIdInsumo;
+
+    private System.Windows.Forms.Button btnCancelar;
+    private System.Windows.Forms.Button btnSalvar;
+
+    private System.Windows.Forms.Label lblNomeInsumo;
+    private System.Windows.Forms.Label lblIdInsumo;
+    private System.Windows.Forms.TextBox txtNomeInsumo;
+
+    #endregion
+}
