@@ -20,11 +20,6 @@ public class InsumoRepository(IDbConnection dbConnection) : IInsumoRepository
             "SELECT * FROM insumos WHERE id_insumo= @Id_Insumo", new { Id_Insumo = id });
     }
 
-    public async Task<Fornecedor> GetFornecedorById(int idFornecedor)
-    {
-        return await dbConnection.QueryFirstOrDefaultAsync<Fornecedor>(
-            "SELECT * FROM fornecedores WHERE id_fornecedor = @Id_Fornecedor", new { Id_Fornecedor = idFornecedor });
-    }
     public async Task Add(Insumo entity)
     {
         var query =

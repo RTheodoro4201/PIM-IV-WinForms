@@ -6,7 +6,7 @@ using PIM_IV_Forms.Validator;
 
 namespace PIM_IV_Forms.Controllers;
 
-public class ProdutoController(IRepository<Produto> produtoRepository)
+public class ProdutoController(IProdutoRepository produtoRepository)
 {
     public async Task<bool> Create(Produto produto)
     {

@@ -11,11 +11,7 @@ public class FornecedorValidator : AbstractValidator<Fornecedor>
         RuleFor(fornecedor => fornecedor.Nome)
             .NotEmpty().WithMessage("O nome do fornecedor deve ser informado.")
             .MinimumLength(3).WithMessage("O nome deve conter ao menos 3 letras!")
-            .Matches(@"^[a-zA-Zà-úÀ-Ú\s\-\']+$")
-            .WithMessage("O nome deve conter apenas letras, acentos, espaços, hífens e apóstrofos.")
-            .Must(nome => !string.IsNullOrWhiteSpace(nome))
-            .WithMessage("O nome não pode conter apenas espaços em branco.")
-            .Must(nome => char.IsLetter(nome[0])).WithMessage("A primeira letra do nome deve ser uma letra.");
+            .Must(nome => !string.IsNullOrWhiteSpace(nome)).WithMessage("O nome não pode conter apenas espaços em branco.");
 
         RuleFor(fornecedor => fornecedor.Documento)
             .NotEmpty().WithMessage("O documento deve ser informado.")

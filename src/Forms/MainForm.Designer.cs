@@ -195,6 +195,7 @@ partial class MainForm
         this.btnVendas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnVendas.Name = "btnVendas";
         this.btnVendas.UseVisualStyleBackColor = false;
+        this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
         // 
         // MainForm
         // 
