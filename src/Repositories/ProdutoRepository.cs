@@ -6,7 +6,7 @@ using PIM_IV_Forms.Models;
 
 namespace PIM_IV_Forms.Repositories;
 
-public class ProdutoRepository(IDbConnection dbConnection) : IRepository<Produto>
+public class ProdutoRepository(IDbConnection dbConnection) : IProdutoRepository
 {
     public async Task<IEnumerable<Produto>> GetAll()
     {
@@ -39,5 +39,13 @@ public class ProdutoRepository(IDbConnection dbConnection) : IRepository<Produto
     {
         await dbConnection.ExecuteAsync("DELETE FROM produtos WHERE Id_Produto = @Id_Produto",
             new { Id_Produto = id });
+    }
+
+    public async Task UpdateEstoque(Produto produto)
+    {
+        var query = "UPDATE produtos " +
+                    "SET quantidade_estoque = @Quantidade_Estoque "+
+                    "WHERE Id_Produto = @Id_Produto";
+        await dbConnection.ExecuteAsync(query, produto);
     }
 }

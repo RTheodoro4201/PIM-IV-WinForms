@@ -6,6 +6,12 @@ using PIM_IV_Forms.Validator;
 
 namespace PIM_IV_Forms.Controllers;
 
+#region TODO
+
+//TODO Adicionar correção de estoque ao editar compra
+
+#endregion
+
 public class CompraController(
     IRepository<Compra> compraRepository,
     IFornecedorRepository fornecedorRepository,
@@ -58,7 +64,11 @@ public class CompraController(
 
         if (compraValidationResult.IsValid)
         {
+            var insumo = await insumoRepository.GetById(compra.Id_Insumo);
+            insumo.Quantidade_Estoque += compra.Quantidade_Comprada;
+
             await compraRepository.Update(compra);
+            await insumoRepository.UpdateEstoque(insumo);
             return true;
         }
 
@@ -71,7 +81,12 @@ public class CompraController(
 
         if (compra != null)
         {
+            var insumo = await insumoRepository.GetById(compra.Id_Insumo);
+            insumo.Quantidade_Estoque -= compra.Quantidade_Comprada;
+
             await compraRepository.Delete(id);
+            await insumoRepository.UpdateEstoque(insumo);
+
             return true;
         }
 

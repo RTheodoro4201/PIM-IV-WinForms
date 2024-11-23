@@ -12,11 +12,8 @@ public class ProdutoValidator : AbstractValidator<Produto>
         RuleFor(produto => produto.Nome)
             .NotEmpty().WithMessage("O nome do fornecedor deve ser informado.")
             .MinimumLength(3).WithMessage("O nome deve conter ao menos 3 letras.")
-            .Matches(@"^[a-zA-Zà-úÀ-Ú\s\-\']+$")
-            .WithMessage("O nome deve conter apenas letras, acentos, espaços, hífens e apóstrofos.")
             .Must(nome => !string.IsNullOrWhiteSpace(nome))
-            .WithMessage("O nome não pode conter apenas espaços em branco.")
-            .Must(nome => char.IsLetter(nome[0])).WithMessage("A primeira letra do nome deve ser uma letra.");
+            .WithMessage("O nome não pode conter apenas espaços em branco.");
 
         RuleFor(produto => produto.Descricao)
             .NotEmpty().WithMessage("A descrição do produto deve ser informada.")
@@ -32,12 +29,12 @@ public class ProdutoValidator : AbstractValidator<Produto>
 
         RuleFor(produto => produto.Data_Validade)
             .NotEmpty().WithMessage("A data de validade deve ser informada.")
-            .Must(ValidarDataValidade).WithMessage("A data de validade deve ter ao menos 7 dias.");
+            .Must(ValidarDataValidade).WithMessage("A data de validade deve ter ao menos 7 dias de diferença da data atual.");
     }
 
     private static bool ValidarDataValidade(DateTime dataValidade)
     {
-        if (dataValidade >= dataValidade.AddDays(7))
+        if (dataValidade >= DateTime.Now.AddDays(7))
         {
             return true;
         }

@@ -6,7 +6,8 @@ using PIM_IV_Forms.Validator;
 
 namespace PIM_IV_Forms.Controllers;
 
-public class InsumoController(IInsumoRepository insumoRepository)
+public class InsumoController(IInsumoRepository insumoRepository,
+    IFornecedorRepository fornecedorRepository)
 {
     public async Task<bool> Create(Insumo insumo)
     {
@@ -35,7 +36,7 @@ public class InsumoController(IInsumoRepository insumoRepository)
 
     public async Task<Fornecedor> SearchFornecedor(int idFornecedor)
     {
-        return await insumoRepository.GetFornecedorById(idFornecedor);
+        return await fornecedorRepository.GetById(idFornecedor);
     }
 
     public async Task<bool> Edit(Insumo insumo)

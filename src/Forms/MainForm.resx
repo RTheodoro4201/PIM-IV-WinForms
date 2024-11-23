@@ -532,7 +532,7 @@
     <value>Flat</value>
   </data>
   <data name="btnCompras.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt</value>
+    <value>Arial, 14pt</value>
   </data>
   <data name="btnCompras.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

@@ -75,6 +75,7 @@
         <Compile Include="src\Controllers\FuncionarioController.cs" />
         <Compile Include="src\Controllers\InsumoController.cs" />
         <Compile Include="src\Controllers\ProdutoController.cs" />
+        <Compile Include="src\Controllers\VendaController.cs" />
         <Compile Include="src\Forms\Clientes Fisicos\AlteraClienteFisicoForm.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -291,6 +292,36 @@
         <Compile Include="src\Forms\Produtos\ProdutoForm.Designer.cs">
           <DependentUpon>ProdutoForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="src\Forms\Vendas\AlteraVendaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Vendas\AlteraVendaForm.Designer.cs">
+          <DependentUpon>AlteraVendaForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Vendas\CadastroVendaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Vendas\CadastroVendaForm.Designer.cs">
+          <DependentUpon>CadastroVendaForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Vendas\ConsultaVendaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Vendas\ConsultaVendaForm.Designer.cs">
+          <DependentUpon>ConsultaVendaForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Vendas\ExcluirVendaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Vendas\ExcluirVendaForm.Designer.cs">
+          <DependentUpon>ExcluirVendaForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="src\Forms\Vendas\VendaForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="src\Forms\Vendas\VendaForm.Designer.cs">
+          <DependentUpon>VendaForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="src\Models\ClienteFisico.cs" />
         <Compile Include="src\Models\Compra.cs" />
         <Compile Include="src\Models\Cultura.cs" />
@@ -299,6 +330,7 @@
         <Compile Include="src\Models\Funcionario.cs" />
         <Compile Include="src\Models\Insumo.cs" />
         <Compile Include="src\Models\Produto.cs" />
+        <Compile Include="src\Models\Venda.cs" />
         <Compile Include="src\Repositories\ClienteFisicoRepository.cs" />
         <Compile Include="src\Repositories\CompraRepository.cs" />
         <Compile Include="src\Repositories\CulturaRepository.cs" />
@@ -307,8 +339,10 @@
         <Compile Include="src\Repositories\IFornecedorRepository.cs" />
         <Compile Include="src\Repositories\IInsumoRepository.cs" />
         <Compile Include="src\Repositories\InsumoRepository.cs" />
+        <Compile Include="src\Repositories\IProdutoRepository.cs" />
         <Compile Include="src\Repositories\IRepository.cs" />
         <Compile Include="src\Repositories\ProdutoRepository.cs" />
+        <Compile Include="src\Repositories\VendaRepository.cs" />
         <Compile Include="src\Validator\ClienteValidator.cs" />
         <Compile Include="src\Validator\CompraValidator.cs" />
         <Compile Include="src\Validator\CulturaValidator.cs" />
@@ -317,6 +351,7 @@
         <Compile Include="src\Validator\FuncionarioValidator.cs" />
         <Compile Include="src\Validator\InsumoValidator.cs" />
         <Compile Include="src\Validator\ProdutoValidator.cs" />
+        <Compile Include="src\Validator\VendaValidator.cs" />
         <EmbeddedResource Include="Properties\Resources.en-us.resx">
           <DependentUpon>Resources.resx</DependentUpon>
         </EmbeddedResource>
@@ -436,6 +471,21 @@
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\Produtos\ProdutoForm.resx">
           <DependentUpon>ProdutoForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Vendas\AlteraVendaForm.resx">
+          <DependentUpon>AlteraVendaForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Vendas\CadastroVendaForm.resx">
+          <DependentUpon>CadastroVendaForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Vendas\ConsultaVendaForm.resx">
+          <DependentUpon>ConsultaVendaForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Vendas\ExcluirVendaForm.resx">
+          <DependentUpon>ExcluirVendaForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="src\Forms\Vendas\VendaForm.resx">
+          <DependentUpon>VendaForm.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>

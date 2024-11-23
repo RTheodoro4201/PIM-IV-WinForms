@@ -4,7 +4,7 @@ using PIM_IV_Forms.Models;
 
 namespace PIM_IV_Forms.Repositories;
 
-public interface IInsumoRepository : IRepository<Insumo>
+public interface IProdutoRepository : IRepository<Produto>
 {
-    Task UpdateEstoque(Insumo insumo);
+    Task UpdateEstoque(Produto produto);
 }
