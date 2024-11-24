@@ -14,7 +14,7 @@ namespace PIM_IV_Forms.Controllers;
 
 public class VendaController(
     IRepository<Venda> vendaRepository,
-    IRepository<ClienteFisico> clienteFisicoRepository,
+    IClienteRepository clienteFisicoRepository,
     IProdutoRepository produtoRepository)
 {
     public async Task<bool> Create(Venda venda)
@@ -47,7 +47,7 @@ public class VendaController(
         return await vendaRepository.GetById(vendaId);
     }
 
-    public async Task<ClienteFisico> SearchCliente(int idCliente)
+    public async Task<Cliente> SearchCliente(int idCliente)
     {
         return await clienteFisicoRepository.GetById(idCliente);
     }

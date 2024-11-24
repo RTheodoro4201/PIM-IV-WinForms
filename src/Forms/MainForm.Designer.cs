@@ -37,7 +37,7 @@ partial class MainForm
         this.label3 = new System.Windows.Forms.Label();
         this.splitContainer1 = new System.Windows.Forms.SplitContainer();
         this.btnFornecedorJurídico = new System.Windows.Forms.Button();
-        this.btnCliente = new System.Windows.Forms.Button();
+        this.btnClienteFisico = new System.Windows.Forms.Button();
         this.btnFornecedorFisico = new System.Windows.Forms.Button();
         this.btnInsumo = new System.Windows.Forms.Button();
         this.panel1 = new System.Windows.Forms.Panel();
@@ -47,6 +47,8 @@ partial class MainForm
         this.btnProduto = new System.Windows.Forms.Button();
         this.btnCompras = new System.Windows.Forms.Button();
         this.btnVendas = new System.Windows.Forms.Button();
+        this.btnClienteJuridico = new System.Windows.Forms.Button();
+        this.btnCliente = new System.Windows.Forms.Button();
         ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
         this.splitContainer1.Panel1.SuspendLayout();
         this.splitContainer1.Panel2.SuspendLayout();
@@ -91,16 +93,16 @@ partial class MainForm
         this.btnFornecedorJurídico.UseVisualStyleBackColor = false;
         this.btnFornecedorJurídico.Click += new System.EventHandler(this.btnFornecedorJurídico_Click);
         // 
-        // btnCliente
+        // btnClienteFisico
         // 
-        this.btnCliente.BackColor = System.Drawing.Color.DimGray;
-        this.btnCliente.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-        this.btnCliente.FlatAppearance.BorderSize = 0;
-        resources.ApplyResources(this.btnCliente, "btnCliente");
-        this.btnCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-        this.btnCliente.Name = "btnCliente";
-        this.btnCliente.UseVisualStyleBackColor = false;
-        this.btnCliente.Click += new System.EventHandler(this.btnClienteFisico_Click);
+        this.btnClienteFisico.BackColor = System.Drawing.Color.DimGray;
+        this.btnClienteFisico.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+        this.btnClienteFisico.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnClienteFisico, "btnClienteFisico");
+        this.btnClienteFisico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnClienteFisico.Name = "btnClienteFisico";
+        this.btnClienteFisico.UseVisualStyleBackColor = false;
+        this.btnClienteFisico.Click += new System.EventHandler(this.btnClienteFisico_Click);
         // 
         // btnFornecedorFisico
         // 
@@ -197,11 +199,35 @@ partial class MainForm
         this.btnVendas.UseVisualStyleBackColor = false;
         this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
         // 
+        // btnClienteJuridico
+        // 
+        this.btnClienteJuridico.BackColor = System.Drawing.Color.DimGray;
+        this.btnClienteJuridico.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+        this.btnClienteJuridico.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnClienteJuridico, "btnClienteJuridico");
+        this.btnClienteJuridico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnClienteJuridico.Name = "btnClienteJuridico";
+        this.btnClienteJuridico.UseVisualStyleBackColor = false;
+        this.btnClienteJuridico.Click += new System.EventHandler(this.btnClienteJuridico_Click);
+        // 
+        // btnCliente
+        // 
+        this.btnCliente.BackColor = System.Drawing.Color.DimGray;
+        this.btnCliente.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+        this.btnCliente.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnCliente, "btnCliente");
+        this.btnCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnCliente.Name = "btnCliente";
+        this.btnCliente.UseVisualStyleBackColor = false;
+        this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+        // 
         // MainForm
         // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.BackColor = System.Drawing.Color.PaleGreen;
+        this.Controls.Add(this.btnCliente);
+        this.Controls.Add(this.btnClienteJuridico);
         this.Controls.Add(this.btnVendas);
         this.Controls.Add(this.btnCompras);
         this.Controls.Add(this.btnProduto);
@@ -213,7 +239,7 @@ partial class MainForm
         this.Controls.Add(this.btnFornecedorFisico);
         this.Controls.Add(this.splitContainer1);
         this.Controls.Add(this.btnFornecedorJurídico);
-        this.Controls.Add(this.btnCliente);
+        this.Controls.Add(this.btnClienteFisico);
         this.MaximizeBox = false;
         this.Name = "MainForm";
         this.ShowIcon = false;
@@ -230,6 +256,9 @@ partial class MainForm
         this.ResumeLayout(false);
     }
 
+    private System.Windows.Forms.Button btnClienteJuridico;
+    private System.Windows.Forms.Button btnCliente;
+
     private System.Windows.Forms.Button btnCompras;
 
     private System.Windows.Forms.Button btnVendas;
@@ -245,7 +274,7 @@ partial class MainForm
     private System.Windows.Forms.Panel panel1;
 
     private System.Windows.Forms.Button btnFornecedorJurídico;
-    private System.Windows.Forms.Button btnCliente;
+    private System.Windows.Forms.Button btnClienteFisico;
     private System.Windows.Forms.Button btnFornecedorFisico;
     private System.Windows.Forms.Button btnInsumo;
 

@@ -25,7 +25,7 @@ internal static class Program
         builder.Register(_ => new SqlConnection(ConnectionString))
             .As<IDbConnection>().InstancePerLifetimeScope();
 
-        builder.RegisterType<ClienteFisicoRepository>().As<IRepository<ClienteFisico>>();
+        builder.RegisterType<ClienteRepository>().As<IClienteRepository>();
         builder.RegisterType<FuncionarioRepository>().As<IRepository<Funcionario>>();
         builder.RegisterType<FornecedorRepository>().As<IFornecedorRepository>();
         builder.RegisterType<CulturaRepository>().As<IRepository<Cultura>>();
@@ -34,7 +34,7 @@ internal static class Program
         builder.RegisterType<CompraRepository>().As<IRepository<Compra>>();
         builder.RegisterType<VendaRepository>().As<IRepository<Venda>>();
 
-        builder.RegisterType<ClienteFisicoController>();
+        builder.RegisterType<ClienteController>();
         builder.RegisterType<FuncionarioController>();
         builder.RegisterType<FornecedorController>();
         builder.RegisterType<CulturaController>();
