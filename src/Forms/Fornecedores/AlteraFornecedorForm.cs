@@ -93,9 +93,9 @@ public partial class AlteraFornecedorForm : Form
                 Id_Fornecedor = int.Parse(txtId.Text),
                 Nome = txtNome.Text,
                 Tipo = txtTipo.Text,
-                Documento = txtDocumento.Text.Replace(".", "").Replace("-", "").Replace("/", ""),
+                Documento = txtDocumento.Text,
                 Email = txtEmail.Text,
-                Telefone = txtTelefone.Text.Replace("(", "").Replace("-", "").Replace(" ", "").Replace(")", ""),
+                Telefone = txtTelefone.Text,
                 Endereco = endereco.ToString(),
                 Data_Inicial = dateDataInicial.Value
             };

@@ -94,7 +94,7 @@ partial class CadastroFornecedorForm
         this.txtDocumento.Location = new System.Drawing.Point(166, 145);
         this.txtDocumento.Mask = "999.999.999-99";
         this.txtDocumento.Name = "txtDocumento";
-        this.txtDocumento.Size = new System.Drawing.Size(124, 30);
+        this.txtDocumento.Size = new System.Drawing.Size(140, 30);
         this.txtDocumento.TabIndex = 45;
         // 
         // lblDocumento
@@ -118,7 +118,7 @@ partial class CadastroFornecedorForm
         this.txtTelefone.Location = new System.Drawing.Point(137, 215);
         this.txtTelefone.Mask = "(99) 99999-9999";
         this.txtTelefone.Name = "txtTelefone";
-        this.txtTelefone.Size = new System.Drawing.Size(131, 30);
+        this.txtTelefone.Size = new System.Drawing.Size(146, 30);
         this.txtTelefone.TabIndex = 44;
         // 
         // lblTipo
@@ -337,7 +337,7 @@ partial class CadastroFornecedorForm
         this.txtEmail.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtEmail.Location = new System.Drawing.Point(109, 180);
         this.txtEmail.Name = "txtEmail";
-        this.txtEmail.Size = new System.Drawing.Size(225, 30);
+        this.txtEmail.Size = new System.Drawing.Size(302, 30);
         this.txtEmail.TabIndex = 43;
         // 
         // txtTipo

@@ -122,7 +122,7 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="txtTipo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 145</value>
+    <value>99, 145</value>
   </data>
   <data name="txtTipo.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 30</value>
@@ -178,7 +178,7 @@
     <value>46, 495</value>
   </data>
   <data name="lblDataInicial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
+    <value>186, 30</value>
   </data>
   <data name="lblDataInicial.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -280,7 +280,7 @@
     <value>TO</value>
   </data>
   <data name="cbUf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 425</value>
+    <value>86, 425</value>
   </data>
   <data name="cbUf.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 31</value>
@@ -310,7 +310,7 @@
     <value>46, 425</value>
   </data>
   <data name="lblUf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
+    <value>35, 30</value>
   </data>
   <data name="lblUf.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -340,7 +340,7 @@
     <value>46, 390</value>
   </data>
   <data name="lblCidade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
+    <value>70, 30</value>
   </data>
   <data name="lblCidade.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -370,7 +370,7 @@
     <value>46, 460</value>
   </data>
   <data name="lblCep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
+    <value>45, 30</value>
   </data>
   <data name="lblCep.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -394,7 +394,7 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="txtCidade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 390</value>
+    <value>122, 390</value>
   </data>
   <data name="txtCidade.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 30</value>
@@ -418,7 +418,7 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="txtBairro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 355</value>
+    <value>122, 355</value>
   </data>
   <data name="txtBairro.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 30</value>
@@ -448,7 +448,7 @@
     <value>45, 320</value>
   </data>
   <data name="lblComplemento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 30</value>
+    <value>125, 30</value>
   </data>
   <data name="lblComplemento.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -478,7 +478,7 @@
     <value>46, 250</value>
   </data>
   <data name="lblLogradouro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 30</value>
+    <value>110, 30</value>
   </data>
   <data name="lblLogradouro.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -508,13 +508,13 @@
     <value>46, 285</value>
   </data>
   <data name="lblNum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 30</value>
+    <value>80, 30</value>
   </data>
   <data name="lblNum.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
   <data name="lblNum.Text" xml:space="preserve">
-    <value>Nº</value>
+    <value>Número</value>
   </data>
   <data name="&gt;&gt;lblNum.Name" xml:space="preserve">
     <value>lblNum</value>
@@ -538,7 +538,7 @@
     <value>46, 355</value>
   </data>
   <data name="lblBairro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
+    <value>70, 30</value>
   </data>
   <data name="lblBairro.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -568,7 +568,7 @@
     <value>46, 110</value>
   </data>
   <data name="lblDocumento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
+    <value>110, 30</value>
   </data>
   <data name="lblDocumento.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -598,7 +598,7 @@
     <value>46, 145</value>
   </data>
   <data name="lblTipo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
+    <value>46, 30</value>
   </data>
   <data name="lblTipo.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -625,10 +625,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblTelefone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 215</value>
+    <value>45, 215</value>
   </data>
   <data name="lblTelefone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 30</value>
+    <value>85, 30</value>
   </data>
   <data name="lblTelefone.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -658,7 +658,7 @@
     <value>46, 180</value>
   </data>
   <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 30</value>
+    <value>56, 30</value>
   </data>
   <data name="lblEmail.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -688,7 +688,7 @@
     <value>45, 75</value>
   </data>
   <data name="lblNome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 30</value>
+    <value>71, 30</value>
   </data>
   <data name="lblNome.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -712,7 +712,7 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="txtNumero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 285</value>
+    <value>132, 285</value>
   </data>
   <data name="txtNumero.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 30</value>
@@ -739,7 +739,7 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="dateDataInicial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 495</value>
+    <value>238, 495</value>
   </data>
   <data name="dateDataInicial.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 30</value>
@@ -763,10 +763,10 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="txtLogradouro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 250</value>
+    <value>167, 250</value>
   </data>
   <data name="txtLogradouro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 30</value>
+    <value>268, 30</value>
   </data>
   <data name="txtLogradouro.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -787,10 +787,10 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 181</value>
+    <value>109, 180</value>
   </data>
   <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 30</value>
+    <value>326, 30</value>
   </data>
   <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -877,7 +877,7 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="txtTelefone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 215</value>
+    <value>142, 215</value>
   </data>
   <data name="txtTelefone.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 30</value>
@@ -925,10 +925,10 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="txtNome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 75</value>
+    <value>122, 75</value>
   </data>
   <data name="txtNome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 30</value>
+    <value>313, 30</value>
   </data>
   <data name="txtNome.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -955,7 +955,7 @@
     <value>45, 25</value>
   </data>
   <data name="lblAlteraCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 36</value>
+    <value>188, 40</value>
   </data>
   <data name="lblAlteraCliente.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -979,7 +979,7 @@
     <value>Tahoma, 14pt</value>
   </data>
   <data name="txtCep.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 460</value>
+    <value>95, 460</value>
   </data>
   <data name="txtCep.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 30</value>
@@ -1009,7 +1009,7 @@
     <value>239, 25</value>
   </data>
   <data name="lblIdCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 36</value>
+    <value>100, 40</value>
   </data>
   <data name="lblIdCliente.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -1030,13 +1030,13 @@
     <value>1</value>
   </data>
   <data name="txtIdCliente.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 18pt</value>
+    <value>Tahoma, 20pt</value>
   </data>
   <data name="txtIdCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>345, 25</value>
   </data>
   <data name="txtIdCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 36</value>
+    <value>90, 40</value>
   </data>
   <data name="txtIdCliente.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>

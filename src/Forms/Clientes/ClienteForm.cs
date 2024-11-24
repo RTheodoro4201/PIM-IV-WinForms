@@ -23,7 +23,7 @@ public partial class ClienteForm : Form
         WindowState = FormWindowState.Maximized;
     }
 
-    private async void ClienteFisicoForm_Load(object sender, EventArgs e)
+    private async void ClienteForm_Load(object sender, EventArgs e)
     {
         ResizeForm(this, null);
 
@@ -79,8 +79,8 @@ public partial class ClienteForm : Form
 
         else
         {
-            MessageBox.Show("Houve um erro ao receber os dados do servidor");
-            Close();
+            MessageBox.Show("Não foi encontrado nenhum registro no servidor.", "Aviso", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
     }
 
@@ -101,8 +101,8 @@ public partial class ClienteForm : Form
 
         else
         {
-            MessageBox.Show("Houve um erro ao receber os dados do servidor");
-            Close();
+            MessageBox.Show("Não foi encontrado nenhum registro no servidor.", "Aviso", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
     }
 
@@ -122,8 +122,8 @@ public partial class ClienteForm : Form
 
         else
         {
-            MessageBox.Show("Houve um erro ao receber os dados do servidor");
-            Close();
+            MessageBox.Show("Não foi encontrado nenhum registro no servidor.", "Aviso", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
     }
 

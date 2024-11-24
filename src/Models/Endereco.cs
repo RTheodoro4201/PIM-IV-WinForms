@@ -41,6 +41,6 @@ public class Endereco
 
     public override string ToString()
     {
-        return $"{Logradouro},{Numero},{Complemento},{Bairro},{Cidade},{Uf},{Cep}";
+        return $"{Logradouro}, {Numero}, {Complemento}, {Bairro}, {Cidade}, {Uf}, {Cep}";
     }
 }

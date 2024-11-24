@@ -6,10 +6,6 @@ using PIM_IV_Forms.Controllers;
 
 namespace PIM_IV_Forms.Forms.Fornecedores;
 
-#region TODO
-//TODO Corrigir limpeza de Grid
-#endregion
-
 public partial class FornecedorForm : Form
 {
     private readonly FornecedorController _fornecedorController;
