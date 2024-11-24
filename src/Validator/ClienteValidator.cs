@@ -4,11 +4,11 @@ using PIM_IV_Forms.Models;
 
 namespace PIM_IV_Forms.Validator;
 
-public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
+public class ClienteValidator : AbstractValidator<Cliente>
 {
-    public ClienteFisicoValidator()
+    public ClienteValidator()
     {
-        RuleFor(cliente => cliente.Nome_Completo)
+        RuleFor(cliente => cliente.Nome)
             .NotEmpty().WithMessage("O nome do cliente deve ser informado.")
             .MinimumLength(3).WithMessage("O nome deve conter ao menos 3 letras!")
             .Matches(@"^[a-zA-Zà-úÀ-Ú\s\-\']+$")
@@ -17,11 +17,11 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
             .WithMessage("O nome não pode conter apenas espaços em branco.")
             .Must(nome => char.IsLetter(nome[0])).WithMessage("A primeira letra do nome deve ser uma letra.");
 
-        RuleFor(cliente => cliente.Rg)
+        RuleFor(cliente => cliente.Tipo)
             .NotEmpty().WithMessage("O rg deve ser informado.")
             .Matches(@"^\d{9}$").WithMessage("O rg deve conter exatamente 9 dígitos!");
 
-        RuleFor(cliente => cliente.Cpf)
+        RuleFor(cliente => cliente.Documento)
             .NotEmpty().WithMessage("O cpf deve ser informado.")
             .Matches(@"^\d{11}$").WithMessage("O cpf deve conter exatamente 11 dígitos!");
 
@@ -36,7 +36,7 @@ public class ClienteFisicoValidator : AbstractValidator<ClienteFisico>
         RuleFor(cliente => cliente.Endereco)
             .NotEmpty().WithMessage("O endereço deve ser informado.");
 
-        RuleFor(cliente => cliente.Data_De_Nascimento)
+        RuleFor(cliente => cliente.Data_Inicial)
             .NotEmpty().WithMessage("A data de nascimento deve ser informada.")
             .Must(ValidateDataNascimento).WithMessage("O cliente deve possuir mais de 18 anos!");
     }

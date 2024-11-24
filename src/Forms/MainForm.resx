@@ -238,7 +238,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="btnFornecedorJurídico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -250,7 +250,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnFornecedorJurídico.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 175</value>
+    <value>363, 155</value>
   </data>
   <data name="btnFornecedorJurídico.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -271,40 +271,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnFornecedorJurídico.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
-  <data name="btnCliente.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnClienteFisico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnCliente.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnClienteFisico.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
-  <data name="btnCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnClienteFisico.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnCliente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 285</value>
+  <data name="btnClienteFisico.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 335</value>
   </data>
-  <data name="btnCliente.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnClienteFisico.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
   </data>
-  <data name="btnCliente.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnClienteFisico.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="btnCliente.Text" xml:space="preserve">
-    <value>Cliente</value>
+  <data name="btnClienteFisico.Text" xml:space="preserve">
+    <value>Físico</value>
   </data>
-  <data name="&gt;&gt;btnCliente.Name" xml:space="preserve">
-    <value>btnCliente</value>
+  <data name="&gt;&gt;btnClienteFisico.Name" xml:space="preserve">
+    <value>btnClienteFisico</value>
   </data>
-  <data name="&gt;&gt;btnCliente.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnClienteFisico.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnCliente.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnClienteFisico.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnCliente.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;btnClienteFisico.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="btnFornecedorFisico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -316,7 +316,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnFornecedorFisico.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 175</value>
+    <value>118, 155</value>
   </data>
   <data name="btnFornecedorFisico.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -337,7 +337,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnFornecedorFisico.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="btnInsumo.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -349,7 +349,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnInsumo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 505</value>
+    <value>118, 515</value>
   </data>
   <data name="btnInsumo.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -370,7 +370,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnInsumo.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -394,7 +394,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="btnCultura.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -406,7 +406,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCultura.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 395</value>
+    <value>118, 425</value>
   </data>
   <data name="btnCultura.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -427,7 +427,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCultura.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="btnFuncionario.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -439,7 +439,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnFuncionario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 285</value>
+    <value>363, 425</value>
   </data>
   <data name="btnFuncionario.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -460,7 +460,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnFuncionario.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="btnFornecedor.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -493,7 +493,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnFornecedor.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="btnProduto.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -505,7 +505,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnProduto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 395</value>
+    <value>363, 515</value>
   </data>
   <data name="btnProduto.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -526,7 +526,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnProduto.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btnCompras.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -559,7 +559,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCompras.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnVendas.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -592,6 +592,72 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnVendas.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnClienteJuridico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClienteJuridico.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt</value>
+  </data>
+  <data name="btnClienteJuridico.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClienteJuridico.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 335</value>
+  </data>
+  <data name="btnClienteJuridico.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 65</value>
+  </data>
+  <data name="btnClienteJuridico.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="btnClienteJuridico.Text" xml:space="preserve">
+    <value>Jurídico</value>
+  </data>
+  <data name="&gt;&gt;btnClienteJuridico.Name" xml:space="preserve">
+    <value>btnClienteJuridico</value>
+  </data>
+  <data name="&gt;&gt;btnClienteJuridico.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClienteJuridico.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClienteJuridico.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnCliente.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnCliente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt</value>
+  </data>
+  <data name="btnCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 245</value>
+  </data>
+  <data name="btnCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 65</value>
+  </data>
+  <data name="btnCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="btnCliente.Text" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="&gt;&gt;btnCliente.Name" xml:space="preserve">
+    <value>btnCliente</value>
+  </data>
+  <data name="&gt;&gt;btnCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCliente.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCliente.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

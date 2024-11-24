@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using PIM_IV_Forms.Controllers;
-using PIM_IV_Forms.Forms.Clientes_Fisicos;
+using PIM_IV_Forms.Forms.Clientes;
 using PIM_IV_Forms.Forms.Compras;
 using PIM_IV_Forms.Forms.Culturas;
 using PIM_IV_Forms.Forms.Fornecedores;
@@ -14,7 +14,7 @@ namespace PIM_IV_Forms.Forms;
 
 public partial class MainForm : Form
 {
-    private readonly ClienteFisicoController _clienteFisicoController;
+    private readonly ClienteController _clienteController;
     private readonly FuncionarioController _funcionarioController;
     private readonly FornecedorController _fornecedorController;
     private readonly CulturaController _culturaController;
@@ -23,13 +23,13 @@ public partial class MainForm : Form
     private readonly CompraController _compraController;
     private readonly VendaController _vendaController;
 
-    public MainForm(ClienteFisicoController clienteFisicoController, FuncionarioController funcionarioController,
+    public MainForm(ClienteController clienteController, FuncionarioController funcionarioController,
         FornecedorController fornecedorController, CulturaController culturaController,
         ProdutoController produtoController, InsumoController insumoController,
         CompraController compraController, VendaController vendaController)
     {
         InitializeComponent();
-        _clienteFisicoController = clienteFisicoController;
+        _clienteController = clienteController;
         _funcionarioController = funcionarioController;
         _fornecedorController = fornecedorController;
         _culturaController = culturaController;
@@ -46,10 +46,28 @@ public partial class MainForm : Form
 
     private void btnClienteFisico_Click(object sender, EventArgs e)
     {
-        if (_clienteFisicoController != null)
+        if (_clienteController != null)
         {
-            var clienteFisicoForm = new ClienteFisicoForm(_clienteFisicoController);
-            clienteFisicoForm.Show();
+            var clienteForm = new ClienteForm(_clienteController, "Fisico");
+            clienteForm.Show();
+        }
+    }
+
+    private void btnClienteJuridico_Click(object sender, EventArgs e)
+    {
+        if (_clienteController != null)
+        {
+            var clienteForm = new ClienteForm(_clienteController, "Jurídico");
+            clienteForm.Show();
+        }
+    }
+
+    private void btnCliente_Click(object sender, EventArgs e)
+    {
+        if (_clienteController != null)
+        {
+            var clienteForm = new ClienteForm(_clienteController, "Geral");
+            clienteForm.Show();
         }
     }
 

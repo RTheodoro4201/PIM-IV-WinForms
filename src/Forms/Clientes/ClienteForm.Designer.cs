@@ -1,8 +1,8 @@
 ﻿using IContainer = System.ComponentModel.IContainer;
 
-namespace PIM_IV_Forms.Forms.Clientes_Fisicos;
+namespace PIM_IV_Forms.Forms.Clientes;
 
-partial class ClienteFisicoForm
+partial class ClienteForm
 {
     /// <summary>
     /// Required designer variable.
@@ -103,7 +103,7 @@ partial class ClienteFisicoForm
         this.btnConsultar.UseVisualStyleBackColor = true;
         this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
         // 
-        // ClienteFisicoForm
+        // ClienteForm
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -117,7 +117,7 @@ partial class ClienteFisicoForm
         this.Controls.Add(this.btnAlterar);
         this.Controls.Add(this.btnCadastrar);
         this.MaximizeBox = false;
-        this.Name = "ClienteFisicoForm";
+        this.Name = "ClienteForm";
         this.Text = "Clientes Físicos";
         this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         this.Load += new System.EventHandler(this.ClienteFisicoForm_Load);

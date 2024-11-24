@@ -68,7 +68,7 @@
     <ItemGroup>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="src\Controllers\ClienteFisicoController.cs" />
+        <Compile Include="src\Controllers\ClienteController.cs" />
         <Compile Include="src\Controllers\CompraController.cs" />
         <Compile Include="src\Controllers\CulturaController.cs" />
         <Compile Include="src\Controllers\FornecedorController.cs" />
@@ -76,35 +76,35 @@
         <Compile Include="src\Controllers\InsumoController.cs" />
         <Compile Include="src\Controllers\ProdutoController.cs" />
         <Compile Include="src\Controllers\VendaController.cs" />
-        <Compile Include="src\Forms\Clientes Fisicos\AlteraClienteFisicoForm.cs">
+        <Compile Include="src\Forms\Clientes\AlteraClienteForm.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="src\Forms\Clientes Fisicos\AlteraClienteFisicoForm.Designer.cs">
-          <DependentUpon>AlteraClienteFisicoForm.cs</DependentUpon>
+        <Compile Include="src\Forms\Clientes\AlteraClienteForm.Designer.cs">
+          <DependentUpon>AlteraClienteForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="src\Forms\Clientes Fisicos\CadastroClienteFisicoForm.cs">
+        <Compile Include="src\Forms\Clientes\CadastroClienteForm.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="src\Forms\Clientes Fisicos\CadastroClienteFisicoForm.Designer.cs">
-          <DependentUpon>CadastroClienteFisicoForm.cs</DependentUpon>
+        <Compile Include="src\Forms\Clientes\CadastroClienteForm.Designer.cs">
+          <DependentUpon>CadastroClienteForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="src\Forms\Clientes Fisicos\ClienteFisicoForm.cs">
+        <Compile Include="src\Forms\Clientes\ClienteForm.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="src\Forms\Clientes Fisicos\ClienteFisicoForm.Designer.cs">
-          <DependentUpon>ClienteFisicoForm.cs</DependentUpon>
+        <Compile Include="src\Forms\Clientes\ClienteForm.Designer.cs">
+          <DependentUpon>ClienteForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="src\Forms\Clientes Fisicos\ConsultaClienteForm.cs">
+        <Compile Include="src\Forms\Clientes\ConsultaClienteForm.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="src\Forms\Clientes Fisicos\ConsultaClienteForm.Designer.cs">
+        <Compile Include="src\Forms\Clientes\ConsultaClienteForm.Designer.cs">
           <DependentUpon>ConsultaClienteForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="src\Forms\Clientes Fisicos\ExcluirClienteFisicoForm.cs">
+        <Compile Include="src\Forms\Clientes\ExcluirClienteForm.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="src\Forms\Clientes Fisicos\ExcluirClienteFisicoForm.Designer.cs">
-          <DependentUpon>ExcluirClienteFisicoForm.cs</DependentUpon>
+        <Compile Include="src\Forms\Clientes\ExcluirClienteForm.Designer.cs">
+          <DependentUpon>ExcluirClienteForm.cs</DependentUpon>
         </Compile>
         <Compile Include="src\Forms\Compras\AlteraCompraForm.cs">
           <SubType>Form</SubType>
@@ -322,7 +322,7 @@
         <Compile Include="src\Forms\Vendas\VendaForm.Designer.cs">
           <DependentUpon>VendaForm.cs</DependentUpon>
         </Compile>
-        <Compile Include="src\Models\ClienteFisico.cs" />
+        <Compile Include="src\Models\Cliente.cs" />
         <Compile Include="src\Models\Compra.cs" />
         <Compile Include="src\Models\Cultura.cs" />
         <Compile Include="src\Models\Endereco.cs" />
@@ -331,11 +331,12 @@
         <Compile Include="src\Models\Insumo.cs" />
         <Compile Include="src\Models\Produto.cs" />
         <Compile Include="src\Models\Venda.cs" />
-        <Compile Include="src\Repositories\ClienteFisicoRepository.cs" />
+        <Compile Include="src\Repositories\ClienteRepository.cs" />
         <Compile Include="src\Repositories\CompraRepository.cs" />
         <Compile Include="src\Repositories\CulturaRepository.cs" />
         <Compile Include="src\Repositories\FornecedorRepository.cs" />
         <Compile Include="src\Repositories\FuncionarioRepository.cs" />
+        <Compile Include="src\Repositories\IClienteRepository.cs" />
         <Compile Include="src\Repositories\IFornecedorRepository.cs" />
         <Compile Include="src\Repositories\IInsumoRepository.cs" />
         <Compile Include="src\Repositories\InsumoRepository.cs" />
@@ -364,20 +365,20 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="src\Forms\Clientes Fisicos\AlteraClienteFisicoForm.resx">
-          <DependentUpon>AlteraClienteFisicoForm.cs</DependentUpon>
+        <EmbeddedResource Include="src\Forms\Clientes\AlteraClienteForm.resx">
+          <DependentUpon>AlteraClienteForm.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="src\Forms\Clientes Fisicos\CadastroClienteFisicoForm.resx">
-          <DependentUpon>CadastroClienteFisicoForm.cs</DependentUpon>
+        <EmbeddedResource Include="src\Forms\Clientes\CadastroClienteForm.resx">
+          <DependentUpon>CadastroClienteForm.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="src\Forms\Clientes Fisicos\ClienteFisicoForm.resx">
-          <DependentUpon>ClienteFisicoForm.cs</DependentUpon>
+        <EmbeddedResource Include="src\Forms\Clientes\ClienteForm.resx">
+          <DependentUpon>ClienteForm.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="src\Forms\Clientes Fisicos\ConsultaClienteForm.resx">
+        <EmbeddedResource Include="src\Forms\Clientes\ConsultaClienteForm.resx">
           <DependentUpon>ConsultaClienteForm.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="src\Forms\Clientes Fisicos\ExcluirClienteFisicoForm.resx">
-          <DependentUpon>ExcluirClienteFisicoForm.cs</DependentUpon>
+        <EmbeddedResource Include="src\Forms\Clientes\ExcluirClienteForm.resx">
+          <DependentUpon>ExcluirClienteForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="src\Forms\Compras\AlteraCompraForm.resx">
           <DependentUpon>AlteraCompraForm.cs</DependentUpon>

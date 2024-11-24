@@ -8,6 +8,7 @@
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FCadastroClienteForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FclienteForm/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FclienteForm/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FCulturas_002FAlteraCulturaForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FFuncionarios_002FAlteraFuncionarioForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FFuncionarios_002FCadastroClienteFisicoForm/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FFuncionarios_002FCadastroClienteFisicoForm/@EntryIndexRemoved">True</s:Boolean>

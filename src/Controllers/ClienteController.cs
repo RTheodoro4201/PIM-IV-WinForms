@@ -6,46 +6,59 @@ using PIM_IV_Forms.Validator;
 
 namespace PIM_IV_Forms.Controllers;
 
-public class ClienteFisicoController(IRepository<ClienteFisico> clienteFisicoRepository)
+public class ClienteController(IClienteRepository clienteRepository)
 {
-    public async Task<bool> Create(ClienteFisico cliente, Endereco enderecoCliente)
+    public async Task<bool> Create(Cliente cliente, Endereco enderecoCliente)
     {
-        var clienteValidator = new ClienteFisicoValidator();
+        var clienteValidator = new ClienteValidator();
         var enderecoValidator = new EnderecoValidator();
         var enderecoValidationResult = await enderecoValidator.ValidateAsync(enderecoCliente);
         var clienteValidationResult = await clienteValidator.ValidateAsync(cliente);
 
         if (enderecoValidationResult.IsValid && clienteValidationResult.IsValid)
         {
-            await clienteFisicoRepository.Add(cliente);
+            await clienteRepository.Add(cliente);
             return true;
         }
 
         return false;
     }
 
-    public async Task<IEnumerable<ClienteFisico>> Index()
+    public async Task<IEnumerable<Cliente>> IndexAll()
     {
-        var clientes = await clienteFisicoRepository.GetAll();
+        var clientes = await clienteRepository.GetAll();
         return clientes;
     }
 
-    public async Task<ClienteFisico> SearchCliente(int clienteId)
+    public async Task<IEnumerable<Cliente>> IndexFisico()
     {
-        var cliente = await clienteFisicoRepository.GetById(clienteId);
+        var clientes = await clienteRepository.GetAllFisico();
+        return clientes;
+    }
+
+    public async Task<IEnumerable<Cliente>> IndexJuridico()
+    {
+        var clientes = await clienteRepository.GetAllJuridico();
+        return clientes;
+    }
+
+    public async Task<Cliente> SearchCliente(int clienteId)
+    {
+        var cliente = await clienteRepository.GetById(clienteId);
         return cliente;
     }
 
-    public async Task<bool> Edit(ClienteFisico cliente, Endereco enderecoCliente)
+
+    public async Task<bool> Edit(Cliente cliente, Endereco enderecoCliente)
     {
-        var clienteValidator = new ClienteFisicoValidator();
+        var clienteValidator = new ClienteValidator();
         var enderecoValidator = new EnderecoValidator();
         var enderecoValidationResult = await enderecoValidator.ValidateAsync(enderecoCliente);
         var clienteValidationResult = await clienteValidator.ValidateAsync(cliente);
 
         if (enderecoValidationResult.IsValid && clienteValidationResult.IsValid)
         {
-            await clienteFisicoRepository.Update(cliente);
+            await clienteRepository.Update(cliente);
             return true;
         }
 
@@ -54,11 +67,11 @@ public class ClienteFisicoController(IRepository<ClienteFisico> clienteFisicoRep
 
     public async Task<bool> Delete(int id)
     {
-        var cliente = await clienteFisicoRepository.GetById(id);
+        var cliente = await clienteRepository.GetById(id);
 
         if (cliente != null)
         {
-            await clienteFisicoRepository.Delete(id);
+            await clienteRepository.Delete(id);
             return true;
         }
 

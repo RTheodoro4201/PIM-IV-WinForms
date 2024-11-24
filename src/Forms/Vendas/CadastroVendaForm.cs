@@ -37,7 +37,7 @@ public partial class CadastroVendaForm : Form
             if (int.TryParse(txtIdCliente.Text, out int idCliente))
             {
                 var cliente = await _vendaController.SearchCliente(idCliente);
-                txtNomeCliente.Text = cliente.Nome_Completo;
+                txtNomeCliente.Text = cliente.Nome;
             }
 
             else if (!int.TryParse(txtIdCliente.Text, out idCliente) && !txtIdCliente.Text.IsNullOrEmpty())
