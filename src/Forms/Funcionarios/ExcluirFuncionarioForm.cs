@@ -6,12 +6,6 @@ using PIM_IV_Forms.Models;
 
 namespace PIM_IV_Forms.Forms.Funcionarios;
 
-#region TODOs
-
-//TODO Reestruturar interface
-
-#endregion
-
 public partial class ExcluirFuncionarioForm : Form
 {
     private readonly FuncionarioController _funcionarioController;
@@ -44,15 +38,14 @@ public partial class ExcluirFuncionarioForm : Form
 
         else
         {
-            MessageBox.Show("Não foi possível carregar os dados deste funcionario! Tente novamente mais tarde.");
+            MessageBox.Show("Não foi possível carregar os dados deste funcionário! Tente novamente mais tarde.");
             Close();
         }
     }
 
     private void PopulaCampos(Endereco endereco, Funcionario funcionario)
     {
-        txtIdFuncionario.Text = funcionario.Id_Funcionario.ToString();
-        txtIdFuncionario.ReadOnly = true;
+        txtId.Text = funcionario.Id_Funcionario.ToString();
         txtNome.Text = funcionario.Nome_Completo;
         txtCargo.Text = funcionario.Cargo;
         txtRg.Text = funcionario.Rg;
@@ -81,18 +74,18 @@ public partial class ExcluirFuncionarioForm : Form
         {
             var resultado =
                 MessageBox.Show(
-                    $"Deseja excluir o funcionario {_funcionario.Nome_Completo}? Esta ação não pode ser desfeita.",
-                    "Excluir Funcionario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    $"Deseja excluir o funcionário nº{_funcionarioId} '{_funcionario.Nome_Completo}'? Esta ação não pode ser desfeita.",
+                    "Excluir Funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (resultado == DialogResult.Yes)
             {
                 await _funcionarioController.Delete(_funcionarioId);
-                MessageBox.Show("Funcionario excluído com sucesso!");
+                MessageBox.Show("Funcionário excluído com sucesso!");
             }
         }
         catch (Exception exception)
         {
-            MessageBox.Show("Houve um erro ao tentar excluir o funcionario!");
+            MessageBox.Show("Houve um erro ao tentar excluir o funcionário!");
             MessageBox.Show(exception.Message);
             throw;
         }

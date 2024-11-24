@@ -117,47 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblComplemento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblEndereco.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblComplemento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblEndereco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 237</value>
+  <data name="lblComplemento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 355</value>
   </data>
-  <data name="lblEndereco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>667, 27</value>
+  <data name="lblComplemento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 30</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblEndereco.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
+  <data name="lblComplemento.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
-  <data name="lblEndereco.Text" xml:space="preserve">
-    <value>Endereço</value>
+  <data name="lblComplemento.Text" xml:space="preserve">
+    <value>Complemento</value>
   </data>
-  <data name="lblEndereco.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lblComplemento.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;lblEndereco.Name" xml:space="preserve">
-    <value>lblEndereco</value>
+  <data name="&gt;&gt;lblComplemento.Name" xml:space="preserve">
+    <value>lblComplemento</value>
   </data>
-  <data name="&gt;&gt;lblEndereco.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblComplemento.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblEndereco.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblComplemento.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblEndereco.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;lblComplemento.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="txtCep.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtCep.Location" type="System.Drawing.Point, System.Drawing">
-    <value>637, 344</value>
+    <value>96, 495</value>
   </data>
   <data name="txtCep.Mask" xml:space="preserve">
     <value>99999-999</value>
   </data>
   <data name="txtCep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 27</value>
+    <value>124, 30</value>
   </data>
   <data name="txtCep.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -172,16 +178,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtCep.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
+  </data>
+  <data name="txtDocumento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtDocumento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>636, 162</value>
+    <value>166, 145</value>
   </data>
   <data name="txtDocumento.Mask" xml:space="preserve">
     <value>999.999.999-99</value>
   </data>
   <data name="txtDocumento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 27</value>
+    <value>124, 30</value>
   </data>
   <data name="txtDocumento.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -196,16 +205,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtDocumento.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
+  </data>
+  <data name="lblDocumento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblDocumento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblDocumento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>490, 162</value>
+    <value>45, 145</value>
   </data>
   <data name="lblDocumento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 27</value>
+    <value>115, 30</value>
   </data>
   <data name="lblDocumento.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -226,19 +238,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblDocumento.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="txtTelefone.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtTelefone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 162</value>
+    <value>137, 215</value>
   </data>
   <data name="txtTelefone.Mask" xml:space="preserve">
     <value>(99) 99999-9999</value>
   </data>
   <data name="txtTelefone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 27</value>
+    <value>131, 30</value>
   </data>
   <data name="txtTelefone.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -253,16 +265,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtTelefone.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
+  </data>
+  <data name="lblTipo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblTipo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblTipo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>490, 127</value>
+    <value>45, 110</value>
   </data>
   <data name="lblTipo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 27</value>
+    <value>48, 30</value>
   </data>
   <data name="lblTipo.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -283,67 +298,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblTipo.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
-  <data name="txtIdFornecedor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 19</value>
-  </data>
-  <data name="txtIdFornecedor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 27</value>
-  </data>
-  <data name="txtIdFornecedor.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="&gt;&gt;txtIdFornecedor.Name" xml:space="preserve">
-    <value>txtIdFornecedor</value>
-  </data>
-  <data name="&gt;&gt;txtIdFornecedor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtIdFornecedor.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtIdFornecedor.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lblIdFornecedor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblIdFornecedor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 19</value>
-  </data>
-  <data name="lblIdFornecedor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 27</value>
-  </data>
-  <data name="lblIdFornecedor.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="lblIdFornecedor.Text" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="lblIdFornecedor.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lblIdFornecedor.Name" xml:space="preserve">
-    <value>lblIdFornecedor</value>
-  </data>
-  <data name="&gt;&gt;lblIdFornecedor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblIdFornecedor.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblIdFornecedor.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="lblDataInicial.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblDataInicial.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblDataInicial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 197</value>
+    <value>45, 250</value>
   </data>
   <data name="lblDataInicial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 30</value>
+    <value>115, 30</value>
   </data>
   <data name="lblDataInicial.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -352,7 +319,7 @@
     <value>Data Inicial</value>
   </data>
   <data name="lblDataInicial.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblDataInicial.Name" xml:space="preserve">
     <value>lblDataInicial</value>
@@ -364,10 +331,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblDataInicial.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="cbUf.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="cbUf.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="cbUf.Items" xml:space="preserve">
     <value>AC</value>
@@ -448,10 +418,10 @@
     <value>TO</value>
   </data>
   <data name="cbUf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>637, 309</value>
+    <value>86, 460</value>
   </data>
   <data name="cbUf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 27</value>
+    <value>124, 31</value>
   </data>
   <data name="cbUf.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -466,16 +436,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbUf.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
+  </data>
+  <data name="lblUf.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblUf.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 309</value>
+    <value>45, 460</value>
   </data>
   <data name="lblUf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 27</value>
+    <value>35, 30</value>
   </data>
   <data name="lblUf.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -496,16 +469,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUf.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
+  </data>
+  <data name="lblCidade.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblCidade.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblCidade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 377</value>
+    <value>45, 425</value>
   </data>
   <data name="lblCidade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 27</value>
+    <value>70, 30</value>
   </data>
   <data name="lblCidade.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -526,16 +502,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCidade.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
+  </data>
+  <data name="lblCep.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblCep.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblCep.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 344</value>
+    <value>45, 495</value>
   </data>
   <data name="lblCep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 27</value>
+    <value>45, 30</value>
   </data>
   <data name="lblCep.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -556,13 +535,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCep.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
+  </data>
+  <data name="txtNumero.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtNumero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>637, 274</value>
+    <value>136, 320</value>
   </data>
   <data name="txtNumero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 27</value>
+    <value>124, 30</value>
   </data>
   <data name="txtNumero.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -577,13 +559,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtNumero.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
+  </data>
+  <data name="txtCidade.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtCidade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 376</value>
+    <value>121, 425</value>
   </data>
   <data name="txtCidade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 27</value>
+    <value>225, 30</value>
   </data>
   <data name="txtCidade.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -598,13 +583,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtCidade.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
+  </data>
+  <data name="txtBairro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtBairro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 341</value>
+    <value>121, 390</value>
   </data>
   <data name="txtBairro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 27</value>
+    <value>225, 30</value>
   </data>
   <data name="txtBairro.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
@@ -619,46 +607,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtBairro.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="lblComplemento.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblComplemento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 307</value>
-  </data>
-  <data name="lblComplemento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 27</value>
-  </data>
-  <data name="lblComplemento.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="lblComplemento.Text" xml:space="preserve">
-    <value>Complemento</value>
-  </data>
-  <data name="lblComplemento.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lblComplemento.Name" xml:space="preserve">
-    <value>lblComplemento</value>
-  </data>
-  <data name="&gt;&gt;lblComplemento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblComplemento.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblComplemento.ZOrder" xml:space="preserve">
     <value>17</value>
+  </data>
+  <data name="lblLogradouro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblLogradouro.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblLogradouro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 272</value>
+    <value>45, 285</value>
   </data>
   <data name="lblLogradouro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 27</value>
+    <value>115, 30</value>
   </data>
   <data name="lblLogradouro.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -679,16 +640,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblLogradouro.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
+  </data>
+  <data name="lblNum.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblNum.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblNum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 271</value>
+    <value>45, 320</value>
   </data>
   <data name="lblNum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 27</value>
+    <value>85, 30</value>
   </data>
   <data name="lblNum.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -697,7 +661,7 @@
     <value>Número</value>
   </data>
   <data name="lblNum.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblNum.Name" xml:space="preserve">
     <value>lblNum</value>
@@ -709,16 +673,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblNum.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
+  </data>
+  <data name="lblBairro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblBairro.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblBairro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 342</value>
+    <value>45, 390</value>
   </data>
   <data name="lblBairro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 27</value>
+    <value>70, 30</value>
   </data>
   <data name="lblBairro.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -739,16 +706,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblBairro.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
+  </data>
+  <data name="lblTelefone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblTelefone.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblTelefone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 162</value>
+    <value>45, 215</value>
   </data>
   <data name="lblTelefone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 27</value>
+    <value>86, 30</value>
   </data>
   <data name="lblTelefone.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -769,16 +739,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblTelefone.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
+  </data>
+  <data name="lblEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblEmail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 127</value>
+    <value>45, 180</value>
   </data>
   <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 27</value>
+    <value>58, 30</value>
   </data>
   <data name="lblEmail.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -799,16 +772,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblEmail.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
+  </data>
+  <data name="lblNome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="lblNome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblNome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 92</value>
+    <value>45, 75</value>
   </data>
   <data name="lblNome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 27</value>
+    <value>74, 30</value>
   </data>
   <data name="lblNome.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -829,16 +805,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblNome.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="dateDataInicial.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="dateDataInicial.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
+  </data>
   <data name="dateDataInicial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 197</value>
+    <value>167, 250</value>
   </data>
   <data name="dateDataInicial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 27</value>
+    <value>132, 30</value>
   </data>
   <data name="dateDataInicial.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -853,13 +832,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dateDataInicial.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
+  </data>
+  <data name="txtLogradouro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtLogradouro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 272</value>
+    <value>167, 285</value>
   </data>
   <data name="txtLogradouro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 27</value>
+    <value>225, 30</value>
   </data>
   <data name="txtLogradouro.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -874,13 +856,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtLogradouro.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
+  </data>
+  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 127</value>
+    <value>109, 180</value>
   </data>
   <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 27</value>
+    <value>225, 30</value>
   </data>
   <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -895,13 +880,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
+  </data>
+  <data name="txtTipo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtTipo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>636, 127</value>
+    <value>99, 110</value>
   </data>
   <data name="txtTipo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 27</value>
+    <value>124, 30</value>
   </data>
   <data name="txtTipo.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -916,13 +904,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtTipo.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
+  </data>
+  <data name="txtComplemento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="txtComplemento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 306</value>
+    <value>186, 355</value>
   </data>
   <data name="txtComplemento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 27</value>
+    <value>225, 30</value>
   </data>
   <data name="txtComplemento.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -937,34 +928,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtComplemento.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="txtNome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 92</value>
-  </data>
-  <data name="txtNome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>545, 27</value>
-  </data>
-  <data name="txtNome.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;txtNome.Name" xml:space="preserve">
-    <value>txtNome</value>
-  </data>
-  <data name="&gt;&gt;txtNome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtNome.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtNome.ZOrder" xml:space="preserve">
     <value>29</value>
+  </data>
+  <data name="btnFechar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnFechar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
   </data>
   <data name="btnFechar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnFechar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>425, 493</value>
+    <value>368, 602</value>
   </data>
   <data name="btnFechar.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 52</value>
@@ -985,6 +961,126 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnFechar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtNome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
+  </data>
+  <data name="txtNome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 75</value>
+  </data>
+  <data name="txtNome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>391, 30</value>
+  </data>
+  <data name="txtNome.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;txtNome.Name" xml:space="preserve">
+    <value>txtNome</value>
+  </data>
+  <data name="&gt;&gt;txtNome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtNome.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtNome.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblConsultaFornecedor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 20pt</value>
+  </data>
+  <data name="lblConsultaFornecedor.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lblConsultaFornecedor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblConsultaFornecedor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 25</value>
+  </data>
+  <data name="lblConsultaFornecedor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 40</value>
+  </data>
+  <data name="lblConsultaFornecedor.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="lblConsultaFornecedor.Text" xml:space="preserve">
+    <value>Consultar Fornecedor</value>
+  </data>
+  <data name="lblConsultaFornecedor.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblConsultaFornecedor.Name" xml:space="preserve">
+    <value>lblConsultaFornecedor</value>
+  </data>
+  <data name="&gt;&gt;lblConsultaFornecedor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblConsultaFornecedor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblConsultaFornecedor.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 20pt</value>
+  </data>
+  <data name="lblId.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lblId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lblId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 40</value>
+  </data>
+  <data name="lblId.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="lblId.Text" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="lblId.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblId.Name" xml:space="preserve">
+    <value>lblId</value>
+  </data>
+  <data name="&gt;&gt;lblId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblId.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 20pt</value>
+  </data>
+  <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 25</value>
+  </data>
+  <data name="txtId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 40</value>
+  </data>
+  <data name="txtId.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;txtId.Name" xml:space="preserve">
+    <value>txtId</value>
+  </data>
+  <data name="&gt;&gt;txtId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtId.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1000,13 +1096,10 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1350, 681</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 12pt</value>
+    <value>1350, 685</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Consultar Cliente</value>
+    <value>Consultar Fornecedor</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ConsultaFornecedorForm</value>
