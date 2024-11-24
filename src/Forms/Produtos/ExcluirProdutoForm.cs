@@ -48,7 +48,7 @@ public partial class ExcluirProdutoForm : Form
         txtNome.Text = produto.Nome;
         txtDescricao.Text = produto.Descricao;
         txtQuantidadeEstoque.Text = produto.Quantidade_Estoque.ToString();
-        txtPrecoUnitario.Text = produto.Preco_Unitario.ToString(CultureInfo.CurrentCulture);
+        txtPrecoUnitario.Text = produto.Preco_Unitario.ToString("C");
         dateDataValidade.Value = produto.Data_Validade;
     }
 

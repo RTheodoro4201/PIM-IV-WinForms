@@ -51,9 +51,9 @@ partial class CadastroCulturaForm
         this.txtNotas = new System.Windows.Forms.TextBox();
         this.lblCadastroCultura = new System.Windows.Forms.Label();
         this.SuspendLayout();
-        //
+        // 
         // lblTipoSolo
-        //
+        // 
         this.lblTipoSolo.BackColor = System.Drawing.Color.DimGray;
         this.lblTipoSolo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblTipoSolo.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -65,9 +65,9 @@ partial class CadastroCulturaForm
         this.lblTipoSolo.TabIndex = 64;
         this.lblTipoSolo.Text = "Tipo de Solo";
         this.lblTipoSolo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // lblDataPlantio
-        //
+        // 
         this.lblDataPlantio.BackColor = System.Drawing.Color.DimGray;
         this.lblDataPlantio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblDataPlantio.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -79,9 +79,9 @@ partial class CadastroCulturaForm
         this.lblDataPlantio.TabIndex = 42;
         this.lblDataPlantio.Text = "Data de Plantio";
         this.lblDataPlantio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // lblÁreaPlantada
-        //
+        // 
         this.lblÁreaPlantada.BackColor = System.Drawing.Color.DimGray;
         this.lblÁreaPlantada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblÁreaPlantada.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -93,9 +93,9 @@ partial class CadastroCulturaForm
         this.lblÁreaPlantada.TabIndex = 54;
         this.lblÁreaPlantada.Text = "Área Plantada (m2)";
         this.lblÁreaPlantada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // lblNome
-        //
+        // 
         this.lblNome.BackColor = System.Drawing.Color.DimGray;
         this.lblNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblNome.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -107,9 +107,9 @@ partial class CadastroCulturaForm
         this.lblNome.TabIndex = 50;
         this.lblNome.Text = "Nome";
         this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // dateDataPlantio
-        //
+        // 
         this.dateDataPlantio.Font = new System.Drawing.Font("Tahoma", 14F);
         this.dateDataPlantio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dateDataPlantio.Location = new System.Drawing.Point(201, 283);
@@ -123,25 +123,26 @@ partial class CadastroCulturaForm
         this.dateDataPlantio.Enter += new System.EventHandler(this.dateDataColheita_ValueChanged);
         this.dateDataPlantio.Leave += new System.EventHandler(this.dateDataColheita_ValueChanged);
         this.dateDataPlantio.Validated += new System.EventHandler(this.dateDataColheita_ValueChanged);
-        //
+        // 
         // txtAreaPlantada
-        //
+        // 
         this.txtAreaPlantada.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtAreaPlantada.Location = new System.Drawing.Point(226, 110);
         this.txtAreaPlantada.Name = "txtAreaPlantada";
         this.txtAreaPlantada.Size = new System.Drawing.Size(86, 30);
         this.txtAreaPlantada.TabIndex = 43;
-        //
+        this.txtAreaPlantada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        // 
         // txtTipoSolo
-        //
+        // 
         this.txtTipoSolo.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtTipoSolo.Location = new System.Drawing.Point(169, 180);
         this.txtTipoSolo.Name = "txtTipoSolo";
         this.txtTipoSolo.Size = new System.Drawing.Size(223, 30);
         this.txtTipoSolo.TabIndex = 40;
-        //
+        // 
         // btnCancelar
-        //
+        // 
         this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
         this.btnCancelar.BackColor = System.Drawing.Color.DimGray;
         this.btnCancelar.FlatAppearance.BorderSize = 0;
@@ -156,9 +157,9 @@ partial class CadastroCulturaForm
         this.btnCancelar.Text = "Cancelar";
         this.btnCancelar.UseVisualStyleBackColor = false;
         this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-        //
+        // 
         // btnSalvar
-        //
+        // 
         this.btnSalvar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
         this.btnSalvar.BackColor = System.Drawing.Color.DimGray;
         this.btnSalvar.FlatAppearance.BorderSize = 0;
@@ -173,17 +174,17 @@ partial class CadastroCulturaForm
         this.btnSalvar.Text = "Salvar";
         this.btnSalvar.UseVisualStyleBackColor = false;
         this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-        //
+        // 
         // txtNome
-        //
+        // 
         this.txtNome.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtNome.Location = new System.Drawing.Point(121, 75);
         this.txtNome.Name = "txtNome";
         this.txtNome.Size = new System.Drawing.Size(271, 30);
         this.txtNome.TabIndex = 69;
-        //
+        // 
         // lblDataColheita
-        //
+        // 
         this.lblDataColheita.BackColor = System.Drawing.Color.DimGray;
         this.lblDataColheita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblDataColheita.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -195,9 +196,9 @@ partial class CadastroCulturaForm
         this.lblDataColheita.TabIndex = 70;
         this.lblDataColheita.Text = "Data de Colheita";
         this.lblDataColheita.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // dateColheita
-        //
+        // 
         this.dateColheita.Font = new System.Drawing.Font("Tahoma", 14F);
         this.dateColheita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dateColheita.Location = new System.Drawing.Point(201, 320);
@@ -207,9 +208,9 @@ partial class CadastroCulturaForm
         this.dateColheita.Size = new System.Drawing.Size(132, 30);
         this.dateColheita.TabIndex = 71;
         this.dateColheita.Value = new System.DateTime(2024, 12, 19, 0, 0, 0, 0);
-        //
+        // 
         // lblTipoIrrigacao
-        //
+        // 
         this.lblTipoIrrigacao.BackColor = System.Drawing.Color.DimGray;
         this.lblTipoIrrigacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblTipoIrrigacao.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -221,17 +222,17 @@ partial class CadastroCulturaForm
         this.lblTipoIrrigacao.TabIndex = 73;
         this.lblTipoIrrigacao.Text = "Tipo de Irrigação";
         this.lblTipoIrrigacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // txtTipoIrrigacao
-        //
+        // 
         this.txtTipoIrrigacao.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtTipoIrrigacao.Location = new System.Drawing.Point(216, 215);
         this.txtTipoIrrigacao.Name = "txtTipoIrrigacao";
         this.txtTipoIrrigacao.Size = new System.Drawing.Size(223, 30);
         this.txtTipoIrrigacao.TabIndex = 72;
-        //
+        // 
         // lblQuantidadePlantada
-        //
+        // 
         this.lblQuantidadePlantada.BackColor = System.Drawing.Color.DimGray;
         this.lblQuantidadePlantada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblQuantidadePlantada.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -243,17 +244,18 @@ partial class CadastroCulturaForm
         this.lblQuantidadePlantada.TabIndex = 75;
         this.lblQuantidadePlantada.Text = "Quantidade Plantada";
         this.lblQuantidadePlantada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // txtQuantidadePlantada
-        //
+        // 
         this.txtQuantidadePlantada.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtQuantidadePlantada.Location = new System.Drawing.Point(239, 145);
         this.txtQuantidadePlantada.Name = "txtQuantidadePlantada";
         this.txtQuantidadePlantada.Size = new System.Drawing.Size(79, 30);
         this.txtQuantidadePlantada.TabIndex = 74;
-        //
+        this.txtQuantidadePlantada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        // 
         // lblNotas
-        //
+        // 
         this.lblNotas.BackColor = System.Drawing.Color.DimGray;
         this.lblNotas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblNotas.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -265,17 +267,17 @@ partial class CadastroCulturaForm
         this.lblNotas.TabIndex = 77;
         this.lblNotas.Text = "Notas";
         this.lblNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // txtNotas
-        //
+        // 
         this.txtNotas.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtNotas.Location = new System.Drawing.Point(110, 250);
         this.txtNotas.Name = "txtNotas";
         this.txtNotas.Size = new System.Drawing.Size(243, 30);
         this.txtNotas.TabIndex = 76;
-        //
+        // 
         // lblCadastroCultura
-        //
+        // 
         this.lblCadastroCultura.BackColor = System.Drawing.Color.DimGray;
         this.lblCadastroCultura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblCadastroCultura.Font = new System.Drawing.Font("Tahoma", 20F);
@@ -287,9 +289,9 @@ partial class CadastroCulturaForm
         this.lblCadastroCultura.TabIndex = 79;
         this.lblCadastroCultura.Text = "Cadastrar Cultura";
         this.lblCadastroCultura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // CadastroCulturaForm
-        //
+        // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.AutoSize = true;

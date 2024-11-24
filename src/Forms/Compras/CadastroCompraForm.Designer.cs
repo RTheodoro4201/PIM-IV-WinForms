@@ -51,9 +51,9 @@ partial class CadastroCompraForm
         this.txtValorTotal = new System.Windows.Forms.TextBox();
         this.lblCadastroCompra = new System.Windows.Forms.Label();
         this.SuspendLayout();
-        //
+        // 
         // lblNomeInsumo
-        //
+        // 
         this.lblNomeInsumo.BackColor = System.Drawing.Color.DimGray;
         this.lblNomeInsumo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblNomeInsumo.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -61,13 +61,13 @@ partial class CadastroCompraForm
         this.lblNomeInsumo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblNomeInsumo.Location = new System.Drawing.Point(45, 110);
         this.lblNomeInsumo.Name = "lblNomeInsumo";
-        this.lblNomeInsumo.Size = new System.Drawing.Size(162, 27);
+        this.lblNomeInsumo.Size = new System.Drawing.Size(135, 30);
         this.lblNomeInsumo.TabIndex = 54;
         this.lblNomeInsumo.Text = "Nome Insumo";
         this.lblNomeInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // lblIdInsumo
-        //
+        // 
         this.lblIdInsumo.BackColor = System.Drawing.Color.DimGray;
         this.lblIdInsumo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblIdInsumo.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -75,22 +75,22 @@ partial class CadastroCompraForm
         this.lblIdInsumo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblIdInsumo.Location = new System.Drawing.Point(45, 75);
         this.lblIdInsumo.Name = "lblIdInsumo";
-        this.lblIdInsumo.Size = new System.Drawing.Size(162, 30);
+        this.lblIdInsumo.Size = new System.Drawing.Size(140, 30);
         this.lblIdInsumo.TabIndex = 50;
         this.lblIdInsumo.Text = "Código Insumo";
         this.lblIdInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // txtNomeInsumo
-        //
+        // 
         this.txtNomeInsumo.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtNomeInsumo.Location = new System.Drawing.Point(213, 110);
+        this.txtNomeInsumo.Location = new System.Drawing.Point(186, 110);
         this.txtNomeInsumo.Name = "txtNomeInsumo";
         this.txtNomeInsumo.ReadOnly = true;
         this.txtNomeInsumo.Size = new System.Drawing.Size(223, 30);
         this.txtNomeInsumo.TabIndex = 43;
-        //
+        // 
         // btnCancelar
-        //
+        // 
         this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
         this.btnCancelar.BackColor = System.Drawing.Color.DimGray;
         this.btnCancelar.FlatAppearance.BorderSize = 0;
@@ -105,9 +105,9 @@ partial class CadastroCompraForm
         this.btnCancelar.Text = "Cancelar";
         this.btnCancelar.UseVisualStyleBackColor = false;
         this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-        //
+        // 
         // btnSalvar
-        //
+        // 
         this.btnSalvar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
         this.btnSalvar.BackColor = System.Drawing.Color.DimGray;
         this.btnSalvar.FlatAppearance.BorderSize = 0;
@@ -122,18 +122,19 @@ partial class CadastroCompraForm
         this.btnSalvar.Text = "Salvar";
         this.btnSalvar.UseVisualStyleBackColor = false;
         this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-        //
+        // 
         // txtIdInsumo
-        //
+        // 
         this.txtIdInsumo.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtIdInsumo.Location = new System.Drawing.Point(213, 75);
+        this.txtIdInsumo.Location = new System.Drawing.Point(191, 75);
         this.txtIdInsumo.Name = "txtIdInsumo";
-        this.txtIdInsumo.Size = new System.Drawing.Size(111, 30);
+        this.txtIdInsumo.Size = new System.Drawing.Size(80, 30);
         this.txtIdInsumo.TabIndex = 69;
+        this.txtIdInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         this.txtIdInsumo.Leave += new System.EventHandler(this.txtIdInsumo_Leave);
-        //
+        // 
         // lblQuantidadeComprada
-        //
+        // 
         this.lblQuantidadeComprada.BackColor = System.Drawing.Color.DimGray;
         this.lblQuantidadeComprada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblQuantidadeComprada.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -145,17 +146,18 @@ partial class CadastroCompraForm
         this.lblQuantidadeComprada.TabIndex = 75;
         this.lblQuantidadeComprada.Text = "Quantidade Comprada";
         this.lblQuantidadeComprada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // txtQuantidadeComprada
-        //
+        // 
         this.txtQuantidadeComprada.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtQuantidadeComprada.Location = new System.Drawing.Point(253, 215);
         this.txtQuantidadeComprada.Name = "txtQuantidadeComprada";
-        this.txtQuantidadeComprada.Size = new System.Drawing.Size(151, 30);
+        this.txtQuantidadeComprada.Size = new System.Drawing.Size(80, 30);
         this.txtQuantidadeComprada.TabIndex = 74;
-        //
+        this.txtQuantidadeComprada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        // 
         // lblIdFornecedor
-        //
+        // 
         this.lblIdFornecedor.BackColor = System.Drawing.Color.DimGray;
         this.lblIdFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblIdFornecedor.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -163,23 +165,23 @@ partial class CadastroCompraForm
         this.lblIdFornecedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblIdFornecedor.Location = new System.Drawing.Point(45, 145);
         this.lblIdFornecedor.Name = "lblIdFornecedor";
-        this.lblIdFornecedor.Size = new System.Drawing.Size(179, 30);
+        this.lblIdFornecedor.Size = new System.Drawing.Size(170, 30);
         this.lblIdFornecedor.TabIndex = 77;
         this.lblIdFornecedor.Text = "Código Fornecedor";
         this.lblIdFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // txtIdFornecedor
-        //
+        // 
         this.txtIdFornecedor.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtIdFornecedor.Location = new System.Drawing.Point(230, 145);
+        this.txtIdFornecedor.Location = new System.Drawing.Point(221, 145);
         this.txtIdFornecedor.Name = "txtIdFornecedor";
-        this.txtIdFornecedor.Size = new System.Drawing.Size(151, 30);
+        this.txtIdFornecedor.Size = new System.Drawing.Size(80, 30);
         this.txtIdFornecedor.TabIndex = 76;
         this.txtIdFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         this.txtIdFornecedor.Leave += new System.EventHandler(this.txtIdFornecedor_Leave);
-        //
+        // 
         // lblDataCompra
-        //
+        // 
         this.lblDataCompra.BackColor = System.Drawing.Color.DimGray;
         this.lblDataCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblDataCompra.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -191,9 +193,9 @@ partial class CadastroCompraForm
         this.lblDataCompra.TabIndex = 78;
         this.lblDataCompra.Text = "Data de Compra";
         this.lblDataCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // dateDataCompra
-        //
+        // 
         this.dateDataCompra.Font = new System.Drawing.Font("Tahoma", 14F);
         this.dateDataCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dateDataCompra.Location = new System.Drawing.Point(200, 320);
@@ -204,9 +206,9 @@ partial class CadastroCompraForm
         this.dateDataCompra.TabIndex = 79;
         this.dateDataCompra.Value = new System.DateTime(2024, 11, 19, 0, 0, 0, 0);
         this.dateDataCompra.Leave += new System.EventHandler(this.dateDataCompra_Leave);
-        //
+        // 
         // lblNomeFornecedor
-        //
+        // 
         this.lblNomeFornecedor.BackColor = System.Drawing.Color.DimGray;
         this.lblNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblNomeFornecedor.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -214,23 +216,23 @@ partial class CadastroCompraForm
         this.lblNomeFornecedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblNomeFornecedor.Location = new System.Drawing.Point(45, 180);
         this.lblNomeFornecedor.Name = "lblNomeFornecedor";
-        this.lblNomeFornecedor.Size = new System.Drawing.Size(179, 30);
+        this.lblNomeFornecedor.Size = new System.Drawing.Size(162, 30);
         this.lblNomeFornecedor.TabIndex = 81;
         this.lblNomeFornecedor.Text = "Nome Fornecedor";
         this.lblNomeFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // txtNomeFornecedor
-        //
+        // 
         this.txtNomeFornecedor.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtNomeFornecedor.Location = new System.Drawing.Point(230, 180);
+        this.txtNomeFornecedor.Location = new System.Drawing.Point(213, 180);
         this.txtNomeFornecedor.Name = "txtNomeFornecedor";
         this.txtNomeFornecedor.ReadOnly = true;
         this.txtNomeFornecedor.Size = new System.Drawing.Size(164, 30);
         this.txtNomeFornecedor.TabIndex = 80;
         this.txtNomeFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-        //
+        // 
         // lblValorUnitario
-        //
+        // 
         this.lblValorUnitario.BackColor = System.Drawing.Color.DimGray;
         this.lblValorUnitario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblValorUnitario.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -242,18 +244,19 @@ partial class CadastroCompraForm
         this.lblValorUnitario.TabIndex = 83;
         this.lblValorUnitario.Text = "Valor Unitário";
         this.lblValorUnitario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // txtValorUnitario
-        //
+        // 
         this.txtValorUnitario.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtValorUnitario.Location = new System.Drawing.Point(181, 250);
         this.txtValorUnitario.Name = "txtValorUnitario";
-        this.txtValorUnitario.Size = new System.Drawing.Size(151, 30);
+        this.txtValorUnitario.Size = new System.Drawing.Size(110, 30);
         this.txtValorUnitario.TabIndex = 82;
+        this.txtValorUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         this.txtValorUnitario.Leave += new System.EventHandler(this.txtValorUnitario_Leave);
-        //
+        // 
         // lblValorTotal
-        //
+        // 
         this.lblValorTotal.BackColor = System.Drawing.Color.DimGray;
         this.lblValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblValorTotal.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -265,18 +268,19 @@ partial class CadastroCompraForm
         this.lblValorTotal.TabIndex = 85;
         this.lblValorTotal.Text = "Valor Total";
         this.lblValorTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // txtValorTotal
-        //
+        // 
         this.txtValorTotal.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtValorTotal.Location = new System.Drawing.Point(162, 285);
         this.txtValorTotal.Name = "txtValorTotal";
         this.txtValorTotal.ReadOnly = true;
-        this.txtValorTotal.Size = new System.Drawing.Size(151, 30);
+        this.txtValorTotal.Size = new System.Drawing.Size(110, 30);
         this.txtValorTotal.TabIndex = 84;
-        //
+        this.txtValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        // 
         // lblCadastroCompra
-        //
+        // 
         this.lblCadastroCompra.BackColor = System.Drawing.Color.DimGray;
         this.lblCadastroCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         this.lblCadastroCompra.Font = new System.Drawing.Font("Tahoma", 18F);
@@ -284,13 +288,13 @@ partial class CadastroCompraForm
         this.lblCadastroCompra.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblCadastroCompra.Location = new System.Drawing.Point(45, 25);
         this.lblCadastroCompra.Name = "lblCadastroCompra";
-        this.lblCadastroCompra.Size = new System.Drawing.Size(296, 40);
+        this.lblCadastroCompra.Size = new System.Drawing.Size(226, 40);
         this.lblCadastroCompra.TabIndex = 86;
         this.lblCadastroCompra.Text = "Cadastrar Compra";
         this.lblCadastroCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        //
+        // 
         // CadastroCompraForm
-        //
+        // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.AutoSize = true;

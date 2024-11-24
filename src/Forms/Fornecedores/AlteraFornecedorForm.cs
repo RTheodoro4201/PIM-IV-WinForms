@@ -42,19 +42,6 @@ public partial class AlteraFornecedorForm : Form
         }
     }
 
-    private void VerificarTipoFornecedor(object sender, EventArgs e)
-    {
-        if (txtTipo.Text == "Jurídico")
-        {
-            txtDocumento.Mask = "99.999.999/9999-99";
-        }
-
-        if (txtTipo.Text == "Físico")
-        {
-            txtDocumento.Mask = "999.999.999-99";
-        }
-    }
-
     private void PopulaCampos(Endereco endereco, Fornecedor fornecedor)
     {
         txtId.Text = fornecedor.Id_Fornecedor.ToString();
@@ -73,6 +60,57 @@ public partial class AlteraFornecedorForm : Form
         dateDataInicial.Value = fornecedor.Data_Inicial.Date;
     }
 
+    #region Métodos de Verificação
+
+    private void VerificarTipoFornecedor(object sender, EventArgs e)
+    {
+        if (txtTipo.Text == "Jurídico")
+        {
+            txtDocumento.Mask = "99.999.999/9999-99";
+        }
+
+        if (txtTipo.Text == "Físico")
+        {
+            txtDocumento.Mask = "999.999.999-99";
+        }
+    }
+
+    private void dateDataInicial_ValueChanged(object sender, EventArgs e)
+    {
+        if (txtTipo.Text == "Físico")
+        {
+            lblDataInicial.Text = "Data de Nascimento";
+            VerificarDataInicial();
+        }
+
+        else if (txtTipo.Text == "Jurídico")
+        {
+            lblDataInicial.Text = "Data de Fundação";
+            VerificarDataInicial();
+        }
+    }
+
+    private void VerificarDataInicial()
+    {
+        if (txtTipo.Text == "Físico" && dateDataInicial.Value > DateTime.Now.AddYears(-18))
+        {
+            MessageBox.Show("Data de nascimento inválida. O cliente precisa ser maior de 18 anos.", "Atenção",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dateDataInicial.Value = DateTime.Now.AddYears(-18);
+        }
+
+        else if (txtTipo.Text == "Jurídico" && dateDataInicial.Value > DateTime.Now)
+        {
+            MessageBox.Show("Data de Fundação inválida. A data de fundação não pode ser futura", "Atenção",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    }
+
+    #endregion
+
+
+    #region Métodos de Click
+
     private async void btnSalvar_Click(object sender, EventArgs e)
     {
         try
@@ -90,7 +128,7 @@ public partial class AlteraFornecedorForm : Form
 
             var fornecedor = new Fornecedor
             {
-                Id_Fornecedor = int.Parse(txtId.Text),
+                Id_Fornecedor = _fornecedorId,
                 Nome = txtNome.Text,
                 Tipo = txtTipo.Text,
                 Documento = txtDocumento.Text,
@@ -126,23 +164,10 @@ public partial class AlteraFornecedorForm : Form
         }
     }
 
-    private void dateDataInicial_ValueChanged(object sender, EventArgs e)
-    {
-        if (dateDataInicial.Value > DateTime.Now)
-        {
-            MessageBox.Show("Data de inicial (fundação/nascimento) não pode ser maior do que a data atual!");
-            dateDataInicial.Value = DateTime.Now;
-        }
-
-        if (txtTipo.Text == "Físico" && dateDataInicial.Value > DateTime.Now.AddYears(-18))
-        {
-            MessageBox.Show("Data de nascimento inválida!");
-            dateDataInicial.Value = DateTime.Now.AddYears(-18);
-        }
-    }
-
     private void btnCancelar_Click(object sender, EventArgs e)
     {
         Close();
     }
+
+    #endregion
 }

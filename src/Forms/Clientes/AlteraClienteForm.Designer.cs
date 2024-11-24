@@ -33,7 +33,6 @@ partial class AlteraClienteForm
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlteraClienteForm));
         this.txtTipo = new System.Windows.Forms.TextBox();
-        this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
         this.lblDataInicial = new System.Windows.Forms.Label();
         this.cbUf = new System.Windows.Forms.ComboBox();
         this.lblUf = new System.Windows.Forms.Label();
@@ -56,24 +55,20 @@ partial class AlteraClienteForm
         this.txtEmail = new System.Windows.Forms.TextBox();
         this.btnCancelar = new System.Windows.Forms.Button();
         this.btnSalvar = new System.Windows.Forms.Button();
-        this.txtTelefone = new System.Windows.Forms.TextBox();
         this.txtComplemento = new System.Windows.Forms.TextBox();
         this.txtNome = new System.Windows.Forms.TextBox();
         this.lblAlteraCliente = new System.Windows.Forms.Label();
-        this.txtCep = new System.Windows.Forms.TextBox();
         this.lblIdCliente = new System.Windows.Forms.Label();
         this.txtIdCliente = new System.Windows.Forms.TextBox();
+        this.txtCep = new System.Windows.Forms.MaskedTextBox();
+        this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
+        this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
         this.SuspendLayout();
         // 
         // txtTipo
         // 
         resources.ApplyResources(this.txtTipo, "txtTipo");
         this.txtTipo.Name = "txtTipo";
-        // 
-        // txtDocumento
-        // 
-        resources.ApplyResources(this.txtDocumento, "txtDocumento");
-        this.txtDocumento.Name = "txtDocumento";
         // 
         // lblDataInicial
         // 
@@ -231,11 +226,6 @@ partial class AlteraClienteForm
         this.btnSalvar.UseVisualStyleBackColor = false;
         this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
         // 
-        // txtTelefone
-        // 
-        resources.ApplyResources(this.txtTelefone, "txtTelefone");
-        this.txtTelefone.Name = "txtTelefone";
-        // 
         // txtComplemento
         // 
         resources.ApplyResources(this.txtComplemento, "txtComplemento");
@@ -254,11 +244,6 @@ partial class AlteraClienteForm
         this.lblAlteraCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblAlteraCliente.Name = "lblAlteraCliente";
         // 
-        // txtCep
-        // 
-        resources.ApplyResources(this.txtCep, "txtCep");
-        this.txtCep.Name = "txtCep";
-        // 
         // lblIdCliente
         // 
         this.lblIdCliente.BackColor = System.Drawing.Color.DimGray;
@@ -273,17 +258,36 @@ partial class AlteraClienteForm
         this.txtIdCliente.Name = "txtIdCliente";
         this.txtIdCliente.ReadOnly = true;
         // 
+        // txtCep
+        // 
+        this.txtCep.Culture = new System.Globalization.CultureInfo("");
+        resources.ApplyResources(this.txtCep, "txtCep");
+        this.txtCep.Name = "txtCep";
+        // 
+        // txtDocumento
+        // 
+        this.txtDocumento.Culture = new System.Globalization.CultureInfo("");
+        resources.ApplyResources(this.txtDocumento, "txtDocumento");
+        this.txtDocumento.Name = "txtDocumento";
+        // 
+        // txtTelefone
+        // 
+        this.txtTelefone.Culture = new System.Globalization.CultureInfo("");
+        resources.ApplyResources(this.txtTelefone, "txtTelefone");
+        this.txtTelefone.Name = "txtTelefone";
+        // 
         // AlteraClienteForm
         // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.BackColor = System.Drawing.Color.PaleGreen;
+        this.Controls.Add(this.txtCep);
+        this.Controls.Add(this.txtDocumento);
+        this.Controls.Add(this.txtTelefone);
         this.Controls.Add(this.txtIdCliente);
         this.Controls.Add(this.lblIdCliente);
-        this.Controls.Add(this.txtCep);
         this.Controls.Add(this.lblAlteraCliente);
         this.Controls.Add(this.txtTipo);
-        this.Controls.Add(this.txtDocumento);
         this.Controls.Add(this.lblDataInicial);
         this.Controls.Add(this.cbUf);
         this.Controls.Add(this.lblUf);
@@ -306,7 +310,6 @@ partial class AlteraClienteForm
         this.Controls.Add(this.txtEmail);
         this.Controls.Add(this.btnCancelar);
         this.Controls.Add(this.btnSalvar);
-        this.Controls.Add(this.txtTelefone);
         this.Controls.Add(this.txtComplemento);
         this.Controls.Add(this.txtNome);
         this.MaximizeBox = false;
@@ -321,18 +324,20 @@ partial class AlteraClienteForm
         this.PerformLayout();
     }
 
+    private System.Windows.Forms.MaskedTextBox txtCep;
+    private System.Windows.Forms.MaskedTextBox txtDocumento;
+    private System.Windows.Forms.MaskedTextBox txtTelefone;
+
     private System.Windows.Forms.Label lblIdCliente;
     private System.Windows.Forms.TextBox txtIdCliente;
     private System.Windows.Forms.Label lblAlteraCliente;
 
     private System.Windows.Forms.TextBox txtTipo;
-    private System.Windows.Forms.MaskedTextBox txtDocumento;
     private System.Windows.Forms.Label lblDataInicial;
     private System.Windows.Forms.ComboBox cbUf;
     private System.Windows.Forms.Label lblUf;
     private System.Windows.Forms.Label lblCidade;
     private System.Windows.Forms.Label lblCep;
-    private System.Windows.Forms.TextBox txtCep;
     private System.Windows.Forms.TextBox txtCidade;
     private System.Windows.Forms.TextBox txtBairro;
     private System.Windows.Forms.Label lblComplemento;
@@ -350,7 +355,6 @@ partial class AlteraClienteForm
     private System.Windows.Forms.TextBox txtEmail;
     private System.Windows.Forms.Button btnCancelar;
     private System.Windows.Forms.Button btnSalvar;
-    private System.Windows.Forms.TextBox txtTelefone;
     private System.Windows.Forms.TextBox txtComplemento;
     private System.Windows.Forms.TextBox txtNome;
 

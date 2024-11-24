@@ -181,6 +181,7 @@ partial class ExcluirInsumoForm
         this.txtQuantidadeEstoque.ReadOnly = true;
         this.txtQuantidadeEstoque.Size = new System.Drawing.Size(73, 30);
         this.txtQuantidadeEstoque.TabIndex = 74;
+        this.txtQuantidadeEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblIdFornecedor
         // 
@@ -293,6 +294,7 @@ partial class ExcluirInsumoForm
         this.txtId.ReadOnly = true;
         this.txtId.Size = new System.Drawing.Size(90, 40);
         this.txtId.TabIndex = 84;
+        this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // ExcluirInsumoForm
         // 

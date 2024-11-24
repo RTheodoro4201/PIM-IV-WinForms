@@ -176,6 +176,7 @@ partial class CadastroInsumoForm
         this.txtQuantidadeEstoque.Name = "txtQuantidadeEstoque";
         this.txtQuantidadeEstoque.Size = new System.Drawing.Size(73, 30);
         this.txtQuantidadeEstoque.TabIndex = 74;
+        this.txtQuantidadeEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblIdFornecedor
         // 

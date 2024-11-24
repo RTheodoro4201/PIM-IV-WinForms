@@ -296,6 +296,7 @@ partial class AlteraFuncionarioForm
         // 
         resources.ApplyResources(this.txtSalario, "txtSalario");
         this.txtSalario.Name = "txtSalario";
+        this.txtSalario.Leave += new System.EventHandler(this.txtSalario_Leave);
         // 
         // lblAlteraFuncionario
         // 

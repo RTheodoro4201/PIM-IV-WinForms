@@ -172,8 +172,9 @@ partial class AlteraProdutoForm
         this.txtQuantidadeEstoque.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtQuantidadeEstoque.Location = new System.Drawing.Point(266, 145);
         this.txtQuantidadeEstoque.Name = "txtQuantidadeEstoque";
-        this.txtQuantidadeEstoque.Size = new System.Drawing.Size(83, 30);
+        this.txtQuantidadeEstoque.Size = new System.Drawing.Size(80, 30);
         this.txtQuantidadeEstoque.TabIndex = 74;
+        this.txtQuantidadeEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblPrecoUnitario
         // 
@@ -194,9 +195,10 @@ partial class AlteraProdutoForm
         this.txtPrecoUnitario.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtPrecoUnitario.Location = new System.Drawing.Point(179, 179);
         this.txtPrecoUnitario.Name = "txtPrecoUnitario";
-        this.txtPrecoUnitario.Size = new System.Drawing.Size(151, 30);
+        this.txtPrecoUnitario.Size = new System.Drawing.Size(110, 30);
         this.txtPrecoUnitario.TabIndex = 76;
         this.txtPrecoUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        this.txtPrecoUnitario.Leave += new System.EventHandler(this.txtPrecoUnitario_Leave);
         // 
         // lblAlteraProduto
         // 
@@ -234,6 +236,7 @@ partial class AlteraProdutoForm
         this.txtId.ReadOnly = true;
         this.txtId.Size = new System.Drawing.Size(90, 40);
         this.txtId.TabIndex = 80;
+        this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // AlteraProdutoForm
         // 

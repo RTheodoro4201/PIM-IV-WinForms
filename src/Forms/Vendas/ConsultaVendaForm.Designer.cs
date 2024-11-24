@@ -117,6 +117,7 @@ partial class ConsultaVendaForm
         this.txtIdProduto.ReadOnly = true;
         this.txtIdProduto.Size = new System.Drawing.Size(70, 30);
         this.txtIdProduto.TabIndex = 69;
+        this.txtIdProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblQuantidadeVendida
         // 
@@ -140,6 +141,7 @@ partial class ConsultaVendaForm
         this.txtQuantidadeVendida.ReadOnly = true;
         this.txtQuantidadeVendida.Size = new System.Drawing.Size(76, 30);
         this.txtQuantidadeVendida.TabIndex = 74;
+        this.txtQuantidadeVendida.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblIdCliente
         // 
@@ -238,6 +240,7 @@ partial class ConsultaVendaForm
         this.txtValorUnitario.ReadOnly = true;
         this.txtValorUnitario.Size = new System.Drawing.Size(100, 30);
         this.txtValorUnitario.TabIndex = 82;
+        this.txtValorUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblValorTotal
         // 
@@ -261,6 +264,7 @@ partial class ConsultaVendaForm
         this.txtValorTotal.ReadOnly = true;
         this.txtValorTotal.Size = new System.Drawing.Size(100, 30);
         this.txtValorTotal.TabIndex = 84;
+        this.txtValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblDescricaoProduto
         // 
@@ -321,6 +325,7 @@ partial class ConsultaVendaForm
         this.txtId.ReadOnly = true;
         this.txtId.Size = new System.Drawing.Size(90, 40);
         this.txtId.TabIndex = 90;
+        this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // ConsultaVendaForm
         // 

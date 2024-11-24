@@ -63,7 +63,7 @@ partial class ExcluirCompraForm
         this.lblNomeInsumo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblNomeInsumo.Location = new System.Drawing.Point(45, 110);
         this.lblNomeInsumo.Name = "lblNomeInsumo";
-        this.lblNomeInsumo.Size = new System.Drawing.Size(162, 27);
+        this.lblNomeInsumo.Size = new System.Drawing.Size(135, 30);
         this.lblNomeInsumo.TabIndex = 54;
         this.lblNomeInsumo.Text = "Nome Insumo";
         this.lblNomeInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -77,7 +77,7 @@ partial class ExcluirCompraForm
         this.lblIdInsumo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblIdInsumo.Location = new System.Drawing.Point(45, 75);
         this.lblIdInsumo.Name = "lblIdInsumo";
-        this.lblIdInsumo.Size = new System.Drawing.Size(162, 30);
+        this.lblIdInsumo.Size = new System.Drawing.Size(140, 30);
         this.lblIdInsumo.TabIndex = 50;
         this.lblIdInsumo.Text = "Código Insumo";
         this.lblIdInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -85,10 +85,10 @@ partial class ExcluirCompraForm
         // txtNomeInsumo
         // 
         this.txtNomeInsumo.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtNomeInsumo.Location = new System.Drawing.Point(213, 110);
+        this.txtNomeInsumo.Location = new System.Drawing.Point(186, 110);
         this.txtNomeInsumo.Name = "txtNomeInsumo";
         this.txtNomeInsumo.ReadOnly = true;
-        this.txtNomeInsumo.Size = new System.Drawing.Size(223, 30);
+        this.txtNomeInsumo.Size = new System.Drawing.Size(240, 30);
         this.txtNomeInsumo.TabIndex = 43;
         // 
         // btnCancelar
@@ -128,11 +128,12 @@ partial class ExcluirCompraForm
         // txtIdInsumo
         // 
         this.txtIdInsumo.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtIdInsumo.Location = new System.Drawing.Point(213, 75);
+        this.txtIdInsumo.Location = new System.Drawing.Point(191, 75);
         this.txtIdInsumo.Name = "txtIdInsumo";
         this.txtIdInsumo.ReadOnly = true;
-        this.txtIdInsumo.Size = new System.Drawing.Size(111, 30);
+        this.txtIdInsumo.Size = new System.Drawing.Size(80, 30);
         this.txtIdInsumo.TabIndex = 69;
+        this.txtIdInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblQuantidadeComprada
         // 
@@ -154,8 +155,9 @@ partial class ExcluirCompraForm
         this.txtQuantidadeComprada.Location = new System.Drawing.Point(253, 215);
         this.txtQuantidadeComprada.Name = "txtQuantidadeComprada";
         this.txtQuantidadeComprada.ReadOnly = true;
-        this.txtQuantidadeComprada.Size = new System.Drawing.Size(151, 30);
+        this.txtQuantidadeComprada.Size = new System.Drawing.Size(80, 30);
         this.txtQuantidadeComprada.TabIndex = 74;
+        this.txtQuantidadeComprada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblIdFornecedor
         // 
@@ -177,7 +179,7 @@ partial class ExcluirCompraForm
         this.txtIdFornecedor.Location = new System.Drawing.Point(230, 145);
         this.txtIdFornecedor.Name = "txtIdFornecedor";
         this.txtIdFornecedor.ReadOnly = true;
-        this.txtIdFornecedor.Size = new System.Drawing.Size(151, 30);
+        this.txtIdFornecedor.Size = new System.Drawing.Size(80, 30);
         this.txtIdFornecedor.TabIndex = 76;
         this.txtIdFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
@@ -228,7 +230,7 @@ partial class ExcluirCompraForm
         this.txtNomeFornecedor.Location = new System.Drawing.Point(230, 180);
         this.txtNomeFornecedor.Name = "txtNomeFornecedor";
         this.txtNomeFornecedor.ReadOnly = true;
-        this.txtNomeFornecedor.Size = new System.Drawing.Size(164, 30);
+        this.txtNomeFornecedor.Size = new System.Drawing.Size(196, 30);
         this.txtNomeFornecedor.TabIndex = 80;
         this.txtNomeFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
@@ -252,8 +254,9 @@ partial class ExcluirCompraForm
         this.txtValorUnitario.Location = new System.Drawing.Point(181, 250);
         this.txtValorUnitario.Name = "txtValorUnitario";
         this.txtValorUnitario.ReadOnly = true;
-        this.txtValorUnitario.Size = new System.Drawing.Size(151, 30);
+        this.txtValorUnitario.Size = new System.Drawing.Size(110, 30);
         this.txtValorUnitario.TabIndex = 82;
+        this.txtValorUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblValorTotal
         // 
@@ -275,8 +278,9 @@ partial class ExcluirCompraForm
         this.txtValorTotal.Location = new System.Drawing.Point(162, 285);
         this.txtValorTotal.Name = "txtValorTotal";
         this.txtValorTotal.ReadOnly = true;
-        this.txtValorTotal.Size = new System.Drawing.Size(151, 30);
+        this.txtValorTotal.Size = new System.Drawing.Size(110, 30);
         this.txtValorTotal.TabIndex = 84;
+        this.txtValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblExcluirCompra
         // 
@@ -301,7 +305,7 @@ partial class ExcluirCompraForm
         this.lblId.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblId.Location = new System.Drawing.Point(230, 25);
         this.lblId.Name = "lblId";
-        this.lblId.Size = new System.Drawing.Size(94, 40);
+        this.lblId.Size = new System.Drawing.Size(100, 40);
         this.lblId.TabIndex = 87;
         this.lblId.Text = "Código";
         this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -309,11 +313,12 @@ partial class ExcluirCompraForm
         // txtId
         // 
         this.txtId.Font = new System.Drawing.Font("Tahoma", 20F);
-        this.txtId.Location = new System.Drawing.Point(330, 25);
+        this.txtId.Location = new System.Drawing.Point(336, 25);
         this.txtId.Name = "txtId";
         this.txtId.ReadOnly = true;
-        this.txtId.Size = new System.Drawing.Size(110, 40);
+        this.txtId.Size = new System.Drawing.Size(90, 40);
         this.txtId.TabIndex = 88;
+        this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // ExcluirCompraForm
         // 

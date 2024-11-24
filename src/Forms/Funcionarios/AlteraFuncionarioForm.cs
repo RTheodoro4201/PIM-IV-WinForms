@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Forms;
+using Microsoft.IdentityModel.Tokens;
 using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Validator;
@@ -60,9 +61,50 @@ public partial class AlteraFuncionarioForm : Form
         txtCidade.Text = endereco.Cidade;
         cbUf.Text = endereco.Uf;
         txtCep.Text = endereco.Cep;
-        txtSalario.Text = funcionario.Salario.ToString(CultureInfo.CurrentCulture);
+        txtSalario.Text = funcionario.Salario.ToString("C");
         dateDataAdmissao.Value = funcionario.Data_Admissao.Date;
     }
+
+    #region Métodos de Verificação
+
+    private void txtSalario_Leave(object sender, EventArgs e)
+    {
+        try
+        {
+            if (decimal.TryParse(txtSalario.Text, out decimal salario) || txtSalario.Text.Contains("R$"))
+            {
+                txtSalario.Text = "";
+                txtSalario.Text = salario.ToString("C");
+            }
+
+            else if (!decimal.TryParse(txtSalario.Text, out salario) && !txtSalario.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("Insira apenas números decimais no campo 'Salário'.", "Atenção",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        catch (Exception exception)
+        {
+            MessageBox.Show("Houve um erro ao exibir o valor do campo salário.", "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            MessageBox.Show("Erro: " + exception.Message, "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+    private void dateDataNascimento_ValueChanged(object sender, EventArgs e)
+    {
+        if (dateDataAdmissao.Value > DateTime.Now)
+        {
+            MessageBox.Show("Data de admissão não pode ser maior do que a data atual!");
+            dateDataAdmissao.Value = DateTime.Now;
+        }
+    }
+
+    #endregion
+
+    #region Métodos de Click
 
     private async void btnSalvar_Click(object sender, EventArgs e)
     {
@@ -119,17 +161,10 @@ public partial class AlteraFuncionarioForm : Form
         }
     }
 
-    private void dateDataNascimento_ValueChanged(object sender, EventArgs e)
-    {
-        if (dateDataAdmissao.Value > DateTime.Now)
-        {
-            MessageBox.Show("Data de admissão não pode ser maior do que a data atual!");
-            dateDataAdmissao.Value = DateTime.Now;
-        }
-    }
-
     private void btnCancelar_Click(object sender, EventArgs e)
     {
         Close();
     }
+
+    #endregion
 }
