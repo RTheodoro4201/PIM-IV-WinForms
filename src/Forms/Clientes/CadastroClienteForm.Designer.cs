@@ -86,7 +86,7 @@ partial class CadastroClienteForm
         this.lblDataInicial.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblDataInicial.Location = new System.Drawing.Point(46, 495);
         this.lblDataInicial.Name = "lblDataInicial";
-        this.lblDataInicial.Size = new System.Drawing.Size(115, 30);
+        this.lblDataInicial.Size = new System.Drawing.Size(186, 30);
         this.lblDataInicial.TabIndex = 59;
         this.lblDataInicial.Text = "Data Inicial";
         this.lblDataInicial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -287,7 +287,7 @@ partial class CadastroClienteForm
         this.dateDataInicial.CustomFormat = "";
         this.dateDataInicial.Font = new System.Drawing.Font("Tahoma", 14F);
         this.dateDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        this.dateDataInicial.Location = new System.Drawing.Point(170, 495);
+        this.dateDataInicial.Location = new System.Drawing.Point(238, 495);
         this.dateDataInicial.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
         this.dateDataInicial.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
         this.dateDataInicial.Name = "dateDataInicial";
@@ -301,7 +301,7 @@ partial class CadastroClienteForm
         this.txtLogradouro.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtLogradouro.Location = new System.Drawing.Point(170, 250);
         this.txtLogradouro.Name = "txtLogradouro";
-        this.txtLogradouro.Size = new System.Drawing.Size(346, 30);
+        this.txtLogradouro.Size = new System.Drawing.Size(296, 30);
         this.txtLogradouro.TabIndex = 38;
         // 
         // txtEmail
@@ -309,7 +309,7 @@ partial class CadastroClienteForm
         this.txtEmail.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtEmail.Location = new System.Drawing.Point(110, 180);
         this.txtEmail.Name = "txtEmail";
-        this.txtEmail.Size = new System.Drawing.Size(406, 30);
+        this.txtEmail.Size = new System.Drawing.Size(356, 30);
         this.txtEmail.TabIndex = 36;
         // 
         // btnCancelar
@@ -367,7 +367,7 @@ partial class CadastroClienteForm
         this.txtNome.Font = new System.Drawing.Font("Tahoma", 14F);
         this.txtNome.Location = new System.Drawing.Point(122, 75);
         this.txtNome.Name = "txtNome";
-        this.txtNome.Size = new System.Drawing.Size(391, 30);
+        this.txtNome.Size = new System.Drawing.Size(344, 30);
         this.txtNome.TabIndex = 34;
         // 
         // lblCadastroCliente
@@ -379,7 +379,7 @@ partial class CadastroClienteForm
         this.lblCadastroCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblCadastroCliente.Location = new System.Drawing.Point(45, 25);
         this.lblCadastroCliente.Name = "lblCadastroCliente";
-        this.lblCadastroCliente.Size = new System.Drawing.Size(472, 40);
+        this.lblCadastroCliente.Size = new System.Drawing.Size(219, 40);
         this.lblCadastroCliente.TabIndex = 62;
         this.lblCadastroCliente.Text = "Cadastrar Cliente";
         this.lblCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -440,6 +440,7 @@ partial class CadastroClienteForm
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
     private System.Windows.Forms.Label lblCadastroCliente;
 
     private System.Windows.Forms.TextBox txtTipo;

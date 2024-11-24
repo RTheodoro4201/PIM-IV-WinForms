@@ -190,7 +190,7 @@
     <value>999.999.999-99</value>
   </data>
   <data name="txtDocumento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 30</value>
+    <value>140, 30</value>
   </data>
   <data name="txtDocumento.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -250,7 +250,7 @@
     <value>(99) 99999-9999</value>
   </data>
   <data name="txtTelefone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 30</value>
+    <value>146, 30</value>
   </data>
   <data name="txtTelefone.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -865,7 +865,7 @@
     <value>109, 180</value>
   </data>
   <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 30</value>
+    <value>302, 30</value>
   </data>
   <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
