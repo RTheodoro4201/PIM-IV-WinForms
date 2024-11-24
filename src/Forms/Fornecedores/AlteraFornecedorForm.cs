@@ -57,7 +57,7 @@ public partial class AlteraFornecedorForm : Form
 
     private void PopulaCampos(Endereco endereco, Fornecedor fornecedor)
     {
-        txtIdFornecedor.Text = fornecedor.Id_Fornecedor.ToString();
+        txtId.Text = fornecedor.Id_Fornecedor.ToString();
         txtNome.Text = fornecedor.Nome;
         txtTipo.Text = fornecedor.Tipo;
         txtDocumento.Text = fornecedor.Documento;
@@ -90,7 +90,7 @@ public partial class AlteraFornecedorForm : Form
 
             var fornecedor = new Fornecedor
             {
-                Id_Fornecedor = int.Parse(txtIdFornecedor.Text),
+                Id_Fornecedor = int.Parse(txtId.Text),
                 Nome = txtNome.Text,
                 Tipo = txtTipo.Text,
                 Documento = txtDocumento.Text.Replace(".", "").Replace("-", "").Replace("/", ""),

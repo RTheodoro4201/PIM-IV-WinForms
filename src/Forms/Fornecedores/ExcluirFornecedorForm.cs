@@ -44,7 +44,7 @@ public partial class ExcluirFornecedorForm : Form
 
     private void PopulaCampos(Endereco endereco, Fornecedor fornecedor)
     {
-        txtIdFornecedor.Text = fornecedor.Id_Fornecedor.ToString();
+        txtId.Text = fornecedor.Id_Fornecedor.ToString();
         txtNome.Text = fornecedor.Nome;
         txtTipo.Text = fornecedor.Tipo;
         txtDocumento.Text = fornecedor.Documento;

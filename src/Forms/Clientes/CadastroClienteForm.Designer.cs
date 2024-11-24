@@ -109,7 +109,7 @@ partial class CadastroClienteForm
         this.lblUf.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblUf.Location = new System.Drawing.Point(46, 425);
         this.lblUf.Name = "lblUf";
-        this.lblUf.Size = new System.Drawing.Size(38, 30);
+        this.lblUf.Size = new System.Drawing.Size(35, 30);
         this.lblUf.TabIndex = 57;
         this.lblUf.Text = "UF";
         this.lblUf.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,7 +122,7 @@ partial class CadastroClienteForm
         this.lblCidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblCidade.Location = new System.Drawing.Point(46, 390);
         this.lblCidade.Name = "lblCidade";
-        this.lblCidade.Size = new System.Drawing.Size(73, 30);
+        this.lblCidade.Size = new System.Drawing.Size(70, 30);
         this.lblCidade.TabIndex = 56;
         this.lblCidade.Text = "Cidade";
         this.lblCidade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,7 +135,7 @@ partial class CadastroClienteForm
         this.lblCep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblCep.Location = new System.Drawing.Point(46, 460);
         this.lblCep.Name = "lblCep";
-        this.lblCep.Size = new System.Drawing.Size(48, 30);
+        this.lblCep.Size = new System.Drawing.Size(45, 30);
         this.lblCep.TabIndex = 55;
         this.lblCep.Text = "CEP";
         this.lblCep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,7 +177,7 @@ partial class CadastroClienteForm
         this.lblLogradouro.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblLogradouro.Location = new System.Drawing.Point(46, 250);
         this.lblLogradouro.Name = "lblLogradouro";
-        this.lblLogradouro.Size = new System.Drawing.Size(117, 30);
+        this.lblLogradouro.Size = new System.Drawing.Size(115, 30);
         this.lblLogradouro.TabIndex = 50;
         this.lblLogradouro.Text = "Logradouro";
         this.lblLogradouro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,9 +190,9 @@ partial class CadastroClienteForm
         this.lblNum.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblNum.Location = new System.Drawing.Point(46, 285);
         this.lblNum.Name = "lblNum";
-        this.lblNum.Size = new System.Drawing.Size(38, 30);
+        this.lblNum.Size = new System.Drawing.Size(80, 30);
         this.lblNum.TabIndex = 49;
-        this.lblNum.Text = "Nº";
+        this.lblNum.Text = "Número";
         this.lblNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // lblBairro
@@ -203,7 +203,7 @@ partial class CadastroClienteForm
         this.lblBairro.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblBairro.Location = new System.Drawing.Point(46, 355);
         this.lblBairro.Name = "lblBairro";
-        this.lblBairro.Size = new System.Drawing.Size(73, 30);
+        this.lblBairro.Size = new System.Drawing.Size(70, 30);
         this.lblBairro.TabIndex = 48;
         this.lblBairro.Text = "Bairro";
         this.lblBairro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,12 +264,12 @@ partial class CadastroClienteForm
         // 
         this.lblNome.BackColor = System.Drawing.Color.DimGray;
         this.lblNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblNome.Font = new System.Drawing.Font("Tahoma", 16F);
+        this.lblNome.Font = new System.Drawing.Font("Tahoma", 14F);
         this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblNome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblNome.Location = new System.Drawing.Point(45, 75);
         this.lblNome.Name = "lblNome";
-        this.lblNome.Size = new System.Drawing.Size(74, 30);
+        this.lblNome.Size = new System.Drawing.Size(71, 30);
         this.lblNome.TabIndex = 43;
         this.lblNome.Text = "Nome";
         this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,7 +277,7 @@ partial class CadastroClienteForm
         // txtNumero
         // 
         this.txtNumero.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtNumero.Location = new System.Drawing.Point(90, 285);
+        this.txtNumero.Location = new System.Drawing.Point(132, 285);
         this.txtNumero.Name = "txtNumero";
         this.txtNumero.Size = new System.Drawing.Size(76, 30);
         this.txtNumero.TabIndex = 42;
@@ -365,7 +365,7 @@ partial class CadastroClienteForm
         // txtNome
         // 
         this.txtNome.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtNome.Location = new System.Drawing.Point(125, 75);
+        this.txtNome.Location = new System.Drawing.Point(122, 75);
         this.txtNome.Name = "txtNome";
         this.txtNome.Size = new System.Drawing.Size(391, 30);
         this.txtNome.TabIndex = 34;
@@ -379,7 +379,7 @@ partial class CadastroClienteForm
         this.lblCadastroCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         this.lblCadastroCliente.Location = new System.Drawing.Point(45, 25);
         this.lblCadastroCliente.Name = "lblCadastroCliente";
-        this.lblCadastroCliente.Size = new System.Drawing.Size(472, 36);
+        this.lblCadastroCliente.Size = new System.Drawing.Size(472, 40);
         this.lblCadastroCliente.TabIndex = 62;
         this.lblCadastroCliente.Text = "Cadastrar Cliente";
         this.lblCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

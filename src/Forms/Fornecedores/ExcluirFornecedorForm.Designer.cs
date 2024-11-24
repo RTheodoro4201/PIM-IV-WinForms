@@ -23,7 +23,7 @@ partial class ExcluirFornecedorForm
         base.Dispose(disposing);
     }
 
-    #region Component Designer generated code
+    #region Windows Form Designer generated code
 
     /// <summary>
     /// Required method for Designer support - do not modify
@@ -32,14 +32,12 @@ partial class ExcluirFornecedorForm
     private void InitializeComponent()
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirFornecedorForm));
-        this.lblEndereco = new System.Windows.Forms.Label();
+        this.lblComplemento = new System.Windows.Forms.Label();
         this.txtCep = new System.Windows.Forms.MaskedTextBox();
         this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
         this.lblDocumento = new System.Windows.Forms.Label();
         this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
         this.lblTipo = new System.Windows.Forms.Label();
-        this.txtIdFornecedor = new System.Windows.Forms.TextBox();
-        this.lblIdFornecedor = new System.Windows.Forms.Label();
         this.lblDataInicial = new System.Windows.Forms.Label();
         this.cbUf = new System.Windows.Forms.ComboBox();
         this.lblUf = new System.Windows.Forms.Label();
@@ -48,7 +46,6 @@ partial class ExcluirFornecedorForm
         this.txtNumero = new System.Windows.Forms.TextBox();
         this.txtCidade = new System.Windows.Forms.TextBox();
         this.txtBairro = new System.Windows.Forms.TextBox();
-        this.lblComplemento = new System.Windows.Forms.Label();
         this.lblLogradouro = new System.Windows.Forms.Label();
         this.lblNum = new System.Windows.Forms.Label();
         this.lblBairro = new System.Windows.Forms.Label();
@@ -58,237 +55,264 @@ partial class ExcluirFornecedorForm
         this.dateDataInicial = new System.Windows.Forms.DateTimePicker();
         this.txtLogradouro = new System.Windows.Forms.TextBox();
         this.txtEmail = new System.Windows.Forms.TextBox();
-        this.btnCancelar = new System.Windows.Forms.Button();
-        this.btnExcluir = new System.Windows.Forms.Button();
         this.txtTipo = new System.Windows.Forms.TextBox();
         this.txtComplemento = new System.Windows.Forms.TextBox();
+        this.btnCancelar = new System.Windows.Forms.Button();
+        this.btnExcluir = new System.Windows.Forms.Button();
         this.txtNome = new System.Windows.Forms.TextBox();
+        this.lblExcluirFornecedor = new System.Windows.Forms.Label();
+        this.lblId = new System.Windows.Forms.Label();
+        this.txtId = new System.Windows.Forms.TextBox();
         this.SuspendLayout();
-        // 
-        // lblEndereco
-        // 
-        this.lblEndereco.BackColor = System.Drawing.Color.GhostWhite;
-        this.lblEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        resources.ApplyResources(this.lblEndereco, "lblEndereco");
-        this.lblEndereco.Name = "lblEndereco";
-        // 
+        //
+        // lblComplemento
+        //
+        this.lblComplemento.BackColor = System.Drawing.Color.DimGray;
+        this.lblComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        resources.ApplyResources(this.lblComplemento, "lblComplemento");
+        this.lblComplemento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.lblComplemento.Name = "lblComplemento";
+        //
         // txtCep
-        // 
+        //
         this.txtCep.Culture = new System.Globalization.CultureInfo("");
         resources.ApplyResources(this.txtCep, "txtCep");
         this.txtCep.Name = "txtCep";
         this.txtCep.ReadOnly = true;
-        // 
+        //
         // txtDocumento
-        // 
+        //
         this.txtDocumento.Culture = new System.Globalization.CultureInfo("");
         resources.ApplyResources(this.txtDocumento, "txtDocumento");
         this.txtDocumento.Name = "txtDocumento";
         this.txtDocumento.ReadOnly = true;
-        // 
+        //
         // lblDocumento
-        // 
-        this.lblDocumento.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblDocumento.BackColor = System.Drawing.Color.DimGray;
         this.lblDocumento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblDocumento, "lblDocumento");
+        this.lblDocumento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblDocumento.Name = "lblDocumento";
-        // 
+        //
         // txtTelefone
-        // 
+        //
         this.txtTelefone.Culture = new System.Globalization.CultureInfo("");
         resources.ApplyResources(this.txtTelefone, "txtTelefone");
         this.txtTelefone.Name = "txtTelefone";
         this.txtTelefone.ReadOnly = true;
-        // 
+        //
         // lblTipo
-        // 
-        this.lblTipo.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblTipo.BackColor = System.Drawing.Color.DimGray;
         this.lblTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblTipo, "lblTipo");
+        this.lblTipo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblTipo.Name = "lblTipo";
-        // 
-        // txtIdFornecedor
-        // 
-        resources.ApplyResources(this.txtIdFornecedor, "txtIdFornecedor");
-        this.txtIdFornecedor.Name = "txtIdFornecedor";
-        this.txtIdFornecedor.ReadOnly = true;
-        // 
-        // lblIdFornecedor
-        // 
-        this.lblIdFornecedor.BackColor = System.Drawing.Color.GhostWhite;
-        this.lblIdFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        resources.ApplyResources(this.lblIdFornecedor, "lblIdFornecedor");
-        this.lblIdFornecedor.Name = "lblIdFornecedor";
-        // 
+        //
         // lblDataInicial
-        // 
-        this.lblDataInicial.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblDataInicial.BackColor = System.Drawing.Color.DimGray;
         this.lblDataInicial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblDataInicial, "lblDataInicial");
+        this.lblDataInicial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblDataInicial.Name = "lblDataInicial";
-        // 
+        //
         // cbUf
-        // 
+        //
         resources.ApplyResources(this.cbUf, "cbUf");
         this.cbUf.Items.AddRange(new object[] { resources.GetString("cbUf.Items"), resources.GetString("cbUf.Items1"), resources.GetString("cbUf.Items2"), resources.GetString("cbUf.Items3"), resources.GetString("cbUf.Items4"), resources.GetString("cbUf.Items5"), resources.GetString("cbUf.Items6"), resources.GetString("cbUf.Items7"), resources.GetString("cbUf.Items8"), resources.GetString("cbUf.Items9"), resources.GetString("cbUf.Items10"), resources.GetString("cbUf.Items11"), resources.GetString("cbUf.Items12"), resources.GetString("cbUf.Items13"), resources.GetString("cbUf.Items14"), resources.GetString("cbUf.Items15"), resources.GetString("cbUf.Items16"), resources.GetString("cbUf.Items17"), resources.GetString("cbUf.Items18"), resources.GetString("cbUf.Items19"), resources.GetString("cbUf.Items20"), resources.GetString("cbUf.Items21"), resources.GetString("cbUf.Items22"), resources.GetString("cbUf.Items23"), resources.GetString("cbUf.Items24"), resources.GetString("cbUf.Items25") });
         this.cbUf.Name = "cbUf";
-        // 
+        //
         // lblUf
-        // 
-        this.lblUf.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblUf.BackColor = System.Drawing.Color.DimGray;
         this.lblUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblUf, "lblUf");
+        this.lblUf.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblUf.Name = "lblUf";
-        // 
+        //
         // lblCidade
-        // 
-        this.lblCidade.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblCidade.BackColor = System.Drawing.Color.DimGray;
         this.lblCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblCidade, "lblCidade");
+        this.lblCidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblCidade.Name = "lblCidade";
-        // 
+        //
         // lblCep
-        // 
-        this.lblCep.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblCep.BackColor = System.Drawing.Color.DimGray;
         this.lblCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblCep, "lblCep");
+        this.lblCep.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblCep.Name = "lblCep";
-        // 
+        //
         // txtNumero
-        // 
+        //
         resources.ApplyResources(this.txtNumero, "txtNumero");
         this.txtNumero.Name = "txtNumero";
         this.txtNumero.ReadOnly = true;
-        // 
+        //
         // txtCidade
-        // 
+        //
         resources.ApplyResources(this.txtCidade, "txtCidade");
         this.txtCidade.Name = "txtCidade";
         this.txtCidade.ReadOnly = true;
-        // 
+        //
         // txtBairro
-        // 
+        //
         resources.ApplyResources(this.txtBairro, "txtBairro");
         this.txtBairro.Name = "txtBairro";
         this.txtBairro.ReadOnly = true;
-        // 
-        // lblComplemento
-        // 
-        this.lblComplemento.BackColor = System.Drawing.Color.GhostWhite;
-        this.lblComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        resources.ApplyResources(this.lblComplemento, "lblComplemento");
-        this.lblComplemento.Name = "lblComplemento";
-        // 
+        //
         // lblLogradouro
-        // 
-        this.lblLogradouro.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblLogradouro.BackColor = System.Drawing.Color.DimGray;
         this.lblLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblLogradouro, "lblLogradouro");
+        this.lblLogradouro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblLogradouro.Name = "lblLogradouro";
-        // 
+        //
         // lblNum
-        // 
-        this.lblNum.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblNum.BackColor = System.Drawing.Color.DimGray;
         this.lblNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblNum, "lblNum");
+        this.lblNum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblNum.Name = "lblNum";
-        // 
+        //
         // lblBairro
-        // 
-        this.lblBairro.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblBairro.BackColor = System.Drawing.Color.DimGray;
         this.lblBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblBairro, "lblBairro");
+        this.lblBairro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblBairro.Name = "lblBairro";
-        // 
+        //
         // lblTelefone
-        // 
-        this.lblTelefone.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblTelefone.BackColor = System.Drawing.Color.DimGray;
         this.lblTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblTelefone, "lblTelefone");
+        this.lblTelefone.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblTelefone.Name = "lblTelefone";
-        // 
+        //
         // lblEmail
-        // 
-        this.lblEmail.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblEmail.BackColor = System.Drawing.Color.DimGray;
         this.lblEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblEmail, "lblEmail");
+        this.lblEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblEmail.Name = "lblEmail";
-        // 
+        //
         // lblNome
-        // 
-        this.lblNome.BackColor = System.Drawing.Color.GhostWhite;
+        //
+        this.lblNome.BackColor = System.Drawing.Color.DimGray;
         this.lblNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
         resources.ApplyResources(this.lblNome, "lblNome");
+        this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblNome.Name = "lblNome";
-        // 
+        //
         // dateDataInicial
-        // 
+        //
         resources.ApplyResources(this.dateDataInicial, "dateDataInicial");
         this.dateDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dateDataInicial.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
         this.dateDataInicial.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
         this.dateDataInicial.Name = "dateDataInicial";
-        this.dateDataInicial.Value = new System.DateTime(2024, 11, 2, 0, 0, 0, 0);
-        // 
+        this.dateDataInicial.Value = new System.DateTime(2006, 11, 2, 0, 0, 0, 0);
+        //
         // txtLogradouro
-        // 
+        //
         resources.ApplyResources(this.txtLogradouro, "txtLogradouro");
         this.txtLogradouro.Name = "txtLogradouro";
         this.txtLogradouro.ReadOnly = true;
-        // 
+        //
         // txtEmail
-        // 
+        //
         resources.ApplyResources(this.txtEmail, "txtEmail");
         this.txtEmail.Name = "txtEmail";
         this.txtEmail.ReadOnly = true;
-        // 
-        // btnCancelar
-        // 
-        this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-        resources.ApplyResources(this.btnCancelar, "btnCancelar");
-        this.btnCancelar.Name = "btnCancelar";
-        this.btnCancelar.UseVisualStyleBackColor = true;
-        this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-        // 
-        // btnExcluir
-        // 
-        this.btnExcluir.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-        resources.ApplyResources(this.btnExcluir, "btnExcluir");
-        this.btnExcluir.Name = "btnExcluir";
-        this.btnExcluir.UseVisualStyleBackColor = true;
-        this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-        // 
+        //
         // txtTipo
-        // 
+        //
         resources.ApplyResources(this.txtTipo, "txtTipo");
         this.txtTipo.Name = "txtTipo";
         this.txtTipo.ReadOnly = true;
-        // 
+        //
         // txtComplemento
-        // 
+        //
         resources.ApplyResources(this.txtComplemento, "txtComplemento");
         this.txtComplemento.Name = "txtComplemento";
         this.txtComplemento.ReadOnly = true;
-        // 
+        //
+        // btnCancelar
+        //
+        this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+        this.btnCancelar.BackColor = System.Drawing.Color.DimGray;
+        this.btnCancelar.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnCancelar, "btnCancelar");
+        this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnCancelar.Name = "btnCancelar";
+        this.btnCancelar.UseVisualStyleBackColor = false;
+        this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+        //
+        // btnExcluir
+        //
+        this.btnExcluir.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+        this.btnExcluir.BackColor = System.Drawing.Color.DimGray;
+        this.btnExcluir.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnExcluir, "btnExcluir");
+        this.btnExcluir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnExcluir.Name = "btnExcluir";
+        this.btnExcluir.UseVisualStyleBackColor = false;
+        this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+        //
         // txtNome
-        // 
+        //
         resources.ApplyResources(this.txtNome, "txtNome");
         this.txtNome.Name = "txtNome";
         this.txtNome.ReadOnly = true;
-        // 
+        //
+        // lblExcluirFornecedor
+        //
+        this.lblExcluirFornecedor.BackColor = System.Drawing.Color.DimGray;
+        this.lblExcluirFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        resources.ApplyResources(this.lblExcluirFornecedor, "lblExcluirFornecedor");
+        this.lblExcluirFornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.lblExcluirFornecedor.Name = "lblExcluirFornecedor";
+        //
+        // lblId
+        //
+        this.lblId.BackColor = System.Drawing.Color.DimGray;
+        this.lblId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        resources.ApplyResources(this.lblId, "lblId");
+        this.lblId.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.lblId.Name = "lblId";
+        //
+        // txtId
+        //
+        resources.ApplyResources(this.txtId, "txtId");
+        this.txtId.Name = "txtId";
+        this.txtId.ReadOnly = true;
+        //
         // ExcluirFornecedorForm
-        // 
+        //
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.BackColor = System.Drawing.Color.PaleGreen;
-        this.Controls.Add(this.lblEndereco);
+        this.Controls.Add(this.txtId);
+        this.Controls.Add(this.lblId);
+        this.Controls.Add(this.lblExcluirFornecedor);
+        this.Controls.Add(this.txtNome);
+        this.Controls.Add(this.btnCancelar);
+        this.Controls.Add(this.btnExcluir);
         this.Controls.Add(this.txtCep);
         this.Controls.Add(this.txtDocumento);
         this.Controls.Add(this.lblDocumento);
         this.Controls.Add(this.txtTelefone);
         this.Controls.Add(this.lblTipo);
-        this.Controls.Add(this.txtIdFornecedor);
-        this.Controls.Add(this.lblIdFornecedor);
         this.Controls.Add(this.lblDataInicial);
         this.Controls.Add(this.cbUf);
         this.Controls.Add(this.lblUf);
@@ -307,34 +331,37 @@ partial class ExcluirFornecedorForm
         this.Controls.Add(this.dateDataInicial);
         this.Controls.Add(this.txtLogradouro);
         this.Controls.Add(this.txtEmail);
-        this.Controls.Add(this.btnCancelar);
-        this.Controls.Add(this.btnExcluir);
         this.Controls.Add(this.txtTipo);
         this.Controls.Add(this.txtComplemento);
-        this.Controls.Add(this.txtNome);
         this.MaximizeBox = false;
         this.Name = "ExcluirFornecedorForm";
         this.ShowIcon = false;
-        this.ShowInTaskbar = false;
-        this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+        this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         this.Load += new System.EventHandler(this.ExcluirFornecedorForm_Load);
         this.ResizeBegin += new System.EventHandler(this.ResizeForm);
         this.ResizeEnd += new System.EventHandler(this.ResizeForm);
-        this.LocationChanged += new System.EventHandler(this.ResizeForm);
-        this.SizeChanged += new System.EventHandler(this.ResizeForm);
         this.Resize += new System.EventHandler(this.ResizeForm);
         this.ResumeLayout(false);
         this.PerformLayout();
     }
 
-    private System.Windows.Forms.Label lblEndereco;
+    private System.Windows.Forms.TextBox txtId;
+
+    private System.Windows.Forms.Label lblId;
+
+    private System.Windows.Forms.Label lblExcluirFornecedor;
+
+    private System.Windows.Forms.TextBox txtNome;
+
+    private System.Windows.Forms.Button btnCancelar;
+    private System.Windows.Forms.Button btnExcluir;
+
+    private System.Windows.Forms.Label lblComplemento;
     private System.Windows.Forms.MaskedTextBox txtCep;
     private System.Windows.Forms.MaskedTextBox txtDocumento;
     private System.Windows.Forms.Label lblDocumento;
     private System.Windows.Forms.MaskedTextBox txtTelefone;
     private System.Windows.Forms.Label lblTipo;
-    private System.Windows.Forms.TextBox txtIdFornecedor;
-    private System.Windows.Forms.Label lblIdFornecedor;
     private System.Windows.Forms.Label lblDataInicial;
     private System.Windows.Forms.ComboBox cbUf;
     private System.Windows.Forms.Label lblUf;
@@ -343,7 +370,6 @@ partial class ExcluirFornecedorForm
     private System.Windows.Forms.TextBox txtNumero;
     private System.Windows.Forms.TextBox txtCidade;
     private System.Windows.Forms.TextBox txtBairro;
-    private System.Windows.Forms.Label lblComplemento;
     private System.Windows.Forms.Label lblLogradouro;
     private System.Windows.Forms.Label lblNum;
     private System.Windows.Forms.Label lblBairro;
@@ -353,11 +379,8 @@ partial class ExcluirFornecedorForm
     private System.Windows.Forms.DateTimePicker dateDataInicial;
     private System.Windows.Forms.TextBox txtLogradouro;
     private System.Windows.Forms.TextBox txtEmail;
-    private System.Windows.Forms.Button btnCancelar;
-    private System.Windows.Forms.Button btnExcluir;
     private System.Windows.Forms.TextBox txtTipo;
     private System.Windows.Forms.TextBox txtComplemento;
-    private System.Windows.Forms.TextBox txtNome;
 
     #endregion
 }

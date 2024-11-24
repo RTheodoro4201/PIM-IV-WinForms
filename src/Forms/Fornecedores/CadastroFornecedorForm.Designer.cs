@@ -31,7 +31,7 @@ partial class CadastroFornecedorForm
     /// </summary>
     private void InitializeComponent()
     {
-        this.lblEndereco = new System.Windows.Forms.Label();
+        System.Windows.Forms.Label lblComplemento;
         this.txtCep = new System.Windows.Forms.MaskedTextBox();
         this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
         this.lblDocumento = new System.Windows.Forms.Label();
@@ -45,7 +45,6 @@ partial class CadastroFornecedorForm
         this.txtNumero = new System.Windows.Forms.TextBox();
         this.txtCidade = new System.Windows.Forms.TextBox();
         this.txtBairro = new System.Windows.Forms.TextBox();
-        this.lblComplemento = new System.Windows.Forms.Label();
         this.lblLogradouro = new System.Windows.Forms.Label();
         this.lblNum = new System.Windows.Forms.Label();
         this.lblBairro = new System.Windows.Forms.Label();
@@ -60,50 +59,54 @@ partial class CadastroFornecedorForm
         this.btnCancelar = new System.Windows.Forms.Button();
         this.btnSalvar = new System.Windows.Forms.Button();
         this.txtNome = new System.Windows.Forms.TextBox();
+        this.lblCadastroFornecedor = new System.Windows.Forms.Label();
+        lblComplemento = new System.Windows.Forms.Label();
         this.SuspendLayout();
         // 
-        // lblEndereco
+        // lblComplemento
         // 
-        this.lblEndereco.BackColor = System.Drawing.Color.GhostWhite;
-        this.lblEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblEndereco.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.lblEndereco.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblEndereco.Location = new System.Drawing.Point(96, 237);
-        this.lblEndereco.Name = "lblEndereco";
-        this.lblEndereco.Size = new System.Drawing.Size(667, 27);
-        this.lblEndereco.TabIndex = 66;
-        this.lblEndereco.Text = "Endereço";
-        this.lblEndereco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        lblComplemento.BackColor = System.Drawing.Color.DimGray;
+        lblComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        lblComplemento.Font = new System.Drawing.Font("Tahoma", 14F);
+        lblComplemento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        lblComplemento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        lblComplemento.Location = new System.Drawing.Point(45, 355);
+        lblComplemento.Name = "lblComplemento";
+        lblComplemento.Size = new System.Drawing.Size(135, 30);
+        lblComplemento.TabIndex = 60;
+        lblComplemento.Text = "Complemento";
+        lblComplemento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // txtCep
         // 
         this.txtCep.Culture = new System.Globalization.CultureInfo("");
-        this.txtCep.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtCep.Location = new System.Drawing.Point(639, 344);
+        this.txtCep.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtCep.Location = new System.Drawing.Point(96, 495);
         this.txtCep.Mask = "99999-999";
         this.txtCep.Name = "txtCep";
-        this.txtCep.Size = new System.Drawing.Size(124, 27);
+        this.txtCep.Size = new System.Drawing.Size(124, 30);
         this.txtCep.TabIndex = 52;
         // 
         // txtDocumento
         // 
         this.txtDocumento.Culture = new System.Globalization.CultureInfo("");
-        this.txtDocumento.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtDocumento.Location = new System.Drawing.Point(638, 162);
+        this.txtDocumento.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtDocumento.Location = new System.Drawing.Point(166, 145);
         this.txtDocumento.Mask = "999.999.999-99";
         this.txtDocumento.Name = "txtDocumento";
-        this.txtDocumento.Size = new System.Drawing.Size(124, 27);
+        this.txtDocumento.Size = new System.Drawing.Size(124, 30);
         this.txtDocumento.TabIndex = 45;
         // 
         // lblDocumento
         // 
-        this.lblDocumento.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblDocumento.BackColor = System.Drawing.Color.DimGray;
         this.lblDocumento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblDocumento.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblDocumento.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblDocumento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblDocumento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblDocumento.Location = new System.Drawing.Point(492, 162);
+        this.lblDocumento.Location = new System.Drawing.Point(45, 145);
         this.lblDocumento.Name = "lblDocumento";
-        this.lblDocumento.Size = new System.Drawing.Size(140, 27);
+        this.lblDocumento.Size = new System.Drawing.Size(115, 30);
         this.lblDocumento.TabIndex = 65;
         this.lblDocumento.Text = "Documento";
         this.lblDocumento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,211 +114,209 @@ partial class CadastroFornecedorForm
         // txtTelefone
         // 
         this.txtTelefone.Culture = new System.Globalization.CultureInfo("");
-        this.txtTelefone.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtTelefone.Location = new System.Drawing.Point(218, 162);
+        this.txtTelefone.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtTelefone.Location = new System.Drawing.Point(137, 215);
         this.txtTelefone.Mask = "(99) 99999-9999";
         this.txtTelefone.Name = "txtTelefone";
-        this.txtTelefone.Size = new System.Drawing.Size(131, 27);
+        this.txtTelefone.Size = new System.Drawing.Size(131, 30);
         this.txtTelefone.TabIndex = 44;
         // 
         // lblTipo
         // 
-        this.lblTipo.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblTipo.BackColor = System.Drawing.Color.DimGray;
         this.lblTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblTipo.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblTipo.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblTipo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblTipo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblTipo.Location = new System.Drawing.Point(492, 127);
+        this.lblTipo.Location = new System.Drawing.Point(45, 110);
         this.lblTipo.Name = "lblTipo";
-        this.lblTipo.Size = new System.Drawing.Size(140, 27);
+        this.lblTipo.Size = new System.Drawing.Size(48, 30);
         this.lblTipo.TabIndex = 64;
         this.lblTipo.Text = "Tipo";
         this.lblTipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lblDataInicial
         // 
-        this.lblDataInicial.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblDataInicial.BackColor = System.Drawing.Color.DimGray;
         this.lblDataInicial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblDataInicial.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblDataInicial.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblDataInicial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblDataInicial.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblDataInicial.Location = new System.Drawing.Point(95, 197);
+        this.lblDataInicial.Location = new System.Drawing.Point(45, 250);
         this.lblDataInicial.Name = "lblDataInicial";
-        this.lblDataInicial.Size = new System.Drawing.Size(118, 30);
+        this.lblDataInicial.Size = new System.Drawing.Size(115, 30);
         this.lblDataInicial.TabIndex = 42;
         this.lblDataInicial.Text = "Data Inicial";
-        this.lblDataInicial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        this.lblDataInicial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // cbUf
         // 
-        this.cbUf.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.cbUf.Font = new System.Drawing.Font("Tahoma", 14F);
         this.cbUf.Items.AddRange(new object[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "SC", "SP", "SE", "TO" });
-        this.cbUf.Location = new System.Drawing.Point(639, 309);
+        this.cbUf.Location = new System.Drawing.Point(86, 460);
         this.cbUf.Name = "cbUf";
-        this.cbUf.Size = new System.Drawing.Size(124, 27);
+        this.cbUf.Size = new System.Drawing.Size(124, 31);
         this.cbUf.TabIndex = 49;
         // 
         // lblUf
         // 
-        this.lblUf.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblUf.BackColor = System.Drawing.Color.DimGray;
         this.lblUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblUf.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblUf.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblUf.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblUf.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblUf.Location = new System.Drawing.Point(493, 309);
+        this.lblUf.Location = new System.Drawing.Point(45, 460);
         this.lblUf.Name = "lblUf";
-        this.lblUf.Size = new System.Drawing.Size(140, 27);
+        this.lblUf.Size = new System.Drawing.Size(35, 30);
         this.lblUf.TabIndex = 63;
         this.lblUf.Text = "UF";
         this.lblUf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lblCidade
         // 
-        this.lblCidade.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblCidade.BackColor = System.Drawing.Color.DimGray;
         this.lblCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblCidade.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblCidade.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblCidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblCidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblCidade.Location = new System.Drawing.Point(95, 376);
+        this.lblCidade.Location = new System.Drawing.Point(45, 425);
         this.lblCidade.Name = "lblCidade";
-        this.lblCidade.Size = new System.Drawing.Size(116, 27);
+        this.lblCidade.Size = new System.Drawing.Size(70, 30);
         this.lblCidade.TabIndex = 62;
         this.lblCidade.Text = "Cidade";
         this.lblCidade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lblCep
         // 
-        this.lblCep.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblCep.BackColor = System.Drawing.Color.DimGray;
         this.lblCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblCep.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblCep.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblCep.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblCep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblCep.Location = new System.Drawing.Point(493, 344);
+        this.lblCep.Location = new System.Drawing.Point(45, 495);
         this.lblCep.Name = "lblCep";
-        this.lblCep.Size = new System.Drawing.Size(140, 27);
+        this.lblCep.Size = new System.Drawing.Size(45, 30);
         this.lblCep.TabIndex = 61;
         this.lblCep.Text = "CEP";
         this.lblCep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // txtNumero
         // 
-        this.txtNumero.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtNumero.Location = new System.Drawing.Point(639, 274);
+        this.txtNumero.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtNumero.Location = new System.Drawing.Point(136, 320);
         this.txtNumero.Name = "txtNumero";
-        this.txtNumero.Size = new System.Drawing.Size(124, 27);
+        this.txtNumero.Size = new System.Drawing.Size(124, 30);
         this.txtNumero.TabIndex = 47;
         // 
         // txtCidade
         // 
-        this.txtCidade.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtCidade.Location = new System.Drawing.Point(220, 376);
+        this.txtCidade.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtCidade.Location = new System.Drawing.Point(121, 425);
         this.txtCidade.Name = "txtCidade";
-        this.txtCidade.Size = new System.Drawing.Size(225, 27);
+        this.txtCidade.Size = new System.Drawing.Size(225, 30);
         this.txtCidade.TabIndex = 51;
         // 
         // txtBairro
         // 
-        this.txtBairro.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtBairro.Location = new System.Drawing.Point(220, 341);
+        this.txtBairro.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtBairro.Location = new System.Drawing.Point(121, 390);
         this.txtBairro.Name = "txtBairro";
-        this.txtBairro.Size = new System.Drawing.Size(225, 27);
+        this.txtBairro.Size = new System.Drawing.Size(225, 30);
         this.txtBairro.TabIndex = 53;
-        // 
-        // lblComplemento
-        // 
-        this.lblComplemento.BackColor = System.Drawing.Color.GhostWhite;
-        this.lblComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblComplemento.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.lblComplemento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblComplemento.Location = new System.Drawing.Point(97, 306);
-        this.lblComplemento.Name = "lblComplemento";
-        this.lblComplemento.Size = new System.Drawing.Size(116, 27);
-        this.lblComplemento.TabIndex = 60;
-        this.lblComplemento.Text = "Complemento";
-        this.lblComplemento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lblLogradouro
         // 
-        this.lblLogradouro.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblLogradouro.BackColor = System.Drawing.Color.DimGray;
         this.lblLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblLogradouro.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblLogradouro.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblLogradouro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblLogradouro.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblLogradouro.Location = new System.Drawing.Point(97, 271);
+        this.lblLogradouro.Location = new System.Drawing.Point(45, 285);
         this.lblLogradouro.Name = "lblLogradouro";
-        this.lblLogradouro.Size = new System.Drawing.Size(116, 27);
+        this.lblLogradouro.Size = new System.Drawing.Size(115, 30);
         this.lblLogradouro.TabIndex = 59;
         this.lblLogradouro.Text = "Logradouro";
         this.lblLogradouro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lblNum
         // 
-        this.lblNum.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblNum.BackColor = System.Drawing.Color.DimGray;
         this.lblNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblNum.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblNum.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblNum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblNum.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblNum.Location = new System.Drawing.Point(493, 271);
+        this.lblNum.Location = new System.Drawing.Point(45, 320);
         this.lblNum.Name = "lblNum";
-        this.lblNum.Size = new System.Drawing.Size(140, 27);
+        this.lblNum.Size = new System.Drawing.Size(85, 30);
         this.lblNum.TabIndex = 58;
         this.lblNum.Text = "Número";
-        this.lblNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        this.lblNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // lblBairro
         // 
-        this.lblBairro.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblBairro.BackColor = System.Drawing.Color.DimGray;
         this.lblBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblBairro.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblBairro.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblBairro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblBairro.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblBairro.Location = new System.Drawing.Point(97, 341);
+        this.lblBairro.Location = new System.Drawing.Point(45, 390);
         this.lblBairro.Name = "lblBairro";
-        this.lblBairro.Size = new System.Drawing.Size(116, 27);
+        this.lblBairro.Size = new System.Drawing.Size(70, 30);
         this.lblBairro.TabIndex = 57;
         this.lblBairro.Text = "Bairro";
         this.lblBairro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lblTelefone
         // 
-        this.lblTelefone.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblTelefone.BackColor = System.Drawing.Color.DimGray;
         this.lblTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblTelefone.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblTelefone.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblTelefone.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblTelefone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblTelefone.Location = new System.Drawing.Point(97, 162);
+        this.lblTelefone.Location = new System.Drawing.Point(45, 215);
         this.lblTelefone.Name = "lblTelefone";
-        this.lblTelefone.Size = new System.Drawing.Size(116, 27);
+        this.lblTelefone.Size = new System.Drawing.Size(86, 30);
         this.lblTelefone.TabIndex = 55;
         this.lblTelefone.Text = "Telefone";
         this.lblTelefone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lblEmail
         // 
-        this.lblEmail.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblEmail.BackColor = System.Drawing.Color.DimGray;
         this.lblEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblEmail.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblEmail.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblEmail.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblEmail.Location = new System.Drawing.Point(96, 127);
+        this.lblEmail.Location = new System.Drawing.Point(45, 180);
         this.lblEmail.Name = "lblEmail";
-        this.lblEmail.Size = new System.Drawing.Size(116, 27);
+        this.lblEmail.Size = new System.Drawing.Size(58, 30);
         this.lblEmail.TabIndex = 54;
         this.lblEmail.Text = "Email";
         this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // lblNome
         // 
-        this.lblNome.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblNome.BackColor = System.Drawing.Color.DimGray;
         this.lblNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblNome.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblNome.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblNome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblNome.Location = new System.Drawing.Point(96, 92);
+        this.lblNome.Location = new System.Drawing.Point(45, 75);
         this.lblNome.Name = "lblNome";
-        this.lblNome.Size = new System.Drawing.Size(116, 27);
+        this.lblNome.Size = new System.Drawing.Size(74, 30);
         this.lblNome.TabIndex = 50;
         this.lblNome.Text = "Nome";
         this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // dateDataInicial
         // 
-        this.dateDataInicial.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.dateDataInicial.Font = new System.Drawing.Font("Tahoma", 14F);
         this.dateDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        this.dateDataInicial.Location = new System.Drawing.Point(217, 197);
+        this.dateDataInicial.Location = new System.Drawing.Point(167, 250);
         this.dateDataInicial.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
         this.dateDataInicial.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
         this.dateDataInicial.Name = "dateDataInicial";
-        this.dateDataInicial.Size = new System.Drawing.Size(132, 27);
+        this.dateDataInicial.Size = new System.Drawing.Size(132, 30);
         this.dateDataInicial.TabIndex = 56;
         this.dateDataInicial.Value = new System.DateTime(2006, 11, 2, 0, 0, 0, 0);
         this.dateDataInicial.ValueChanged += new System.EventHandler(this.dateDataInicial_ValueChanged);
@@ -325,27 +326,26 @@ partial class CadastroFornecedorForm
         // 
         // txtLogradouro
         // 
-        this.txtLogradouro.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtLogradouro.Location = new System.Drawing.Point(219, 271);
+        this.txtLogradouro.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtLogradouro.Location = new System.Drawing.Point(167, 285);
         this.txtLogradouro.Name = "txtLogradouro";
-        this.txtLogradouro.Size = new System.Drawing.Size(225, 27);
+        this.txtLogradouro.Size = new System.Drawing.Size(225, 30);
         this.txtLogradouro.TabIndex = 46;
         // 
         // txtEmail
         // 
-        this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtEmail.Location = new System.Drawing.Point(218, 127);
+        this.txtEmail.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtEmail.Location = new System.Drawing.Point(109, 180);
         this.txtEmail.Name = "txtEmail";
-        this.txtEmail.Size = new System.Drawing.Size(225, 27);
+        this.txtEmail.Size = new System.Drawing.Size(225, 30);
         this.txtEmail.TabIndex = 43;
         // 
         // txtTipo
         // 
-        this.txtTipo.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtTipo.Location = new System.Drawing.Point(638, 127);
+        this.txtTipo.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtTipo.Location = new System.Drawing.Point(99, 110);
         this.txtTipo.Name = "txtTipo";
-        this.txtTipo.ReadOnly = true;
-        this.txtTipo.Size = new System.Drawing.Size(124, 27);
+        this.txtTipo.Size = new System.Drawing.Size(124, 30);
         this.txtTipo.TabIndex = 40;
         this.txtTipo.TextChanged += new System.EventHandler(this.VerificarTipoFornecedor);
         this.txtTipo.Enter += new System.EventHandler(this.VerificarTipoFornecedor);
@@ -353,45 +353,68 @@ partial class CadastroFornecedorForm
         // 
         // txtComplemento
         // 
-        this.txtComplemento.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtComplemento.Location = new System.Drawing.Point(220, 306);
+        this.txtComplemento.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtComplemento.Location = new System.Drawing.Point(186, 355);
         this.txtComplemento.Name = "txtComplemento";
-        this.txtComplemento.Size = new System.Drawing.Size(225, 27);
+        this.txtComplemento.Size = new System.Drawing.Size(225, 30);
         this.txtComplemento.TabIndex = 48;
         // 
         // btnCancelar
         // 
         this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-        this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.btnCancelar.BackColor = System.Drawing.Color.DimGray;
+        this.btnCancelar.FlatAppearance.BorderSize = 0;
+        this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.btnCancelar.Location = new System.Drawing.Point(514, 513);
+        this.btnCancelar.Location = new System.Drawing.Point(368, 602);
         this.btnCancelar.Name = "btnCancelar";
         this.btnCancelar.Size = new System.Drawing.Size(148, 52);
         this.btnCancelar.TabIndex = 68;
         this.btnCancelar.Text = "Cancelar";
-        this.btnCancelar.UseVisualStyleBackColor = true;
+        this.btnCancelar.UseVisualStyleBackColor = false;
         this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
         // 
         // btnSalvar
         // 
         this.btnSalvar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-        this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.btnSalvar.BackColor = System.Drawing.Color.DimGray;
+        this.btnSalvar.FlatAppearance.BorderSize = 0;
+        this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.btnSalvar.Location = new System.Drawing.Point(295, 513);
+        this.btnSalvar.Location = new System.Drawing.Point(45, 602);
         this.btnSalvar.Name = "btnSalvar";
         this.btnSalvar.Size = new System.Drawing.Size(148, 52);
         this.btnSalvar.TabIndex = 67;
         this.btnSalvar.Text = "Salvar";
-        this.btnSalvar.UseVisualStyleBackColor = true;
+        this.btnSalvar.UseVisualStyleBackColor = false;
         this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
         // 
         // txtNome
         // 
-        this.txtNome.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtNome.Location = new System.Drawing.Point(220, 92);
+        this.txtNome.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtNome.Location = new System.Drawing.Point(125, 75);
         this.txtNome.Name = "txtNome";
-        this.txtNome.Size = new System.Drawing.Size(543, 27);
+        this.txtNome.Size = new System.Drawing.Size(390, 30);
         this.txtNome.TabIndex = 69;
+        // 
+        // lblCadastroFornecedor
+        // 
+        this.lblCadastroFornecedor.BackColor = System.Drawing.Color.DimGray;
+        this.lblCadastroFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblCadastroFornecedor.Font = new System.Drawing.Font("Tahoma", 20F);
+        this.lblCadastroFornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.lblCadastroFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        this.lblCadastroFornecedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblCadastroFornecedor.Location = new System.Drawing.Point(45, 25);
+        this.lblCadastroFornecedor.Name = "lblCadastroFornecedor";
+        this.lblCadastroFornecedor.Size = new System.Drawing.Size(290, 40);
+        this.lblCadastroFornecedor.TabIndex = 70;
+        this.lblCadastroFornecedor.Text = "Cadastrar Fornecedor";
+        this.lblCadastroFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // CadastroFornecedorForm
         // 
@@ -400,10 +423,10 @@ partial class CadastroFornecedorForm
         this.AutoSize = true;
         this.BackColor = System.Drawing.Color.PaleGreen;
         this.ClientSize = new System.Drawing.Size(1350, 685);
+        this.Controls.Add(this.lblCadastroFornecedor);
         this.Controls.Add(this.txtNome);
         this.Controls.Add(this.btnCancelar);
         this.Controls.Add(this.btnSalvar);
-        this.Controls.Add(this.lblEndereco);
         this.Controls.Add(this.txtCep);
         this.Controls.Add(this.txtDocumento);
         this.Controls.Add(this.lblDocumento);
@@ -417,7 +440,7 @@ partial class CadastroFornecedorForm
         this.Controls.Add(this.txtNumero);
         this.Controls.Add(this.txtCidade);
         this.Controls.Add(this.txtBairro);
-        this.Controls.Add(this.lblComplemento);
+        this.Controls.Add(lblComplemento);
         this.Controls.Add(this.lblLogradouro);
         this.Controls.Add(this.lblNum);
         this.Controls.Add(this.lblBairro);
@@ -442,12 +465,13 @@ partial class CadastroFornecedorForm
         this.PerformLayout();
     }
 
+    private System.Windows.Forms.Label lblCadastroFornecedor;
+
     private System.Windows.Forms.TextBox txtNome;
 
     private System.Windows.Forms.Button btnCancelar;
     private System.Windows.Forms.Button btnSalvar;
 
-    private System.Windows.Forms.Label lblEndereco;
     private System.Windows.Forms.MaskedTextBox txtCep;
     private System.Windows.Forms.MaskedTextBox txtDocumento;
     private System.Windows.Forms.Label lblDocumento;
@@ -461,7 +485,6 @@ partial class CadastroFornecedorForm
     private System.Windows.Forms.TextBox txtNumero;
     private System.Windows.Forms.TextBox txtCidade;
     private System.Windows.Forms.TextBox txtBairro;
-    private System.Windows.Forms.Label lblComplemento;
     private System.Windows.Forms.Label lblLogradouro;
     private System.Windows.Forms.Label lblNum;
     private System.Windows.Forms.Label lblBairro;

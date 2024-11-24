@@ -8,7 +8,21 @@
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FCadastroClienteForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FclienteForm/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FclienteForm/@EntryIndexRemoved">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FCulturas_002FAlteraCulturaForm/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FAlteraClienteFisicoForm/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FAlteraClienteFisicoForm/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FCadastroClienteFisicoForm/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FCadastroClienteFisicoForm/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FClienteFisicoForm/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FClienteFisicoForm/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FConsultaClienteForm/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FConsultaClienteForm/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FExcluirClienteFisicoForm/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_0020Fisicos_002FExcluirClienteFisicoForm/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_002FAlteraClienteForm/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_002FCadastroClienteForm/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_002FClienteForm/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_002FConsultaClienteForm/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FClientes_002FExcluirClienteForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FFuncionarios_002FAlteraFuncionarioForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FFuncionarios_002FCadastroClienteFisicoForm/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PIM_0020IV_0020Forms_002Fsrc_002FForms_002FFuncionarios_002FCadastroClienteFisicoForm/@EntryIndexRemoved">True</s:Boolean>

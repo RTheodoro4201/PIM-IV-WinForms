@@ -45,8 +45,7 @@ public partial class ConsultaFuncionarioForm : Form
 
     private void PopulaCampos(Endereco endereco, Funcionario funcionario)
     {
-        txtIdFuncionario.Text = funcionario.Id_Funcionario.ToString();
-        txtIdFuncionario.ReadOnly = true;
+        txtId.Text = funcionario.Id_Funcionario.ToString();
         txtNome.Text = funcionario.Nome_Completo;
         txtCargo.Text = funcionario.Cargo;
         txtRg.Text = funcionario.Rg;
