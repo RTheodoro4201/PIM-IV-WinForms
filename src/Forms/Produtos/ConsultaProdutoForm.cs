@@ -52,7 +52,7 @@ public partial class ConsultaProdutoForm : Form
 
     #region Métodos de Click
 
-    private void btnCancelar_Click(object sender, EventArgs e)
+    private void btnFechar_Click(object sender, EventArgs e)
     {
         Close();
     }

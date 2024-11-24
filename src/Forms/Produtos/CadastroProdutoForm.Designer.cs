@@ -43,52 +43,56 @@ partial class CadastroProdutoForm
         this.txtQuantidadeEstoque = new System.Windows.Forms.TextBox();
         this.lblPrecoUnitario = new System.Windows.Forms.Label();
         this.txtPrecoUnitario = new System.Windows.Forms.TextBox();
+        this.lblCadastroProduto = new System.Windows.Forms.Label();
         this.SuspendLayout();
         // 
         // lblDataValidade
         // 
-        this.lblDataValidade.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblDataValidade.BackColor = System.Drawing.Color.DimGray;
         this.lblDataValidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblDataValidade.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblDataValidade.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblDataValidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblDataValidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblDataValidade.Location = new System.Drawing.Point(96, 160);
+        this.lblDataValidade.Location = new System.Drawing.Point(45, 215);
         this.lblDataValidade.Name = "lblDataValidade";
-        this.lblDataValidade.Size = new System.Drawing.Size(138, 30);
+        this.lblDataValidade.Size = new System.Drawing.Size(159, 30);
         this.lblDataValidade.TabIndex = 42;
         this.lblDataValidade.Text = "Data de Validade";
-        this.lblDataValidade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        this.lblDataValidade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // lblDescricao
         // 
-        this.lblDescricao.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblDescricao.BackColor = System.Drawing.Color.DimGray;
         this.lblDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblDescricao.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblDescricao.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblDescricao.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblDescricao.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblDescricao.Location = new System.Drawing.Point(458, 89);
+        this.lblDescricao.Location = new System.Drawing.Point(45, 110);
         this.lblDescricao.Name = "lblDescricao";
-        this.lblDescricao.Size = new System.Drawing.Size(118, 27);
+        this.lblDescricao.Size = new System.Drawing.Size(92, 30);
         this.lblDescricao.TabIndex = 54;
         this.lblDescricao.Text = "Descrição";
-        this.lblDescricao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        this.lblDescricao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // lblNome
         // 
-        this.lblNome.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblNome.BackColor = System.Drawing.Color.DimGray;
         this.lblNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblNome.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblNome.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblNome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblNome.Location = new System.Drawing.Point(96, 90);
+        this.lblNome.Location = new System.Drawing.Point(45, 75);
         this.lblNome.Name = "lblNome";
-        this.lblNome.Size = new System.Drawing.Size(118, 27);
+        this.lblNome.Size = new System.Drawing.Size(63, 30);
         this.lblNome.TabIndex = 50;
         this.lblNome.Text = "Nome";
-        this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // dateDataValidade
         // 
         this.dateDataValidade.Font = new System.Drawing.Font("Tahoma", 14F);
         this.dateDataValidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        this.dateDataValidade.Location = new System.Drawing.Point(240, 160);
+        this.dateDataValidade.Location = new System.Drawing.Point(210, 215);
         this.dateDataValidade.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
         this.dateDataValidade.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
         this.dateDataValidade.Name = "dateDataValidade";
@@ -99,20 +103,22 @@ partial class CadastroProdutoForm
         // 
         // txtDescricao
         // 
-        this.txtDescricao.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtDescricao.Location = new System.Drawing.Point(582, 89);
+        this.txtDescricao.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtDescricao.Location = new System.Drawing.Point(143, 110);
         this.txtDescricao.Name = "txtDescricao";
-        this.txtDescricao.Size = new System.Drawing.Size(223, 27);
+        this.txtDescricao.Size = new System.Drawing.Size(336, 30);
         this.txtDescricao.TabIndex = 43;
         // 
         // btnCancelar
         // 
         this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-        this.btnCancelar.BackColor = System.Drawing.Color.GhostWhite;
+        this.btnCancelar.BackColor = System.Drawing.Color.DimGray;
+        this.btnCancelar.FlatAppearance.BorderSize = 0;
         this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.btnCancelar.Location = new System.Drawing.Point(501, 322);
+        this.btnCancelar.Location = new System.Drawing.Point(368, 602);
         this.btnCancelar.Name = "btnCancelar";
         this.btnCancelar.Size = new System.Drawing.Size(148, 52);
         this.btnCancelar.TabIndex = 68;
@@ -123,11 +129,13 @@ partial class CadastroProdutoForm
         // btnSalvar
         // 
         this.btnSalvar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-        this.btnSalvar.BackColor = System.Drawing.Color.GhostWhite;
+        this.btnSalvar.BackColor = System.Drawing.Color.DimGray;
+        this.btnSalvar.FlatAppearance.BorderSize = 0;
         this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.btnSalvar.Location = new System.Drawing.Point(220, 322);
+        this.btnSalvar.Location = new System.Drawing.Point(45, 602);
         this.btnSalvar.Name = "btnSalvar";
         this.btnSalvar.Size = new System.Drawing.Size(148, 52);
         this.btnSalvar.TabIndex = 67;
@@ -137,54 +145,70 @@ partial class CadastroProdutoForm
         // 
         // txtNome
         // 
-        this.txtNome.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtNome.Location = new System.Drawing.Point(220, 90);
+        this.txtNome.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtNome.Location = new System.Drawing.Point(114, 75);
         this.txtNome.Name = "txtNome";
-        this.txtNome.Size = new System.Drawing.Size(223, 27);
+        this.txtNome.Size = new System.Drawing.Size(365, 30);
         this.txtNome.TabIndex = 69;
         // 
         // lblQuantidadeEstoque
         // 
-        this.lblQuantidadeEstoque.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblQuantidadeEstoque.BackColor = System.Drawing.Color.DimGray;
         this.lblQuantidadeEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblQuantidadeEstoque.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblQuantidadeEstoque.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblQuantidadeEstoque.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblQuantidadeEstoque.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblQuantidadeEstoque.Location = new System.Drawing.Point(96, 125);
+        this.lblQuantidadeEstoque.Location = new System.Drawing.Point(45, 145);
         this.lblQuantidadeEstoque.Name = "lblQuantidadeEstoque";
-        this.lblQuantidadeEstoque.Size = new System.Drawing.Size(190, 27);
+        this.lblQuantidadeEstoque.Size = new System.Drawing.Size(215, 30);
         this.lblQuantidadeEstoque.TabIndex = 75;
         this.lblQuantidadeEstoque.Text = "Quantidade em Estoque";
-        this.lblQuantidadeEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        this.lblQuantidadeEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // txtQuantidadeEstoque
         // 
-        this.txtQuantidadeEstoque.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtQuantidadeEstoque.Location = new System.Drawing.Point(292, 125);
+        this.txtQuantidadeEstoque.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtQuantidadeEstoque.Location = new System.Drawing.Point(266, 145);
         this.txtQuantidadeEstoque.Name = "txtQuantidadeEstoque";
-        this.txtQuantidadeEstoque.Size = new System.Drawing.Size(151, 27);
+        this.txtQuantidadeEstoque.Size = new System.Drawing.Size(83, 30);
         this.txtQuantidadeEstoque.TabIndex = 74;
         // 
         // lblPrecoUnitario
         // 
-        this.lblPrecoUnitario.BackColor = System.Drawing.Color.GhostWhite;
+        this.lblPrecoUnitario.BackColor = System.Drawing.Color.DimGray;
         this.lblPrecoUnitario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        this.lblPrecoUnitario.Font = new System.Drawing.Font("Tahoma", 12F);
+        this.lblPrecoUnitario.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.lblPrecoUnitario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblPrecoUnitario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-        this.lblPrecoUnitario.Location = new System.Drawing.Point(458, 124);
+        this.lblPrecoUnitario.Location = new System.Drawing.Point(45, 180);
         this.lblPrecoUnitario.Name = "lblPrecoUnitario";
-        this.lblPrecoUnitario.Size = new System.Drawing.Size(118, 27);
+        this.lblPrecoUnitario.Size = new System.Drawing.Size(128, 30);
         this.lblPrecoUnitario.TabIndex = 77;
         this.lblPrecoUnitario.Text = "Preço Unitário";
-        this.lblPrecoUnitario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        this.lblPrecoUnitario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // txtPrecoUnitario
         // 
-        this.txtPrecoUnitario.Font = new System.Drawing.Font("Tahoma", 12F);
-        this.txtPrecoUnitario.Location = new System.Drawing.Point(582, 125);
+        this.txtPrecoUnitario.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtPrecoUnitario.Location = new System.Drawing.Point(179, 179);
         this.txtPrecoUnitario.Name = "txtPrecoUnitario";
-        this.txtPrecoUnitario.Size = new System.Drawing.Size(223, 27);
+        this.txtPrecoUnitario.Size = new System.Drawing.Size(151, 30);
         this.txtPrecoUnitario.TabIndex = 76;
         this.txtPrecoUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        // 
+        // lblCadastroProduto
+        // 
+        this.lblCadastroProduto.BackColor = System.Drawing.Color.DimGray;
+        this.lblCadastroProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        this.lblCadastroProduto.Font = new System.Drawing.Font("Tahoma", 20F);
+        this.lblCadastroProduto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.lblCadastroProduto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+        this.lblCadastroProduto.Location = new System.Drawing.Point(45, 25);
+        this.lblCadastroProduto.Name = "lblCadastroProduto";
+        this.lblCadastroProduto.Size = new System.Drawing.Size(233, 40);
+        this.lblCadastroProduto.TabIndex = 78;
+        this.lblCadastroProduto.Text = "Cadastrar Produto";
+        this.lblCadastroProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
         // CadastroProdutoForm
         // 
@@ -193,6 +217,7 @@ partial class CadastroProdutoForm
         this.AutoSize = true;
         this.BackColor = System.Drawing.Color.PaleGreen;
         this.ClientSize = new System.Drawing.Size(1350, 685);
+        this.Controls.Add(this.lblCadastroProduto);
         this.Controls.Add(this.lblPrecoUnitario);
         this.Controls.Add(this.txtPrecoUnitario);
         this.Controls.Add(this.lblQuantidadeEstoque);
@@ -217,6 +242,8 @@ partial class CadastroProdutoForm
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.Label lblCadastroProduto;
 
     private System.Windows.Forms.Label lblQuantidadeEstoque;
     private System.Windows.Forms.TextBox txtPrecoUnitario;
