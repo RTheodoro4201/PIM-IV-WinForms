@@ -33,7 +33,6 @@ partial class ConsultaClienteForm
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaClienteForm));
         this.txtTipo = new System.Windows.Forms.TextBox();
-        this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
         this.lblDataInicial = new System.Windows.Forms.Label();
         this.cbUf = new System.Windows.Forms.ComboBox();
         this.lblUf = new System.Windows.Forms.Label();
@@ -50,18 +49,19 @@ partial class ConsultaClienteForm
         this.lblTelefone = new System.Windows.Forms.Label();
         this.lblEmail = new System.Windows.Forms.Label();
         this.lblNome = new System.Windows.Forms.Label();
-        this.txtNumero = new System.Windows.Forms.TextBox();
         this.dateDataInicial = new System.Windows.Forms.DateTimePicker();
         this.txtLogradouro = new System.Windows.Forms.TextBox();
         this.txtEmail = new System.Windows.Forms.TextBox();
         this.btnFechar = new System.Windows.Forms.Button();
-        this.txtTelefone = new System.Windows.Forms.TextBox();
         this.txtComplemento = new System.Windows.Forms.TextBox();
         this.txtNome = new System.Windows.Forms.TextBox();
         this.lblConsultaCliente = new System.Windows.Forms.Label();
-        this.txtCep = new System.Windows.Forms.TextBox();
         this.lblIdCliente = new System.Windows.Forms.Label();
         this.txtIdCliente = new System.Windows.Forms.TextBox();
+        this.txtCep = new System.Windows.Forms.MaskedTextBox();
+        this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
+        this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+        this.txtNumero = new System.Windows.Forms.TextBox();
         this.SuspendLayout();
         // 
         // txtTipo
@@ -69,12 +69,6 @@ partial class ConsultaClienteForm
         resources.ApplyResources(this.txtTipo, "txtTipo");
         this.txtTipo.Name = "txtTipo";
         this.txtTipo.ReadOnly = true;
-        // 
-        // txtDocumento
-        // 
-        resources.ApplyResources(this.txtDocumento, "txtDocumento");
-        this.txtDocumento.Name = "txtDocumento";
-        this.txtDocumento.ReadOnly = true;
         // 
         // lblDataInicial
         // 
@@ -187,12 +181,6 @@ partial class ConsultaClienteForm
         this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblNome.Name = "lblNome";
         // 
-        // txtNumero
-        // 
-        resources.ApplyResources(this.txtNumero, "txtNumero");
-        this.txtNumero.Name = "txtNumero";
-        this.txtNumero.ReadOnly = true;
-        // 
         // dateDataInicial
         // 
         resources.ApplyResources(this.dateDataInicial, "dateDataInicial");
@@ -225,12 +213,6 @@ partial class ConsultaClienteForm
         this.btnFechar.UseVisualStyleBackColor = false;
         this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
         // 
-        // txtTelefone
-        // 
-        resources.ApplyResources(this.txtTelefone, "txtTelefone");
-        this.txtTelefone.Name = "txtTelefone";
-        this.txtTelefone.ReadOnly = true;
-        // 
         // txtComplemento
         // 
         resources.ApplyResources(this.txtComplemento, "txtComplemento");
@@ -251,12 +233,6 @@ partial class ConsultaClienteForm
         this.lblConsultaCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
         this.lblConsultaCliente.Name = "lblConsultaCliente";
         // 
-        // txtCep
-        // 
-        resources.ApplyResources(this.txtCep, "txtCep");
-        this.txtCep.Name = "txtCep";
-        this.txtCep.ReadOnly = true;
-        // 
         // lblIdCliente
         // 
         this.lblIdCliente.BackColor = System.Drawing.Color.DimGray;
@@ -271,17 +247,43 @@ partial class ConsultaClienteForm
         this.txtIdCliente.Name = "txtIdCliente";
         this.txtIdCliente.ReadOnly = true;
         // 
+        // txtCep
+        // 
+        this.txtCep.Culture = new System.Globalization.CultureInfo("");
+        resources.ApplyResources(this.txtCep, "txtCep");
+        this.txtCep.Name = "txtCep";
+        // 
+        // txtDocumento
+        // 
+        this.txtDocumento.Culture = new System.Globalization.CultureInfo("");
+        resources.ApplyResources(this.txtDocumento, "txtDocumento");
+        this.txtDocumento.Name = "txtDocumento";
+        // 
+        // txtTelefone
+        // 
+        this.txtTelefone.Culture = new System.Globalization.CultureInfo("");
+        resources.ApplyResources(this.txtTelefone, "txtTelefone");
+        this.txtTelefone.Name = "txtTelefone";
+        // 
+        // txtNumero
+        // 
+        resources.ApplyResources(this.txtNumero, "txtNumero");
+        this.txtNumero.Name = "txtNumero";
+        this.txtNumero.ReadOnly = true;
+        // 
         // ConsultaClienteForm
         // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.BackColor = System.Drawing.Color.PaleGreen;
+        this.Controls.Add(this.txtNumero);
+        this.Controls.Add(this.txtCep);
+        this.Controls.Add(this.txtDocumento);
+        this.Controls.Add(this.txtTelefone);
         this.Controls.Add(this.txtIdCliente);
         this.Controls.Add(this.lblIdCliente);
-        this.Controls.Add(this.txtCep);
         this.Controls.Add(this.lblConsultaCliente);
         this.Controls.Add(this.txtTipo);
-        this.Controls.Add(this.txtDocumento);
         this.Controls.Add(this.lblDataInicial);
         this.Controls.Add(this.cbUf);
         this.Controls.Add(this.lblUf);
@@ -298,12 +300,10 @@ partial class ConsultaClienteForm
         this.Controls.Add(this.lblTelefone);
         this.Controls.Add(this.lblEmail);
         this.Controls.Add(this.lblNome);
-        this.Controls.Add(this.txtNumero);
         this.Controls.Add(this.dateDataInicial);
         this.Controls.Add(this.txtLogradouro);
         this.Controls.Add(this.txtEmail);
         this.Controls.Add(this.btnFechar);
-        this.Controls.Add(this.txtTelefone);
         this.Controls.Add(this.txtComplemento);
         this.Controls.Add(this.txtNome);
         this.MaximizeBox = false;
@@ -318,19 +318,23 @@ partial class ConsultaClienteForm
         this.PerformLayout();
     }
 
+    private System.Windows.Forms.TextBox txtNumero;
+
+    private System.Windows.Forms.MaskedTextBox txtCep;
+    private System.Windows.Forms.MaskedTextBox txtDocumento;
+    private System.Windows.Forms.MaskedTextBox txtTelefone;
+
     private System.Windows.Forms.TextBox txtIdCliente;
 
     private System.Windows.Forms.Label lblIdCliente;
     private System.Windows.Forms.Label lblConsultaCliente;
 
     private System.Windows.Forms.TextBox txtTipo;
-    private System.Windows.Forms.MaskedTextBox txtDocumento;
     private System.Windows.Forms.Label lblDataInicial;
     private System.Windows.Forms.ComboBox cbUf;
     private System.Windows.Forms.Label lblUf;
     private System.Windows.Forms.Label lblCidade;
     private System.Windows.Forms.Label lblCep;
-    private System.Windows.Forms.TextBox txtCep;
     private System.Windows.Forms.TextBox txtCidade;
     private System.Windows.Forms.TextBox txtBairro;
     private System.Windows.Forms.Label lblComplemento;
@@ -342,12 +346,10 @@ partial class ConsultaClienteForm
     private System.Windows.Forms.Label lblTelefone;
     private System.Windows.Forms.Label lblEmail;
     private System.Windows.Forms.Label lblNome;
-    private System.Windows.Forms.TextBox txtNumero;
     private System.Windows.Forms.DateTimePicker dateDataInicial;
     private System.Windows.Forms.TextBox txtLogradouro;
     private System.Windows.Forms.TextBox txtEmail;
     private System.Windows.Forms.Button btnFechar;
-    private System.Windows.Forms.TextBox txtTelefone;
     private System.Windows.Forms.TextBox txtComplemento;
     private System.Windows.Forms.TextBox txtNome;
 

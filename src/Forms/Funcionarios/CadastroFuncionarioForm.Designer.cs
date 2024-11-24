@@ -388,7 +388,7 @@ partial class CadastroFuncionarioForm
         this.txtRg.Location = new System.Drawing.Point(91, 145);
         this.txtRg.Mask = "00.000.000-0";
         this.txtRg.Name = "txtRg";
-        this.txtRg.Size = new System.Drawing.Size(124, 30);
+        this.txtRg.Size = new System.Drawing.Size(120, 30);
         this.txtRg.TabIndex = 35;
         // 
         // txtTelefone
@@ -398,7 +398,7 @@ partial class CadastroFuncionarioForm
         this.txtTelefone.Location = new System.Drawing.Point(137, 250);
         this.txtTelefone.Mask = "(99) 00000-0000";
         this.txtTelefone.Name = "txtTelefone";
-        this.txtTelefone.Size = new System.Drawing.Size(149, 30);
+        this.txtTelefone.Size = new System.Drawing.Size(145, 30);
         this.txtTelefone.TabIndex = 36;
         // 
         // txtCpf
@@ -408,7 +408,7 @@ partial class CadastroFuncionarioForm
         this.txtCpf.Location = new System.Drawing.Point(96, 180);
         this.txtCpf.Mask = "000.000.000-00";
         this.txtCpf.Name = "txtCpf";
-        this.txtCpf.Size = new System.Drawing.Size(124, 30);
+        this.txtCpf.Size = new System.Drawing.Size(140, 30);
         this.txtCpf.TabIndex = 37;
         // 
         // txtCep
@@ -428,6 +428,8 @@ partial class CadastroFuncionarioForm
         this.txtSalario.Name = "txtSalario";
         this.txtSalario.Size = new System.Drawing.Size(124, 30);
         this.txtSalario.TabIndex = 39;
+        this.txtSalario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        this.txtSalario.Leave += new System.EventHandler(this.txtSalario_Leave);
         // 
         // lblCadastroFuncionario
         // 

@@ -133,6 +133,7 @@ partial class AlteraCulturaForm
         this.txtAreaPlantada.Name = "txtAreaPlantada";
         this.txtAreaPlantada.Size = new System.Drawing.Size(86, 30);
         this.txtAreaPlantada.TabIndex = 43;
+        this.txtAreaPlantada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // txtTipoSolo
         // 
@@ -253,6 +254,7 @@ partial class AlteraCulturaForm
         this.txtQuantidadePlantada.Name = "txtQuantidadePlantada";
         this.txtQuantidadePlantada.Size = new System.Drawing.Size(79, 30);
         this.txtQuantidadePlantada.TabIndex = 74;
+        this.txtQuantidadePlantada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblNotas
         // 
@@ -310,8 +312,9 @@ partial class AlteraCulturaForm
         this.txtId.Location = new System.Drawing.Point(357, 25);
         this.txtId.Name = "txtId";
         this.txtId.ReadOnly = true;
-        this.txtId.Size = new System.Drawing.Size(95, 40);
+        this.txtId.Size = new System.Drawing.Size(90, 40);
         this.txtId.TabIndex = 80;
+        this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // AlteraCulturaForm
         // 

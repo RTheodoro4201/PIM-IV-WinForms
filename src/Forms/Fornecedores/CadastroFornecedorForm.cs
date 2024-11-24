@@ -55,18 +55,33 @@ public partial class CadastroFornecedorForm : Form
 
     private void dateDataInicial_ValueChanged(object sender, EventArgs e)
     {
+        if (txtTipo.Text == "Físico")
+        {
+            lblDataInicial.Text = "Data de Nascimento";
+            VerificarDataInicial();
+        }
+
+        else if (txtTipo.Text == "Jurídico")
+        {
+            lblDataInicial.Text = "Data de Fundação";
+            VerificarDataInicial();
+        }
+    }
+
+    private void VerificarDataInicial()
+    {
         if (txtTipo.Text == "Físico" && dateDataInicial.Value > DateTime.Now.AddYears(-18))
         {
-            MessageBox.Show("Data de nascimento inválida!");
+            MessageBox.Show("Data de nascimento inválida. O cliente precisa ser maior de 18 anos.", "Atenção",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             dateDataInicial.Value = DateTime.Now.AddYears(-18);
         }
 
-        if (txtTipo.Text == "Jurídico" && dateDataInicial.Value > DateTime.Now)
+        else if (txtTipo.Text == "Jurídico" && dateDataInicial.Value > DateTime.Now)
         {
-            MessageBox.Show("Data de inicial (fundação/nascimento) não pode ser maior do que a data atual!");
-            dateDataInicial.Value = DateTime.Now;
+            MessageBox.Show("Data de Fundação inválida. A data de fundação não pode ser futura", "Atenção",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
     }
 
     #endregion

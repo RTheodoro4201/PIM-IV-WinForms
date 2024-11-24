@@ -59,7 +59,7 @@ public partial class ExcluirFuncionarioForm : Form
         txtCidade.Text = endereco.Cidade;
         cbUf.Text = endereco.Uf;
         txtCep.Text = endereco.Cep;
-        txtSalario.Text = funcionario.Salario.ToString(CultureInfo.CurrentCulture);
+        txtSalario.Text = funcionario.Salario.ToString("C");
         dateDataAdmissao.Value = funcionario.Data_Admissao.Date;
     }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Microsoft.IdentityModel.Tokens;
 using PIM_IV_Forms.Controllers;
 using PIM_IV_Forms.Models;
 using PIM_IV_Forms.Validator;
@@ -36,6 +37,32 @@ public partial class CadastroProdutoForm : Form
             MessageBox.Show("A data de validade deve ser no mínimo daqui a 7 dias.",
                 "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             dateDataValidade.Value = DateTime.Now.AddDays(7);
+        }
+    }
+    
+    private void txtPrecoUnitario_Leave(object sender, EventArgs e)
+    {
+        try
+        {
+            if (decimal.TryParse(txtPrecoUnitario.Text, out decimal precoUnitario) || txtPrecoUnitario.Text.Contains("R$"))
+            {
+                txtPrecoUnitario.Text = "";
+                txtPrecoUnitario.Text = precoUnitario.ToString("C");
+            }
+
+            else if (!decimal.TryParse(txtPrecoUnitario.Text, out precoUnitario) && !txtPrecoUnitario.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("Insira apenas números decimais no campo 'Preço Unitário'.", "Atenção",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        catch (Exception exception)
+        {
+            MessageBox.Show("Houve um erro ao exibir o valor do campo 'Preço Unitário'.", "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            MessageBox.Show("Erro: " + exception.Message, "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 

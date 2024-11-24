@@ -32,7 +32,6 @@ partial class CadastroClienteForm
     private void InitializeComponent()
     {
         this.txtTipo = new System.Windows.Forms.TextBox();
-        this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
         this.lblDataInicial = new System.Windows.Forms.Label();
         this.cbUf = new System.Windows.Forms.ComboBox();
         this.lblUf = new System.Windows.Forms.Label();
@@ -55,11 +54,12 @@ partial class CadastroClienteForm
         this.txtEmail = new System.Windows.Forms.TextBox();
         this.btnCancelar = new System.Windows.Forms.Button();
         this.btnSalvar = new System.Windows.Forms.Button();
-        this.txtTelefone = new System.Windows.Forms.TextBox();
         this.txtComplemento = new System.Windows.Forms.TextBox();
         this.txtNome = new System.Windows.Forms.TextBox();
         this.lblCadastroCliente = new System.Windows.Forms.Label();
-        this.txtCep = new System.Windows.Forms.TextBox();
+        this.txtCep = new System.Windows.Forms.MaskedTextBox();
+        this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
+        this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
         this.SuspendLayout();
         // 
         // txtTipo
@@ -69,14 +69,6 @@ partial class CadastroClienteForm
         this.txtTipo.Name = "txtTipo";
         this.txtTipo.Size = new System.Drawing.Size(112, 30);
         this.txtTipo.TabIndex = 61;
-        // 
-        // txtDocumento
-        // 
-        this.txtDocumento.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtDocumento.Location = new System.Drawing.Point(170, 110);
-        this.txtDocumento.Name = "txtDocumento";
-        this.txtDocumento.Size = new System.Drawing.Size(166, 30);
-        this.txtDocumento.TabIndex = 60;
         // 
         // lblDataInicial
         // 
@@ -346,14 +338,6 @@ partial class CadastroClienteForm
         this.btnSalvar.UseVisualStyleBackColor = false;
         this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
         // 
-        // txtTelefone
-        // 
-        this.txtTelefone.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtTelefone.Location = new System.Drawing.Point(138, 215);
-        this.txtTelefone.Name = "txtTelefone";
-        this.txtTelefone.Size = new System.Drawing.Size(148, 30);
-        this.txtTelefone.TabIndex = 37;
-        // 
         // txtComplemento
         // 
         this.txtComplemento.Font = new System.Drawing.Font("Tahoma", 14F);
@@ -386,11 +370,33 @@ partial class CadastroClienteForm
         // 
         // txtCep
         // 
+        this.txtCep.Culture = new System.Globalization.CultureInfo("");
         this.txtCep.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtCep.Location = new System.Drawing.Point(100, 460);
+        this.txtCep.Location = new System.Drawing.Point(97, 460);
+        this.txtCep.Mask = "99999-999";
         this.txtCep.Name = "txtCep";
-        this.txtCep.Size = new System.Drawing.Size(113, 30);
-        this.txtCep.TabIndex = 63;
+        this.txtCep.Size = new System.Drawing.Size(124, 30);
+        this.txtCep.TabIndex = 65;
+        // 
+        // txtDocumento
+        // 
+        this.txtDocumento.Culture = new System.Globalization.CultureInfo("");
+        this.txtDocumento.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtDocumento.Location = new System.Drawing.Point(167, 110);
+        this.txtDocumento.Mask = "999.999.999-99";
+        this.txtDocumento.Name = "txtDocumento";
+        this.txtDocumento.Size = new System.Drawing.Size(140, 30);
+        this.txtDocumento.TabIndex = 64;
+        // 
+        // txtTelefone
+        // 
+        this.txtTelefone.Culture = new System.Globalization.CultureInfo("");
+        this.txtTelefone.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtTelefone.Location = new System.Drawing.Point(137, 215);
+        this.txtTelefone.Mask = "(99) 99999-9999";
+        this.txtTelefone.Name = "txtTelefone";
+        this.txtTelefone.Size = new System.Drawing.Size(146, 30);
+        this.txtTelefone.TabIndex = 63;
         // 
         // CadastroClienteForm
         // 
@@ -400,9 +406,10 @@ partial class CadastroClienteForm
         this.BackColor = System.Drawing.Color.PaleGreen;
         this.ClientSize = new System.Drawing.Size(1350, 681);
         this.Controls.Add(this.txtCep);
+        this.Controls.Add(this.txtDocumento);
+        this.Controls.Add(this.txtTelefone);
         this.Controls.Add(this.lblCadastroCliente);
         this.Controls.Add(this.txtTipo);
-        this.Controls.Add(this.txtDocumento);
         this.Controls.Add(this.lblDataInicial);
         this.Controls.Add(this.cbUf);
         this.Controls.Add(this.lblUf);
@@ -425,7 +432,6 @@ partial class CadastroClienteForm
         this.Controls.Add(this.txtEmail);
         this.Controls.Add(this.btnCancelar);
         this.Controls.Add(this.btnSalvar);
-        this.Controls.Add(this.txtTelefone);
         this.Controls.Add(this.txtComplemento);
         this.Controls.Add(this.txtNome);
         this.MaximizeBox = false;
@@ -441,16 +447,18 @@ partial class CadastroClienteForm
         this.PerformLayout();
     }
 
+    private System.Windows.Forms.MaskedTextBox txtCep;
+    private System.Windows.Forms.MaskedTextBox txtDocumento;
+    private System.Windows.Forms.MaskedTextBox txtTelefone;
+
     private System.Windows.Forms.Label lblCadastroCliente;
 
     private System.Windows.Forms.TextBox txtTipo;
-    private System.Windows.Forms.MaskedTextBox txtDocumento;
     private System.Windows.Forms.Label lblDataInicial;
     private System.Windows.Forms.ComboBox cbUf;
     private System.Windows.Forms.Label lblUf;
     private System.Windows.Forms.Label lblCidade;
     private System.Windows.Forms.Label lblCep;
-    private System.Windows.Forms.TextBox txtCep;
     private System.Windows.Forms.TextBox txtCidade;
     private System.Windows.Forms.TextBox txtBairro;
     private System.Windows.Forms.Label lblComplemento;
@@ -468,7 +476,6 @@ partial class CadastroClienteForm
     private System.Windows.Forms.TextBox txtEmail;
     private System.Windows.Forms.Button btnCancelar;
     private System.Windows.Forms.Button btnSalvar;
-    private System.Windows.Forms.TextBox txtTelefone;
     private System.Windows.Forms.TextBox txtComplemento;
     private System.Windows.Forms.TextBox txtNome;
 
