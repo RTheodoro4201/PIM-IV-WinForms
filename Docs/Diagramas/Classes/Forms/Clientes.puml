@@ -1,0 +1,84 @@
+﻿@startuml ClienteForm
+
+package Forms
+{
+        package Clientes
+        {
+            class AlteraClienteForm
+                {
+                    - readonly ClienteController _clienteController
+                    - readonly int _idCliente
+                    - Cliente _cliente
+                    + AlteraClienteForm(ClienteController clienteController, int idCliente)
+                    - void ResizeForm(object sender, EventArgs e)
+                    - async AlteraClienteForm_Load(object sender, EventArgs e)
+                    - void VerificarTipoCliente(object sender, EventArgs e)
+                    - void PopulaCampos(Endereco endereco, Cliente cliente)
+                    - void dateDataInicial_ValueChanged(object sender, EventArgs e)
+                    - void VerificarDataInicial()
+                    - async void btnSalvar_Click(object sender, EventArgs e)
+                    - async void btnCancelar_Click(object sender, EventArgs e)
+                }
+
+            class CadastroClienteForm
+            {
+                - readonly ClienteController _clienteController
+                + CadastroClienteForm(ClienteController clienteController)
+                - void ResizeForm(object sender, EventArgs e)
+                - async AlteraClienteForm_Load(object sender, EventArgs e)
+                - void VerificarTipoCliente(object sender, EventArgs e)
+                - void dateDataInicial_ValueChanged(object sender, EventArgs e)
+                - void VerificarDataInicial()
+                + btnSalvar_Click(object sender, EventArgs e)
+                + btnCancelar_Click(object sender, EventArgs e)
+            }
+
+            class ClienteForm
+            {
+                - readonly ClienteController _clienteController
+                - string _tipoCliente
+                + ClienteForm(ClienteController clienteController, string tipoCliente)
+                - void ResizeForm(object sender, EventArgs e)
+                - async ClienteForm_Load(object sender, EventArgs e)
+                - bool VerificarSelecao()
+                - async Task VerificarTipoGrid()
+                - async Task CarregarGridJuridico()
+                - async Task CarregarGridFisico()
+                - async Task CarregarGridGeral()
+                - async void btnAlterar_Click(object sender, EventArgs e)
+                - async void btnCadastrar_Click(object sender, EventArgs e)
+                - async void btnExcluir_Click(object sender, EventArgs e)
+                - async void btnConsultar_Click(object sender, EventArgs e)
+                - void btnFechar_Click(object sender, EventArgs e)
+            }
+
+            class ConsultaClienteForm
+            {
+                - readonly ClienteController _clienteController
+                - readonly int _clienteId
+                - Cliente _cliente
+                + ConsultaClienteForm(ClienteController clienteController, int clienteId)
+                - void ResizeForm(object sender, EventArgs e)
+                - async void ConsultaClienteForm_Load(object sender, EventArgs e)
+                - void VerificarTipoCliente(object sender, EventArgs e)
+                - void PopulaCampos(Endereco endereco, Cliente cliente)
+                - void btnFechar_Click(object sender, EventArgs e)
+            }
+
+            class ExcluirClienteForm
+            {
+                - readonly ClienteController _clienteController
+                - readonly int _clienteId
+                - Cliente _cliente
+                + ExcluirClienteForm(ClienteController clienteController, int clienteId)
+                - void ResizeForm(object sender, EventArgs e)
+                - async void ExcluirClienteForm_Load(object sender, EventArgs e)
+                - void VerificarTipoCliente()
+                - void PopulaCampos(Endereco endereco, Cliente cliente)
+                - async void btnExcluir_Click(object sender, EventArgs e)
+                - void btnCancelar_Click(object sender, EventArgs e)
+            }
+        }
+}
+
+@enduml

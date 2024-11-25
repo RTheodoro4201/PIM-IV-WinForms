@@ -1,0 +1,68 @@
+﻿@startuml
+
+package Forms
+{
+    package Insumos
+    {
+        class AlteraInsumoForm {
+          - InsumoController _insumoController
+          - int _idInsumo
+          + AlteraInsumoForm(InsumoController insumoController, int idInsumo)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void AlteraInsumoForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Insumo insumo)
+          - void dateDataValidade_ValueChanged(object sender, EventArgs e)
+          - async void txtIdFornecedor_TextChanged(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class CadastroInsumoForm {
+          - InsumoController _insumoController
+          + CadastroInsumoForm(InsumoController insumoController)
+          - void ResizeForm(object sender, EventArgs e)
+          - void CadastroInsumoForm_Load(object sender, EventArgs e)
+          - void dateDataValidade_ValueChanged(object sender, EventArgs e)
+          - async void txtIdFornecedor_TextChanged(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class ConsultaInsumoForm {
+          - InsumoController _insumoController
+          - int _idInsumo
+          + ConsultaInsumoForm(InsumoController insumoController, int idInsumo)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ConsultaInsumoForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Insumo insumo)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+
+        class ExcluirInsumoForm {
+          - InsumoController _insumoController
+          - int _idInsumo
+          - Insumo _insumo
+          + ExcluirInsumoForm(InsumoController insumoController, int idInsumo)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ExcluirInsumoForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Insumo insumo)
+          - void btnCancelar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+        }
+
+        class InsumoForm {
+          - InsumoController _insumoController
+          + InsumoForm(InsumoController insumoController)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void InsumoForm_Load(object sender, EventArgs e)
+          - async Task CarregarGrid()
+          - bool VerificarSelecao()
+          - async void btnCadastrar_Click(object sender, EventArgs e)
+          - async void btnAlterar_Click(object sender, EventArgs e)
+          - async void btnConsultar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+    }
+}
+@enduml

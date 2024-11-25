@@ -1,0 +1,69 @@
+﻿@startuml
+
+package Forms
+{
+    package Produtos
+    {
+        class AlteraProdutoForm {
+          - ProdutoController _produtoController
+          - int _idProduto
+          + AlteraProdutoForm(ProdutoController produtoController, int idProduto)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void AlteraProdutoForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Produto produto)
+          - void dateDataValidade_ValueChanged(object sender, EventArgs e)
+          - void txtPrecoUnitario_Leave(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class CadastroProdutoForm {
+          - ProdutoController _produtoController
+          + CadastroProdutoForm(ProdutoController produtoController)
+          - void ResizeForm(object sender, EventArgs e)
+          - void CadastroProdutoForm_Load(object sender, EventArgs e)
+          - void dateDataValidade_ValueChanged(object sender, EventArgs e)
+          - void txtPrecoUnitario_Leave(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class ConsultaProdutoForm {
+          - ProdutoController _produtoController
+          - int _idProduto
+          + ConsultaProdutoForm(ProdutoController produtoController, int idProduto)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ConsultaProdutoForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Produto produto)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+
+        class ExcluirProdutoForm {
+          - ProdutoController _produtoController
+          - int _idProduto
+          - Produto _produto
+          + ExcluirProdutoForm(ProdutoController produtoController, int idProduto)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ExcluirProdutoForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Produto produto)
+          - void btnCancelar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+        }
+
+        class ProdutoForm {
+          - ProdutoController _produtoController
+          + ProdutoForm(ProdutoController produtoController)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ProdutoForm_Load(object sender, EventArgs e)
+          - async Task CarregarGrid()
+          - bool VerificarSelecao()
+          - async void btnCadastrar_Click(object sender, EventArgs e)
+          - async void btnAlterar_Click(object sender, EventArgs e)
+          - async void btnConsultar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+    }
+}
+
+@enduml

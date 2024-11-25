@@ -1,0 +1,64 @@
+@startuml Validator
+
+package Validator
+{
+    class ClienteValidator
+    {
+        + ClienteValidator()
+    }
+
+    class CompraValidator
+    {
+        + CompraValidator()
+        - static bool ValidarValorTotal(Compra compra, decimal valorTotal)
+    }
+
+    class CulturaValidator
+    {
+        + CulturaValidator()
+        - bool ValidarDataPrevista(Cultura cultura, DateTime dataPrevista)
+    }
+
+    class EnderecoValidator
+    {
+        - readonly string[] _prefixosLogradouro
+        - readonly string[] _ufsValidas
+        + EnderecoValidator()
+        - bool ValidateUf(string uf)
+        - static bool ValidateNumero(string numero)
+        - bool ValidatePrefixoLogradouro(string logradouro)
+    }
+
+    class FornecedorValidator
+    {
+        - const string CpfOuCnpjRegex
+        - const string TelefoneRegex
+        + FornecedorValidator()
+    }
+
+    class FuncionarioValidator
+    {
+        + FuncionarioValidator()
+        - static bool ValidarSalario(decimal salario)
+    }
+
+    class InsumoValidator
+    {
+        + InsumoValidator()
+    }
+
+    class ProdutoValidator
+    {
+        + ProdutoValidator()
+        - static bool ValidarDataValidade(DateTime dataValidade)
+    }
+
+    class VendaValidator
+    {
+        + VendaValidator()
+    }
+}
+
+
+
+@enduml

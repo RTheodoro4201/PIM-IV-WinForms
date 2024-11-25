@@ -1,0 +1,63 @@
+﻿@startuml
+package Forms
+{
+    package Usuarios
+    {
+        class AlteraUsuarioForm {
+          - UsuarioController _usuarioController
+          - int _idUsuario
+          + AlteraUsuarioForm(UsuarioController usuarioController, int idUsuario)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void AlteraUsuarioForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Usuario usuario)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class CadastroUsuarioForm {
+          - UsuarioController _usuarioController
+          + CadastroUsuarioForm(UsuarioController usuarioController)
+          - void ResizeForm(object sender, EventArgs e)
+          - void CadastroUsuarioForm_Load(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class ConsultaUsuarioForm {
+          - UsuarioController _usuarioController
+          - int _idUsuario
+          + ConsultaUsuarioForm(UsuarioController usuarioController, int idUsuario)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ConsultaUsuarioForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Usuario usuario)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+
+        class ExcluirUsuarioForm {
+          - UsuarioController _usuarioController
+          - int _idUsuario
+          - Usuario _usuario
+          + ExcluirUsuarioForm(UsuarioController usuarioController, int idUsuario)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ExcluirUsuarioForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Usuario usuario)
+          - void btnCancelar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+        }
+
+        class UsuarioForm {
+          - UsuarioController _usuarioController
+          + UsuarioForm(UsuarioController usuarioController)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void UsuarioForm_Load(object sender, EventArgs e)
+          - async Task CarregarGrid()
+          - bool VerificarSelecao()
+          - async void btnCadastrar_Click(object sender, EventArgs e)
+          - async void btnAlterar_Click(object sender, EventArgs e)
+          - async void btnConsultar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+    }
+}
+@enduml

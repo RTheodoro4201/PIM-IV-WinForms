@@ -1,0 +1,75 @@
+﻿@startuml
+
+package Forms
+{
+    package Vendas
+    {
+        class AlteraVendaForm {
+          - VendaController _vendaController
+          - int _idVenda
+          - Venda _venda
+          + AlteraVendaForm(VendaController vendaController, int idVenda)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void AlteraVendaForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Venda venda)
+          - async void txtIdCliente_Leave(object sender, EventArgs e)
+          - async void txtIdProduto_Leave(object sender, EventArgs e)
+          - void txtValorUnitario_Leave(object sender, EventArgs e)
+          - void dateDataVenda_Leave(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class CadastroVendaForm {
+          - VendaController _vendaController
+          + CadastroVendaForm(VendaController vendaController)
+          - void ResizeForm(object sender, EventArgs e)
+          - void CadastroVendaForm_Load(object sender, EventArgs e)
+          - async void txtIdCliente_Leave(object sender, EventArgs e)
+          - async void txtIdProduto_Leave(object sender, EventArgs e)
+          - void txtValorUnitario_Leave(object sender, EventArgs e)
+          - void dateDataVenda_Leave(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class ConsultaVendaForm {
+          - VendaController _vendaController
+          - int _idVenda
+          - Venda _venda
+          + ConsultaVendaForm(VendaController vendaController, int idVenda)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ConsultaVendaForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Venda venda)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+
+        class ExcluirVendaForm {
+          - VendaController _vendaController
+          - int _idVenda
+          - Venda _venda
+          + ExcluirVendaForm(VendaController vendaController, int idVenda)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ExcluirVendaForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Venda venda)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class VendaForm {
+          - VendaController _vendaController
+          + VendaForm(VendaController vendaController)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void VendaForm_Load(object sender, EventArgs e)
+          - async Task CarregarGrid()
+          - bool VerificarSelecao()
+          - async void btnCadastrar_Click(object sender, EventArgs e)
+          - async void btnAlterar_Click(object sender, EventArgs e)
+          - async void btnConsultar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+    }
+}
+
+@enduml
