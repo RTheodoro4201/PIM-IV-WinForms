@@ -17,6 +17,8 @@ package Controllers
     class ProdutoController
 
     class VendaController
+
+    class UsuarioController
 }
 
 package Forms
@@ -30,7 +32,7 @@ package Forms
       - InsumoController _insumoController
       - CompraController _compraController
       - VendaController _vendaController
-      + MainForm(ClienteController clienteController, FuncionarioController funcionarioController, FornecedorController fornecedorController, CulturaController culturaController, ProdutoController produtoController, InsumoController insumoController, CompraController compraController, VendaController vendaController)
+      + MainForm()
       - void MainForm_Resize(object sender, EventArgs e)
       - void btnClienteFisico_Click(object sender, EventArgs e)
       - void btnClienteJuridico_Click(object sender, EventArgs e)
@@ -86,8 +88,25 @@ package Forms
                 class VendaForm
             }
 
+    package Usuarios
+    {
+        class UsuarioForm
+    }
 
-    MainForm --> ClienteController
+    note left of MainForm
+          O construtor recebe os seguintes controladores como parâmetros:
+          * ClienteController
+          * FuncionarioController
+          * FornecedorController
+          * CulturaController
+          * ProdutoController
+          * InsumoController
+          * CompraController
+          * VendaController
+          * UsuarioController
+        end note
+
+    MainForm -right-> ClienteController
     MainForm --> ClienteForm
     MainForm --> FuncionarioController
     MainForm --> FuncionarioForm
@@ -103,6 +122,19 @@ package Forms
     MainForm --> CompraForm
     MainForm --> VendaController
     MainForm --> VendaForm
+    MainForm --> UsuarioController
+    MainForm --> UsuarioForm
+    ClienteController -down[hidden]-> CompraController
+    CompraController -down[hidden]-> CulturaController
+    FornecedorController -down[hidden]-> FuncionarioController
+    FuncionarioController -down[hidden]-> ProdutoController
+    UsuarioController -down[hidden]-> VendaController
+    VendaController -down[hidden]-> InsumoController
+
+    Usuarios -down[hidden]-> Vendas
+    Produtos -down[hidden]-> Insumos
+    Fornecedores -down[hidden]-> Funcionarios
+    Clientes -down[hidden]-> Compras
 }
 
 @enduml

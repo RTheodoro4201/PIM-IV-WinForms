@@ -50,6 +50,18 @@ public partial class AlteraUsuarioForm : Form
         txtSenha.Text = usuario.Senha;
     }
 
+    private void chkRevelar_CheckedChanged(object sender, EventArgs e)
+    {
+        if (chkRevelar.Checked)
+        {
+            txtSenha.UseSystemPasswordChar = false;
+        }
+
+        else
+        {
+            txtSenha.UseSystemPasswordChar = true;
+        }
+    }
 
     #region Métodos de Click
 

@@ -50,6 +50,19 @@ public partial class ExcluirUsuarioForm : Form
         txtSenha.Text = usuario.Senha;
     }
 
+    private void chkRevelar_CheckedChanged(object sender, EventArgs e)
+    {
+        if (chkRevelar.Checked)
+        {
+            txtSenha.UseSystemPasswordChar = false;
+        }
+
+        else
+        {
+            txtSenha.UseSystemPasswordChar = true;
+        }
+    }
+
     #region Métodos de Click
 
     private void btnCancelar_Click(object sender, EventArgs e)

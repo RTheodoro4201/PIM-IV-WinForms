@@ -10,6 +10,7 @@ package Forms
           - void ResizeForm(object sender, EventArgs e)
           - async void AlteraUsuarioForm_Load(object sender, EventArgs e)
           - void PopulaCampos(Usuario usuario)
+          - void chkRevelar_CheckedChanged(object sender, EventArgs e)
           - async void btnSalvar_Click(object sender, EventArgs e)
           - void btnCancelar_Click(object sender, EventArgs e)
         }
@@ -19,6 +20,7 @@ package Forms
           + CadastroUsuarioForm(UsuarioController usuarioController)
           - void ResizeForm(object sender, EventArgs e)
           - void CadastroUsuarioForm_Load(object sender, EventArgs e)
+          - void chkRevelar_CheckedChanged(object sender, EventArgs e)
           - async void btnSalvar_Click(object sender, EventArgs e)
           - void btnCancelar_Click(object sender, EventArgs e)
         }
@@ -30,6 +32,7 @@ package Forms
           - void ResizeForm(object sender, EventArgs e)
           - async void ConsultaUsuarioForm_Load(object sender, EventArgs e)
           - void PopulaCampos(Usuario usuario)
+          - void chkRevelar_CheckedChanged(object sender, EventArgs e)
           - void btnFechar_Click(object sender, EventArgs e)
         }
 
@@ -41,6 +44,7 @@ package Forms
           - void ResizeForm(object sender, EventArgs e)
           - async void ExcluirUsuarioForm_Load(object sender, EventArgs e)
           - void PopulaCampos(Usuario usuario)
+          - void chkRevelar_CheckedChanged(object sender, EventArgs e)
           - void btnCancelar_Click(object sender, EventArgs e)
           - async void btnExcluir_Click(object sender, EventArgs e)
         }

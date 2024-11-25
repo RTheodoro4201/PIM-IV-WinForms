@@ -39,7 +39,7 @@ public partial class UsuarioForm : Form
                 dataGridUsuarios.DataSource = usuarios;
                 dataGridUsuarios.AutoGenerateColumns = true;
                 dataGridUsuarios.Columns[0].HeaderText = "Código";
-                dataGridUsuarios.Columns.RemoveAt(2);
+                dataGridUsuarios.Columns.RemoveAt(3);
                 dataGridUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
 

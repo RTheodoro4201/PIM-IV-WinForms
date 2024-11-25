@@ -1,0 +1,47 @@
+﻿@startuml
+    package Forms
+    {
+
+    }
+
+    package Controllers
+    {
+
+    }
+
+    package Models
+    {
+
+    }
+
+    package Repositories
+    {
+
+    }
+
+    package Validator
+    {
+
+    }
+
+Forms .. Controllers
+Forms --> Models
+Forms --> Validator
+
+Controllers --> Validator
+Controllers --> Models
+Controllers --> Repositories
+
+Repositories --> Models
+
+Validator --> Models
+
+note as n1
+As classes do sistema
+foram ocultadas
+para facilitar a
+compreensão
+do diagrama
+end note
+
+@enduml

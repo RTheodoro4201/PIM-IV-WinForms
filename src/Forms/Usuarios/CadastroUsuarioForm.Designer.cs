@@ -40,6 +40,7 @@ partial class CadastroUsuarioForm
         this.lblQuantidadeEstoque = new System.Windows.Forms.Label();
         this.txtSenha = new System.Windows.Forms.TextBox();
         this.lblCadastroUsuario = new System.Windows.Forms.Label();
+        this.chkRevelar = new System.Windows.Forms.CheckBox();
         this.SuspendLayout();
         // 
         // lblCargo
@@ -157,6 +158,19 @@ partial class CadastroUsuarioForm
         this.lblCadastroUsuario.Text = "Cadastrar Usuário";
         this.lblCadastroUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
+        // chkRevelar
+        // 
+        this.chkRevelar.BackColor = System.Drawing.Color.DimGray;
+        this.chkRevelar.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.chkRevelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.chkRevelar.Location = new System.Drawing.Point(296, 145);
+        this.chkRevelar.Name = "chkRevelar";
+        this.chkRevelar.Size = new System.Drawing.Size(96, 30);
+        this.chkRevelar.TabIndex = 79;
+        this.chkRevelar.Text = "Revelar";
+        this.chkRevelar.UseVisualStyleBackColor = false;
+        this.chkRevelar.CheckedChanged += new System.EventHandler(this.chkRevelar_CheckedChanged);
+        // 
         // CadastroUsuarioForm
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -164,6 +178,7 @@ partial class CadastroUsuarioForm
         this.AutoSize = true;
         this.BackColor = System.Drawing.Color.PaleGreen;
         this.ClientSize = new System.Drawing.Size(1350, 685);
+        this.Controls.Add(this.chkRevelar);
         this.Controls.Add(this.lblCadastroUsuario);
         this.Controls.Add(this.lblQuantidadeEstoque);
         this.Controls.Add(this.txtSenha);
@@ -185,6 +200,8 @@ partial class CadastroUsuarioForm
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.CheckBox chkRevelar;
 
     private System.Windows.Forms.Label lblCadastroUsuario;
 

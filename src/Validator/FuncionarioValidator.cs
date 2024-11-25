@@ -7,6 +7,10 @@ namespace PIM_IV_Forms.Validator;
 
 public class FuncionarioValidator : AbstractValidator<Funcionario>
 {
+    private const string RgRegex = @"^\d{2}\.\d{3}\.\d{3}\-\d{1}$";
+    private const string CpfRegex = @"^\d{3}\.\d{3}\.\d{3}\-\d{2}$";
+    private const string TelefoneRegex = @"^\(\d{2}\)\s\d{4,5}-\d{4}$";
+
     public FuncionarioValidator()
     {
         RuleFor(funcionario => funcionario.Nome_Completo)
@@ -20,11 +24,11 @@ public class FuncionarioValidator : AbstractValidator<Funcionario>
 
         RuleFor(funcionario => funcionario.Rg)
             .NotEmpty().WithMessage("O rg deve ser informado.")
-            .Matches(@"^\d{9}$").WithMessage("O rg deve conter exatamente 9 dígitos!");
+            .Matches(RgRegex).WithMessage("O rg informado não é válido.");
 
         RuleFor(funcionario => funcionario.Cpf)
             .NotEmpty().WithMessage("O cpf deve ser informado.")
-            .Matches(@"^\d{11}$").WithMessage("O cpf deve conter exatamente 11 dígitos!");
+            .Matches(CpfRegex).WithMessage("O cpf informado não é válido.");
 
         RuleFor(funcionario => funcionario.Cargo)
             .NotEmpty().WithMessage("O cargo deve ser informado.")
@@ -36,7 +40,7 @@ public class FuncionarioValidator : AbstractValidator<Funcionario>
 
         RuleFor(funcionario => funcionario.Telefone)
             .NotEmpty().WithMessage("O telefone deve ser informado.")
-            .Matches(@"^\d{11}$").WithMessage("O telefone deve conter exatamente 11 dígitos!");
+            .Matches(TelefoneRegex).WithMessage("O telefone informado não é válido.");
 
         RuleFor(funcionario => funcionario.Salario)
             .NotEmpty().WithMessage("O salário deve ser informado.")

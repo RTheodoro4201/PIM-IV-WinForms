@@ -37,6 +37,7 @@ partial class LoginForm
         this.txtSenha = new System.Windows.Forms.TextBox();
         this.lblSenha = new System.Windows.Forms.Label();
         this.btnFechar = new System.Windows.Forms.Button();
+        this.chkRevelar = new System.Windows.Forms.CheckBox();
         this.SuspendLayout();
         // 
         // btnLogar
@@ -112,12 +113,26 @@ partial class LoginForm
         this.btnFechar.UseVisualStyleBackColor = false;
         this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
         // 
+        // chkRevelar
+        // 
+        this.chkRevelar.BackColor = System.Drawing.Color.DimGray;
+        this.chkRevelar.Font = new System.Drawing.Font("Tahoma", 20F);
+        this.chkRevelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.chkRevelar.Location = new System.Drawing.Point(942, 301);
+        this.chkRevelar.Name = "chkRevelar";
+        this.chkRevelar.Size = new System.Drawing.Size(122, 40);
+        this.chkRevelar.TabIndex = 82;
+        this.chkRevelar.Text = "Revelar";
+        this.chkRevelar.UseVisualStyleBackColor = false;
+        this.chkRevelar.CheckedChanged += new System.EventHandler(this.chkRevelar_CheckedChanged);
+        // 
         // LoginForm
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.PaleGreen;
         this.ClientSize = new System.Drawing.Size(1350, 681);
+        this.Controls.Add(this.chkRevelar);
         this.Controls.Add(this.btnFechar);
         this.Controls.Add(this.txtSenha);
         this.Controls.Add(this.lblSenha);
@@ -130,6 +145,8 @@ partial class LoginForm
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.CheckBox chkRevelar;
 
     private System.Windows.Forms.Button btnFechar;
 

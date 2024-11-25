@@ -115,6 +115,14 @@ package Models
         + int Quantidade_Vendida
         + decimal Valor_Total
     }
+
+    class Usuario
+    {
+        + int Id_Usuario
+        + string Login
+        + string Cargo
+        + string Senha
+    }
 }
 
 @enduml

@@ -34,6 +34,19 @@ public partial class LoginForm : Form
         _usuarioController = usuarioController;
     }
 
+    private void chkRevelar_CheckedChanged(object sender, EventArgs e)
+    {
+        if (chkRevelar.Checked)
+        {
+            txtSenha.UseSystemPasswordChar = false;
+        }
+
+        else
+        {
+            txtSenha.UseSystemPasswordChar = true;
+        }
+    }
+
     private void btnFechar_Click(object sender, EventArgs e)
     {
         Close();
@@ -41,23 +54,33 @@ public partial class LoginForm : Form
 
     private async void btnLogar_Click(object sender, EventArgs e)
     {
-        var usuario = await _usuarioController.TestUsuario(txtLogin.Text, txtSenha.Text);
-
-        if (usuario.Login == txtLogin.Text && usuario.Senha == txtSenha.Text)
+        try
         {
-            Hide();
-            var mainForm = new MainForm(_clienteController, _funcionarioController, _fornecedorController,
-                _culturaController, _produtoController, _insumoController,
-                _compraController, _vendaController, _usuarioController);
+            var usuario = await _usuarioController.TestUsuario(txtLogin.Text, txtSenha.Text);
 
-            mainForm.Closed += (s, args) => this.Close();
-            mainForm.Show();
+            if (usuario.Login == txtLogin.Text && usuario.Senha == txtSenha.Text)
+            {
+                Hide();
+                var mainForm = new MainForm(_clienteController, _funcionarioController, _fornecedorController,
+                    _culturaController, _produtoController, _insumoController,
+                    _compraController, _vendaController, _usuarioController);
+
+                mainForm.Closed += (s, args) => Close();
+                mainForm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Login e/ou Senha incorretos, tente novamente.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
-
-        else
+        catch (Exception exception)
         {
-            MessageBox.Show("Login e/ou Senha incorretos, tente novamente.", "Aviso",
-                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Houve um erro ao tentar se conectar ao aplicativo. Tente novamente.", "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Erro: " + exception.Message, "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

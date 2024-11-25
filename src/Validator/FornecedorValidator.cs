@@ -7,7 +7,7 @@ namespace PIM_IV_Forms.Validator;
 public class FornecedorValidator : AbstractValidator<Fornecedor>
 {
     private const string CpfOuCnpjRegex = @"^\d{3}\.\d{3}\.\d{3}\-\d{2}$|^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$";
-    private const string TelefoneRegex = @"^\(\d{2}\)\s\d{5}-\d{4}$";
+    private const string TelefoneRegex = @"^\(\d{2}\)\s\d{4,5}-\d{4}$";
     public FornecedorValidator()
     {
         RuleFor(fornecedor => fornecedor.Nome)
@@ -25,7 +25,7 @@ public class FornecedorValidator : AbstractValidator<Fornecedor>
 
         RuleFor(fornecedor => fornecedor.Telefone)
             .NotEmpty().WithMessage("O telefone deve ser informado.")
-            .Matches(TelefoneRegex).WithMessage("O telefone deve conter exatamente 11 dígitos.");
+            .Matches(TelefoneRegex).WithMessage("O telefone informado não é válido.");
 
         RuleFor(fornecedor => fornecedor.Data_Inicial)
             .NotEmpty().WithMessage("A data inicial deve ser informada.");

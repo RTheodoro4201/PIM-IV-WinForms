@@ -42,6 +42,7 @@ partial class ExcluirUsuarioForm
         this.lblExcluirUsuario = new System.Windows.Forms.Label();
         this.lblId = new System.Windows.Forms.Label();
         this.txtId = new System.Windows.Forms.TextBox();
+        this.chkRevelar = new System.Windows.Forms.CheckBox();
         this.SuspendLayout();
         // 
         // lblCargo
@@ -147,6 +148,7 @@ partial class ExcluirUsuarioForm
         this.txtSenha.Size = new System.Drawing.Size(170, 30);
         this.txtSenha.TabIndex = 74;
         this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        this.txtSenha.UseSystemPasswordChar = true;
         // 
         // lblExcluirUsuario
         // 
@@ -186,6 +188,19 @@ partial class ExcluirUsuarioForm
         this.txtId.TabIndex = 80;
         this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
+        // chkRevelar
+        // 
+        this.chkRevelar.BackColor = System.Drawing.Color.DimGray;
+        this.chkRevelar.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.chkRevelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.chkRevelar.Location = new System.Drawing.Point(296, 146);
+        this.chkRevelar.Name = "chkRevelar";
+        this.chkRevelar.Size = new System.Drawing.Size(96, 30);
+        this.chkRevelar.TabIndex = 81;
+        this.chkRevelar.Text = "Revelar";
+        this.chkRevelar.UseVisualStyleBackColor = false;
+        this.chkRevelar.CheckedChanged += new System.EventHandler(this.chkRevelar_CheckedChanged);
+        // 
         // ExcluirUsuarioForm
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -193,6 +208,7 @@ partial class ExcluirUsuarioForm
         this.AutoSize = true;
         this.BackColor = System.Drawing.Color.PaleGreen;
         this.ClientSize = new System.Drawing.Size(1350, 685);
+        this.Controls.Add(this.chkRevelar);
         this.Controls.Add(this.txtId);
         this.Controls.Add(this.lblId);
         this.Controls.Add(this.lblExcluirUsuario);
@@ -216,6 +232,8 @@ partial class ExcluirUsuarioForm
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.CheckBox chkRevelar;
 
     private System.Windows.Forms.TextBox txtId;
 

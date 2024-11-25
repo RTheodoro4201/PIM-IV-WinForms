@@ -33,7 +33,7 @@ partial class ConsultaUsuarioForm
     {
         this.lblCargo = new System.Windows.Forms.Label();
         this.lblLogin = new System.Windows.Forms.Label();
-        this.txtDescricao = new System.Windows.Forms.TextBox();
+        this.txtCargo = new System.Windows.Forms.TextBox();
         this.btnFechar = new System.Windows.Forms.Button();
         this.txtLogin = new System.Windows.Forms.TextBox();
         this.lblConsultaUsuario = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@ partial class ConsultaUsuarioForm
         this.txtId = new System.Windows.Forms.TextBox();
         this.lblSenha = new System.Windows.Forms.Label();
         this.txtSenha = new System.Windows.Forms.TextBox();
+        this.chkRevelar = new System.Windows.Forms.CheckBox();
         this.SuspendLayout();
         // 
         // lblCargo
@@ -71,14 +72,14 @@ partial class ConsultaUsuarioForm
         this.lblLogin.Text = "Login";
         this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
         // 
-        // txtDescricao
+        // txtCargo
         // 
-        this.txtDescricao.Font = new System.Drawing.Font("Tahoma", 14F);
-        this.txtDescricao.Location = new System.Drawing.Point(114, 109);
-        this.txtDescricao.Name = "txtDescricao";
-        this.txtDescricao.ReadOnly = true;
-        this.txtDescricao.Size = new System.Drawing.Size(365, 30);
-        this.txtDescricao.TabIndex = 43;
+        this.txtCargo.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.txtCargo.Location = new System.Drawing.Point(114, 109);
+        this.txtCargo.Name = "txtCargo";
+        this.txtCargo.ReadOnly = true;
+        this.txtCargo.Size = new System.Drawing.Size(365, 30);
+        this.txtCargo.TabIndex = 43;
         // 
         // btnFechar
         // 
@@ -166,6 +167,20 @@ partial class ConsultaUsuarioForm
         this.txtSenha.ReadOnly = true;
         this.txtSenha.Size = new System.Drawing.Size(170, 30);
         this.txtSenha.TabIndex = 81;
+        this.txtSenha.UseSystemPasswordChar = true;
+        // 
+        // chkRevelar
+        // 
+        this.chkRevelar.BackColor = System.Drawing.Color.DimGray;
+        this.chkRevelar.Font = new System.Drawing.Font("Tahoma", 14F);
+        this.chkRevelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.chkRevelar.Location = new System.Drawing.Point(296, 145);
+        this.chkRevelar.Name = "chkRevelar";
+        this.chkRevelar.Size = new System.Drawing.Size(96, 30);
+        this.chkRevelar.TabIndex = 83;
+        this.chkRevelar.Text = "Revelar";
+        this.chkRevelar.UseVisualStyleBackColor = false;
+        this.chkRevelar.CheckedChanged += new System.EventHandler(this.chkRevelar_CheckedChanged);
         // 
         // ConsultaUsuarioForm
         // 
@@ -174,6 +189,7 @@ partial class ConsultaUsuarioForm
         this.AutoSize = true;
         this.BackColor = System.Drawing.Color.PaleGreen;
         this.ClientSize = new System.Drawing.Size(1350, 685);
+        this.Controls.Add(this.chkRevelar);
         this.Controls.Add(this.lblSenha);
         this.Controls.Add(this.txtSenha);
         this.Controls.Add(this.txtId);
@@ -183,7 +199,7 @@ partial class ConsultaUsuarioForm
         this.Controls.Add(this.btnFechar);
         this.Controls.Add(this.lblCargo);
         this.Controls.Add(this.lblLogin);
-        this.Controls.Add(this.txtDescricao);
+        this.Controls.Add(this.txtCargo);
         this.MaximizeBox = false;
         this.Name = "ConsultaUsuarioForm";
         this.ShowIcon = false;
@@ -196,6 +212,8 @@ partial class ConsultaUsuarioForm
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.CheckBox chkRevelar;
 
     private System.Windows.Forms.Label lblSenha;
     private System.Windows.Forms.TextBox txtSenha;
@@ -212,7 +230,7 @@ partial class ConsultaUsuarioForm
 
     private System.Windows.Forms.Label lblCargo;
     private System.Windows.Forms.Label lblLogin;
-    private System.Windows.Forms.TextBox txtDescricao;
+    private System.Windows.Forms.TextBox txtCargo;
 
     #endregion
 }

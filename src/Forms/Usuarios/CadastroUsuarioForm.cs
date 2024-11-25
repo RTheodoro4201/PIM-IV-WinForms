@@ -27,6 +27,19 @@ public partial class CadastroUsuarioForm : Form
         ResizeForm(this, null);
     }
 
+    private void chkRevelar_CheckedChanged(object sender, EventArgs e)
+    {
+        if (chkRevelar.Checked)
+        {
+            txtSenha.UseSystemPasswordChar = false;
+        }
+
+        else
+        {
+            txtSenha.UseSystemPasswordChar = true;
+        }
+    }
+
     #region Métodos de Click
 
     private async void btnSalvar_Click(object sender, EventArgs e)

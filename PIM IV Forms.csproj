@@ -644,9 +644,15 @@
       <PackageReference Include="System.Xml.XDocument" Version="4.3.0" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Docs\Diagramas\Casos de Uso\" />
-    </ItemGroup>
-    <ItemGroup>
+      <Content Include="Docs\Diagramas\Casos de Uso\Clientes.puml" />
+      <Content Include="Docs\Diagramas\Casos de Uso\Compras.puml" />
+      <Content Include="Docs\Diagramas\Casos de Uso\Culturas.puml" />
+      <Content Include="Docs\Diagramas\Casos de Uso\Fornecedores.puml" />
+      <Content Include="Docs\Diagramas\Casos de Uso\Funcionario.puml" />
+      <Content Include="Docs\Diagramas\Casos de Uso\Insumo.puml" />
+      <Content Include="Docs\Diagramas\Casos de Uso\Produtos.puml" />
+      <Content Include="Docs\Diagramas\Casos de Uso\Usuarios.puml" />
+      <Content Include="Docs\Diagramas\Casos de Uso\Vendas.puml" />
       <Content Include="Docs\Diagramas\Classes\Controllers\Controllers.puml" />
       <Content Include="Docs\Diagramas\Classes\Forms\Clientes.puml" />
       <Content Include="Docs\Diagramas\Classes\Forms\Compras.puml" />
@@ -654,6 +660,7 @@
       <Content Include="Docs\Diagramas\Classes\Forms\Fornecedores.puml" />
       <Content Include="Docs\Diagramas\Classes\Forms\Funcionarios.puml" />
       <Content Include="Docs\Diagramas\Classes\Forms\Insumos.puml" />
+      <Content Include="Docs\Diagramas\Classes\Forms\LoginForm.puml" />
       <Content Include="Docs\Diagramas\Classes\Forms\MainForm.puml" />
       <Content Include="Docs\Diagramas\Classes\Forms\Produtos.puml" />
       <Content Include="Docs\Diagramas\Classes\Forms\Usuarios.puml" />
@@ -661,6 +668,8 @@
       <Content Include="Docs\Diagramas\Classes\Models\Models.puml" />
       <Content Include="Docs\Diagramas\Classes\Repositories\Repositories.plantuml" />
       <Content Include="Docs\Diagramas\Classes\Validator\Validator.plantuml" />
+      <Content Include="Docs\Diagramas\Pacotes\Pacotes.puml" />
+      <Content Include="src\SQL\PIM IV DB.sql" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>

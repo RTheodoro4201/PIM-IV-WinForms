@@ -44,6 +44,21 @@ public partial class ConsultaUsuarioForm : Form
     private void PopulaCampos(Usuario usuario)
     {
         txtLogin.Text = usuario.Login;
+        txtCargo.Text = usuario.Cargo;
+        txtSenha.Text = usuario.Senha;
+    }
+
+    private void chkRevelar_CheckedChanged(object sender, EventArgs e)
+    {
+        if (chkRevelar.Checked)
+        {
+            txtSenha.UseSystemPasswordChar = false;
+        }
+
+        else
+        {
+            txtSenha.UseSystemPasswordChar = true;
+        }
     }
 
     #region Métodos de Click
