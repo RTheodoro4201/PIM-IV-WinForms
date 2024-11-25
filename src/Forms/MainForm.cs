@@ -8,6 +8,7 @@ using PIM_IV_Forms.Forms.Fornecedores;
 using PIM_IV_Forms.Forms.Funcionarios;
 using PIM_IV_Forms.Forms.Insumos;
 using PIM_IV_Forms.Forms.Produtos;
+using PIM_IV_Forms.Forms.Usuarios;
 using PIM_IV_Forms.Forms.Vendas;
 
 namespace PIM_IV_Forms.Forms;
@@ -22,11 +23,13 @@ public partial class MainForm : Form
     private readonly InsumoController _insumoController;
     private readonly CompraController _compraController;
     private readonly VendaController _vendaController;
+    private readonly UsuarioController _usuarioController;
 
     public MainForm(ClienteController clienteController, FuncionarioController funcionarioController,
         FornecedorController fornecedorController, CulturaController culturaController,
         ProdutoController produtoController, InsumoController insumoController,
-        CompraController compraController, VendaController vendaController)
+        CompraController compraController, VendaController vendaController,
+        UsuarioController usuarioController)
     {
         InitializeComponent();
         _clienteController = clienteController;
@@ -37,6 +40,7 @@ public partial class MainForm : Form
         _insumoController = insumoController;
         _compraController = compraController;
         _vendaController = vendaController;
+        _usuarioController = usuarioController;
     }
 
     private void MainForm_Resize(object sender, EventArgs e)
@@ -149,6 +153,15 @@ public partial class MainForm : Form
         {
             var vendaForm = new VendaForm(_vendaController);
             vendaForm.Show();
+        }
+    }
+
+    private void btnUsuario_Click(object sender, EventArgs e)
+    {
+        if (_usuarioController != null)
+        {
+            var usuarioForm = new UsuarioForm(_usuarioController);
+            usuarioForm.Show();
         }
     }
 }

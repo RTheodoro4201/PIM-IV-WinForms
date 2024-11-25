@@ -1,0 +1,74 @@
+﻿@startuml
+package Controllers
+{
+    class ClienteController
+
+    class CompraController
+
+    class CulturaController
+
+    class FornecedorController
+
+    class FuncionarioController
+
+    class InsumoController
+
+    class ProdutoController
+
+    class VendaController
+
+    class UsuarioController
+}
+
+package Forms
+{
+    class MainForm
+
+    class LoginForm {
+      - ClienteController _clienteController
+      - FuncionarioController _funcionarioController
+      - FornecedorController _fornecedorController
+      - CulturaController _culturaController
+      - ProdutoController _produtoController
+      - InsumoController _insumoController
+      - CompraController _compraController
+      - VendaController _vendaController
+      - UsuarioController _usuarioController
+      + LoginForm()
+      - void chkRevelar_CheckedChanged(object sender, EventArgs e)
+      - void btnFechar_Click(object sender, EventArgs e)
+      - async void btnLogar_Click(object sender, EventArgs e)
+    }
+
+    note left of LoginForm
+      O construtor recebe os seguintes controladores como parâmetros:
+      * ClienteController
+      * FuncionarioController
+      * FornecedorController
+      * CulturaController
+      * ProdutoController
+      * InsumoController
+      * CompraController
+      * VendaController
+      * UsuarioController
+    end note
+
+        LoginForm .. MainForm
+    LoginForm -right-> ClienteController
+        LoginForm --> FuncionarioController
+        LoginForm --> FornecedorController
+        LoginForm --> CulturaController
+        LoginForm --> ProdutoController
+        LoginForm --> InsumoController
+        LoginForm --> CompraController
+        LoginForm --> VendaController
+        LoginForm .. UsuarioController
+
+        ClienteController -down[hidden]-> CompraController
+        CompraController -down[hidden]-> CulturaController
+        FornecedorController -down[hidden]-> FuncionarioController
+        FuncionarioController -down[hidden]-> ProdutoController
+        UsuarioController -down[hidden]-> VendaController
+        VendaController -down[hidden]-> InsumoController
+}
+@enduml

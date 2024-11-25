@@ -1,0 +1,140 @@
+﻿@startuml
+
+package Controllers
+{
+    class ClienteController
+
+    class CompraController
+
+    class CulturaController
+
+    class FornecedorController
+
+    class FuncionarioController
+
+    class InsumoController
+
+    class ProdutoController
+
+    class VendaController
+
+    class UsuarioController
+}
+
+package Forms
+{
+    class MainForm {
+      - ClienteController _clienteController
+      - FuncionarioController _funcionarioController
+      - FornecedorController _fornecedorController
+      - CulturaController _culturaController
+      - ProdutoController _produtoController
+      - InsumoController _insumoController
+      - CompraController _compraController
+      - VendaController _vendaController
+      + MainForm()
+      - void MainForm_Resize(object sender, EventArgs e)
+      - void btnClienteFisico_Click(object sender, EventArgs e)
+      - void btnClienteJuridico_Click(object sender, EventArgs e)
+      - void btnCliente_Click(object sender, EventArgs e)
+      - void btnFuncionario_Click(object sender, EventArgs e)
+      - void btnFornecedorFisico_Click(object sender, EventArgs e)
+      - void btnFornecedorJurídico_Click(object sender, EventArgs e)
+      - void btnFornecedor_Click(object sender, EventArgs e)
+      - void btnCultura_Click(object sender, EventArgs e)
+      - void btnProduto_Click(object sender, EventArgs e)
+      - void btnInsumo_Click(object sender, EventArgs e)
+      - void btnCompras_Click(object sender, EventArgs e)
+      - void btnVendas_Click(object sender, EventArgs e)
+    }
+
+    package Clientes
+    {
+        class ClienteForm
+    }
+
+    package Compras
+        {
+            class CompraForm
+        }
+
+    package Culturas
+        {
+            class CulturaForm
+        }
+
+    package Fornecedores
+        {
+            class FornecedorForm
+        }
+
+    package Funcionarios
+            {
+                class FuncionarioForm
+            }
+
+    package Insumos
+            {
+                class InsumoForm
+            }
+
+    package Produtos
+            {
+                class ProdutoForm
+            }
+
+    package Vendas
+            {
+                class VendaForm
+            }
+
+    package Usuarios
+    {
+        class UsuarioForm
+    }
+
+    note left of MainForm
+          O construtor recebe os seguintes controladores como parâmetros:
+          * ClienteController
+          * FuncionarioController
+          * FornecedorController
+          * CulturaController
+          * ProdutoController
+          * InsumoController
+          * CompraController
+          * VendaController
+          * UsuarioController
+        end note
+
+    MainForm -right-> ClienteController
+    MainForm --> ClienteForm
+    MainForm --> FuncionarioController
+    MainForm --> FuncionarioForm
+    MainForm --> FornecedorController
+    MainForm --> FornecedorForm
+    MainForm --> CulturaController
+    MainForm --> CulturaForm
+    MainForm --> ProdutoController
+    MainForm --> ProdutoForm
+    MainForm --> InsumoController
+    MainForm --> InsumoForm
+    MainForm --> CompraController
+    MainForm --> CompraForm
+    MainForm --> VendaController
+    MainForm --> VendaForm
+    MainForm --> UsuarioController
+    MainForm --> UsuarioForm
+    ClienteController -down[hidden]-> CompraController
+    CompraController -down[hidden]-> CulturaController
+    FornecedorController -down[hidden]-> FuncionarioController
+    FuncionarioController -down[hidden]-> ProdutoController
+    UsuarioController -down[hidden]-> VendaController
+    VendaController -down[hidden]-> InsumoController
+
+    Usuarios -down[hidden]-> Vendas
+    Produtos -down[hidden]-> Insumos
+    Fornecedores -down[hidden]-> Funcionarios
+    Clientes -down[hidden]-> Compras
+}
+
+@enduml

@@ -1,0 +1,125 @@
+@startuml Repositories
+
+package Repositories
+{
+    class ClienteRepository
+    {
+    + ClienteRepository(IDbConnection dbConnection)
+    + async Task<IEnumerable<Cliente>> GetAll()
+    + async Task<IEnumerable<Cliente>> GetAllFisico()
+    + async Task<IEnumerable<Cliente>> GetAllJuridico()
+    + async Task<Cliente> GetById(int id)
+    + async Task Add(Cliente entity)
+    + async Task Update(Cliente entity)
+    + async Task Delete(int id)
+    }
+
+    class CompraRepository
+    {
+        + CompraRepository(IDbConnection dbConnection)
+        + async Task<IEnumerable<Compra>> GetAll()
+        + async Task<Compra> GetById(int id)
+        + async Task Add(Compra entity)
+        + async Task Update(Compra entity)
+        + async Task Delete(int id)
+    }
+
+    class CulturaRepository
+    {
+        + CulturaRepository(IDbConnection dbConnection)
+        + async Task<IEnumerable<Cultura>> GetAll()
+        + async Task<Cultura> GetById(int id)
+        + async Task Add(Cultura entity)
+        + async Task Update(Cultura entity)
+        + async Task Delete(int id)
+    }
+
+    class FornecedorRepository
+    {
+        + FornecedorRepository(IDbConnection dbConnection)
+        + async Task<IEnumerable<Fornecedor>> GetAllFisico()
+        + async Task<IEnumerable<Fornecedor>> GetAllJuridico()
+        + async Task<IEnumerable<Fornecedor>> GetAll()
+        + async Task<Fornecedor> GetById(int id)
+        + async Task Add(Fornecedor entity)
+        + async Task Update(Fornecedor entity)
+        + async Task Delete(int id)
+    }
+
+    class FuncionarioRepository
+    {
+        + FuncionarioRepository(IDbConnection dbConnection)
+        + async Task<IEnumerable<Funcionario>> GetAll()
+        + async Task<Funcionario> GetById(int id)
+        + async Task Add(Funcionario entity)
+        + async Task Update(Funcionario entity)
+        + async Task Delete(int id)
+    }
+
+    interface IClienteRepository
+    {
+        Task<IEnumerable<Cliente>> GetAllFisico()
+        Task<IEnumerable<Cliente>> GetAllJuridico()
+    }
+
+    interface IFornecedorRepository
+    {
+        Task<IEnumerable<Fornecedor>> GetAllFisico()
+        Task<IEnumerable<Fornecedor>> GetAllJuridico()
+    }
+
+    interface IInsumoRepository
+    {
+        Task UpdateEstoque(Insumo insumo)
+    }
+
+    interface IProdutoRepository
+    {
+        Task UpdateEstoque(Produto produto)
+    }
+
+    interface IRepository<T>
+    {
+        Task<Enumerable<T>> GetAll()
+        Task<T> GetById(int id)
+        Task Add(T entity)
+        Task Update(T entity)
+        Task Delete(int id)
+    }
+
+    class InsumoRepository
+    {
+        + InsumoRepository(IDbConnection dbConnection)
+        + async Task<Enumerable<Insumo>> GetAll()
+        + async Task<Insumo> GetById(int id)
+        + async Task Add(Insumo entity)
+        + async Task Update(Insumo entity)
+        + async Task Delete(int id)
+        + async Task UpdateEstoque(Insumo insumo)
+    }
+
+    class ProdutoRepository
+    {
+        + ProdutoRepository(IDbConection dbConnection)
+        + async Task<IEnumerable<Produto>> GetAll()
+        + async Task<Produto> GetById(int id)
+        + async Task Add(Produto entity)
+        + async Task Update(Produto entity)
+        + async Task Delete(int id)
+        + async Task UpdateEstoque(Produto produto)
+    }
+
+    class VendaRepository
+    {
+        + VendaRepository(IDbConnection dbConnection)
+        + async Task<IEnumerable<Venda>> GetAll()
+        + async Task<Venda> GetById(int id)
+        + async Task Add(Venda entity)
+        + async Task Update(Venda entity)
+        + async Task Delete(int id)
+    }
+}
+
+
+
+@enduml

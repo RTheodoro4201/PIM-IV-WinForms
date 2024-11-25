@@ -1,0 +1,70 @@
+﻿@startuml
+
+package Forms
+{
+    package Funcionarios
+    {
+        class AlteraFuncionarioForm {
+          - FuncionarioController _funcionarioController
+          - int _funcionarioId
+          - Funcionario _funcionario
+          + AlteraFuncionarioForm(FuncionarioController funcionarioController, int funcionarioId)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void AlteraFuncionarioForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Endereco endereco, Funcionario funcionario)
+          - void txtSalario_Leave(object sender, EventArgs e)
+          - void dateDataNascimento_ValueChanged(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class CadastroFuncionarioForm {
+          - FuncionarioController _funcionarioController
+          + CadastroFuncionarioForm(FuncionarioController funcionarioController)
+          - void CadastroFuncionarioForm_Load(object sender, EventArgs e)
+          - void dateDataNascimento_ValueChanged(object sender, EventArgs e)
+          - void txtSalario_Leave(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class ConsultaFuncionarioForm {
+          - FuncionarioController _funcionarioController
+          - int _funcionarioId
+          - Funcionario _funcionario
+          + ConsultaFuncionarioForm(FuncionarioController funcionarioController, int funcionarioId)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ConsultaFuncionarioForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Endereco endereco, Funcionario funcionario)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+
+        class ExcluirFuncionarioForm {
+          - FuncionarioController _funcionarioController
+          - int _funcionarioId
+          - Funcionario _funcionario
+          + ExcluirFuncionarioForm(FuncionarioController funcionarioController, int funcionarioId)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void ExcluirFuncionarioForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Endereco endereco, Funcionario funcionario)
+          - void btnCancelar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+        }
+
+        class FuncionarioForm {
+          - FuncionarioController _funcionarioController
+          + FuncionarioForm(FuncionarioController funcionarioController)
+          - void ResizeForm(object sender, EventArgs e)
+          - async void FuncionarioForm_Load(object sender, EventArgs e)
+          - async Task CarregarGrid()
+          - bool VerificarSelecao()
+          - async void btnCadastrar_Click(object sender, EventArgs e)
+          - async void btnAlterar_Click(object sender, EventArgs e)
+          - async void btnConsultar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+    }
+}
+
+@enduml

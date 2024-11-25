@@ -16,7 +16,7 @@ public partial class CadastroClienteForm : Form
         _clienteController = clienteController;
     }
 
-    private void CadastroClienteFisicoForm_Load(object sender, EventArgs e)
+    private void CadastroClienteForm_Load(object sender, EventArgs e)
     {
         ResizeForm(this, null);
     }

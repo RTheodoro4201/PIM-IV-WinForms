@@ -1,0 +1,11 @@
+﻿@startuml
+left to right direction
+actor "Usuário" as Usuario
+
+rectangle Fornecedores {
+  Usuario -> (Cadastrar Fornecedor)
+  Usuario -> (Alterar Fornecedor)
+  Usuario -> (Consultar Fornecedor)
+  Usuario -> (Excluir Fornecedor)
+}
+@enduml

@@ -1,0 +1,66 @@
+﻿@startuml
+
+package Forms
+{
+    package Culturas
+    {
+        class AlteraCulturaForm {
+          - CulturaController _culturaController
+          - int _idCultura
+          + AlteraCulturaForm(CulturaController culturaController, int idCultura)
+          + void ResizeForm(object sender, EventArgs e)
+          + async void AlteraCulturaForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Cultura cultura)
+          - void dateDataColheita_ValueChanged(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class CadastroCulturaForm {
+          - CulturaController _culturaController
+          + CadastroCulturaForm(CulturaController culturaController)
+          + void ResizeForm(object sender, EventArgs e)
+          + void CadastroCulturaForm_Load(object sender, EventArgs e)
+          - void dateDataColheita_ValueChanged(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class ConsultaCulturaForm {
+          - CulturaController _culturaController
+          - int _idCultura
+          + ConsultaCulturaForm(CulturaController culturaController, int idCultura)
+          + void ResizeForm(object sender, EventArgs e)
+          + async void ConsultaCulturaForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Cultura cultura)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+
+        class CulturaForm {
+          - CulturaController _culturaController
+          + CulturaForm(CulturaController culturaController)
+          + void ResizeForm(object sender, EventArgs e)
+          + async void CulturaForm_Load(object sender, EventArgs e)
+          - async Task CarregarGrid()
+          - bool VerificarSelecao()
+          - async void btnCadastrar_Click(object sender, EventArgs e)
+          - async void btnAlterar_Click(object sender, EventArgs e)
+          - async void btnConsultar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+
+        class ExcluirCulturaForm {
+          - CulturaController _culturaController
+          - int _idCultura
+          - Cultura _cultura
+          + ExcluirCulturaForm(CulturaController culturaController, int idCultura)
+          + void ResizeForm(object sender, EventArgs e)
+          + async void ExcluirCulturaForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Cultura cultura)
+          - void btnFechar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+        }
+    }
+}
+@enduml

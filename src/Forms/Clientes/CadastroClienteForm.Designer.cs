@@ -439,7 +439,7 @@ partial class CadastroClienteForm
         this.ShowIcon = false;
         this.Text = "Cadastrar Cliente";
         this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-        this.Load += new System.EventHandler(this.CadastroClienteFisicoForm_Load);
+        this.Load += new System.EventHandler(this.CadastroClienteForm_Load);
         this.ResizeBegin += new System.EventHandler(this.ResizeForm);
         this.ResizeEnd += new System.EventHandler(this.ResizeForm);
         this.Resize += new System.EventHandler(this.ResizeForm);

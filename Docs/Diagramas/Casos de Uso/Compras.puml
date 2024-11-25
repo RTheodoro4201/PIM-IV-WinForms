@@ -1,0 +1,11 @@
+﻿@startuml
+left to right direction
+actor "Usuário" as Usuario
+
+rectangle Compras {
+  Usuario -> (Cadastrar Compra)
+  Usuario -> (Alterar Compra)
+  Usuario -> (Consultar Compra)
+  Usuario -> (Excluir Compra)
+}
+@enduml
