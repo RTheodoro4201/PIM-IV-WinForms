@@ -1,0 +1,120 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+
+package Models
+{
+    class Cliente
+    {
+        + int Id_Cliente
+        + string Nome
+        + string Tipo
+        + string Documento
+        + string Email
+        + string Telefone
+        + string Endereco
+        + DateTime Data_Inicial
+    }
+
+    class Compra
+    {
+        + int Id_Compra
+        + int Id_Fornecedor
+        + string Nome_Fornecedor
+        + DateTime Data_Compra
+        + int Id_Insumo
+        + string Nome_Insumo
+        + int Quantidade_Comprada
+        + decimal Valor_Unitario
+        + decimal Valor_Total
+    }
+
+    class Cultura
+    {
+        + int Id_Cultura
+        + string Nome
+        + DateTime Data_Plantio
+        + DateTime Data_Colheita
+        + double Area_Plantada
+        + int Quantidade_Plantada
+        + string Tipo_Solo
+        + string Tipo_Irrigacao
+        + string Notas
+    }
+
+    class Endereco
+    {
+        + string Logradouro
+        + string Numero
+        + string Complemento
+        + string Bairro
+        + string Cidade
+        + string Uf
+        + string Cep
+        + static Endereco ToEndereco(string endereco)
+        + override string ToString()
+    }
+
+    class Fornecedor
+    {
+        + string int Id_Fornecedor
+        + string Nome
+        + string Documento
+        + string Telefone
+        + string Email
+        + string Endereco
+        + string Tipo
+        + DateTime Data_Inicial
+    }
+
+    class Funcionario
+    {
+        + int Id_Funcionario
+        + string Nome_Completo
+        + string Rg
+        + string Cpf
+        + string Cargo
+        + string Email
+        + string Telefone
+        + string Endereco
+        + decimal Salario
+        + DateTime Data_Admissao
+    }
+
+    class Id_Insumo
+    {
+        + int Id_Insumo
+        + string Nome
+        + string Descricao
+        + int Quantidade_Estoque
+        + DateTime Data_Compra
+        + DateTime Data_Validade
+        + int Id_Fornecedor
+        + string Nome_Fornecedor
+    }
+
+    class Produto
+    {
+        + int Id_Produto
+        + string Nome
+        + string Descricao
+        + int Quantidade_Estoque
+        + decimal Preco_Unitario
+        + public DateTime Data_Validade
+    }
+
+    class Venda
+    {
+        + int Id_Venda
+        + int Id_Cliente
+        + string Nome_Cliente
+        + int Id_Produto
+        + string Nome_Produto
+        + string Descricao_Produto
+        + DateTime Data_Venda
+        + decimal Valor_Unitario
+        + int Quantidade_Vendida
+        + decimal Valor_Total
+    }
+}
+
+@enduml

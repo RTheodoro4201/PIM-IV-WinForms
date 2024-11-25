@@ -1,0 +1,77 @@
+﻿@startuml CompraForm
+
+package Forms
+{
+    package Compras
+    {
+
+        class AlteraCompraForm {
+          - CompraController _compraController
+          - int _idCompra
+          - Compra _compra
+          + AlteraCompraForm(CompraController compraController, int idCompra)
+          + void ResizeForm(object sender, EventArgs e)
+          + async void AlteraCompraForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Compra compra)
+          - async void txtIdFornecedor_Leave(object sender, EventArgs e)
+          - async void txtIdInsumo_Leave(object sender, EventArgs e)
+          - void txtQuantidadeComprada_Leave(object sender, EventArgs e)
+          - void txtValorUnitario_Leave(object sender, EventArgs e)
+          - void txtValorUnitario_Enter(object sender, EventArgs e)
+          - void dateDataCompra_Leave(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class CadastroCompraForm {
+          - CompraController _compraController
+          + CadastroCompraForm(CompraController compraController)
+          + void ResizeForm(object sender, EventArgs e)
+          + void CadastroCompraForm_Load(object sender, EventArgs e)
+          - async void txtIdFornecedor_Leave(object sender, EventArgs e)
+          - async void txtIdInsumo_Leave(object sender, EventArgs e)
+          - void txtValorUnitario_Leave(object sender, EventArgs e)
+          - void dateDataCompra_Leave(object sender, EventArgs e)
+          - async void btnSalvar_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+
+        class CompraForm {
+          - CompraController _compraController
+          + CompraForm(CompraController compraController)
+          + void ResizeForm(object sender, EventArgs e)
+          + async void CompraForm_Load(object sender, EventArgs e)
+          - async Task CarregarGrid()
+          - bool VerificarSelecao()
+          - async void btnCadastrar_Click(object sender, EventArgs e)
+          - async void btnAlterar_Click(object sender, EventArgs e)
+          - async void btnConsultar_Click(object sender, EventArgs e)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+
+        class ConsultaCompraForm {
+          - CompraController _compraController
+          - int _idCompra
+          + ConsultaCompraForm(CompraController compraController, int idCompra)
+          + void ResizeForm(object sender, EventArgs e)
+          + async void ConsultaCompraForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Compra compra)
+          - void btnFechar_Click(object sender, EventArgs e)
+        }
+
+        class ExcluirCompraForm {
+          - CompraController _compraController
+          - int _idCompra
+          - Compra _compra
+          + ExcluirCompraForm(CompraController compraController, int idCompra)
+          + void ResizeForm(object sender, EventArgs e)
+          + async void ExcluirCompraForm_Load(object sender, EventArgs e)
+          - void PopulaCampos(Compra compra)
+          - async void btnExcluir_Click(object sender, EventArgs e)
+          - void btnCancelar_Click(object sender, EventArgs e)
+        }
+    }
+}
+
+@enduml

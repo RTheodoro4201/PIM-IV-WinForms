@@ -33,6 +33,7 @@ internal static class Program
         builder.RegisterType<InsumoRepository>().As<IInsumoRepository>();
         builder.RegisterType<CompraRepository>().As<IRepository<Compra>>();
         builder.RegisterType<VendaRepository>().As<IRepository<Venda>>();
+        builder.RegisterType<UsuarioRepository>().As<IUsuarioRepository>();
 
         builder.RegisterType<ClienteController>();
         builder.RegisterType<FuncionarioController>();
@@ -42,7 +43,8 @@ internal static class Program
         builder.RegisterType<InsumoController>();
         builder.RegisterType<CompraController>();
         builder.RegisterType<VendaController>();
-        builder.RegisterType<MainForm>();
+        builder.RegisterType<UsuarioController>();
+        builder.RegisterType<LoginForm>();
 
         var container = builder.Build();
 
@@ -50,7 +52,7 @@ internal static class Program
         Application.SetCompatibleTextRenderingDefault(false);
 
         using var scope = container.BeginLifetimeScope();
-        var form = scope.Resolve<MainForm>();
+        var form = scope.Resolve<LoginForm>();
         Application.Run(form);
     }
 }

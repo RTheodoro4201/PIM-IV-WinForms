@@ -1,0 +1,95 @@
+﻿@startuml
+
+package Controllers
+{
+    class ClienteController
+    {
+        + ClienteController(IClienteRepository clienteRepository)
+        + async Task<bool> Create(Cliente cliente, Endereco enderecoCliente)
+        + async Task<IEnumerable<Cliente>> IndexAll()
+        + async Task<IEnumerable<Cliente>> IndexFisico()
+        + async Task<IEnumerable<Cliente>> IndexJuridico()
+        + async Task<Cliente> SearchCliente(int clienteId)
+        + async Task<bool> Edit(Cliente cliente, Endereco, enderecoCliente)
+        + async Task<bool> Delete(int id)
+    }
+
+    class CompraController
+    {
+        + CompraController(IRepository<Compra> compraRepository, IFornecedorRepository fornecedorRepository, IInsumoRepository insumoRepository)
+        + async Task<bool> Create(Compra compra)
+        + async Task<IEnumerable<Compra>> Index()
+        + async Task<Compra> SearchCompra(int compraId)
+        + async Task<Fornecedor SearchFornecedor(int idFornecedor)
+        + async Task<Insumo> SearchInsumo(int idInsumo)
+        + async Task<bool> Edit(Compra compra)
+        + async Task<bool> Delete(int id)
+    }
+
+    class CulturaController
+    {
+        + CulturaController(IRepository<Cultura> culturaRepository)
+        + async Task<bool Create(Cultura cultura)
+        + async Task<IEnumerable<Cultura>> Index()
+        + async Task<Cultura> SearchCultura(int culturaId)
+        + async Task<bool Edit(Cultura cultura)
+        + async Task<bool Delete(int id)
+    }
+
+    class FornecedorController
+    {
+        + FornecedorController(IFornecedorRepository fornecedorRepository)
+        + async Task<bool> Create(Fornecedor fornecedor, Endereco enderecoFornecedor)
+        + async Task<IEnumerable<Fornecedor>> IndexAll()
+        + async Task<IEnumerable<Fornecedor>> IndexFisico()
+        + async Task<IEnumerable<Fornecedor>> IndexJuridico()
+        + async Task<Fornecedor> SearchFornecedor(int fornecedorId)
+        + async Task<bool> Edit(Fornecedor fornecedor, Endereco, enderecoFornecedor)
+        + async Task<bool> Delete(int id)
+    }
+
+    class FuncionarioController
+    {
+        + FuncionarioController(IFuncionarioRepository funcionarioRepository)
+        + async Task<bool> Create(Funcionario funcionario, Endereco enderecoFuncionario)
+        + async Task<IEnumerable<Funcionario>> IndexAll()
+        + async Task<Funcionario> SearchFuncionario(int funcionarioId)
+        + async Task<bool> Edit(Funcionario funcionario, Endereco, enderecoFuncionario)
+        + async Task<bool> Delete(int id)
+    }
+
+    class InsumoController
+    {
+        + InsumoController(IInsumoRepository insumoRepository, IFornecedorRepository fornecedorRepository)
+        + async Task<bool Create(Insumo insumo)
+        + async Task<IEnumerable<Insumo>> Index()
+        + async Task<Insumo> SearchInsumo(int insumoId)
+        + async Task<Fornecedor> SearchFornecedor(int idFornecedor)
+        + async Task<bool Edit(Insumo insumo)
+        + async Task<bool Delete(int id)
+    }
+
+    class ProdutoController
+    {
+        + ProdutoController(IProdutoRepository produtoRepository)
+        + async Task<bool Create(Produto produto)
+        + async Task<IEnumerable<Produto>> Index()
+        + async Task<Produto> SearchProduto(int produtoId)
+        + async Task<bool Edit(Produto produto)
+        + async Task<bool Delete(int id)
+    }
+
+    class VendaController
+        {
+            + VendaController(IRepository<Venda> vendaRepository, IClienteRepository clienteRepository, IProdutoRepository produtoRepository)
+            + async Task<bool Create(Venda venda)
+            + async Task<IEnumerable<Venda>> Index()
+            + async Task<Venda> SearchVenda(int vendaId)
+            + async Task<Cliente> SearchCliente(int idCliente)
+            + async Task<Produto> SearchProduto(int idProduto)
+            + async Task<bool Edit(Venda venda)
+            + async Task<bool Delete(int id)
+        }
+}
+
+@enduml

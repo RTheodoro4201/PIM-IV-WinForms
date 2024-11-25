@@ -49,6 +49,7 @@ partial class MainForm
         this.btnVendas = new System.Windows.Forms.Button();
         this.btnClienteJuridico = new System.Windows.Forms.Button();
         this.btnCliente = new System.Windows.Forms.Button();
+        this.btnUsuario = new System.Windows.Forms.Button();
         ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
         this.splitContainer1.Panel1.SuspendLayout();
         this.splitContainer1.Panel2.SuspendLayout();
@@ -221,11 +222,23 @@ partial class MainForm
         this.btnCliente.UseVisualStyleBackColor = false;
         this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
         // 
+        // btnUsuario
+        // 
+        this.btnUsuario.BackColor = System.Drawing.Color.DimGray;
+        this.btnUsuario.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+        this.btnUsuario.FlatAppearance.BorderSize = 0;
+        resources.ApplyResources(this.btnUsuario, "btnUsuario");
+        this.btnUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+        this.btnUsuario.Name = "btnUsuario";
+        this.btnUsuario.UseVisualStyleBackColor = false;
+        this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+        // 
         // MainForm
         // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         this.BackColor = System.Drawing.Color.PaleGreen;
+        this.Controls.Add(this.btnUsuario);
         this.Controls.Add(this.btnCliente);
         this.Controls.Add(this.btnClienteJuridico);
         this.Controls.Add(this.btnVendas);
@@ -255,6 +268,8 @@ partial class MainForm
         this.splitContainer1.ResumeLayout(false);
         this.ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Button btnUsuario;
 
     private System.Windows.Forms.Button btnClienteJuridico;
     private System.Windows.Forms.Button btnCliente;
